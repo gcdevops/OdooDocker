@@ -1,0 +1,14 @@
+name: dts-test-publish-deploy
+
+on: 
+  push:
+    branches:
+      - master
+  pull_request:
+    branches: 
+      - master
+jobs:
+    - name: jenkins build and deployment job
+      uses: wei/curl@v1
+      with:
+        args: -X POST https://jenkins.covid-dev.dts-stn.com/job/HRM-Odoo-Docker-Build/build?token=${{ secrets.DTS_COVID_JENKINS_TOKEN }} --insecure --user jenkinsbot:${{ secrets.DTS_COVID_JENKINSBOT_PASSWORD }}
