@@ -7,6 +7,10 @@ services:
             - db
         ports: 
             - "8069:8069"
+        environment: 
+            - ODOO_DATABASE_HOST=db
+            - ODOO_DATABASE_USER=odoo
+            - ODOO_DATABASE_PASSWORD=odoo
     pgAdmin:
         image: dpage/pgadmin4
         depends_on: 
