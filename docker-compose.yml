@@ -7,6 +7,17 @@ services:
             - db
         ports: 
             - "8069:8069"
+    pgAdmin:
+        image: dpage/pgadmin4
+        depends_on: 
+            - db
+        environment: 
+            PGADMIN_DEFAULT_EMAIL: admin
+            PGADMIN_DEFAULT_PASSWORD: password
+        volumes:
+            - pgadmin:/root/.pgadmin
+        ports:
+            - "8070:80"
     db:
         image: postgres:11
         environment: 
@@ -15,5 +26,7 @@ services:
             - POSTGRES_USER=odoo
         volumes:
             - odoo-db-data:/var/lib/postgresql/
+    
 volumes: 
     odoo-db-data:
+    pgadmin:
