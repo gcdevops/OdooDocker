@@ -1,0 +1,16 @@
+<odoo>
+    <data>
+      <record model="openacademy.course" id = "course0">
+        <field name="name"> Course 0</field>
+        <field name="description"> This is a description field </field>
+      </record>
+      <record model="openacademy.course" id = "course1">
+        <field name="name"> Course 1</field>
+        <field name="description"> This is a description field </field>
+      </record>
+      <record model="openacademy.course" id = "course2">
+        <field name="name"> Course 2</field>
+        <field name="description"> This is a description field </field>
+      </record>
+    </data>
+</odoo>

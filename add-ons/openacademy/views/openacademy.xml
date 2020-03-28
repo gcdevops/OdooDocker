@@ -1,0 +1,110 @@
+<odoo>
+    <data>
+        <!-- course form view -->
+        <record model="ir.ui.view" id="course_form_view">
+            <field name="name">course.form</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <form string="Course Form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="responsible_id"/>
+                        </group>
+                        <notebook>
+                            <page string="Description">
+                                <field name="description"/>
+                            </page>
+                            <page string="About">
+                                This is an example of notebooks
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>        
+        </record>
+
+        <!--course search view-->
+        <record model="ir.ui.view" id="course_search_view">
+            <field name="name">course.search</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                </search>
+            </field>
+        </record>
+
+        <!--course list view-->
+        <record model="ir.ui.view" id="course_tree_view">
+            <field name="name">course.tree</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <tree string="Course Tree">
+                    <field name = "name" />
+                    <field name = "responsible_id" />
+                </tree>
+            </field>
+        </record>
+
+        <!--session tree/list view-->
+        <record model="ir.ui.view" id="session_tree_view">
+            <field name="name">session.tree</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <tree string="Session Tree">
+                    <field name="name" />
+                    <field name="course_id" />
+                </tree>
+            </field>
+        </record>
+
+        <!-- session form view -->
+        <record model="ir.ui.view" id="session_form_view">
+            <field name = "name">session.form</field>
+            <field name = "model">openacademy.session</field>
+            <field name = "arch" type="xml">
+                <form string="Session Form">
+                    <sheet>
+                        <group>
+                            <group string="General">
+                                <field name="course_id"/>
+                                <field name = "name" />
+                                <field name = "instructor_id" />
+                            </group>
+                            <group string="Schedule">
+                                <field name="start_date"/>
+                                <field name="duration"/>
+                                <field name="seats"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- window action -->
+        <record model = "ir.actions.act_window" id="course_list_action">
+            <field name = "name"> Courses </field>
+            <field name = "res_model">openacademy.course</field>
+            <field name = "view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">Create the first course</p>
+            </field>
+        </record>
+
+        <record model = "ir.actions.act_window" id="session_list_action">
+            <field name = "name"> Sessions </field>
+            <field name = "res_model">openacademy.session</field>
+            <field name = "view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">No Sessions Yet</p>
+            </field>
+        </record>
+        <menuitem id="main_openacademy_menu" name="Open Academy"/>
+        <menuitem id="openacademy_menu" name="Open Academy" parent="main_openacademy_menu"/>
+        <menuitem id="course_menu" name="Courses" parent="openacademy_menu" action="course_list_action"/>
+        <menuitem id="session_menu" name="Sessions" parent="openacademy_menu" action="session_list_action"/>
+    </data>
+</odoo>

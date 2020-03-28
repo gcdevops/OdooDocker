@@ -1,0 +1,19 @@
+version: "3"
+
+services: 
+    odoo:
+        build: .
+        depends_on: 
+            - db
+        ports: 
+            - "8069:8069"
+    db:
+        image: postgres:11
+        environment: 
+            - POSTGRES_DB=postgres
+            - POSTGRES_PASSWORD=odoo
+            - POSTGRES_USER=odoo
+        volumes:
+            - odoo-db-data:/var/lib/postgresql/
+volumes: 
+    odoo-db-data:
