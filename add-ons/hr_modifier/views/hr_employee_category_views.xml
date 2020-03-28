@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr.open_view_categ_form" model="ir.actions.act_window">
+            <field name="name">Employee Tags</field>
+            <field name="res_model">hr.employee.category</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.view_employee_category_list')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr.view_employee_category_form')})]"/>
+        </record>
+    </data>
+ </odoo>

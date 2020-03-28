@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="hr.hr_plan_action" model="ir.actions.act_window">
+            <field name="name">Planning</field>
+            <field name="res_model">hr.plan</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.hr_plan_view_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr.hr_plan_view_form')})]"/>
+            <field name="search_view_id" ref="hr.hr_plan_view_search"/>
+        </record>
+
+        <record id="hr.hr_plan_activity_type_action" model="ir.actions.act_window">
+            <field name="name">Planning Types</field>
+            <field name="res_model">hr.plan.activity.type</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.hr_plan_activity_type_view_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr.hr_plan_activity_type_view_form')})]"/>
+        </record>
+
+    </data>
+</odoo>
