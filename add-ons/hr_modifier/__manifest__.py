@@ -8,7 +8,7 @@
     'summary': 'Cutomize Employee Module for our purposes',
     
     'depends': [
-        'hr'
+        'base', 'hr'
     ],
     'data': [
         'views/hr_plan_views.xml',
