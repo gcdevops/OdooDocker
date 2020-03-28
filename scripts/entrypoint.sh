@@ -4,13 +4,14 @@ set -e
 
 # set the postgres database host, port, user and password according to the environment
 # and pass them as arguments to the odoo process if not present in the config file
-: ${HOST:=${ODOO_DATABASE_HOST:='db'}}
-: ${PORT:=${ODOO_DATABASE_PORT:=5432}}
-: ${USER:=${ODOO_DATABASE_USER:="odoo"}}
-: ${PASSWORD:=${ODOO_DATABASE_PASSWORD}}
+: ${HOST:=${HOST:='db'}}
+: ${PORT:=${PORT:=5432}}
+: ${USER:=${USER:="odoo"}}
+: ${PASSWORD:=${PASSWORD}}
 
 DB_ARGS=()
 function check_config() {
+    echo Checking Config $1 $2
     param="$1"
     value="$2"
     if grep -q -E "^\s*\b${param}\b\s*=" "$ODOO_RC" ; then       
@@ -18,6 +19,7 @@ function check_config() {
     fi;
     DB_ARGS+=("--${param}")
     DB_ARGS+=("${value}")
+    echo $DB_ARGS
 }
 check_config "db_host" "$HOST"
 check_config "db_port" "$PORT"
@@ -28,13 +30,16 @@ case "$1" in
     -- | odoo)
         shift
         if [[ "$1" == "scaffold" ]] ; then
+            echo "Running without Args"
             exec odoo "$@"
         else
+            echo "Running with Args $DB_ARGS"
             wait-for-psql.py ${DB_ARGS[@]} --timeout=30
             exec odoo "$@" "${DB_ARGS[@]}"
         fi
         ;;
     -*)
+        echo "Running with Args $DB_ARGS"
         wait-for-psql.py ${DB_ARGS[@]} --timeout=30
         exec odoo "$@" "${DB_ARGS[@]}"
         ;;
