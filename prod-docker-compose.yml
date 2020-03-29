@@ -1,38 +1,38 @@
 version: "3"
 
 services: 
-    odoo:
-        build: 
-            context: .
-            dockerfile: OdooStock-Dockerfile
+    odoo-prod:
+        build: .
         depends_on: 
-            - db
+            - db-prod
         ports: 
             - "8069:8069"
         environment: 
-            - HOST=db
-            - USER=odoo
-            - PASSWORD=odoo
-    pgAdmin:
+            - ODOO_EMAIL=user@example.com 
+            - ODOO_PASSWORD=bitnami 
+            - POSTGRESQL_HOST=db-prod 
+            - POSTGRESQL_PASSWORD=odoo 
+            - POSTGRESQL_USER=odoo 
+    pgAdmin-prod:
         image: dpage/pgadmin4
         depends_on: 
-            - db
+            - db-prod
         environment: 
             PGADMIN_DEFAULT_EMAIL: admin
             PGADMIN_DEFAULT_PASSWORD: password
         volumes:
-            - pgadmin:/root/.pgadmin
+            - pgadmin-prod:/root/.pgadmin
         ports:
             - "8070:80"
-    db:
+    db-prod:
         image: postgres:11
         environment: 
             - POSTGRES_DB=postgres
             - POSTGRES_PASSWORD=odoo
             - POSTGRES_USER=odoo
         volumes:
-            - odoo-db-data:/var/lib/postgresql/
+            - odoo-prod-db-data:/var/lib/postgresql/
     
 volumes: 
-    odoo-db-data:
-    pgadmin:
+    odoo-prod-db-data:
+    pgadmin-prod:
