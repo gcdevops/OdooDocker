@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<openerp>
+    <data noupdate="0">
+        <record id="login_form_background_default" model="ir.config_parameter">
+            <field name="key">login_form_background_default</field>
+            <field name="value">https://www.canada.ca/content/dam/canada/splash/sp-bg-12.jpg</field>
+        </record>
+    </data>
+</openerp>
