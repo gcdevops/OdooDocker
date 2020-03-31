@@ -12,18 +12,7 @@ services:
             - ODOO_PASSWORD=bitnami 
             - POSTGRESQL_HOST=db-prod 
             - POSTGRESQL_PASSWORD=odoo 
-            - POSTGRESQL_USER=odoo 
-    pgAdmin-prod:
-        image: dpage/pgadmin4
-        depends_on: 
-            - db-prod
-        environment: 
-            PGADMIN_DEFAULT_EMAIL: admin
-            PGADMIN_DEFAULT_PASSWORD: password
-        volumes:
-            - pgadmin-prod:/root/.pgadmin
-        ports:
-            - "8070:80"
+            - POSTGRESQL_USER=odoo
     db-prod:
         image: postgres:11
         environment: 
@@ -32,6 +21,8 @@ services:
             - POSTGRES_USER=odoo
         volumes:
             - odoo-prod-db-data:/var/lib/postgresql/
+        ports:
+            - "5555:5432"
     
 volumes: 
     odoo-prod-db-data:
