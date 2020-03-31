@@ -135,7 +135,58 @@ Step 9. Activate developer mode by going to general settings
 
 ![activate developer mode](./images/activate-developer-mode.png)
 
-You should now be ready to develop modules 
+You should now be ready to develop modules
+
+When you want to stop the database 
+
+```sh
+$ docker-compose stop db
+```
+
+#### Loading Data 
+
+You can optionally load in organizational data from GEDS. Please note these data sets were developed using the GEDS Open Data Set. No protected or classified information is contained within these data sets. No protected or classified information should be added to these data sets. If you are interested in how these datasets were created, vist this [repo](https://github.com/gcdevops/HRWhiteListing-data).
+
+Step 1. Ensure you have developer mode activated 
+
+Step 2. Navigate to the ```Employees``` (HR) module by selecting the four squares in the top left corner and clicking Employees. Then click on ```Departments``` as shown
+
+![Employees page with departments highlighted](./images/employees-page-department-highlight.png)
+
+Step 3. Delete any existing data that's there
+
+![Delete existing department](./images/delete-existing-departments.png)
+
+Step 4. Select import and navigate to the department import page and then select ```Load File```
+![Department Import Page](./images/department-import-page.png) 
+
+Step 5. Select [odoo-org-csv.csv](./data/org_structure/odoo-org-csv.csv) and import
+
+![import organizational structure](./images/import-org.png)
+
+Step 6. Be patient ! This might take 5-10 minutes depending on your system
+
+![organizational structure import loading](./images/import-org-loading.png)
+
+Once the loading screen stops. You should see the ESDC org structure has been imported 
+
+![org structure imported](./images/imported-org.png)
+![org structure visualization](./images/imported-org-visualized.png)
+
+Step 7. Now you will need to load Job Titles. This is the same process as Departments except you navigate to ```Job Positions```
+
+![Jobs page with employees highlighted](./images/employees-page-job-highlighted.png)
+
+Step 8. Similarly, import [odoo-jobs-csv.csv](./data/org_structure/odoo-jobs-csv.csv)
+
+![importing jobs](./images/import-jobs.png)
+
+Step 9. Now import employees by navigating to the ```Employees``` page and then importing [odoo-employees-csv.csv](./data/org_structure/odoo-employees-csv.csv). Note this will take 15-20 minutes due to the large amount of records.
+
+![import employees](./images/import-employees.png)
+![imported employees](./images/imported-employees.png)
+
+You should now have the GEDS DataSet for the ESDC Organization imported 
 
 #### Reloading changes 
 
