@@ -66,35 +66,104 @@ We have two images in this repo
 </table>
 
 
-### To get the Odoo Stock Image Running
 
+### Setting up for development
 
-```sh
-$ docker-compose up --build
+You should use the Odoo stock image for local development as you are able to easily reload changes to modules
+
+Step 1. Set up .dev.env file according to your system
+
+Windows and MacOS 
+
+```env
+HOST=host.docker.internal
+USER=odoo
+PASSWORD=odoo
+PORT=5555
 ```
 
-Once you run this command, navigate to http://localhost:8069. You will then need to create a database. 
+Linux including WSL2 or Linux VM
+
+```env
+HOST=localhost
+USER=odoo
+PASSWORD=odoo
+PORT=5555
+```
+
+
+Step 2. Start the database container 
+
+```sh
+docker-compose up -d db
+```
+
+Step 3. Build your odoo container
+
+```sh
+docker build -t odoodocker_odoo --no-cache -f OdooStock-Dockerfile . 
+```
+
+Step 4. Create a volume 
+
+```sh
+docker volume create odoo_dev_volume
+```
+
+Step 5. Start odoo container from built image
+
+```sh
+docker run --env-file .dev.env -p "8069:8069" --mount type=volume,src=odoo_dev_volume,target=/var/lib/odoo/ odoodocker_odoo:latest
+```
+
+Step 6. Create the database and your admin credentials. The database name can be whatever you want it to be. For the email, it does not need to actually be an email. You can enter a simple user name like odoo. Be sure to remember what you set for your email and password fields
 
 ![create database odoo](./images/create-database-odoo.png)
 
+Step 7. Install the HR Module. 
 
-The Database Name field will be the name of the database created in PostgreSQL. The email and password fields will be the credentials to your admin account. Note that you do not need to enter an actual email. Once you are done odoo will initialize the database and you will be logged in to the application. You can then install the module you are working on. Note to find your module through seach, be sure to remove the app filter.
-
-Remove Apps Filter
+Go to apps and clear the apps filter
 ![remove apps filter from odoo search](./images/remove-apps-filter.png)
-
-
-Odoo Apps Page
 ![odoo apps](./images/odoo-apps.png)
 
+Step 8. Search hr_mod and press enter and install the module that appears.
 
-Unfortunately if you are using this container to develop modules and you update or change a module you will have to completely destroy the containers and rebuild.
+![install the hr module](./images/install_hr_mod.png)
 
+
+Step 9. Activate developer mode by going to general settings 
+
+![activate developer mode](./images/activate-developer-mode.png)
+
+You should now be ready to develop modules 
+
+#### Reloading changes 
+
+Step 1. Exit the running odoo container
+
+Step 2. Rebuild tha image
 
 ```sh
-$ docker-compose down -v
-$ docker-compose up --build
+docker build -t odoodocker_odoo --no-cache -f OdooStock-Dockerfile .
 ```
+
+Step 3. Run the container
+
+```sh
+docker run --env-file .dev.env -p "8069:8069" --mount type=volume,src=odoo_dev_volume,target=/var/lib/odoo/ odoodocker_odoo:latest
+```
+
+Step 4. Update app list from odoo ( activate developer mode if you do not see this )
+
+![update app list](./images/update-app-list.png)
+
+Step 5. Find your module and upgrade it 
+
+![upgrade module](./images/upgrade-module.png)
+
+Your changes should now be reflected
+
+
 
 ### To get the Bitnami Production Image up and running 
 
@@ -136,7 +205,14 @@ For example take a look at [openacademy.xml](./add-ons/openacademy/views/openaca
 </record>
 ```
 
-It's pretty intuitive, we are creating a record for the ```ir.ui.view``` table ( ir_ui_view in PostgreSQL ) and populating the record with its fields. In this case we are creating a list view for our 
+It's pretty intuitive, we are creating a record for the ```ir.ui.view``` table ( ir_ui_view in PostgreSQL ) and populating the record with its fields. In this case we are creating a list view for courses based off of the openacademy.course model ( go through the tutorial at least once to understand what I am talking about).
+
+
+As such you are able to use modules to overwrite data for other modules!
+
+For example, We are using the employees module.
+
+
 
 
 
