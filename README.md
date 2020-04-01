@@ -58,10 +58,16 @@ Step 8. Activate developer mode by going to general settings
 
 You should now be ready to develop modules
 
-To take down Odoo completely
+To take down Odoo completely, i.e. restart from scratch 
 
 ```sh
 $ docker-compose down
+```
+
+To stop Odoo and continue where you left off later
+
+```sh
+$ docker-compose stop
 ```
 
 #### Loading Data 
