@@ -5,6 +5,7 @@ services:
         build: 
             context: .
             dockerfile: Dockerfile
+
         depends_on: 
             - db
         ports: 
@@ -14,10 +15,12 @@ services:
             - USER=odoo
             - PASSWORD=odoo
             - NAME=odoo
+        volumes:
+            - ./add-ons:/mnt/extra-addons
     db:
         image: postgres:11
         ports:
-            - "5555:5432"
+            - "5432:5432"
         environment: 
             - POSTGRES_DB=postgres
             - POSTGRES_PASSWORD=odoo

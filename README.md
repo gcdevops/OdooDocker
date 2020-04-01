@@ -71,28 +71,7 @@ We have two images in this repo
 
 You should use the Odoo stock image for local development as you are able to easily reload changes to modules
 
-Step 1. Set up .dev.env file according to your system
-
-Windows and MacOS 
-
-```env
-HOST=host.docker.internal
-USER=odoo
-PASSWORD=odoo
-PORT=5555
-```
-
-Linux including WSL2 or Linux VM
-
-```env
-HOST=localhost
-USER=odoo
-PASSWORD=odoo
-PORT=5555
-```
-
-
-Step 2. Start the database container 
+Step 1. Start the database container 
 
 ```sh
 docker-compose up -d db
@@ -101,46 +80,40 @@ docker-compose up -d db
 Step 3. Build your odoo container
 
 ```sh
-docker build -t odoodocker_odoo --no-cache -f OdooStock-Dockerfile . 
+docker-compose build --no-cache odoo
 ```
 
-Step 4. Create a volume 
+Step 4. Start odoo container
 
 ```sh
-docker volume create odoo_dev_volume
+docker-compose up -d odoo
 ```
 
-Step 5. Start odoo container from built image
-
-```sh
-docker run --env-file .dev.env -p "8069:8069" --mount type=volume,src=odoo_dev_volume,target=/var/lib/odoo/ odoodocker_odoo:latest
-```
-
-Step 6. Create the database and your admin credentials. The database name can be whatever you want it to be. For the email, it does not need to actually be an email. You can enter a simple user name like odoo. Be sure to remember what you set for your email and password fields
+Step 5. Create the database and your admin credentials. The database name can be whatever you want it to be. For the email, it does not need to actually be an email. You can enter a simple user name like odoo. Be sure to remember what you set for your email and password fields as this will be your login information.
 
 ![create database odoo](./images/create-database-odoo.png)
 
-Step 7. Install the HR Module. 
+Step 6. Install the HR Module. 
 
 Go to apps and clear the apps filter
 ![remove apps filter from odoo search](./images/remove-apps-filter.png)
 ![odoo apps](./images/odoo-apps.png)
 
-Step 8. Search hr_mod and press enter and install the module that appears.
+Step 7. Search hr_mod and press enter and install the module that appears.
 
 ![install the hr module](./images/install_hr_mod.png)
 
 
-Step 9. Activate developer mode by going to general settings 
+Step 8. Activate developer mode by going to general settings 
 
 ![activate developer mode](./images/activate-developer-mode.png)
 
 You should now be ready to develop modules
 
-When you want to stop the database 
+To take down Odoo completely
 
 ```sh
-$ docker-compose stop db
+$ docker-compose down
 ```
 
 #### Loading Data 
@@ -190,21 +163,9 @@ You should now have the GEDS DataSet for the ESDC Organization imported
 
 #### Reloading changes 
 
-Step 1. Exit the running odoo container
+Step 1. Make sure your code is saved to disk
 
-Step 2. Rebuild tha image
-
-```sh
-docker build -t odoodocker_odoo --no-cache -f OdooStock-Dockerfile .
-```
-
-Step 3. Run the container
-
-```sh
-docker run --env-file .dev.env -p "8069:8069" --mount type=volume,src=odoo_dev_volume,target=/var/lib/odoo/ odoodocker_odoo:latest
-```
-
-Step 4. Update app list from odoo ( activate developer mode if you do not see this )
+Step 2. Within the Apps module, update app list from Odoo ( activate developer mode if you do not see this )
 
 ![update app list](./images/update-app-list.png)
 
@@ -215,22 +176,9 @@ Step 5. Find your module and upgrade it
 Your changes should now be reflected
 
 
-
-### To get the Bitnami Production Image up and running 
-
-```sh
-$ docker-compose -f prod-docker-compose.yml up --build
-```
-
-It will take sometime to spin up and the application will be unavailable in the meantime. Once the application is set up, it will be available at http://localhost:8069.
-
-You can log in with the credentials found in the [compose file](./prod-docker-compose.yml). 
-
-
-
 ## Creating Modules 
 
-As stated, almost all odoo configuration is done through modules. In this way Odoo can almost be infinitely extended. 
+As stated, almost all Odoo configuration is done through modules. In this way Odoo can almost be infinitely extended. 
 
 
 To get started learning how to build modules, go through this [tutorial](https://www.odoo.com/documentation/13.0/howtos/backend.html). Note: There is already an open academy module for you to play around with. Be sure to create a new branch id you decide to modify for learning purposes
