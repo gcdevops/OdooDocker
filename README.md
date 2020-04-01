@@ -10,61 +10,9 @@ Odoo is an open source web-based ERP (Enterprise Resource System) built primarly
 
 ## How to get Odoo running locally
 
-We are using Docker and docker-compose for the core system and mounting custom plugins by copying them from the [add-ons](./add-ons) and [themes](./themes) to the appropriate folders within the containers. 
+We are using Docker and docker-compose for the core system and mounting custom plugins by copying them from the [add-ons](./add-ons). This includes modules/apps as well as themes 
 
-We have two images in this repo 
-
-<table>
-    <thead>
-        <tr>
-            <td>
-                Dockerfile
-            </td>
-            <td>
-                Docker Compose file
-            </td>
-            <td>
-                Link to original image 
-            </td>
-            <td>
-                Purpose
-            </td>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>
-                <a href="./OdooStock-Dockerfile">Odoo Stock Image</a>
-            </td>
-            <td>
-                <a href="./docker-compose.yml"> Odoo Stock Compose File </a>
-            </td>
-            <td>
-                <a href="https://hub.docker.com/_/odoo">DockerHub</a>
-                <a href="https://github.com/odoo/docker/tree/6d92142da193f60c161f97eea1079f437dd51d7e/13.0">GitHub</a>
-            </td> 
-            <td>
-                This is used for development purposes only. It is much quicker to build and start the application then the bitnami production image
-            </td>   
-        </tr>
-        <tr>
-            <td>
-                <a href="./Dockerfile">Bitnami Odoo Image</a>
-            </td>
-            <td>
-                <a href = "./prod-docker-compose.yml">Bitnami Compose File</a>
-            </td>
-            <td>
-                <a href="https://hub.docker.com/r/bitnami/odoo/">Dockerhub</a>
-                <a href="https://github.com/bitnami/bitnami-docker-odoo/tree/master/13/debian-10"> GitHub </a>
-            </td>
-            <td>
-                This is used in the production environment as the bitnami image has better support for kubernetes. 
-            </td>
-        </tr>
-    </tbody>
-</table>
-
+We are using the Stock Odoo 13.0 Docker image which you can find more info on on [DockerHub](https://hub.docker.com/_/odoo) and on [github](https://github.com/odoo/docker/tree/6d92142da193f60c161f97eea1079f437dd51d7e/13.0)
 
 
 ### Setting up for development
