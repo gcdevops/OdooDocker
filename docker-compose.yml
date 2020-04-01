@@ -13,19 +13,11 @@ services:
             - HOST=db
             - USER=odoo
             - PASSWORD=odoo
-    pgAdmin:
-        image: dpage/pgadmin4
-        depends_on: 
-            - db
-        environment: 
-            PGADMIN_DEFAULT_EMAIL: admin
-            PGADMIN_DEFAULT_PASSWORD: password
-        volumes:
-            - pgadmin:/root/.pgadmin
-        ports:
-            - "8070:80"
+            - NAME=odoo
     db:
         image: postgres:11
+        ports:
+            - "5555:5432"
         environment: 
             - POSTGRES_DB=postgres
             - POSTGRES_PASSWORD=odoo
