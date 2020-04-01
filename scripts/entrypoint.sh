@@ -4,10 +4,10 @@ set -e
 
 # set the postgres database host, port, user and password according to the environment
 # and pass them as arguments to the odoo process if not present in the config file
-: ${HOST:=${HOST:='db'}}
-: ${PORT:=${PORT:=5432}}
-: ${USER:=${USER:="odoo"}}
-: ${PASSWORD:=${PASSWORD}}
+HOST=$POSTGRESQL_HOST
+PORT=5432
+USER=$POSTGRESQL_USER
+PASSWORD=$POSTGRESQL_PASSWORD
 
 DB_ARGS=()
 function check_config() {

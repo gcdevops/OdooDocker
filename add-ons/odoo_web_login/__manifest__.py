@@ -42,5 +42,4 @@ The new configurable Odoo Web Login Screen
     ],
     'installable': True,
     'application': True,
-    'auto_install': True,
 }
