@@ -209,7 +209,154 @@ It's pretty intuitive, we are creating a record for the ```ir.ui.view``` table (
 
 As such you are able to use modules to overwrite data for other modules!
 
-For example, We are using the employees module.
+For example, we are using the employees module in Odoo. However, we found it was very clutered with a lot of unnecessary views. For example the kanban views for Departments and Employees. Our users are more familiar with an excel like interface, so we want to remove this view.
+
+![departments kanban view](./images/kanban-view-departments.png)
+
+Here is the [code](https://github.com/gcdevops/odoo/tree/13.0/addons/hr) for the entire employees module on github. 
+
+The view for departments is represented by the [hr_departments_views.xml](https://github.com/gcdevops/odoo/blob/13.0/addons/hr/views/hr_department_views.xml)
+
+This view defines three views. To see the full code, look at hr_departments_views.xml linked above 
+
+The kanban view 
+
+```xml
+<record id="hr_department_view_kanban" model="ir.ui.view" >
+    <field name="name">hr.department.kanban</field>
+    <field name="model">hr.department</field>
+    <field name="arch" type="xml">
+        ...
+    </field>
+</record>
+```
+
+The tree view 
+
+```xml
+<record id="view_department_tree" model="ir.ui.view">
+    <field name="name">hr.department.tree</field>
+    <field name="model">hr.department</field>
+    <field name="arch" type="xml">
+        <tree string="Companies">
+            <field name="display_name"/>
+            <field name="company_id" groups="base.group_multi_company"/>
+            <field name="manager_id"/>
+            <field name="parent_id"/>
+        </tree>
+    </field>
+</record>
+```
+
+
+The form view 
+
+```xml
+<record id="view_department_form" model="ir.ui.view">
+    <field name="name">hr.department.form</field>
+    <field name="model">hr.department</field>
+    <field name="arch" type="xml">
+        <form string="department">
+            <sheet>
+                <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                <field name="active" invisible="1"/>
+                <group col="4">
+                    <field name="name"/>
+                    <field name="manager_id"/>
+                    <field name="parent_id"/>
+                    <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+                </group>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+        </form>
+    </field>
+</record>
+```
+
+These views all get combined in a window which defines the Department page in the employees module 
+
+```xml
+<record id="open_module_tree_department" model="ir.actions.act_window">
+        <field name="name">Departments</field>
+        <field name="res_model">hr.department</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="search_view_id" ref="view_department_filter"/>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+            Create a new department
+            </p><p>
+            Odoo's department structure is used to manage all documents
+            related to employees by departments: expenses, timesheets,
+            leaves, recruitments, etc.
+            </p>
+        </field>
+    </record>
+</data>
+```
+
+The ```view_mode``` field is specifically what enables or disables certain views. As you can see we need to remove the kanban view from our view_mode
+
+
+``` xml
+<field name="view_mode">kanban,tree,form</field>
+```
+
+The way this works is that the xml will be parsed by Odoo and the kanban view will be resolved to the record ```hr_department_view_kanban```. We can reference this record globally ( from other modules )by using something called the ```External ID```. This is in the format of ```<module_name>.<record_id>```, so for our kanban view it would be ```hr.hr_department_view_kanban``` for example.
+
+In order to modify the departments page to remove the kanban view we created a new module ```hr_modifier``` that overrides the ```open_module_tree_department``` window record. You can see the file [here](./add-ons/views/hr_department_views.xml).
+
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+      <record id="hr.open_module_tree_department" model="ir.actions.act_window">
+          <field name="name">Departments</field>
+          <field name="res_model">hr.department</field>
+          <field name="view_mode">tree,form</field>
+          <field name="search_view_id" ref="hr.view_department_filter"/>
+          <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.view_department_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr.view_department_form')})]"/>
+          <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+              Create a new department
+            </p><p>
+              Odoo's department structure is used to manage all documents
+              related to employees by departments: expenses, timesheets,
+              leaves, recruitments, etc.
+            </p>
+          </field>
+      </record>
+    </data>
+</odoo>
+```
+
+Take a close look at the id for this record 
+
+```xml
+<record id="hr.open_module_tree_department" model="ir.actions.act_window">
+```
+
+We are using the ```External ID``` for the Department window view. When the hr_modifier module is installed it will overwrite that window record in the database and thus removing the ability to select the kanban view ! 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
