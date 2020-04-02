@@ -11,6 +11,7 @@
         'base', 'hr'
     ],
     'data': [
+        'views/hr_job_views.xml',
         'views/hr_plan_views.xml',
         'views/hr_employee_category_views.xml',
         'views/hr_employee_public_views.xml',
