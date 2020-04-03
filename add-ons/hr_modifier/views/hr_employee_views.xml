@@ -153,5 +153,10 @@
               </p>
             </field>
         </record>
+
+        <record id="hr_skills.hr_employee_view_form" model="ir.ui.view">
+            <field name="active" eval="False" />
+        </record>
+
     </data>
 </odoo>
