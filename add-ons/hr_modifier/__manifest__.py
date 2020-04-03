@@ -8,7 +8,7 @@
     'summary': 'Cutomize Employee Module for our purposes',
     
     'depends': [
-        'base', 'hr'
+        'base', 'hr', 'hr_skills'
     ],
     'data': [
         'security/ir.model.access.csv',

@@ -88,6 +88,7 @@
                                             <field name="company_id" groups="base.group_multi_company"/>
                                             <field name="user_id" string="Related User" invisible="1"/>
                                         </group>
+                                        <field name="employee_skill_ids"/>
                                     </div>
                                 </div>
                             </page>
