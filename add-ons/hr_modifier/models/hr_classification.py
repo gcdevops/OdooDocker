@@ -20,7 +20,7 @@ class HrClassification(models.Model):
     ]
 
     def name_get(self):
-        if self.env.context.get("contactenate_level", False):
+        if self.env.context.get("name_only", False):
             return super(HrClassification, self).name_get()
         return [(record.id, record.name + "-" + str(record.level)) for record in self]
 
