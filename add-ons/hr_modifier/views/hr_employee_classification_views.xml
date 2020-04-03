@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_classification_form" model="ir.ui.view">
+            <field name= "name">hr.classification.form</field>
+            <field name= "model">hr.classification</field>
+            <field name="arch" type="xml">
+                <form string = "Classification">
+                <sheet>
+                    <group> 
+                        <field name = "name"  placeholder="e.g. CS"/>
+                        <field name = "level" placeholder="e.g. 1"/>
+                    </group>
+                </sheet>    
+                </form>
+            </field>
+        </record>
+        <record id ="view_classification_tree" model="ir.ui.view">
+            <field name = "name">hr.classification.tree</field>
+            <field name = "model">hr.classification</field>
+            <field name = "arch" type = "xml">
+                <tree string = "Classifications">
+                    <field name = "name"/>
+                    <field name = "level"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_classification_filter" model = "ir.ui.view">
+            <field name = "name">hr.classification.search</field>
+            <field name = "model">hr.classification</field>
+            <field name = "arch" type = "xml">
+                <search string = "Classifications">
+                    <field name="name" string ="Name"/>
+                    <group expand = "0" string = "Group By">
+                        <filter 
+                            string = "Name" 
+                            name="name" 
+                            domain = "[]" 
+                            context = "{'group_by': 'name'}" 
+                        />
+                        <filter 
+                            string = "Level"
+                            name = "level"
+                            domain = "[]"
+                            context = "{'group_by': 'level'}"
+                        />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id = "action_hr_classifications" model = "ir.actions.act_window">
+            <field name="name">Classifications</field>
+            <field name = "res_model">hr.classification</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_classification_filter"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Add a classification!
+              </p><p>
+                Let's create a classification.
+              </p>
+            </field>
+        </record>
+    </data>
+</odoo>
