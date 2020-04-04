@@ -19,8 +19,6 @@ services:
             - ./add-ons:/mnt/extra-addons
     db:
         image: postgres:11
-        ports:
-            - "${DB_PORT}:5432"
         environment: 
             - POSTGRES_DB=postgres
             - POSTGRES_PASSWORD=odoo
