@@ -104,5 +104,13 @@
             </p>
           </field>
       </record>
+
+    <record id="hr_skills.hr_employee_public_view_form_inherit" model="ir.ui.view">
+        <field name="active" eval="False" />
+    </record>
+    <record id="hr_skills.hr_employee_public_view_search" model="ir.ui.view">
+        <field name="active" eval="False" />
+    </record>
+
     </data>
 </odoo>
