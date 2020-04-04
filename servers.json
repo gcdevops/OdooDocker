@@ -1,0 +1,13 @@
+{
+    "Servers": {
+        "Odoo": {
+            "Name": "Odoo",
+            "Port": 5432,
+            "Group": "Servers",
+            "SSLMode": "prefer",
+            "Username": "odoo",
+            "Host": "db",
+            "MaintenanceDB": "postgres"
+        }
+    }
+}
