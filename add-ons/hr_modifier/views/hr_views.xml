@@ -2,6 +2,21 @@
 <odoo>
 <data>
     <menuitem
+        id="hr.menu_hr_employee_payroll"
+        name="My Team"
+        parent="hr.menu_hr_root"
+        action="hr.open_view_employee_list_my"
+        groups="hr.group_hr_manager,group_hr_senior_management"
+        sequence="3"/>
+        <menuitem id="hr.menu_hr_employee_user" groups="make_invisible" />
+    <menuitem
+    id="hr.menu_hr_employee"
+    name="Public Directory"
+    action="hr.hr_employee_public_action"
+    parent="hr.menu_hr_root"
+    sequence="4"/>
+
+    <menuitem
     id="hr.menu_human_resources_configuration_employee"
     name="Employee"
     parent="hr.menu_human_resources_configuration"
