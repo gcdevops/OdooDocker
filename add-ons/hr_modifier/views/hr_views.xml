@@ -17,6 +17,21 @@
     sequence="4"/>
 
     <menuitem
+    id="hr.menu_human_resources_configuration"
+    name="Configuration"
+    parent="hr.menu_hr_root"
+    groups="hr.group_hr_manager,group_hr_senior_management"
+    sequence="100"/>
+
+    <menuitem
+    id="hr_skills.hr_skill_type_menu"
+    name="Skills"
+    action="hr_skills.hr_skill_type_action"
+    parent="hr.menu_human_resources_configuration_employee"
+    sequence="3"
+    groups="hr.group_hr_manager,group_hr_senior_management"/>
+
+    <menuitem
     id="hr.menu_human_resources_configuration_employee"
     name="Employee"
     parent="hr.menu_human_resources_configuration"
