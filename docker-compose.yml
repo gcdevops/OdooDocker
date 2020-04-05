@@ -2,14 +2,11 @@ version: "3"
 
 services: 
     odoo:
-        build: 
-            context: .
-            dockerfile: Dockerfile
-
+        image: odoo:13.0
         depends_on: 
             - db
         ports: 
-            - "8069:8069"
+            - 8069:8069
         environment: 
             - HOST=db
             - USER=odoo
@@ -17,17 +14,27 @@ services:
             - NAME=odoo
         volumes:
             - ./add-ons:/mnt/extra-addons
+
     db:
         image: postgres:11
-        ports:
-            - "${DB_PORT}:5432"
         environment: 
             - POSTGRES_DB=postgres
             - POSTGRES_PASSWORD=odoo
             - POSTGRES_USER=odoo
         volumes:
             - odoo-db-data:/var/lib/postgresql/
-    
+
+    pgadmin:
+        image: dpage/pgadmin4
+        depends_on:
+            - db
+        ports:
+            - 8070:80
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=user@example.com
+            - PGADMIN_DEFAULT_PASSWORD=password
+        volumes:
+            - ./servers.json:/pgadmin4/servers.json
+
 volumes: 
     odoo-db-data:
-    pgadmin:

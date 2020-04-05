@@ -55,6 +55,7 @@
                                     Department: <field name="department_id" context="{'hierarchical_naming': False}"/>
                                 </p>
                             </div>
+                            <field name="company_id" string="Company" invisible="1"/>
                         <notebook>
                             <page name="public" string="Work Information">
                                 <div id="o_work_employee_container"> <!-- These two div are used to position org_chart -->
@@ -81,6 +82,7 @@
                   <field name="department_id"/>
                   <field name="job_title"/>
                   <field name="parent_id"/>
+                  <field name="company_id" string="Company" invisible="1"/>
               </tree>
           </field>
       </record>
@@ -104,5 +106,13 @@
             </p>
           </field>
       </record>
+
+    <record id="hr_skills.hr_employee_public_view_form_inherit" model="ir.ui.view">
+        <field name="active" eval="False" />
+    </record>
+    <record id="hr_skills.hr_employee_public_view_search" model="ir.ui.view">
+        <field name="active" eval="False" />
+    </record>
+
     </data>
 </odoo>
