@@ -46,7 +46,7 @@
                                     Name: <field name="name" placeholder="Employee's Name" required="True"/>
                                 </p>
                                 <p style="font-size:1.2em">
-                                    Email: <field name="work_email" widget="email" required="True"/>
+                                    Email: <field name="work_email" widget="email" required="False"/>
                                 </p>
                                 <p style="font-size:1.2em">
                                     Job Title: <field name="job_title" placeholder="Job Position" />
