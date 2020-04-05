@@ -1,6 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+      <record id="hr.hr_employee_public_view_search" model="ir.ui.view">
+            <field name="name">hr.employee.search</field>
+            <field name="model">hr.employee.public</field>
+            <field name="arch" type="xml">
+                <search string="Employees">
+                    <field name="name" string="Employees" filter_domain="['|',('work_email','ilike',self),('name','ilike',self)]"/>
+                    <field name="job_title" string="Job Title"/>
+                    <field name="department_id" string="Department"/>
+                    <field name="parent_id" string="Manager"/>
+                    <field name="company_id" string="Company"/>
+                    <separator/>
+                    <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
+                    <group expand="0" string="Group By">
+                        <filter name="group_manager" string="Manager" domain="[]" context="{'group_by':'parent_id'}"/>
+                        <filter name="group_department" string="Department" domain="[]" context="{'group_by':'department_id'}"/>
+                        <filter name="group_company" string="Company" domain="[]" context="{'group_by':'company_id'}"/>
+                    </group>
+                    <searchpanel>
+                        <field name="company_id" groups="base.group_multi_company" icon="fa-building"/>
+                        <field name="department_id" icon="fa-users"/>
+                    </searchpanel>
+                </search>
+             </field>
+        </record>
+
+        <record id="hr.hr_employee_public_view_form" model="ir.ui.view">
+            <field name="name">hr.employee.public.form</field>
+            <field name="model">hr.employee.public</field>
+            <field name="arch" type="xml">
+                <form string="Employee" create="0" write="0">
+                    <sheet>
+                        <field name="user_id" invisible="1"/>
+                        <field name="active" invisible="1"/>
+                        <div class="oe_button_box" name="button_box">
+                            <!-- Used by other modules-->
+                        </div>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                            <div>
+                                <h1>
+                                    Employee Information
+                                </h1>
+                                <p style="font-size:1.2em">
+                                    Name: <field name="name" placeholder="Employee's Name" required="True"/>
+                                </p>
+                                <p style="font-size:1.2em">
+                                    Email: <field name="work_email" widget="email" required="True"/>
+                                </p>
+                                <p style="font-size:1.2em">
+                                    Job Title: <field name="job_title" placeholder="Job Position" />
+                                </p>
+                                <p style="font-size:1.2em"> 
+                                    Department: <field name="department_id" context="{'hierarchical_naming': False}"/>
+                                </p>
+                            </div>
+                            <field name="company_id" string="Company" invisible="1"/>
+                        <notebook>
+                            <page name="public" string="Work Information">
+                                <div id="o_work_employee_container"> <!-- These two div are used to position org_chart -->
+                                    <div id="o_work_employee_main">
+                                        <group name="managers" >
+                                            <field name="parent_id"/>
+                                        </group>
+                                    </div>
+                                </div>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+      <record id="hr.hr_employee_public_view_tree" model="ir.ui.view">
+          <field name="name">hr.employee.tree</field>
+          <field name="model">hr.employee.public</field>
+          <field name="arch" type="xml">
+              <tree string="Employees">
+                  <field name="name"/>
+                  <field name="work_email"/>
+                  <field name="department_id"/>
+                  <field name="job_title"/>
+                  <field name="parent_id"/>
+                  <field name="company_id" string="Company" invisible="1"/>
+              </tree>
+          </field>
+      </record>
+
+
       <record id="hr.hr_employee_public_action" model="ir.actions.act_window">
           <field name="name">Employees</field>
           <field name="res_model">hr.employee.public</field>
@@ -19,5 +106,13 @@
             </p>
           </field>
       </record>
+
+    <record id="hr_skills.hr_employee_public_view_form_inherit" model="ir.ui.view">
+        <field name="active" eval="False" />
+    </record>
+    <record id="hr_skills.hr_employee_public_view_search" model="ir.ui.view">
+        <field name="active" eval="False" />
+    </record>
+
     </data>
 </odoo>

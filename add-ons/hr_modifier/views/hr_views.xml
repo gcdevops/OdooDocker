@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data>
+    <menuitem
+        id="hr.menu_hr_employee_payroll"
+        name="My Team"
+        parent="hr.menu_hr_root"
+        action="hr.open_view_employee_list_my"
+        groups="hr.group_hr_manager,group_hr_senior_management"
+        sequence="3"/>
+        <menuitem id="hr.menu_hr_employee_user" groups="make_invisible" />
+    <menuitem
+    id="hr.menu_hr_employee"
+    name="Public Directory"
+    action="hr.hr_employee_public_action"
+    parent="hr.menu_hr_root"
+    sequence="4"/>
+
+    <menuitem
+    id="hr.menu_human_resources_configuration_employee"
+    name="Employee"
+    parent="hr.menu_human_resources_configuration"
+    groups="hr.group_hr_manager"
+    sequence="1"/>
+    <menuitem
+       id = "hr.menu_human_resources_configuration_classification"
+       name = "Classifications"
+       parent="hr.menu_human_resources_configuration_employee"
+       groups="hr.group_hr_manager"
+       action="action_hr_classifications"
+       sequence="2"
+    />
+    <menuitem
+        id="hr.menu_view_employee_category_form"
+        name="Tags"
+        action="hr.open_view_categ_form"
+        parent="hr.menu_human_resources_configuration_employee"
+        groups="hr.group_hr_manager"
+        sequence="1"/>
+</data>
+</odoo>
+ 
