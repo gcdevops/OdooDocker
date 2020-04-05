@@ -17,6 +17,13 @@
     sequence="4"/>
 
     <menuitem
+    id="hr.menu_human_resources_configuration"
+    name="Configuration"
+    parent="hr.menu_hr_root"
+    groups="hr.group_hr_manager,group_hr_senior_management"
+    sequence="100"/>
+
+    <menuitem
     id="hr.menu_human_resources_configuration_employee"
     name="Employee"
     parent="hr.menu_human_resources_configuration"
