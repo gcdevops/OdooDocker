@@ -5,17 +5,9 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'add-ons/*'
-      - 'themes/*'
-      - 'Dockerfile'
   pull_request:
     branches: 
       - master
-    paths:
-      - 'add-ons'
-      - 'themes'
-      - 'Dockerfile'
 jobs:
   publish_Deploy:
     name: Publish and Deploy
