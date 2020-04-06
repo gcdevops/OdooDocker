@@ -23,6 +23,9 @@
         'views/hr_employee_classification_views.xml',
         'views/hr_views.xml'
     ],
+    'qweb': [
+        'static/src/xml/chatter.xml'
+    ],
     'installable': True,
     'application': False,
 }
