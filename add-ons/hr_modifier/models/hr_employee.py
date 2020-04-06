@@ -129,5 +129,8 @@ class HrEmployeePrivate(models.Model):
                 int(record.x_employee_pri)
             except:
                 raise ValidationError("Employee PRI must be a number")
-
-            
+    
+    @api.onchange("parent_id")
+    def _onchange_manager(self):
+        if self.region_id != self.parent_id.region_id and self.parent_id.region_id is not None:
+            self.region_id = self.parent_id.region_id

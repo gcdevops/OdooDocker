@@ -3,3 +3,4 @@ access_hr_employee_classification,hr.classification,model_hr_classification,hr.g
 access_hr_senior_management,hr.employee hr_senior_management,hr.model_hr_employee,group_hr_senior_management,1,1,1,1
 access_hr_senior_management_public,hr.employee.public hr_senior_management,hr.model_hr_employee_public,group_hr_senior_management,1,1,0,0
 access_hr_management_public_employees,hr.employee.public hr_management,hr.model_hr_employee_public,hr.group_hr_manager,1,1,0,0
+access_hr_employee_region,hr.region,model_hr_region,hr.group_hr_user,1,1,1,1
