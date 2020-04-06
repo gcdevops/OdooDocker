@@ -132,5 +132,8 @@ class HrEmployeePrivate(models.Model):
     
     @api.onchange("parent_id")
     def _onchange_manager(self):
-        if self.region_id != self.parent_id.region_id and self.parent_id.region_id is not None:
+        if self.region_id != self.parent_id.region_id:
             self.region_id = self.parent_id.region_id
+        return {
+            'warning': {'title': "Warning", 'message': "region_id:", self.region_id, "/parent.region_id:", self.parent_id.region_id}
+        }
