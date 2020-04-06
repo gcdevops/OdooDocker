@@ -46,6 +46,13 @@
        sequence="2"
     />
     <menuitem
+       id = "hr.menu_human_resources_configuration_regions"
+       name = "Regions"
+       parent="hr.menu_human_resources_configuration_employee"
+       groups="hr.group_hr_manager"
+       action="action_hr_regions"
+       sequence="3"/>
+    <menuitem
         id="hr.menu_view_employee_category_form"
         name="Tags"
         action="hr.open_view_categ_form"

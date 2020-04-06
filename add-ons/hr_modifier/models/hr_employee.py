@@ -109,6 +109,11 @@ class HrEmployeePrivate(models.Model):
         "hr.classification",
         ondelete = "set null"
     )
+
+    region_id = fields.Many2one(
+        "hr.region",
+        ondelete = "set null"
+    )
    
     _sql_constraints = [
         ('barcode_uniq', 'unique (barcode)', "The Badge ID must be unique, this one is already assigned to another employee."),

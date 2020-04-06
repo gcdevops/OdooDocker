@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_region_form" model="ir.ui.view">
+            <field name= "name">hr.region.form</field>
+            <field name= "model">hr.region</field>
+            <field name="arch" type="xml">
+                <form string = "Region">
+                <sheet>
+                    <group> 
+                        <field name = "name"  placeholder="e.g. "/>
+                    </group>
+                </sheet>    
+                </form>
+            </field>
+        </record>
+        <record id ="view_region_tree" model="ir.ui.view">
+            <field name = "name">hr.region.tree</field>
+            <field name = "model">hr.region</field>
+            <field name = "arch" type = "xml">
+                <tree string = "Regions">
+                    <field name = "name"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_region_filter" model = "ir.ui.view">
+            <field name = "name">hr.region.search</field>
+            <field name = "model">hr.region</field>
+            <field name = "arch" type = "xml">
+                <search string = "Regions">
+                    <field name="name" string ="Name"/>
+                    <group expand = "0" string = "Group By">
+                        <filter 
+                            string = "Name" 
+                            name="name" 
+                            domain = "[]" 
+                            context = "{'group_by': 'name'}" 
+                        />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id = "action_hr_regions" model = "ir.actions.act_window">
+            <field name="name">Regions</field>
+            <field name = "res_model">hr.region</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_region_filter"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Add a region!
+              </p><p>
+                Let's create a region.
+              </p>
+            </field>
+        </record>
+    </data>
+</odoo>
