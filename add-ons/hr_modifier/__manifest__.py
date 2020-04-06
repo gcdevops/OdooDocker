@@ -24,7 +24,8 @@
         'views/hr_views.xml'
     ],
     'qweb': [
-        'static/src/xml/chatter.xml'
+        'static/src/xml/chatter.xml',
+        'static/src/xml/systray.xml'
     ],
     'installable': True,
     'application': False,
