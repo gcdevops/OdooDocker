@@ -87,7 +87,6 @@
                                                 <field name="x_employee_job_type"/>
                                                 <field name="x_employee_status"/>
                                                 <field name="x_employee_work_criticality"/>
-                                                <field name="x_employee_level_criticality"/>
                                                 <field name="classification_id"/>
                                             </group>
                                             <group string="Work Address">
