@@ -37,9 +37,6 @@
                     <field name="active" invisible="1"/>
                     <field name="user_partner_id" invisible="1"/>
                     <field name="hr_presence_state" invisible="1"/>
-                    <header>
-                        <button name="%(hr.plan_wizard_action)d" string="Launch Plan" type="action" groups="hr.group_hr_manager"/>
-                    </header>
                     <sheet>
                         <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
                         <div>
@@ -87,7 +84,6 @@
                                                 <field name="x_employee_job_type"/>
                                                 <field name="x_employee_status"/>
                                                 <field name="x_employee_work_criticality"/>
-                                                <field name="x_employee_level_criticality"/>
                                                 <field name="classification_id"/>
                                                 <field name="region_id" options="{'no_create_edit': True}"/>
                                             </group>
@@ -121,7 +117,6 @@
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
-                        <field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
                         <field name="activity_ids" widget="mail_activity"/>
                         <field name="message_ids" widget="mail_thread"/>
                     </div>

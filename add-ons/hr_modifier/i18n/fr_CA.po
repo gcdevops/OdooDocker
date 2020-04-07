@@ -40,27 +40,6 @@ msgstr ""
 msgid "'Print Badge - %s' % (object.name).replace('/', '')"
 msgstr "'Imprimer le Badge - %s' % (object.name).replace('/', '')"
 
-#. module: hr_modifier
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee__x_employee_level_criticality__1
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee_base__x_employee_level_criticality__1
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee_public__x_employee_level_criticality__1
-msgid "1 - Call centres"
-msgstr "1 - Centres d'appel"
-
-#. module: hr_modifier
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee__x_employee_level_criticality__2
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee_base__x_employee_level_criticality__2
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee_public__x_employee_level_criticality__2
-msgid "2 - Claims processing"
-msgstr "2 - Traitement des déclarations"
-
-#. module: hr_modifier
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee__x_employee_level_criticality__3
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee_base__x_employee_level_criticality__3
-#: model:ir.model.fields.selection,name:hr_modifier.selection__hr_employee_public__x_employee_level_criticality__3
-msgid "3 - Others"
-msgstr "3 - Autres"
-
 #. module: hr
 #: model_terms:ir.ui.view,arch_db:hr.view_employee_form
 msgid ""
@@ -1528,13 +1507,6 @@ msgstr "Créons une offre d'emploi."
 #: model_terms:ir.ui.view,arch_db:hr_modifier.view_classification_filter
 msgid "Level"
 msgstr "Niveau"
-
-#. module: hr_modifier
-#: model:ir.model.fields,field_description:hr_modifier.field_hr_employee__x_employee_level_criticality
-#: model:ir.model.fields,field_description:hr_modifier.field_hr_employee_base__x_employee_level_criticality
-#: model:ir.model.fields,field_description:hr_modifier.field_hr_employee_public__x_employee_level_criticality
-msgid "Level of criticality"
-msgstr "Niveau de criticalité"
 
 #. module: hr_skills
 #: model:ir.model.fields,field_description:hr_skills.field_hr_skill_type__skill_level_ids
