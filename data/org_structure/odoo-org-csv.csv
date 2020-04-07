@@ -8,17 +8,17 @@ atip_div_f,ATIP Div F,intake_unit
 atip,ATIP,intake_unit
 business_management_and_executive_committees,Business Management and Executive Committees,corporate_secretariat
 business_management_services,Business Management Services,business_management_and_executive_committees
-bus_mngt_&_ex_ctees_1,Bus Mngt & Ex Ctees 1,business_management_services
+bus_mngt__ex_ctees_1,Bus Mngt & Ex Ctees 1,business_management_services
 executive_committees,Executive Committees,business_management_and_executive_committees
 bus_mngt_serv-a,Bus Mngt Serv-A,executive_committees
-bus_mngt_&_ex_ctees_4,Bus Mngt & Ex Ctees 4,business_management_and_executive_committees
+bus_mngt__ex_ctees_4,Bus Mngt & Ex Ctees 4,business_management_and_executive_committees
 corporate_secretariat_office,Corporate Secretariat Office,corporate_secretariat
 ministerial_services,Ministerial Services,corporate_secretariat
 ministerial_and_executive_correspondence,Ministerial and Executive Correspondence,ministerial_services
-ministerial_&_exec_corres_(3),Ministerial & Exec Corres (3),ministerial_and_executive_correspondence
-ministerial_svcs_div_4,Ministerial Svcs Div 4,ministerial_&_exec_corres_(3)
-ministerial_svcs_div_5,Ministerial Svcs Div 5,ministerial_&_exec_corres_(3)
-ministerial_svcs_div_10,Ministerial Svcs Div 10,ministerial_&_exec_corres_(3)
+ministerial__exec_corres_(3),Ministerial & Exec Corres (3),ministerial_and_executive_correspondence
+ministerial_svcs_div_4,Ministerial Svcs Div 4,ministerial__exec_corres_(3)
+ministerial_svcs_div_5,Ministerial Svcs Div 5,ministerial__exec_corres_(3)
+ministerial_svcs_div_10,Ministerial Svcs Div 10,ministerial__exec_corres_(3)
 parliamentary_affairs,Parliamentary Affairs,corporate_secretariat
 legislation_and_committees,Legislation and Committees,parliamentary_affairs
 privacy_management,Privacy Management,corporate_secretariat
@@ -31,7 +31,7 @@ privacy_compliance_rev_unit-b,Privacy Compliance Rev Unit-B,privacy_mngt_div_1
 privacy_mngt_div,Privacy Mngt Div,privacy_mngt_div_1
 senior_policy_analyst,Senior Policy Analyst,privacy_management
 strategic_planning_unit,Strategic Planning Unit,privacy_management
-"policy,_planning_and_coordination_c","Policy, Planning and Coordination C",privacy_management
+policy_planning_and_coordination_c,"Policy, Planning and Coordination C",privacy_management
 commissioner_for_employers,Commissioner for Employers,employment_and_social_development_canada
 commissioner_for_workers,Commissioner for Workers,employment_and_social_development_canada
 deputy_minister_of_employment_and_social_development,Deputy Minister of Employment and Social Development,employment_and_social_development_canada
@@ -48,73 +48,73 @@ financial_planning_team,Financial Planning Team,integrated_strategic_planning
 human_resources_management,Human Resources Management,business_management_services
 hr_strategic,HR Strategic,human_resources_management
 im-it_and_special_project,IM-IT and Special Project,business_management_services
-sr._adv._internal_comms,Sr. Adv. Internal Comms,im-it_and_special_project
+sr_adv_internal_comms,Sr. Adv. Internal Comms,im-it_and_special_project
 fin_and_accommodation_mngt,Fin and Accommodation Mngt,business_management_services
-bus_mngt_&_ex_ctees_3,Bus Mngt & Ex Ctees 3,business_management_services
+bus_mngt__ex_ctees_3,Bus Mngt & Ex Ctees 3,business_management_services
 team_leader_bms,Team Leader BMS,business_management_services
-"admin_services_and_im,_hrsb","Admin Services and IM, HRSB",business_management_services
+admin_services_and_im_hrsb,"Admin Services and IM, HRSB",business_management_services
 strategic_planning_services,Strategic Planning Services,business_management_services
 cfo's_office,CFO's Office,chief_financial_officer_branch
 financial_management_advisory_services,Financial Management Advisory Services,chief_financial_officer_branch
 corporate_resource_management,Corporate Resource Management,financial_management_advisory_services
 corp_resource_mgmt-b,Corp Resource Mgmt-B,corporate_resource_management
-portfolio_fin_forecstg_&_rep-b,Portfolio Fin Forecstg & Rep-B,corp_resource_mgmt-b
-portfolio_res_plan_&_mgmt-e,Portfolio Res Plan & Mgmt-E,corp_resource_mgmt-b
-portfolio_res_plan_&_mgmt-c,Portfolio Res Plan & Mgmt-C,corp_resource_mgmt-b
-portfolio_fin_forecstg_&_rep,Portfolio Fin Forecstg & Rep,corporate_resource_management
-portfolio_res_plan_&_mgmt-b,Portfolio Res Plan & Mgmt-B,portfolio_fin_forecstg_&_rep
-portfolio_res_plan_&_mgmt-d,Portfolio Res Plan & Mgmt-D,portfolio_fin_forecstg_&_rep
+portfolio_fin_forecstg__rep-b,Portfolio Fin Forecstg & Rep-B,corp_resource_mgmt-b
+portfolio_res_plan__mgmt-e,Portfolio Res Plan & Mgmt-E,corp_resource_mgmt-b
+portfolio_res_plan__mgmt-c,Portfolio Res Plan & Mgmt-C,corp_resource_mgmt-b
+portfolio_fin_forecstg__rep,Portfolio Fin Forecstg & Rep,corporate_resource_management
+portfolio_res_plan__mgmt-b,Portfolio Res Plan & Mgmt-B,portfolio_fin_forecstg__rep
+portfolio_res_plan__mgmt-d,Portfolio Res Plan & Mgmt-D,portfolio_fin_forecstg__rep
 enabling_services_financial_management,Enabling Services Financial Management,financial_management_advisory_services
 fin_mgmt_advisor_cfob,Fin Mgmt Advisor CFOB,enabling_services_financial_management
-fms-hrsb_pasrb_&_lasb-c,FMS-Hrsb Pasrb & Lasb-C,fin_mgmt_advisor_cfob
+fms-hrsb_pasrb__lasb-c,FMS-Hrsb Pasrb & Lasb-C,fin_mgmt_advisor_cfob
 fin_mgmt_advisor_cfob-a,Fin Mgmt Advisor CFOB-A,fin_mgmt_advisor_cfob
 fin_mgmt_advisor_ittb-a,Fin Mgmt Advisor ITTB-A,enabling_services_financial_management
 fin_mgmt_advisor_iitb-c,Fin Mgmt Advisor IITB-C,fin_mgmt_advisor_ittb-a
-fms-op_ei_&_call_center-d,FMS-Op EI & Call Center-D,fin_mgmt_advisor_ittb-a
+fms-op_ei__call_center-d,FMS-Op EI & Call Center-D,fin_mgmt_advisor_ittb-a
 tb_submissions-c,TB Submissions-C,fin_mgmt_advisor_ittb-a
 fin_mgmt_advisor_iitb-b,Fin Mgmt Advisor IITB-B,fin_mgmt_advisor_ittb-a
-fms-ministerial_&_corp_grps-a,FMS-Ministerial & Corp Grps-A,enabling_services_financial_management
-fms-ministerial_&_corp_grps-b,FMS-Ministerial & Corp Grps-B,fms-ministerial_&_corp_grps-a
-fms-ministerial_&_corp_grps-c,FMS-Ministerial & Corp Grps-C,fms-ministerial_&_corp_grps-a
-fms-ministerial_&_corp_grps-d,FMS-Ministerial & Corp Grps-D,fms-ministerial_&_corp_grps-a
+fms-ministerial__corp_grps-a,FMS-Ministerial & Corp Grps-A,enabling_services_financial_management
+fms-ministerial__corp_grps-b,FMS-Ministerial & Corp Grps-B,fms-ministerial__corp_grps-a
+fms-ministerial__corp_grps-c,FMS-Ministerial & Corp Grps-C,fms-ministerial__corp_grps-a
+fms-ministerial__corp_grps-d,FMS-Ministerial & Corp Grps-D,fms-ministerial__corp_grps-a
 planning_and_expenditure_management,Planning and Expenditure Management,financial_management_advisory_services
 planning_expenditure_mgmt-a,Planning Expenditure Mgmt-A,planning_and_expenditure_management
-planning_expendit._mgmt-b,Planning Expendit. Mgmt-B,planning_expenditure_mgmt-a
+planning_expendit_mgmt-b,Planning Expendit. Mgmt-B,planning_expenditure_mgmt-a
 planning_expenditure_mgmt-b,Planning Expenditure Mgmt-B,planning_and_expenditure_management
 planning_expenditure_mgmt-c,Planning Expenditure Mgmt-C,planning_and_expenditure_management
 policy_financial_management,Policy Financial Management,financial_management_advisory_services
 fin_mgmt_advisor-labour,Fin Mgmt Advisor-Labour,policy_financial_management
-fms-issd_homelesnes_&_lrng-d,FMS-ISSD Homelesnes & Lrng-D,policy_financial_management
-"pol-issd,_learng,_tbs_b","Pol-ISSD, Learng, TBS B",policy_financial_management
+fms-issd_homelesnes__lrng-d,FMS-ISSD Homelesnes & Lrng-D,policy_financial_management
+pol-issd_learng_tbs_b,"Pol-ISSD, Learng, TBS B",policy_financial_management
 treasury_board_submission_control_unit,Treasury Board Submission Control Unit,financial_management_advisory_services
 tb_submissions-a,TB Submissions-A,treasury_board_submission_control_unit
 fin_mgmt_advisor_iitb-f,Fin Mgmt Advisor IITB-F,tb_submissions-a
-fin_mgmt_adv_csb_pob_&_lmsdp-a,Fin Mgmt Adv Csb Pob & Lmsdp-A,chief_financial_officer_branch
-fin_mgmt_adv_csb_pob_&_lmsdp-b,Fin Mgmt Adv Csb Pob & Lmsdp-B,fin_mgmt_adv_csb_pob_&_lmsdp-a
-fin_mgmt_adv_csb_pob_&_lmsdp-c,Fin Mgmt Adv Csb Pob & Lmsdp-C,fin_mgmt_adv_csb_pob_&_lmsdp-a
-fin_mgmt_adv_csb_pob_&_lmsdp-e,Fin Mgmt Adv Csb Pob & Lmsdp-E,fin_mgmt_adv_csb_pob_&_lmsdp-a
+fin_mgmt_adv_csb_pob__lmsdp-a,Fin Mgmt Adv Csb Pob & Lmsdp-A,chief_financial_officer_branch
+fin_mgmt_adv_csb_pob__lmsdp-b,Fin Mgmt Adv Csb Pob & Lmsdp-B,fin_mgmt_adv_csb_pob__lmsdp-a
+fin_mgmt_adv_csb_pob__lmsdp-c,Fin Mgmt Adv Csb Pob & Lmsdp-C,fin_mgmt_adv_csb_pob__lmsdp-a
+fin_mgmt_adv_csb_pob__lmsdp-e,Fin Mgmt Adv Csb Pob & Lmsdp-E,fin_mgmt_adv_csb_pob__lmsdp-a
 fms-int_svc-coo-svc_mgmt-a,FMS-Int Svc-Coo-Svc Mgmt-A,chief_financial_officer_branch
 fms-int_svc-coo-svc_mgmt-b,FMS-Int Svc-Coo-Svc Mgmt-B,fms-int_svc-coo-svc_mgmt-a
 fms-int_svc-coo-svc_mgmt-d,FMS-Int Svc-Coo-Svc Mgmt-D,fms-int_svc-coo-svc_mgmt-a
-fms-op_ei_&_call_center-b,FMS-Op EI & Call Center-B,fms-int_svc-coo-svc_mgmt-a
+fms-op_ei__call_center-b,FMS-Op EI & Call Center-B,fms-int_svc-coo-svc_mgmt-a
 fms-int_svc-coo-svc_mgmt-e,FMS-Int Svc-Coo-Svc Mgmt-E,chief_financial_officer_branch
-fin_mgmt_adv_csb_pob_&_lmsdp-d,Fin Mgmt Adv Csb Pob & Lmsdp-D,fms-int_svc-coo-svc_mgmt-e
-fms-op_ei_&_call_center-e,FMS-Op EI & Call Center-E,fms-int_svc-coo-svc_mgmt-e
+fin_mgmt_adv_csb_pob__lmsdp-d,Fin Mgmt Adv Csb Pob & Lmsdp-D,fms-int_svc-coo-svc_mgmt-e
+fms-op_ei__call_center-e,FMS-Op EI & Call Center-E,fms-int_svc-coo-svc_mgmt-e
 senior_director-operations-c,Senior Director-Operations-C,chief_financial_officer_branch
-fms-hrsb_pasrb_&_lasb-b,FMS-Hrsb Pasrb & Lasb-B,senior_director-operations-c
+fms-hrsb_pasrb__lasb-b,FMS-Hrsb Pasrb & Lasb-B,senior_director-operations-c
 strtgc_fin_analysis_costing-c,Strtgc Fin Analysis Costing-C,chief_financial_officer_branch
 strtgc_fin_analysis_costing-f,Strtgc Fin Analysis Costing-F,chief_financial_officer_branch
 strtgc_fin_analysis_costing-g,Strtgc Fin Analysis Costing-G,strtgc_fin_analysis_costing-f
 integrated_corporate_accounting_and_accountability,Integrated Corporate Accounting and Accountability,chief_financial_officer_branch
 active_monitoring_and_quality_assurance,Active monitoring and quality assurance,integrated_corporate_accounting_and_accountability
-gs&cs_accountblty_&_mon,Gs&Cs Accountblty & Mon,active_monitoring_and_quality_assurance
-abor_skls_&_empl_trng_stra_-a,Abor Skls & Empl Trng Stra -A,gs&cs_accountblty_&_mon
-gs&cs_accountblty_&_mont_-a,Gs&Cs Accountblty & Mont -A,gs&cs_accountblty_&_mon
+gscs_accountblty__mon,Gs&Cs Accountblty & Mon,active_monitoring_and_quality_assurance
+abor_skls__empl_trng_stra_-a,Abor Skls & Empl Trng Stra -A,gscs_accountblty__mon
+gscs_accountblty__mont_-a,Gs&Cs Accountblty & Mont -A,gscs_accountblty__mon
 integr_corp_actg_accountblty-o,Integr Corp Actg Accountblty-O,active_monitoring_and_quality_assurance
-abor_skls_&_empl_trng_stra_-b,Abor Skls & Empl Trng Stra -B,integr_corp_actg_accountblty-o
+abor_skls__empl_trng_stra_-b,Abor Skls & Empl Trng Stra -B,integr_corp_actg_accountblty-o
 icaad_strategic_support_team,ICAAD Strategic Support Team,active_monitoring_and_quality_assurance
-corp_fin_rptg_&_pub_acct-d,Corp Fin Rptg & Pub Acct-D,active_monitoring_and_quality_assurance
-finan._systems_-a,Finan. Systems -A,active_monitoring_and_quality_assurance
+corp_fin_rptg__pub_acct-d,Corp Fin Rptg & Pub Acct-D,active_monitoring_and_quality_assurance
+finan_systems_-a,Finan. Systems -A,active_monitoring_and_quality_assurance
 icaad_strategic_support_team_f,ICAAD Strategic Support Team F,active_monitoring_and_quality_assurance
 icaad_strategic_support_team_e,ICAAD Strategic Support Team E,icaad_strategic_support_team_f
 icaad_strategic_support_team_g,ICAAD Strategic Support Team G,active_monitoring_and_quality_assurance
@@ -123,26 +123,26 @@ icaad_stratgic_support_team_-k,ICAAD Stratgic Support Team -K,icaad_strategic_su
 icaad_strategic_support_team-h,ICAAD Strategic Support Team-H,active_monitoring_and_quality_assurance
 strategic_support_team,Strategic Support Team,active_monitoring_and_quality_assurance
 corporate_accounting,Corporate Accounting,integrated_corporate_accounting_and_accountability
-cpp&oas_accnt_&_dept_fin_cod-a,CPP&OAS Accnt & Dept Fin Cod-A,corporate_accounting
-cpp&oas_accnt_&_dept_fin_cod-d,CPP&OAS Accnt & Dept Fin Cod-D,cpp&oas_accnt_&_dept_fin_cod-a
-cpp&oas_accnt_&_dept_fin_cod-b,CPP&OAS Accnt & Dept Fin Cod-B,cpp&oas_accnt_&_dept_fin_cod-a
-cpp&oas_accnt_&_dept_fin_cod-e,CPP&OAS Accnt & Dept Fin Cod-E,cpp&oas_accnt_&_dept_fin_cod-a
+cppoas_accnt__dept_fin_cod-a,CPP&OAS Accnt & Dept Fin Cod-A,corporate_accounting
+cppoas_accnt__dept_fin_cod-d,CPP&OAS Accnt & Dept Fin Cod-D,cppoas_accnt__dept_fin_cod-a
+cppoas_accnt__dept_fin_cod-b,CPP&OAS Accnt & Dept Fin Cod-B,cppoas_accnt__dept_fin_cod-a
+cppoas_accnt__dept_fin_cod-e,CPP&OAS Accnt & Dept Fin Cod-E,cppoas_accnt__dept_fin_cod-a
 departmental_accounting-a,Departmental Accounting-A,corporate_accounting
-publ._accnts._&_special_proj-b,Publ. Accnts. & Special Proj-B,departmental_accounting-a
-stdnt_loan_&_a/r_accntg-c,Stdnt Loan & A/R Accntg-C,departmental_accounting-a
+publ_accnts__special_proj-b,Publ. Accnts. & Special Proj-B,departmental_accounting-a
+stdnt_loan__ar_accntg-c,Stdnt Loan & A/R Accntg-C,departmental_accounting-a
 departmental_accounting-f,Departmental Accounting-F,departmental_accounting-a
-publ._accnts._&_special_proj.,Publ. Accnts. & Special Proj.,corporate_accounting
-publ._accnts._&_special_proj-a,Publ. Accnts. & Special Proj-A,publ._accnts._&_special_proj.
-departmental_accounting-d,Departmental Accounting-D,publ._accnts._&_special_proj.
-cpp&oas_accnt,CPP&OAS Accnt,publ._accnts._&_special_proj.
-stdnt_loan_&_a/r_accntg-f,Stdnt Loan & A/R Accntg-F,cpp&oas_accnt
-stdnt_loan_&_a/r_accntg,Stdnt Loan & A/R Accntg,corporate_accounting
-cpp_&_oas_accounting-a,CPP & OAS Accounting-A,stdnt_loan_&_a/r_accntg
-stdnt_loan_&_a/r_accntg-e,Stdnt Loan & A/R Accntg-E,cpp_&_oas_accounting-a
-stdnt_loan_&_a/r_accntg-a,Stdnt Loan & A/R Accntg-A,stdnt_loan_&_a/r_accntg
-stdnt_loan_&_a/r_accntg-d,Stdnt Loan & A/R Accntg-D,stdnt_loan_&_a/r_accntg-a
-stdnt_loan_&_a/r_accntg-b,Stdnt Loan & A/R Accntg-B,stdnt_loan_&_a/r_accntg
-a/r_&_loans_accounting_rc,A/R & loans Accounting RC,corporate_accounting
+publ_accnts__special_proj,Publ. Accnts. & Special Proj.,corporate_accounting
+publ_accnts__special_proj-a,Publ. Accnts. & Special Proj-A,publ_accnts__special_proj
+departmental_accounting-d,Departmental Accounting-D,publ_accnts__special_proj
+cppoas_accnt,CPP&OAS Accnt,publ_accnts__special_proj
+stdnt_loan__ar_accntg-f,Stdnt Loan & A/R Accntg-F,cppoas_accnt
+stdnt_loan__ar_accntg,Stdnt Loan & A/R Accntg,corporate_accounting
+cpp__oas_accounting-a,CPP & OAS Accounting-A,stdnt_loan__ar_accntg
+stdnt_loan__ar_accntg-e,Stdnt Loan & A/R Accntg-E,cpp__oas_accounting-a
+stdnt_loan__ar_accntg-a,Stdnt Loan & A/R Accntg-A,stdnt_loan__ar_accntg
+stdnt_loan__ar_accntg-d,Stdnt Loan & A/R Accntg-D,stdnt_loan__ar_accntg-a
+stdnt_loan__ar_accntg-b,Stdnt Loan & A/R Accntg-B,stdnt_loan__ar_accntg
+ar__loans_accounting_rc,A/R & loans Accounting RC,corporate_accounting
 financial_policy_and_internal_control,Financial Policy and Internal Control,integrated_corporate_accounting_and_accountability
 financial_policy_-h,Financial Policy -H,financial_policy_and_internal_control
 financial_policy-f,Financial Policy-F,financial_policy_-h
@@ -156,41 +156,41 @@ financial_policy-b,Financial Policy-B,financial_policy_-h
 internal_control-b,Internal Control-B,financial_policy_and_internal_control
 internal_control_-e,Internal Control -E,financial_policy_and_internal_control
 national_accounts_payable,National Accounts Payable,integrated_corporate_accounting_and_accountability
-"nhq,_ntnl_accnts_payable-c","NHQ, Ntnl Accnts Payable-C",national_accounts_payable
-"nhq,_ntnl_accnts_payable_-a","NHQ, Ntnl Accnts Payable -A","nhq,_ntnl_accnts_payable-c"
-"nhq,_ntnl_accnts_payable-p","NHQ, Ntnl Accnts Payable-P","nhq,_ntnl_accnts_payable_-a"
-"nhq,_ntnl_accnts_payable_-n","NHQ, Ntnl Accnts Payable -N","nhq,_ntnl_accnts_payable-c"
-"nhq,_ntnl_accnts_payable-q","NHQ, Ntnl Accnts Payable-Q","nhq,_ntnl_accnts_payable_-n"
-"nhq,_ntnl_accnts_payable-u","NHQ, Ntnl Accnts Payable-U","nhq,_ntnl_accnts_payable-c"
-"nhq,_natnl_accnts_payable-w","NHQ, Natnl Accnts Payable-W","nhq,_ntnl_accnts_payable-u"
-"nhq,_ntnl_accnts_payable-x","NHQ, Ntnl Accnts Payable-X",national_accounts_payable
-ntnl._accnts._payable_qc-a,Ntnl. Accnts. Payable QC-A,national_accounts_payable
-ntnl._accnts._payable_qc-b,Ntnl. Accnts. Payable QC-B,ntnl._accnts._payable_qc-a
-national_acct_payable_(qc)-c,National Acct Payable (Qc)-C,ntnl._accnts._payable_qc-b
-ntnl._accnts._payable_w-b,Ntnl. Accnts. Payable W-B,national_accounts_payable
-ntnl._accnts._payable_w-c,Ntnl. Accnts. Payable W-C,ntnl._accnts._payable_w-b
-ntnl._accnts._payable_w-d,Ntnl. Accnts. Payable W-D,ntnl._accnts._payable_w-c
-ntnl._accnts._payable_w-f,Ntnl. Accnts. Payable W-F,ntnl._accnts._payable_w-b
+nhq_ntnl_accnts_payable-c,"NHQ, Ntnl Accnts Payable-C",national_accounts_payable
+nhq_ntnl_accnts_payable_-a,"NHQ, Ntnl Accnts Payable -A",nhq_ntnl_accnts_payable-c
+nhq_ntnl_accnts_payable-p,"NHQ, Ntnl Accnts Payable-P",nhq_ntnl_accnts_payable_-a
+nhq_ntnl_accnts_payable_-n,"NHQ, Ntnl Accnts Payable -N",nhq_ntnl_accnts_payable-c
+nhq_ntnl_accnts_payable-q,"NHQ, Ntnl Accnts Payable-Q",nhq_ntnl_accnts_payable_-n
+nhq_ntnl_accnts_payable-u,"NHQ, Ntnl Accnts Payable-U",nhq_ntnl_accnts_payable-c
+nhq_natnl_accnts_payable-w,"NHQ, Natnl Accnts Payable-W",nhq_ntnl_accnts_payable-u
+nhq_ntnl_accnts_payable-x,"NHQ, Ntnl Accnts Payable-X",national_accounts_payable
+ntnl_accnts_payable_qc-a,Ntnl. Accnts. Payable QC-A,national_accounts_payable
+ntnl_accnts_payable_qc-b,Ntnl. Accnts. Payable QC-B,ntnl_accnts_payable_qc-a
+national_acct_payable_(qc)-c,National Acct Payable (Qc)-C,ntnl_accnts_payable_qc-b
+ntnl_accnts_payable_w-b,Ntnl. Accnts. Payable W-B,national_accounts_payable
+ntnl_accnts_payable_w-c,Ntnl. Accnts. Payable W-C,ntnl_accnts_payable_w-b
+ntnl_accnts_payable_w-d,Ntnl. Accnts. Payable W-D,ntnl_accnts_payable_w-c
+ntnl_accnts_payable_w-f,Ntnl. Accnts. Payable W-F,ntnl_accnts_payable_w-b
 national_accounts_receivable,National Accounts Receivable,integrated_corporate_accounting_and_accountability
 compt_à_recev_nation_atl_-h,Compt à recev nation ATL -H,national_accounts_receivable
 compt_à_recev_nation_atl_-a,Compt à recev nation ATL -A,compt_à_recev_nation_atl_-h
 compt_à_recev_nation_atl_-e,Compt à recev nation ATL -E,compt_à_recev_nation_atl_-a
 investment_procurement_and_project_management,Investment Procurement and Project Management,chief_financial_officer_branch
-asset_mgmt_pol_&_proc,Asset Mgmt Pol & Proc,investment_procurement_and_project_management
-policy_and_analysis,Policy and Analysis,asset_mgmt_pol_&_proc
-report_audit_&_compliance-a,Report Audit & Compliance-A,policy_and_analysis
+asset_mgmt_pol__proc,Asset Mgmt Pol & Proc,investment_procurement_and_project_management
+policy_and_analysis,Policy and Analysis,asset_mgmt_pol__proc
+report_audit__compliance-a,Report Audit & Compliance-A,policy_and_analysis
 policy_and_analysis-a,Policy and Analysis-A,policy_and_analysis
 procurement_policy,Procurement Policy,policy_and_analysis
-invest_plan_&_proc_mgmt-d,Invest Plan & Proc Mgmt-D,investment_procurement_and_project_management
-governance_&_perform_mgmt,Governance & Perform Mgmt,invest_plan_&_proc_mgmt-d
-governance_&_perform_mgmt-b,Governance & Perform Mgmt-B,governance_&_perform_mgmt
-entrep_proj_mgtm_office,Entrep Proj Mgtm Office,governance_&_perform_mgmt
-governance_&_perform_mgmt-a,Governance & Perform Mgmt-A,governance_&_perform_mgmt
-governance_&_perform_mgmt-d,Governance & Perform Mgmt-D,governance_&_perform_mgmt
-governance_&_perform_mgmt-c,Governance & Perform Mgmt-C,governance_&_perform_mgmt
-invest_plan_&_proc_mgmt-e,Invest Plan & Proc Mgmt-E,investment_procurement_and_project_management
-investment_mgmt,Investment Mgmt,invest_plan_&_proc_mgmt-e
-policy_proc_&_system,Policy Proc & System,invest_plan_&_proc_mgmt-e
+invest_plan__proc_mgmt-d,Invest Plan & Proc Mgmt-D,investment_procurement_and_project_management
+governance__perform_mgmt,Governance & Perform Mgmt,invest_plan__proc_mgmt-d
+governance__perform_mgmt-b,Governance & Perform Mgmt-B,governance__perform_mgmt
+entrep_proj_mgtm_office,Entrep Proj Mgtm Office,governance__perform_mgmt
+governance__perform_mgmt-a,Governance & Perform Mgmt-A,governance__perform_mgmt
+governance__perform_mgmt-d,Governance & Perform Mgmt-D,governance__perform_mgmt
+governance__perform_mgmt-c,Governance & Perform Mgmt-C,governance__perform_mgmt
+invest_plan__proc_mgmt-e,Invest Plan & Proc Mgmt-E,investment_procurement_and_project_management
+investment_mgmt,Investment Mgmt,invest_plan__proc_mgmt-e
+policy_proc__system,Policy Proc & System,invest_plan__proc_mgmt-e
 myems_(sap)_centre_of_expertise,myEMS (SAP) Centre of Expertise,chief_financial_officer_branch
 business_architecture,Business Architecture,myems_(sap)_centre_of_expertise
 center_of_expertise-k,Center of Expertise-K,business_architecture
@@ -218,8 +218,8 @@ center_of_expertise-r,Center of Expertise-R,centre_of_expertise_-_o2
 center_of_expertise-c,Center of Expertise-C,myems_(sap)_centre_of_expertise
 center_of_expertise-q,Center of Expertise-Q,myems_(sap)_centre_of_expertise
 center_of_expertise,Center of Expertise,myems_(sap)_centre_of_expertise
-"real_property,_change_management_and_regional_services","Real Property, Change Management and Regional Services",chief_financial_officer_branch
-national_real_property_management,National Real Property Management,"real_property,_change_management_and_regional_services"
+real_property_change_management_and_regional_services,"Real Property, Change Management and Regional Services",chief_financial_officer_branch
+national_real_property_management,National Real Property Management,real_property_change_management_and_regional_services
 natl_real_property_mgmt-c,Natl Real Property Mgmt-C,national_real_property_management
 natl_real_property_mgmt-h,Natl Real Property Mgmt-H,natl_real_property_mgmt-c
 natl_real_property_mgmt-e,Natl Real Property Mgmt-E,national_real_property_management
@@ -228,105 +228,105 @@ natl_real_property_mgmt-s,Natl Real Property Mgmt-S,natl_real_property_mgmt-g
 natl_real_property_mgmt-k,Natl Real Property Mgmt-K,national_real_property_management
 natl_real_property_mgmt-l,Natl Real Property Mgmt-L,natl_real_property_mgmt-k
 natl_real_property_mgmt-o,Natl Real Property Mgmt-O,natl_real_property_mgmt-k
-"ncr,_facilities_asset_mgmt-t","NCR, Facilities Asset Mgmt-T",natl_real_property_mgmt-k
+ncr_facilities_asset_mgmt-t,"NCR, Facilities Asset Mgmt-T",natl_real_property_mgmt-k
 natl_real_property_mgmt-p,Natl Real Property Mgmt-P,national_real_property_management
 natl_real_property_mgmt-q,Natl Real Property Mgmt-Q,natl_real_property_mgmt-p
-"ncr,_facilities_asset_mgmt-a","NCR, Facilities Asset Mgmt-A",natl_real_property_mgmt-p
-"ncr,_facilities_asset_mgmt-u","NCR, Facilities Asset Mgmt-U",national_real_property_management
+ncr_facilities_asset_mgmt-a,"NCR, Facilities Asset Mgmt-A",natl_real_property_mgmt-p
+ncr_facilities_asset_mgmt-u,"NCR, Facilities Asset Mgmt-U",national_real_property_management
 natl_real_property_mgmt,Natl Real Property Mgmt,national_real_property_management
-"real_property,_change_management_and_regional_services_-_atlantic","Real Property, Change Management and Regional Services - Atlantic","real_property,_change_management_and_regional_services"
-atl_cfob,ATL CFOB,"real_property,_change_management_and_regional_services_-_atlantic"
-financial_mgmt_atl-a,Financial Mgmt ATL-A,"real_property,_change_management_and_regional_services_-_atlantic"
+real_property_change_management_and_regional_services_-_atlantic,"Real Property, Change Management and Regional Services - Atlantic",real_property_change_management_and_regional_services
+atl_cfob,ATL CFOB,real_property_change_management_and_regional_services_-_atlantic
+financial_mgmt_atl-a,Financial Mgmt ATL-A,real_property_change_management_and_regional_services_-_atlantic
 financial_mgmt_atl-b,Financial Mgmt ATL-B,financial_mgmt_atl-a
-rp_&_asset_mgmt_atl,RP & Asset Mgmt ATL,"real_property,_change_management_and_regional_services_-_atlantic"
-rp_&_asset_mgmt_atl-b,RP & Asset Mgmt ATL-B,rp_&_asset_mgmt_atl
-rp_&_asset_mgmt_atl-a,RP & Asset Mgmt ATL-A,rp_&_asset_mgmt_atl-b
-emp_soc_dev_can,Emp Soc Dev Can,rp_&_asset_mgmt_atl
-"real_property,_change_management_and_regional_services_-_ontario","Real Property, Change Management and Regional Services - Ontario","real_property,_change_management_and_regional_services"
-financial_mgmt_ont,Financial Mgmt ONT,"real_property,_change_management_and_regional_services_-_ontario"
+rp__asset_mgmt_atl,RP & Asset Mgmt ATL,real_property_change_management_and_regional_services_-_atlantic
+rp__asset_mgmt_atl-b,RP & Asset Mgmt ATL-B,rp__asset_mgmt_atl
+rp__asset_mgmt_atl-a,RP & Asset Mgmt ATL-A,rp__asset_mgmt_atl-b
+emp_soc_dev_can,Emp Soc Dev Can,rp__asset_mgmt_atl
+real_property_change_management_and_regional_services_-_ontario,"Real Property, Change Management and Regional Services - Ontario",real_property_change_management_and_regional_services
+financial_mgmt_ont,Financial Mgmt ONT,real_property_change_management_and_regional_services_-_ontario
 financial_mgmt_ont-a,Financial Mgmt ONT-A,financial_mgmt_ont
-rp_&_asset_mgmt_ont,RP & Asset Mgmt ONT,"real_property,_change_management_and_regional_services_-_ontario"
-rp_&_asset_mgmt_ont-a,RP & Asset Mgmt ONT-A,rp_&_asset_mgmt_ont
-rp_&_asset_mgmt_ont-b,RP & Asset Mgmt ONT-B,rp_&_asset_mgmt_ont
-rp_&_asset_mgmt_ont-c,RP & Asset Mgmt ONT-C,rp_&_asset_mgmt_ont
-"real_property,_change_management_and_regional_services_-_quebec","Real Property, Change Management and Regional Services - Quebec","real_property,_change_management_and_regional_services"
-cfob_qc-a,CFOB QC-A,"real_property,_change_management_and_regional_services_-_quebec"
-coord_fin_analysis-all_region,Coord Fin Analysis-All Region,"real_property,_change_management_and_regional_services"
-fin._mgmt._qc-a,Fin. Mgmt. QC-A,"real_property,_change_management_and_regional_services"
-fin._mgmt._qc-b,Fin. Mgmt. QC-B,"real_property,_change_management_and_regional_services"
-fin._mgmt._qc-c,Fin. Mgmt. QC-C,"real_property,_change_management_and_regional_services"
-"real_property,_change_management_and_regional_services_-_west","Real Property, Change Management and Regional Services - West","real_property,_change_management_and_regional_services"
-financial_mgmt_wt,Financial Mgmt WT,"real_property,_change_management_and_regional_services_-_west"
+rp__asset_mgmt_ont,RP & Asset Mgmt ONT,real_property_change_management_and_regional_services_-_ontario
+rp__asset_mgmt_ont-a,RP & Asset Mgmt ONT-A,rp__asset_mgmt_ont
+rp__asset_mgmt_ont-b,RP & Asset Mgmt ONT-B,rp__asset_mgmt_ont
+rp__asset_mgmt_ont-c,RP & Asset Mgmt ONT-C,rp__asset_mgmt_ont
+real_property_change_management_and_regional_services_-_quebec,"Real Property, Change Management and Regional Services - Quebec",real_property_change_management_and_regional_services
+cfob_qc-a,CFOB QC-A,real_property_change_management_and_regional_services_-_quebec
+coord_fin_analysis-all_region,Coord Fin Analysis-All Region,real_property_change_management_and_regional_services
+fin_mgmt_qc-a,Fin. Mgmt. QC-A,real_property_change_management_and_regional_services
+fin_mgmt_qc-b,Fin. Mgmt. QC-B,real_property_change_management_and_regional_services
+fin_mgmt_qc-c,Fin. Mgmt. QC-C,real_property_change_management_and_regional_services
+real_property_change_management_and_regional_services_-_west,"Real Property, Change Management and Regional Services - West",real_property_change_management_and_regional_services
+financial_mgmt_wt,Financial Mgmt WT,real_property_change_management_and_regional_services_-_west
 financial_mgmt_wt-a,Financial Mgmt WT-A,financial_mgmt_wt
 financial_mgmt_wt-b,Financial Mgmt WT-B,financial_mgmt_wt
 financial_mgmt_wt-c,Financial Mgmt WT-C,financial_mgmt_wt
 financial_mgmt_wt-d,Financial Mgmt WT-D,financial_mgmt_wt
 financial_mgmt_wt-e,Financial Mgmt WT-E,financial_mgmt_wt
-rp_&_asset_mgmt_wt,RP & Asset Mgmt WT,"real_property,_change_management_and_regional_services_-_west"
-rp_&_asset_mgmt_wt-a,RP & Asset Mgmt WT-A,rp_&_asset_mgmt_wt
-rp_&_asset_mgmt_wt-b,RP & Asset Mgmt WT-B,rp_&_asset_mgmt_wt
-cfob_western_territories-a,CFOB Western Territories-A,"real_property,_change_management_and_regional_services_-_west"
-transformation_and_change_management,Transformation and Change Management,"real_property,_change_management_and_regional_services"
-natl_real_property_mgmt-a,Natl Real Property Mgmt-A,"real_property,_change_management_and_regional_services"
+rp__asset_mgmt_wt,RP & Asset Mgmt WT,real_property_change_management_and_regional_services_-_west
+rp__asset_mgmt_wt-a,RP & Asset Mgmt WT-A,rp__asset_mgmt_wt
+rp__asset_mgmt_wt-b,RP & Asset Mgmt WT-B,rp__asset_mgmt_wt
+cfob_western_territories-a,CFOB Western Territories-A,real_property_change_management_and_regional_services_-_west
+transformation_and_change_management,Transformation and Change Management,real_property_change_management_and_regional_services
+natl_real_property_mgmt-a,Natl Real Property Mgmt-A,real_property_change_management_and_regional_services
 natl_real_property_mgmt-b,Natl Real Property Mgmt-B,natl_real_property_mgmt-a
 human_resources_services_branch,Human Resources Services Branch,deputy_minister_of_employment_and_social_development
 assistant_dm_office,Assistant DM Office,human_resources_services_branch
-income_security_&_social_development_branch,Income Security & Social Development Branch,deputy_minister_of_employment_and_social_development
-canadian_pension_plan_disability,Canadian Pension Plan Disability,income_security_&_social_development_branch
+income_security__social_development_branch,Income Security & Social Development Branch,deputy_minister_of_employment_and_social_development
+canadian_pension_plan_disability,Canadian Pension Plan Disability,income_security__social_development_branch
 cppd_project_office,CPPD Project Office,canadian_pension_plan_disability
-community_development_&_homelessness_partnership,Community Development & Homelessness Partnership,income_security_&_social_development_branch
-"fdrl,_prov._and_terr._rlts-a","FDRL, PROV. AND TERR. RLTS-A",community_development_&_homelessness_partnership
-office_for_disability_issues,Office for Disability Issues,income_security_&_social_development_branch
-knowledge/integ/partner._div.,Knowledge/Integ/Partner. Div.,office_for_disability_issues
-knowledge_and_integration_team,Knowledge and Integration Team,knowledge/integ/partner._div.
-knowledge_management,Knowledge Management,knowledge/integ/partner._div.
-partnerships_&_engagement_unit,Partnerships & Engagement Unit,knowledge/integ/partner._div.
-seniors_and_pensions_policy_secretariat,Seniors and Pensions Policy Secretariat,income_security_&_social_development_branch
-cpp_policy_&_legislation,CPP Policy & legislation,seniors_and_pensions_policy_secretariat
-cpp_legislation_&_litigation,CPP Legislation & Litigation,cpp_policy_&_legislation
-cpp_policy,CPP Policy,cpp_policy_&_legislation
+community_development__homelessness_partnership,Community Development & Homelessness Partnership,income_security__social_development_branch
+fdrl_prov_and_terr_rlts-a,"FDRL, PROV. AND TERR. RLTS-A",community_development__homelessness_partnership
+office_for_disability_issues,Office for Disability Issues,income_security__social_development_branch
+knowledgeintegpartner_div,Knowledge/Integ/Partner. Div.,office_for_disability_issues
+knowledge_and_integration_team,Knowledge and Integration Team,knowledgeintegpartner_div
+knowledge_management,Knowledge Management,knowledgeintegpartner_div
+partnerships__engagement_unit,Partnerships & Engagement Unit,knowledgeintegpartner_div
+seniors_and_pensions_policy_secretariat,Seniors and Pensions Policy Secretariat,income_security__social_development_branch
+cpp_policy__legislation,CPP Policy & legislation,seniors_and_pensions_policy_secretariat
+cpp_legislation__litigation,CPP Legislation & Litigation,cpp_policy__legislation
+cpp_policy,CPP Policy,cpp_policy__legislation
 int_policy_agreements,Int Policy Agreements,seniors_and_pensions_policy_secretariat
 info_sharing_agreements,Info Sharing Agreements,int_policy_agreements
-"oas_policy,_legisl._&_stats","OAS Policy, Legisl. & Stats",seniors_and_pensions_policy_secretariat
-legislation_&_litigation,Legislation & Litigation,"oas_policy,_legisl._&_stats"
-oas_policy,OAS Policy,"oas_policy,_legisl._&_stats"
-pension_statistics,Pension Statistics,"oas_policy,_legisl._&_stats"
-"seniors_policy,_part._&_engag.","Seniors Policy, Part. & Engag.",seniors_and_pensions_policy_secretariat
-corporate_services,Corporate Services,"seniors_policy,_part._&_engag."
-partnership_&_engagagement,Partnership & Engagagement,"seniors_policy,_part._&_engag."
-seniors_policy,Seniors Policy,"seniors_policy,_part._&_engag."
-strategic_integration_planning_and_accountability,Strategic Integration Planning and Accountability,income_security_&_social_development_branch
-corporate_management_div._-_a,Corporate Management Div. - A,strategic_integration_planning_and_accountability
-bms_-_administrative_services,BMS - Administrative Services,corporate_management_div._-_a
+oas_policy_legisl__stats,"OAS Policy, Legisl. & Stats",seniors_and_pensions_policy_secretariat
+legislation__litigation,Legislation & Litigation,oas_policy_legisl__stats
+oas_policy,OAS Policy,oas_policy_legisl__stats
+pension_statistics,Pension Statistics,oas_policy_legisl__stats
+seniors_policy_part__engag,"Seniors Policy, Part. & Engag.",seniors_and_pensions_policy_secretariat
+corporate_services,Corporate Services,seniors_policy_part__engag
+partnership__engagagement,Partnership & Engagagement,seniors_policy_part__engag
+seniors_policy,Seniors Policy,seniors_policy_part__engag
+strategic_integration_planning_and_accountability,Strategic Integration Planning and Accountability,income_security__social_development_branch
+corporate_management_div_-_a,Corporate Management Div. - A,strategic_integration_planning_and_accountability
+bms_-_administrative_services,BMS - Administrative Services,corporate_management_div_-_a
 bms_-_admin_ops_planning,BMS - Admin Ops Planning,bms_-_administrative_services
 bms_-_admin_ops_planning_-_a,BMS - Admin Ops Planning - A,bms_-_administrative_services
-bms_-_finance_and_procurement,BMS - Finance and Procurement,corporate_management_div._-_a
+bms_-_finance_and_procurement,BMS - Finance and Procurement,corporate_management_div_-_a
 bms_-_finance,BMS - Finance,bms_-_finance_and_procurement
-prog_info_mgmt-analysis_-_b,Prog Info Mgmt-Analysis - B,corporate_management_div._-_a
+prog_info_mgmt-analysis_-_b,Prog Info Mgmt-Analysis - B,corporate_management_div_-_a
 bms_-_staffing,BMS - Staffing,prog_info_mgmt-analysis_-_b
 ministerial_executive_coord,Ministerial Executive Coord,strategic_integration_planning_and_accountability
-minist._executive_coord_-a,Minist. Executive Coord -A,ministerial_executive_coord
-minist._executive_coord_-b,Minist. Executive Coord -B,ministerial_executive_coord
+minist_executive_coord_-a,Minist. Executive Coord -A,ministerial_executive_coord
+minist_executive_coord_-b,Minist. Executive Coord -B,ministerial_executive_coord
 strgc_intgtn_plan_acct,Strgc Intgtn Plan Acct,ministerial_executive_coord
-minist._executive_coord_-c,Minist. Executive Coord -C,ministerial_executive_coord
-"planning,_results/_risk_mgt-a","Planning, Results/ Risk Mgt-A",strategic_integration_planning_and_accountability
-"planning,_results/_risk_mgt-c","Planning, Results/ Risk Mgt-C","planning,_results/_risk_mgt-a"
+minist_executive_coord_-c,Minist. Executive Coord -C,ministerial_executive_coord
+planning_results_risk_mgt-a,"Planning, Results/ Risk Mgt-A",strategic_integration_planning_and_accountability
+planning_results_risk_mgt-c,"Planning, Results/ Risk Mgt-C",planning_results_risk_mgt-a
 dg-strgc_intgtn_plan_acct_-_b,Dg-Strgc Intgtn Plan Acct - B,strategic_integration_planning_and_accountability
-strat_integration_&_ling_serv,Strat Integration & Ling Serv,strategic_integration_planning_and_accountability
-casdo_implementation,CASDO Implementation,income_security_&_social_development_branch
+strat_integration__ling_serv,Strat Integration & Ling Serv,strategic_integration_planning_and_accountability
+casdo_implementation,CASDO Implementation,income_security__social_development_branch
 communications,Communications,casdo_implementation
 grants_and_contributions,Grants and Contributions,casdo_implementation
 human_resources-a,Human Resources-A,casdo_implementation
 operations-a,Operations-A,casdo_implementation
 finance-a,Finance-A,casdo_implementation
-governance_&_reporting-a,Governance & Reporting-A,casdo_implementation
-accessibility_secretariat,Accessibility Secretariat,income_security_&_social_development_branch
-"innovation,_information_&_technology_branch","Innovation, Information & Technology Branch",deputy_minister_of_employment_and_social_development
-business_solutions_and_information_management,Business Solutions and Information Management,"innovation,_information_&_technology_branch"
-"mobile,_portal_and_interoperability_solution","Mobile, Portal and Interoperability Solution",business_solutions_and_information_management
-interoperability_services,Interoperability Services,"mobile,_portal_and_interoperability_solution"
+governance__reporting-a,Governance & Reporting-A,casdo_implementation
+accessibility_secretariat,Accessibility Secretariat,income_security__social_development_branch
+innovation_information__technology_branch,"Innovation, Information & Technology Branch",deputy_minister_of_employment_and_social_development
+business_solutions_and_information_management,Business Solutions and Information Management,innovation_information__technology_branch
+mobile_portal_and_interoperability_solution,"Mobile, Portal and Interoperability Solution",business_solutions_and_information_management
+interoperability_services,Interoperability Services,mobile_portal_and_interoperability_solution
 departmental_service_bus,Departmental Service Bus,interoperability_services
-intergr._hub-b,Intergr. Hub-B,departmental_service_bus
+intergr_hub-b,Intergr. Hub-B,departmental_service_bus
 introperability_solution_-_1,Introperability Solution - 1,departmental_service_bus
 departmental_service_bus-a,Departmental Service Bus-A,departmental_service_bus
 interoperability_solutions,Interoperability Solutions,interoperability_services
@@ -334,75 +334,75 @@ eiss_portfolio_management,EISS Portfolio Management,interoperability_solutions
 interoperability_solutions-1,Interoperability Solutions-1,interoperability_solutions
 interoperability_solution__1,Interoperability Solution _1,interoperability_solutions
 sds_resource_centre-c,SDS Resource Centre-C,interoperability_services
-web_solutions_and_client_access_(wsca),Web Solutions and Client Access (WSCA),"mobile,_portal_and_interoperability_solution"
-cmpra_cms_fin_&_adm,Cmpra Cms Fin & Adm,web_solutions_and_client_access_(wsca)
-erp_-_sap_/_interop-c,Erp - Sap / Interop-C,cmpra_cms_fin_&_adm
-tribunal&pension_sup-b,Tribunal&Pension Sup-B,cmpra_cms_fin_&_adm
-bsi-mobile_tech._sol.,BSI-Mobile Tech. Sol.,"mobile,_portal_and_interoperability_solution"
+web_solutions_and_client_access_(wsca),Web Solutions and Client Access (WSCA),mobile_portal_and_interoperability_solution
+cmpra_cms_fin__adm,Cmpra Cms Fin & Adm,web_solutions_and_client_access_(wsca)
+erp_-_sap__interop-c,Erp - Sap / Interop-C,cmpra_cms_fin__adm
+tribunalpension_sup-b,Tribunal&Pension Sup-B,cmpra_cms_fin__adm
+bsi-mobile_tech_sol,BSI-Mobile Tech. Sol.,mobile_portal_and_interoperability_solution
 site_reliability_engineering,Site Reliability Engineering,business_solutions_and_information_management
 brm_strategic_coordination,BRM Strategic Coordination,business_solutions_and_information_management
-business_solutions_innovation,Business Solutions Innovation,"innovation,_information_&_technology_branch"
+business_solutions_innovation,Business Solutions Innovation,innovation_information__technology_branch
 benefits_and_case_management_solutions,Benefits and Case Management Solutions,business_solutions_innovation
 ei_and_pensions_benefit_solutions,EI and Pensions Benefit Solutions,benefits_and_case_management_solutions
 ei_benefit_pay_renov-a,Ei Benefit Pay Renov-A,ei_and_pensions_benefit_solutions
 ei_benefit_pay_renov-b,Ei Benefit Pay Renov-B,ei_benefit_pay_renov-a
-empins_paym&infosyst-a,EmpIns Paym&InfoSyst-A,ei_and_pensions_benefit_solutions
-eiclaimmaint&rep_sys-c,EiClaimMaint&Rep Sys-C,empins_paym&infosyst-a
-ei_payment_&_info_system,EI Payment & Info System,empins_paym&infosyst-a
-empins_paym&infosyst-b,EmpIns Paym&InfoSyst-B,empins_paym&infosyst-a
-inv_&_control_detec-a,Inv & Control Detec-A,ei_and_pensions_benefit_solutions
-eiclaimmaint&rep_sys-d,EiClaimMaint&Rep Sys-D,inv_&_control_detec-a
-inv_&_control_detec-b,Inv & Control Detec-B,inv_&_control_detec-a
-inv_&_control_detec-d,Inv & Control Detec-D,inv_&_control_detec-a
-eiclaimmaint&rep_sys-a,EiClaimMaint&Rep Sys-A,ei_and_pensions_benefit_solutions
+empins_payminfosyst-a,EmpIns Paym&InfoSyst-A,ei_and_pensions_benefit_solutions
+eiclaimmaintrep_sys-c,EiClaimMaint&Rep Sys-C,empins_payminfosyst-a
+ei_payment__info_system,EI Payment & Info System,empins_payminfosyst-a
+empins_payminfosyst-b,EmpIns Paym&InfoSyst-B,empins_payminfosyst-a
+inv__control_detec-a,Inv & Control Detec-A,ei_and_pensions_benefit_solutions
+eiclaimmaintrep_sys-d,EiClaimMaint&Rep Sys-D,inv__control_detec-a
+inv__control_detec-b,Inv & Control Detec-B,inv__control_detec-a
+inv__control_detec-d,Inv & Control Detec-D,inv__control_detec-a
+eiclaimmaintrep_sys-a,EiClaimMaint&Rep Sys-A,ei_and_pensions_benefit_solutions
 corporate_emerging_solutions,CORPORATE EMERGING SOLUTIONS,business_solutions_innovation
 csosd-c,CSOSD-C,business_solutions_innovation
-"employment,_correspondence,_contribution_and_case_management_solutions","Employment, Correspondence, Contribution and Case Management Solutions",business_solutions_innovation
-contributions_systems,Contributions Systems,"employment,_correspondence,_contribution_and_case_management_solutions"
-csls_dev_&_prod_sup-a,CSLS Dev & Prod Sup-A,contributions_systems
-cesg_-_development-c,CESG - Development-C,csls_dev_&_prod_sup-a
-csls_dev_&_prod_sup-c,CSLS Dev & Prod Sup-C,csls_dev_&_prod_sup-a
-g&c_client_module-a,G&C Client Module-A,contributions_systems
-g&c_client_module-c,G&C Client Module-C,g&c_client_module-a
-g&c_new_initiatives-b,G&C New Initiatives-B,g&c_client_module-a
-g&c_project_life_cyc-a,G&C Project Life Cyc-A,contributions_systems
-g&c_client_module-b,G&C Client Module-B,g&c_project_life_cyc-a
-"skills,_employment_and_partner_solutions","Skills, Employment and Partner Solutions","employment,_correspondence,_contribution_and_case_management_solutions"
-part_data_exchange-a,Part Data Exchange-A,"skills,_employment_and_partner_solutions"
+employment_correspondence_contribution_and_case_management_solutions,"Employment, Correspondence, Contribution and Case Management Solutions",business_solutions_innovation
+contributions_systems,Contributions Systems,employment_correspondence_contribution_and_case_management_solutions
+csls_dev__prod_sup-a,CSLS Dev & Prod Sup-A,contributions_systems
+cesg_-_development-c,CESG - Development-C,csls_dev__prod_sup-a
+csls_dev__prod_sup-c,CSLS Dev & Prod Sup-C,csls_dev__prod_sup-a
+gc_client_module-a,G&C Client Module-A,contributions_systems
+gc_client_module-c,G&C Client Module-C,gc_client_module-a
+gc_new_initiatives-b,G&C New Initiatives-B,gc_client_module-a
+gc_project_life_cyc-a,G&C Project Life Cyc-A,contributions_systems
+gc_client_module-b,G&C Client Module-B,gc_project_life_cyc-a
+skills_employment_and_partner_solutions,"Skills, Employment and Partner Solutions",employment_correspondence_contribution_and_case_management_solutions
+part_data_exchange-a,Part Data Exchange-A,skills_employment_and_partner_solutions
 part_data_exchange-b,Part Data Exchange-B,part_data_exchange-a
 part_data_exchange-c,Part Data Exchange-C,part_data_exchange-a
-resource_centre-c,Resource Centre-C,"skills,_employment_and_partner_solutions"
+resource_centre-c,Resource Centre-C,skills_employment_and_partner_solutions
 temp_foreign_wrk_lab_mkt_info,Temp Foreign Wrk Lab Mkt Info,resource_centre-c
-tfw_&_labour_market_info_syst,TFW & Labour Market Info Syst,resource_centre-c
-temporary_foreign_worker_&_lab,TEMPORARY FOREIGN WORKER & LAB,resource_centre-c
-skills_&_employment-a,Skills & Employment-A,"skills,_employment_and_partner_solutions"
-csls_dev_&_prod_sup-b,CSLS Dev & Prod Sup-B,skills_&_employment-a
-appli_web-d,Appli Web-D,skills_&_employment-a
-temporary_foreign_workers_sys,Temporary Foreign Workers Sys,"skills,_employment_and_partner_solutions"
-case_management,Case Management,"employment,_correspondence,_contribution_and_case_management_solutions"
+tfw__labour_market_info_syst,TFW & Labour Market Info Syst,resource_centre-c
+temporary_foreign_worker__lab,TEMPORARY FOREIGN WORKER & LAB,resource_centre-c
+skills__employment-a,Skills & Employment-A,skills_employment_and_partner_solutions
+csls_dev__prod_sup-b,CSLS Dev & Prod Sup-B,skills__employment-a
+appli_web-d,Appli Web-D,skills__employment-a
+temporary_foreign_workers_sys,Temporary Foreign Workers Sys,skills_employment_and_partner_solutions
+case_management,Case Management,employment_correspondence_contribution_and_case_management_solutions
 appeals_systems-a,Appeals Systems-A,case_management
 appeals_systems-c,Appeals Systems-C,appeals_systems-a
-cga_&_ei_support_sol-a,Cga & Ei Support Sol-A,case_management
-cga_&_ei_support_sol-b,Cga & Ei Support Sol-B,cga_&_ei_support_sol-a
-cots_sup_&_case_man,Cots Sup & Case Man,case_management
-integrity_case_man.-a,Integrity Case Man.-A,case_management
-integrity_case_man.-b,Integrity Case Man.-B,integrity_case_man.-a
-cga_&_ei_support_solutions-a,CGA & EI Support Solutions-A,integrity_case_man.-a
-tribunal&pension_sup-a,Tribunal&Pension Sup-A,case_management
-elect_cor._&atip_sys-c,Elect Cor. &Atip Sys-C,tribunal&pension_sup-a
-ei_processing_automation,EI Processing Automation,"employment,_correspondence,_contribution_and_case_management_solutions"
+cga__ei_support_sol-a,Cga & Ei Support Sol-A,case_management
+cga__ei_support_sol-b,Cga & Ei Support Sol-B,cga__ei_support_sol-a
+cots_sup__case_man,Cots Sup & Case Man,case_management
+integrity_case_man-a,Integrity Case Man.-A,case_management
+integrity_case_man-b,Integrity Case Man.-B,integrity_case_man-a
+cga__ei_support_solutions-a,CGA & EI Support Solutions-A,integrity_case_man-a
+tribunalpension_sup-a,Tribunal&Pension Sup-A,case_management
+elect_cor_atip_sys-c,Elect Cor. &Atip Sys-C,tribunalpension_sup-a
+ei_processing_automation,EI Processing Automation,employment_correspondence_contribution_and_case_management_solutions
 auto_corresp_sol-a,Auto Corresp Sol-A,ei_processing_automation
 auto_corresp_sol-b,Auto Corresp Sol-B,auto_corresp_sol-a
-elect_cor._&atip_sys-b,Elect Cor. &Atip Sys-B,auto_corresp_sol-a
-im/it_evergreening_prog_office,IM/IT Evergreening Prog Office,business_solutions_innovation
-td-pen._stab._&_remed.,TD-Pen. Stab. & Remed.,business_solutions_innovation
+elect_cor_atip_sys-b,Elect Cor. &Atip Sys-B,auto_corresp_sol-a
+imit_evergreening_prog_office,IM/IT Evergreening Prog Office,business_solutions_innovation
+td-pen_stab__remed,TD-Pen. Stab. & Remed.,business_solutions_innovation
 business_solutions,Business Solutions,business_solutions_innovation
 td-bcp_and_it_dr,TD-BCP and IT DR,business_solutions_innovation
-business_operations_and_solutions_services,Business Operations and Solutions Services,"innovation,_information_&_technology_branch"
+business_operations_and_solutions_services,Business Operations and Solutions Services,innovation_information__technology_branch
 business_solution_management,Business Solution Management,business_operations_and_solutions_services
 business_solutions_-_contact_centres_projects_and_operations,Business Solutions - Contact Centres Projects and Operations,business_solution_management
 enterprise_project_-_a,Enterprise Project - A,business_solutions_-_contact_centres_projects_and_operations
-sin_-_sir_/_vital_events-b,SIN - SIR / Vital Events-B,enterprise_project_-_a
+sin_-_sir__vital_events-b,SIN - SIR / Vital Events-B,enterprise_project_-_a
 erp_solutions,ERP Solutions,business_operations_and_solutions_services
 peoplesoft_technical,PeopleSoft Technical,erp_solutions
 peoplesoft_development,PeopleSoft Development,peoplesoft_technical
@@ -414,34 +414,34 @@ pdo_enterprise_solution_-_a,PDO Enterprise Solution - A,project_management_resou
 pdo__enterprise_solution-a2,PDO  Enterprise Solution-A2,pdo_enterprise_solution_-_a
 transformation_-_2,Transformation - 2,project_management_resource_centre
 pdo_enterprise_solution-b1,PDO Enterprise Solution-B1,business_operations_and_solutions_services
-chief_information_officer's_office,Chief Information Officer's Office,"innovation,_information_&_technology_branch"
-"strategy,_architecture_and_business_relations","Strategy, Architecture and Business Relations","innovation,_information_&_technology_branch"
-branch_project_management_office,Branch Project Management Office,"strategy,_architecture_and_business_relations"
+chief_information_officer's_office,Chief Information Officer's Office,innovation_information__technology_branch
+strategy_architecture_and_business_relations,"Strategy, Architecture and Business Relations",innovation_information__technology_branch
+branch_project_management_office,Branch Project Management Office,strategy_architecture_and_business_relations
 br-project_management_office,BR-Project Management Office,branch_project_management_office
-demand/portfol_mgt/bus_arch,Demand/Portfol Mgt/Bus Arch,br-project_management_office
+demandportfol_mgtbus_arch,Demand/Portfol Mgt/Bus Arch,br-project_management_office
 project_support_office,Project Support Office,branch_project_management_office
 centre_of_excellence,Centre of Excellence,branch_project_management_office
 center_of_excellence,Center of Excellence,centre_of_excellence
-enabling_services_and_programs,Enabling Services and Programs,"strategy,_architecture_and_business_relations"
+enabling_services_and_programs,Enabling Services and Programs,strategy_architecture_and_business_relations
 esdc_policy_program,ESDC Policy Program,enabling_services_and_programs
 sc_channels_integ_dev_prog,SC Channels Integ Dev Prog,enabling_services_and_programs
 sc_income_support_programs,SC Income Support Programs,enabling_services_and_programs
-svc_mgmt_reg/strat_prtn_mgmt,Svc Mgmt Reg/Strat Prtn Mgmt,enabling_services_and_programs
-enterprise_operations,Enterprise Operations,"strategy,_architecture_and_business_relations"
+svc_mgmt_regstrat_prtn_mgmt,Svc Mgmt Reg/Strat Prtn Mgmt,enabling_services_and_programs
+enterprise_operations,Enterprise Operations,strategy_architecture_and_business_relations
 cloud_centre_of_expertise,Cloud Centre of Expertise,enterprise_operations
 cloud_services,Cloud Services,cloud_centre_of_expertise
 cloud_-_client_relationships,Cloud - Client Relationships,cloud_centre_of_expertise
-programs_and_policy,Programs and Policy,"strategy,_architecture_and_business_relations"
+programs_and_policy,Programs and Policy,strategy_architecture_and_business_relations
 crm_policy_program_b,CRM Policy Program B,programs_and_policy
 sc_channels_integ_dev_prog-b,SC Channels Integ Dev Prog-B,programs_and_policy
 crm_policy_program_d,CRM Policy Program D,programs_and_policy
 business_alignment,Business alignment,programs_and_policy
 crm_policy_and_program_-_c,CRM Policy and Program - C,programs_and_policy
-regions,Regions,"strategy,_architecture_and_business_relations"
+regions,Regions,strategy_architecture_and_business_relations
 business_relations,Business Relations,regions
-corp_&_enabling_services,Corp & Enabling Services,regions
+corp__enabling_services,Corp & Enabling Services,regions
 it_business_line_support,IT Business Line support,regions
-architecture,Architecture,"strategy,_architecture_and_business_relations"
+architecture,Architecture,strategy_architecture_and_business_relations
 bdm_architecture,BDM Architecture,architecture
 bdm_architecture-a,BDM Architecture-A,bdm_architecture
 enterprise_architecture_program,Enterprise Architecture Program,architecture
@@ -453,22 +453,22 @@ solutions_architecture,Solutions Architecture,architecture
 architecture_review-a,Architecture Review-A,solutions_architecture
 architecture_review-b,Architecture Review-B,architecture_review-a
 business_process_services-a,Business Process Services-A,solutions_architecture
-bus._relationship_management,Bus. Relationship Management,solutions_architecture
+bus_relationship_management,Bus. Relationship Management,solutions_architecture
 technology_architecture,Technology Architecture,architecture
 innovation,Innovation,technology_architecture
 strategy,Strategy,technology_architecture
-sabr-service_strategy,SABR-Service Strategy,"strategy,_architecture_and_business_relations"
+sabr-service_strategy,SABR-Service Strategy,strategy_architecture_and_business_relations
 bus_process_mgmt_ctre_exp,Bus Process Mgmt Ctre Exp,sabr-service_strategy
-software/a,Software/a,"strategy,_architecture_and_business_relations"
-sabr-it_tech._research,SABR-IT Tech. Research,"strategy,_architecture_and_business_relations"
-enterprise_operations,Enterprise Operations,"innovation,_information_&_technology_branch"
+softwarea,Software/a,strategy_architecture_and_business_relations
+sabr-it_tech_research,SABR-IT Tech. Research,strategy_architecture_and_business_relations
+enterprise_operations,Enterprise Operations,innovation_information__technology_branch
 distributed_computing,Distributed Computing,enterprise_operations
 distributed_computing_-_support,Distributed Computing - Support,distributed_computing
 asset_inventory_and_onsite_sup,Asset Inventory and Onsite Sup,distributed_computing_-_support
 executve_onsite_team_ncr1-b,Executve Onsite Team NCR1-B,asset_inventory_and_onsite_sup
 eexcutve_onsite_team_ncr1-d,Eexcutve Onsite Team NCR1-D,distributed_computing_-_support
 executve_onsite_team_ncr1-c,Executve Onsite Team NCR1-C,eexcutve_onsite_team_ncr1-d
-srvc_integratn/prjct_supp-b,Srvc Integratn/Prjct Supp-B,eexcutve_onsite_team_ncr1-d
+srvc_integratnprjct_supp-b,Srvc Integratn/Prjct Supp-B,eexcutve_onsite_team_ncr1-d
 major_incident_coordination,Major Incident Coordination,distributed_computing_-_support
 eastern_onsite_team-b,Eastern Onsite Team-B,major_incident_coordination
 ontario_onsite_team-a,Ontario Onsite Team-A,distributed_computing_-_support
@@ -476,7 +476,7 @@ eastern_onsite_team-e,Eastern Onsite Team-E,ontario_onsite_team-a
 ontario_onsite_team-c,Ontario Onsite Team-C,ontario_onsite_team-a
 sip_east,SIP East,ontario_onsite_team-a
 western-territ_onsite_team-a,Western-Territ Onsite Team-A,distributed_computing_-_support
-innovatn_info_tech_br/ent_srvs,Innovatn Info Tech Br/Ent Srvs,western-territ_onsite_team-a
+innovatn_info_tech_brent_srvs,Innovatn Info Tech Br/Ent Srvs,western-territ_onsite_team-a
 western-territ_onsite_team-c,Western-Territ Onsite Team-C,western-territ_onsite_team-a
 it_security,IT Security,distributed_computing
 identity_credential_acces_mgmt,Identity Credential Acces Mgmt,it_security
@@ -484,20 +484,20 @@ it_security_product_management,IT Security Product Management,identity_credentia
 product_management,Product Management,identity_credential_acces_mgmt
 it_security_architectur_srvs-a,IT Security Architectur Srvs-A,identity_credential_acces_mgmt
 it_security_center_excellence,IT Security Center Excellence,it_security
-technical/security_architec-c,Technical/Security Architec-C,it_security_center_excellence
+technicalsecurity_architec-c,Technical/Security Architec-C,it_security_center_excellence
 its_engineering_-_mgr,ITS Engineering - Mgr,it_security
 its_engineering,ITS Engineering,its_engineering_-_mgr
-security_assessmnt_&_authoriz,Security Assessmnt & Authoriz,its_engineering_-_mgr
+security_assessmnt__authoriz,Security Assessmnt & Authoriz,its_engineering_-_mgr
 technology_architecture_srvc-a,Technology Architecture Srvc-A,it_security
 data_loss_prevention,Data Loss Prevention,technology_architecture_srvc-a
 technology_architecture_srvc-b,Technology Architecture Srvc-B,technology_architecture_srvc-a
 iitb_busn_continuity_planning,IITB Busn Continuity Planning,technology_architecture_srvc-a
 director's_office,Director's Office,it_security
 security_program_management,Security Program Management,director's_office
-srvc_integratn/prjct_supp-a,Srvc Integratn/Prjct Supp-A,distributed_computing
-service_integration_and_planni,Service integration and planni,srvc_integratn/prjct_supp-a
-srvc_integratn/prjct_supp-d,Srvc Integratn/Prjct Supp-D,srvc_integratn/prjct_supp-a
-sip_team-e,SIP Team-E,srvc_integratn/prjct_supp-a
+srvc_integratnprjct_supp-a,Srvc Integratn/Prjct Supp-A,distributed_computing
+service_integration_and_planni,Service integration and planni,srvc_integratnprjct_supp-a
+srvc_integratnprjct_supp-d,Srvc Integratn/Prjct Supp-D,srvc_integratnprjct_supp-a
+sip_team-e,SIP Team-E,srvc_integratnprjct_supp-a
 sip-_project_support_c,SIP- Project support C,distributed_computing
 distributed_computing_-_technology_and_optimization,Distributed Computing - Technology and Optimization,distributed_computing
 it_services_a,IT Services A,distributed_computing_-_technology_and_optimization
@@ -506,19 +506,19 @@ strategy_and_compliance,Strategy and Compliance,it_accessibility
 compliance_and_assessment,Compliance and Assessment,strategy_and_compliance
 e-workspace-c,E-Workspace-C,strategy_and_compliance
 accessibility_compliance,Accessibility Compliance,e-workspace-c
-"web_standards,_ace,_rms","Web Standards, ACE, RMS",it_accessibility
-awareness_and_governance,Awareness and Governance,"web_standards,_ace,_rms"
+web_standards_ace_rms,"Web Standards, ACE, RMS",it_accessibility
+awareness_and_governance,Awareness and Governance,web_standards_ace_rms
 it_services,IT Services,enterprise_operations
 data_and_analytics_services,Data and Analytics Services,it_services
-bus_analytics/reportg_srvc-a,Bus Analytics/Reportg Srvc-A,data_and_analytics_services
-bus_analytics/reportg_srvc-b,Bus Analytics/Reportg Srvc-B,bus_analytics/reportg_srvc-a
-bus_analytics/reportg_srvc-c,Bus Analytics/Reportg Srvc-C,bus_analytics/reportg_srvc-a
-bus_analytics/reportg_srvc-d,Bus Analytics/Reportg Srvc-D,bus_analytics/reportg_srvc-a
-bus_analytics/reportg_srvc-e,Bus Analytics/Reportg Srvc-E,bus_analytics/reportg_srvc-a
-bus_analytics/reportg_svc2-a,Bus Analytics/Reportg Svc2-A,data_and_analytics_services
-bus_analytics/reportg_srvc-f,Bus analytics/Reportg Srvc-F,bus_analytics/reportg_svc2-a
-bus_analytics/reportg_srvc-g,Bus analytics/Reportg Srvc-G,bus_analytics/reportg_svc2-a
-bus_analytics/reportg_svc2-b,Bus Analytics/Reportg Svc2-B,bus_analytics/reportg_svc2-a
+bus_analyticsreportg_srvc-a,Bus Analytics/Reportg Srvc-A,data_and_analytics_services
+bus_analyticsreportg_srvc-b,Bus Analytics/Reportg Srvc-B,bus_analyticsreportg_srvc-a
+bus_analyticsreportg_srvc-c,Bus Analytics/Reportg Srvc-C,bus_analyticsreportg_srvc-a
+bus_analyticsreportg_srvc-d,Bus Analytics/Reportg Srvc-D,bus_analyticsreportg_srvc-a
+bus_analyticsreportg_srvc-e,Bus Analytics/Reportg Srvc-E,bus_analyticsreportg_srvc-a
+bus_analyticsreportg_svc2-a,Bus Analytics/Reportg Svc2-A,data_and_analytics_services
+bus_analyticsreportg_srvc-f,Bus analytics/Reportg Srvc-F,bus_analyticsreportg_svc2-a
+bus_analyticsreportg_srvc-g,Bus analytics/Reportg Srvc-G,bus_analyticsreportg_svc2-a
+bus_analyticsreportg_svc2-b,Bus Analytics/Reportg Svc2-B,bus_analyticsreportg_svc2-a
 data_architecture_services-a,Data Architecture Services-A,data_and_analytics_services
 data_architecture_services_-_b,Data Architecture Services - B,data_architecture_services-a
 sql_server_db_services_-_a,SQL Server DB Services - A,data_architecture_services-a
@@ -535,10 +535,10 @@ prodctn_database_srvcs-b,Prodctn Database Srvcs-B,prodctn_database_srvcs-a
 prodctn_database_srvcs-c,Prodctn Database Srvcs-C,prodctn_database_srvcs-a
 prodctn_database_srvcs-d,Prodctn Database Srvcs-D,prodctn_database_srvcs-a
 prodctn_database_srvcs-e,Prodctn Database Srvcs-E,prodctn_database_srvcs-a
-bus._analytic/platform_service,Bus. Analytic/Platform Service,data_and_analytics_services
-bus_analytic_prdcts/platform-b,Bus Analytic Prdcts/Platform-B,it_services
-bus_analytic_prdcts/platform-c,Bus Analytic Prdcts/Platform-C,it_services
-bus_analytic_prdcts/platform-e,Bus Analytic Prdcts/Platform-E,it_services
+bus_analyticplatform_service,Bus. Analytic/Platform Service,data_and_analytics_services
+bus_analytic_prdctsplatform-b,Bus Analytic Prdcts/Platform-B,it_services
+bus_analytic_prdctsplatform-c,Bus Analytic Prdcts/Platform-C,it_services
+bus_analytic_prdctsplatform-e,Bus Analytic Prdcts/Platform-E,it_services
 database_development_svcs-b,Database Development Svcs-B,it_services
 database_development_svcs-c,Database Development Svcs-C,it_services
 database_development_svcs-e,Database Development Svcs-E,it_services
@@ -580,32 +580,32 @@ testing_team_2b,Testing Team 2B,testing_team_2
 testing_team_2h,Testing Team 2H,testing_team_2
 testing_team_7-a,Testing Team 7-A,it_services
 testing_team_7b,Testing Team 7B,it_services
-bus_analytic_prdcts/platform-d,Bus Analytic Prdcts/Platform-D,it_services
-it_spec._environments_manager,IT Spec. Environments Manager,enterprise_operations
-release_mgmnt_services-a,Release Mgmnt Services-A,it_spec._environments_manager
-"web_standards,_ace,_rms-1","Web Standards, ACE, RMS-1",it_spec._environments_manager
-"web_standards,_ace,_rms-a","Web Standards, ACE, RMS-A",it_spec._environments_manager
-qa_fit_team_1,QA Fit Team 1,it_spec._environments_manager
-qa_fit_team_2,QA Fit Team 2,it_spec._environments_manager
+bus_analytic_prdctsplatform-d,Bus Analytic Prdcts/Platform-D,it_services
+it_spec_environments_manager,IT Spec. Environments Manager,enterprise_operations
+release_mgmnt_services-a,Release Mgmnt Services-A,it_spec_environments_manager
+web_standards_ace_rms-1,"Web Standards, ACE, RMS-1",it_spec_environments_manager
+web_standards_ace_rms-a,"Web Standards, ACE, RMS-A",it_spec_environments_manager
+qa_fit_team_1,QA Fit Team 1,it_spec_environments_manager
+qa_fit_team_2,QA Fit Team 2,it_spec_environments_manager
 sade-a,SADE-A,enterprise_operations
 application_hosting_-_oracle,Application Hosting - Oracle,sade-a
-proj_serv_&_prod_manag,Proj Serv & Prod Manag,sade-a
+proj_serv__prod_manag,Proj Serv & Prod Manag,sade-a
 sade-b,SADE-B,sade-a
 specialized_environments,Specialized Environments,enterprise_operations
 cloud_support_services,Cloud Support Services,specialized_environments
-eo-contract/supplier_mgt.,EO-Contract/Supplier Mgt.,enterprise_operations
-branch_operations_and_planning,Branch Operations and Planning,"innovation,_information_&_technology_branch"
+eo-contractsupplier_mgt,EO-Contract/Supplier Mgt.,enterprise_operations
+branch_operations_and_planning,Branch Operations and Planning,innovation_information__technology_branch
 business_analysis,Business Analysis,branch_operations_and_planning
 it_research,IT Research,branch_operations_and_planning
 branch_planning_and_reporting,Branch Planning and Reporting,branch_operations_and_planning
 governance-b,Governance-B,branch_planning_and_reporting
 governance,Governance,branch_planning_and_reporting
 team_leader_policy,Team Leader Policy,branch_planning_and_reporting
-change_management_&_communications,Change Management & Communications,branch_operations_and_planning
-business_change_management,Business Change Management,change_management_&_communications
-change_management_im_it,Change Management IM IT,change_management_&_communications
-employee_engagement,Employee Engagement,change_management_&_communications
-vendor_and_info_mgmt_office,Vendor and Info Mgmt Office,change_management_&_communications
+change_management__communications,Change Management & Communications,branch_operations_and_planning
+business_change_management,Business Change Management,change_management__communications
+change_management_im_it,Change Management IM IT,change_management__communications
+employee_engagement,Employee Engagement,change_management__communications
+vendor_and_info_mgmt_office,Vendor and Info Mgmt Office,change_management__communications
 people_management,People Management,branch_operations_and_planning
 strategic_recruitment,Strategic Recruitment,people_management
 collective_process_support,Collective Process Support,strategic_recruitment
@@ -631,189 +631,189 @@ budget_mgt_forecast_services-e,Budget Mgt Forecast Services-E,branch_operations_
 budget_mgt_forecast_services-f,Budget Mgt Forecast Services-F,branch_operations_and_planning
 corporate_management-c,Corporate Management-C,branch_operations_and_planning
 resource_management-e,Resource Management-E,branch_operations_and_planning
-it_research_and_prototypes,IT Research and Prototypes,"innovation,_information_&_technology_branch"
+it_research_and_prototypes,IT Research and Prototypes,innovation_information__technology_branch
 internal_audit_services_branch,Internal Audit Services Branch,deputy_minister_of_employment_and_social_development
 audit_operations,Audit Operations,internal_audit_services_branch
 audit_operations_-_b,Audit Operations - B,audit_operations
-professional_practices_&_special_examinations,Professional Practices & Special Examinations,internal_audit_services_branch
-prof_practices_&_special_exams,Prof Practices & Special Exams,professional_practices_&_special_examinations
-planning_and_practice_mgt_-_b,Planning and Practice Mgt - B,prof_practices_&_special_exams
-professional_practices_-_a,Professional Practices - A,professional_practices_&_special_examinations
-special_examinations,Special Examinations,professional_practices_&_special_examinations
+professional_practices__special_examinations,Professional Practices & Special Examinations,internal_audit_services_branch
+prof_practices__special_exams,Prof Practices & Special Exams,professional_practices__special_examinations
+planning_and_practice_mgt_-_b,Planning and Practice Mgt - B,prof_practices__special_exams
+professional_practices_-_a,Professional Practices - A,professional_practices__special_examinations
+special_examinations,Special Examinations,professional_practices__special_examinations
 enterprise_risk_management,Enterprise Risk Management,internal_audit_services_branch
-liaison_&_departmental_audit_committee,Liaison & Departmental Audit Committee,internal_audit_services_branch
-liaison_and_dac,Liaison and DAC,liaison_&_departmental_audit_committee
+liaison__departmental_audit_committee,Liaison & Departmental Audit Committee,internal_audit_services_branch
+liaison_and_dac,Liaison and DAC,liaison__departmental_audit_committee
 learning_branch,Learning Branch,deputy_minister_of_employment_and_social_development
 canada_education_savings_program,Canada Education Savings Program,learning_branch
 program_design,Program Design,canada_education_savings_program
 mgr-prog_policy_and_innovation,Mgr-Prog Policy and Innovation,program_design
-strategic_partnership&outreach,Strategic Partnership&Outreach,program_design
-tl_-_operational_support_-_web,TL - Operational Support - Web,strategic_partnership&outreach
+strategic_partnershipoutreach,Strategic Partnership&Outreach,program_design
+tl_-_operational_support_-_web,TL - Operational Support - Web,strategic_partnershipoutreach
 program_integrity,Program Integrity,canada_education_savings_program
 ce-services_soutien_prog,CE-Services soutien prog,program_integrity
-"mgr,_integrity/project_mgmt","Mgr, Integrity/Project Mgmt",program_integrity
-data_analysis_research_&_eval,Data Analysis Research & Eval,program_integrity
+mgr_integrityproject_mgmt,"Mgr, Integrity/Project Mgmt",program_integrity
+data_analysis_research__eval,Data Analysis Research & Eval,program_integrity
 manager_monitoring,Manager Monitoring,program_integrity
 manager_compliance,Manager Compliance,program_integrity
 advisor_program_integ,Advisor Program Integ,canada_education_savings_program
 manager_e-services,Manager E-Services,learning_branch
-mgr-ope_policy_&_legislation,Mgr-Ope Policy & Legislation,learning_branch
-mgr-training_&_oper_support,Mgr-Training & Oper Support,learning_branch
-tl_-training_services,TL -Training Services,mgr-training_&_oper_support
+mgr-ope_policy__legislation,Mgr-Ope Policy & Legislation,learning_branch
+mgr-training__oper_support,Mgr-Training & Oper Support,learning_branch
+tl_-training_services,TL -Training Services,mgr-training__oper_support
 canada_student_loans_program,Canada Student Loans Program,learning_branch
 client_services,Client Services,canada_student_loans_program
-ops_support/web_services,Ops Support/Web Services,client_services
-ops_support,Ops Support,ops_support/web_services
+ops_supportweb_services,Ops Support/Web Services,client_services
+ops_support,Ops Support,ops_supportweb_services
 business_services,Business Services,client_services
 office_of_the_director_general_cslp,Office of the Director General CSLP,canada_student_loans_program
-"planning,_integrity_and_repayment","Planning, Integrity and Repayment",canada_student_loans_program
-repayment_portfolio,Repayment Portfolio,"planning,_integrity_and_repayment"
-strat_plan_&horiz_initiativesa,Strat Plan &Horiz InitiativesA,"planning,_integrity_and_repayment"
-strat_plan_&horiz_initiativesc,Strat Plan &Horiz InitiativesC,strat_plan_&horiz_initiativesa
+planning_integrity_and_repayment,"Planning, Integrity and Repayment",canada_student_loans_program
+repayment_portfolio,Repayment Portfolio,planning_integrity_and_repayment
+strat_plan_horiz_initiativesa,Strat Plan &Horiz InitiativesA,planning_integrity_and_repayment
+strat_plan_horiz_initiativesc,Strat Plan &Horiz InitiativesC,strat_plan_horiz_initiativesa
 policy_and_research,Policy and Research,canada_student_loans_program
-"data,_analytics,_and_reporting","Data, Analytics, and Reporting",policy_and_research
-leg/reg_analys_&_stakehldr_rel,Leg/Reg Analys & Stakehldr Rel,policy_and_research
+data_analytics_and_reporting,"Data, Analytics, and Reporting",policy_and_research
+legreg_analys__stakehldr_rel,Leg/Reg Analys & Stakehldr Rel,policy_and_research
 program_analysis_and_costing,Program Analysis and Costing,policy_and_research
 program_delivery,Program Delivery,canada_student_loans_program
 operations_and_systems,Operations and Systems,program_delivery
 strategic_impl_and_sp_rel,Strategic Impl and SP Rel,program_delivery
 transformation_advisory_serv,Transformation Advisory Serv,program_delivery
 fed_prov_ter_transition,Fed Prov Ter Transition,program_delivery
-comms_&_special_projects,Comms & Special Projects,program_delivery
+comms__special_projects,Comms & Special Projects,program_delivery
 senior_director's_office,Senior Director's Office,canada_student_loans_program
 canada_student_loans_program_b,Canada Student Loans Program B,senior_director's_office
-direct_financing_&operations-a,Direct Financing &Operations-A,canada_student_loans_program_b
-reporting_&_disbursements,Reporting & Disbursements,canada_student_loans_program_b
+direct_financing_operations-a,Direct Financing &Operations-A,canada_student_loans_program_b
+reporting__disbursements,Reporting & Disbursements,canada_student_loans_program_b
 transition_and_service_modernization,Transition and Service Modernization,canada_student_loans_program
 business_transformation_team,Business Transformation Team,transition_and_service_modernization
-transitn_&_service_moderniztnc,Transitn & Service ModerniztnC,transition_and_service_modernization
-"learning_policy,_partnerships_and_services","Learning Policy, Partnerships and Services",learning_branch
-policy_development,Policy Development,"learning_policy,_partnerships_and_services"
+transitn__service_moderniztnc,Transitn & Service ModerniztnC,transition_and_service_modernization
+learning_policy_partnerships_and_services,"Learning Policy, Partnerships and Services",learning_branch
+policy_development,Policy Development,learning_policy_partnerships_and_services
 policy_and_innovation,Policy and Innovation,policy_development
 international_education,International Education,policy_development
 results_and_engagement,Results and Engagement,learning_branch
 strategic_horizontal_policy,Strategic Horizontal Policy,learning_branch
-"office_of_the_assistant_deputy_minister,_learning","Office of the Assistant Deputy Minister, Learning",learning_branch
-assistant_deputy_minister's_office-executive_services,Assistant Deputy Minister's Office-Executive Services,"office_of_the_assistant_deputy_minister,_learning"
+office_of_the_assistant_deputy_minister_learning,"Office of the Assistant Deputy Minister, Learning",learning_branch
+assistant_deputy_minister's_office-executive_services,Assistant Deputy Minister's Office-Executive Services,office_of_the_assistant_deputy_minister_learning
 policy_horizons,Policy Horizons,learning_branch
-corpor_operatn_&_admin-b,Corpor Operatn & Admin-B,policy_horizons
-corpo_operatn_&_business_plann,Corpo Operatn & Business Plann,corpor_operatn_&_admin-b
+corpor_operatn__admin-b,Corpor Operatn & Admin-B,policy_horizons
+corpo_operatn__business_plann,Corpo Operatn & Business Plann,corpor_operatn__admin-b
 mino_esdc_-_departm_assistant,MINO ESDC - Departm Assistant,learning_branch
 director_general_office_-c,Director General Office -C,learning_branch
-corpor_operatn_&_admin-a,Corpor Operatn & Admin-A,director_general_office_-c
+corpor_operatn__admin-a,Corpor Operatn & Admin-A,director_general_office_-c
 director_general_office-f,Director General Office-F,director_general_office_-c
 manager_strategic_pol,Manager Strategic Pol,director_general_office_-c
 legal_services_branch,Legal Services Branch,deputy_minister_of_employment_and_social_development
 dispute_resolution_office,Dispute Resolution Office,legal_services_branch
 legal_services_-_b,Legal Services - B,dispute_resolution_office
-"manager,_business_analytics","Manager, Business Analytics",dispute_resolution_office
+manager_business_analytics,"Manager, Business Analytics",dispute_resolution_office
 legal_counsel,Legal Counsel,legal_services_branch
 legal_services_summary-d,Legal Services Summary-D,legal_counsel
 legal_executive_services,Legal Executive Services,legal_services_branch
 legal_services_summary,Legal Services Summary,legal_services_branch
 legal_services_summary-b,Legal Services Summary-B,legal_services_summary
-senior_counsel_&_group_head_-a,Senior Counsel & Group Head -A,legal_services_branch
-senior_counsel_&_group_head_-b,Senior Counsel & Group Head -B,legal_services_branch
-senior_counsel_&_group_head_-c,Senior Counsel & Group Head -C,legal_services_branch
-"chief,_records_&_info_mgmt","Chief, Records & Info Mgmt",senior_counsel_&_group_head_-c
+senior_counsel__group_head_-a,Senior Counsel & Group Head -A,legal_services_branch
+senior_counsel__group_head_-b,Senior Counsel & Group Head -B,legal_services_branch
+senior_counsel__group_head_-c,Senior Counsel & Group Head -C,legal_services_branch
+chief_records__info_mgmt,"Chief, Records & Info Mgmt",senior_counsel__group_head_-c
 public_affairs_and_stakeholder_relations_branch,Public Affairs and Stakeholder Relations Branch,deputy_minister_of_employment_and_social_development
 branch_management_services,Branch Management Services,public_affairs_and_stakeholder_relations_branch
 operations,Operations,branch_management_services
 finances,Finances,operations
-branch_man._services-finances,Branch Man. Services-Finances,finances
-finances-a,Finances-A,branch_man._services-finances
+branch_man_services-finances,Branch Man. Services-Finances,finances
+finances-a,Finances-A,branch_man_services-finances
 employment_communications_and_operations_directorate,Employment Communications and Operations Directorate,public_affairs_and_stakeholder_relations_branch
-"digital_channels,_media_services_and_events","Digital Channels, Media Services and Events",employment_communications_and_operations_directorate
-dir_media_services_&_events,Dir Media Services & Events,employment_communications_and_operations_directorate
-media_monitoring_and_analysis,Media Monitoring and Analysis,dir_media_services_&_events
-mgr_events,Mgr Events,dir_media_services_&_events
-social_media,Social Media,dir_media_services_&_events
+digital_channels_media_services_and_events,"Digital Channels, Media Services and Events",employment_communications_and_operations_directorate
+dir_media_services__events,Dir Media Services & Events,employment_communications_and_operations_directorate
+media_monitoring_and_analysis,Media Monitoring and Analysis,dir_media_services__events
+mgr_events,Mgr Events,dir_media_services__events
+social_media,Social Media,dir_media_services__events
 employment_communications,Employment Communications,employment_communications_and_operations_directorate
-mgr_jobs_&_training_comms-c,Mgr Jobs & Training Comms-C,employment_communications
+mgr_jobs__training_comms-c,Mgr Jobs & Training Comms-C,employment_communications
 mgr_mows-a,Mgr MOWS-A,public_affairs_and_stakeholder_relations_branch
 mgr_mows-d,Mgr MOWS-D,public_affairs_and_stakeholder_relations_branch
 seniors_and_social_development_communications_directorate,Seniors and Social Development Communications Directorate,public_affairs_and_stakeholder_relations_branch
 accessibility_communications,Accessibility Communications,seniors_and_social_development_communications_directorate
-"homelessness,_community_psf","Homelessness, Community PSF",accessibility_communications
+homelessness_community_psf,"Homelessness, Community PSF",accessibility_communications
 labour_communications,Labour Communications,seniors_and_social_development_communications_directorate
 internal_communications,Internal Communications,labour_communications
 internal,Internal,internal_communications
 transformation,Transformation,internal_communications
 service_canada_communications,Service Canada Communications,seniors_and_social_development_communications_directorate
 mgr_service_canada_comms,Mgr Service Canada Comms,service_canada_communications
-"seniors,_social__dev._comms-d","Seniors, Social  Dev. Comms-D",service_canada_communications
-"seniors,_social__dev._comms-e","Seniors, Social  Dev. Comms-E",service_canada_communications
+seniors_social__dev_comms-d,"Seniors, Social  Dev. Comms-D",service_canada_communications
+seniors_social__dev_comms-e,"Seniors, Social  Dev. Comms-E",service_canada_communications
 strategic_communications_and_stakeholder_relations_directorate,Strategic Communications and Stakeholder Relations Directorate,public_affairs_and_stakeholder_relations_branch
 creative_services,Creative Services,strategic_communications_and_stakeholder_relations_directorate
 mgr_creative_services-a,Mgr Creative Services-A,creative_services
 mgr_creative_services-b,Mgr Creative Services-B,creative_services
-marketing_&_advertising,Marketing & Advertising,strategic_communications_and_stakeholder_relations_directorate
-advertising,Advertising,marketing_&_advertising
-marketing,Marketing,marketing_&_advertising
-"research,_engagement_and_strategic_integration","Research, Engagement and Strategic Integration",strategic_communications_and_stakeholder_relations_directorate
-public_environment_&_opinion_research,Public Environment & Opinion Research,"research,_engagement_and_strategic_integration"
+marketing__advertising,Marketing & Advertising,strategic_communications_and_stakeholder_relations_directorate
+advertising,Advertising,marketing__advertising
+marketing,Marketing,marketing__advertising
+research_engagement_and_strategic_integration,"Research, Engagement and Strategic Integration",strategic_communications_and_stakeholder_relations_directorate
+public_environment__opinion_research,Public Environment & Opinion Research,research_engagement_and_strategic_integration
 admo_support,ADMO Support,public_affairs_and_stakeholder_relations_branch
-skills_&_employment_branch,Skills & Employment Branch,deputy_minister_of_employment_and_social_development
-adm's_office,ADM's Office,skills_&_employment_branch
-skills_&_employment-d,Skills & Employment-D,adm's_office
-briefing_corres_/_corporate_support,Briefing Corres / Corporate Support,adm's_office
-apprenticeship_&_sect_initiatives,Apprenticeship & Sect Initiatives,skills_&_employment_branch
-apprenticeship/rgld_occ_dir,Apprenticeship/Rgld Occ Dir,apprenticeship_&_sect_initiatives
-apprenticeship/rgld_occ_dir-b,Apprenticeship/Rgld Occ Dir-B,apprenticeship/rgld_occ_dir
-director_general's_office,Director General's office,apprenticeship_&_sect_initiatives
-employ_pol_yth/disblty_pers-b,Employ Pol Yth/Disblty pers-B,director_general's_office
-employ_pol_yth/disblty_pers-c,Employ Pol Yth/Disblty pers-C,director_general's_office
+skills__employment_branch,Skills & Employment Branch,deputy_minister_of_employment_and_social_development
+adm's_office,ADM's Office,skills__employment_branch
+skills__employment-d,Skills & Employment-D,adm's_office
+briefing_corres__corporate_support,Briefing Corres / Corporate Support,adm's_office
+apprenticeship__sect_initiatives,Apprenticeship & Sect Initiatives,skills__employment_branch
+apprenticeshiprgld_occ_dir,Apprenticeship/Rgld Occ Dir,apprenticeship__sect_initiatives
+apprenticeshiprgld_occ_dir-b,Apprenticeship/Rgld Occ Dir-B,apprenticeshiprgld_occ_dir
+director_general's_office,Director General's office,apprenticeship__sect_initiatives
+employ_pol_ythdisblty_pers-b,Employ Pol Yth/Disblty pers-B,director_general's_office
+employ_pol_ythdisblty_pers-c,Employ Pol Yth/Disblty pers-C,director_general's_office
 youth_employment_strategy,Youth Employment Strategy,director_general's_office
-employ_poli_yth/disblty_pers-d,Employ Poli Yth/Disblty pers-D,director_general's_office
-empl_liaison_serv_task_team-a,Empl Liaison Serv Task Team-A,apprenticeship_&_sect_initiatives
+employ_poli_ythdisblty_pers-d,Employ Poli Yth/Disblty pers-D,director_general's_office
+empl_liaison_serv_task_team-a,Empl Liaison Serv Task Team-A,apprenticeship__sect_initiatives
 empl_liaison_serv_task_team-b,Empl Liaison Serv Task Team-B,empl_liaison_serv_task_team-a
 empl_liaison_serv_task_team-c,Empl Liaison Serv Task Team-C,empl_liaison_serv_task_team-a
 empl_liaison_serv_task_team-f,Empl Liaison Serv Task Team-F,empl_liaison_serv_task_team-a
-mobility_crdtl_rcgt_&_integ,Mobility Crdtl Rcgt & Integ,apprenticeship_&_sect_initiatives
-mobility_crdtl_rcgt_&_integ-b,Mobility Crdtl Rcgt & Integ-B,mobility_crdtl_rcgt_&_integ
-trades_and_apprenticeship,Trades and Apprenticeship,apprenticeship_&_sect_initiatives
+mobility_crdtl_rcgt__integ,Mobility Crdtl Rcgt & Integ,apprenticeship__sect_initiatives
+mobility_crdtl_rcgt__integ-b,Mobility Crdtl Rcgt & Integ-B,mobility_crdtl_rcgt__integ
+trades_and_apprenticeship,Trades and Apprenticeship,apprenticeship__sect_initiatives
 trades_and_apprenticeship-f,Trades and Apprenticeship-F,trades_and_apprenticeship
 trades_and_apprenticeship-b,Trades and Apprenticeship-B,trades_and_apprenticeship-f
 trades_and_apprenticeship-h,Trades and Apprenticeship-H,trades_and_apprenticeship
 trades_and_apprenticeship-i,Trades and Apprenticeship-I,trades_and_apprenticeship
 trades_and_apprenticeship-k,Trades and Apprenticeship-K,trades_and_apprenticeship
 trans_and_apprenticeship,Trans and Apprenticeship,trades_and_apprenticeship
-apprenticeship/rgld_occ_dir-a,Apprenticeship/Rgld Occ Dir-A,trades_and_apprenticeship
-employer_liaison_services-special_project,Employer Liaison Services-Special Project,skills_&_employment_branch
+apprenticeshiprgld_occ_dir-a,Apprenticeship/Rgld Occ Dir-A,trades_and_apprenticeship
+employer_liaison_services-special_project,Employer Liaison Services-Special Project,skills__employment_branch
 employer_liaison_services-a,Employer Liaison Services-A,employer_liaison_services-special_project
-employment_insurance_policy,Employment Insurance Policy,skills_&_employment_branch
-policy_analysis_&_initiative,Policy Analysis & Initiative,employment_insurance_policy
-policy_analysis_&_initiative-b,Policy Analysis & Initiative-B,policy_analysis_&_initiative
-policy_analysis_&_initiative-c,Policy Analysis & Initiative-C,policy_analysis_&_initiative
-policy_analysis_&_initiative-d,Policy Analysis & Initiative-D,policy_analysis_&_initiative
+employment_insurance_policy,Employment Insurance Policy,skills__employment_branch
+policy_analysis__initiative,Policy Analysis & Initiative,employment_insurance_policy
+policy_analysis__initiative-b,Policy Analysis & Initiative-B,policy_analysis__initiative
+policy_analysis__initiative-c,Policy Analysis & Initiative-C,policy_analysis__initiative
+policy_analysis__initiative-d,Policy Analysis & Initiative-D,policy_analysis__initiative
 program_assessment_and_quantitative_analysis,Program Assessment and Quantitative Analysis,employment_insurance_policy
 policy_research_and_analysis-d,Policy research and Analysis-D,program_assessment_and_quantitative_analysis
 policy_research_and_analysis-e,Policy research and Analysis-E,program_assessment_and_quantitative_analysis
 policy_research_and_analysis,Policy Research and Analysis,program_assessment_and_quantitative_analysis
 program_support,Program Support,program_assessment_and_quantitative_analysis
-program_support/trng&qual_mgt,Program Support/Trng&Qual Mgt,program_support
+program_supporttrngqual_mgt,Program Support/Trng&Qual Mgt,program_support
 regulatory_and_revenue_policy_design,Regulatory and Revenue Policy Design,employment_insurance_policy
 medium_term_policy,Medium Term Policy,regulatory_and_revenue_policy_design
-appeals_&_revenue_policy_unit,Appeals & Revenue Policy Unit,regulatory_and_revenue_policy_design
+appeals__revenue_policy_unit,Appeals & Revenue Policy Unit,regulatory_and_revenue_policy_design
 emplymnt_insrnce_policy-b,Emplymnt Insrnce Policy-B,employment_insurance_policy
-indigenous_affairs_directorate,Indigenous Affairs Directorate,skills_&_employment_branch
+indigenous_affairs_directorate,Indigenous Affairs Directorate,skills__employment_branch
 director_general's_office,Director General's Office,indigenous_affairs_directorate
 horizontal_policy_division,Horizontal Policy Division,indigenous_affairs_directorate
 horizontal_policy-b,Horizontal Policy-B,horizontal_policy_division
-indigenous_coordination_&_engagement_division,Indigenous Coordination & Engagement Division,indigenous_affairs_directorate
-indigenous_affairs,Indigenous Affairs,indigenous_coordination_&_engagement_division
-strgc_partnerships_bus._dev-b,Strgc Partnerships Bus. Dev-B,indigenous_coordination_&_engagement_division
-strgc_partnerships_bus._dev-e,Strgc Partnerships Bus. Dev-E,indigenous_coordination_&_engagement_division
+indigenous_coordination__engagement_division,Indigenous Coordination & Engagement Division,indigenous_affairs_directorate
+indigenous_affairs,Indigenous Affairs,indigenous_coordination__engagement_division
+strgc_partnerships_bus_dev-b,Strgc Partnerships Bus. Dev-B,indigenous_coordination__engagement_division
+strgc_partnerships_bus_dev-e,Strgc Partnerships Bus. Dev-E,indigenous_coordination__engagement_division
 program_policy_division,Program Policy Division,indigenous_affairs_directorate
 aboriginal_affairs-5,Aboriginal Affairs-5,program_policy_division
 aboriginal_affairs-9,Aboriginal Affairs-9,program_policy_division
 indigenous_affairs-2,Indigenous Affairs-2,program_policy_division
 indigenous_affairs-3,Indigenous Affairs-3,program_policy_division
-labour_market_information,Labour Market Information,skills_&_employment_branch
+labour_market_information,Labour Market Information,skills__employment_branch
 corporate_management,Corporate Management,labour_market_information
 corporate_management-g,Corporate Management-G,corporate_management
 corporate_management-b0,Corporate Management-B0,corporate_management-g
-"com,informatn_/reports_mgt_-a","Com,Informatn /Reports Mgt -A",corporate_management
+cominformatn_reports_mgt_-a,"Com,Informatn /Reports Mgt -A",corporate_management
 corporate_management_division,Corporate Management Division,corporate_management
 job_bank,Job Bank,labour_market_information
 job_bank-d,Job Bank-D,job_bank
@@ -821,76 +821,76 @@ job_bank-b1,Job Bank-B1,job_bank-d
 job_bank_x,Job Bank x,job_bank-d
 job_bank-e,Job Bank-E,job_bank
 job_bank-f,Job Bank-F,job_bank
-"labour_market_data,_met_&_anls","Labour Market data, Met & Anls",labour_market_information
-empl_liaison_serv_task_team-e,Empl Liaison Serv Task Team-E,"labour_market_data,_met_&_anls"
-natnl_occup_classification-b,Natnl Occup Classification-B,"labour_market_data,_met_&_anls"
-natnl_occup_classification-c,Natnl Occup Classification-C,"labour_market_data,_met_&_anls"
-labour_market_information-e,Labour Market Information-E,"labour_market_data,_met_&_anls"
-natnl_occup_classification-e,Natnl Occup Classification-E,"labour_market_data,_met_&_anls"
-empl_liaison_serv_task_team-d,Empl Liaison Serv Task Team-D,"labour_market_data,_met_&_anls"
+labour_market_data_met__anls,"Labour Market data, Met & Anls",labour_market_information
+empl_liaison_serv_task_team-e,Empl Liaison Serv Task Team-E,labour_market_data_met__anls
+natnl_occup_classification-b,Natnl Occup Classification-B,labour_market_data_met__anls
+natnl_occup_classification-c,Natnl Occup Classification-C,labour_market_data_met__anls
+labour_market_information-e,Labour Market Information-E,labour_market_data_met__anls
+natnl_occup_classification-e,Natnl Occup Classification-E,labour_market_data_met__anls
+empl_liaison_serv_task_team-d,Empl Liaison Serv Task Team-D,labour_market_data_met__anls
 labour_market_information-d,Labour Market Information-D,labour_market_information
-policy_resrch_anlys/geomatic,Policy Resrch Anlys/Geomatic,labour_market_information
-policy_resrch_anlys/geomatic-b,Policy Resrch Anlys/Geomatic-B,policy_resrch_anlys/geomatic
-policy_resrch_anlys/geomatic-d,Policy Resrch Anlys/Geomatic-D,policy_resrch_anlys/geomatic
-policy_resrch_anlys/geomatic-e,Policy Resrch Anlys/Geomatic-E,policy_resrch_anlys/geomatic
-policy_community_partnership_office,Policy Community Partnership Office,skills_&_employment_branch
-temporary_foreign_workers_program,Temporary Foreign Workers Program,skills_&_employment_branch
-"com,_informatn_/reports_mgt","Com, Informatn /Reports Mgt",temporary_foreign_workers_program
-policy_&_program_design,Policy & Program Design,temporary_foreign_workers_program
-policy_&_program_design-2,Policy & Program Design-2,policy_&_program_design
-global_talent_stream_pp_-a,Global Talent Stream PP -A,policy_&_program_design-2
-policy_&_program_design-c,Policy & Program Design-C,policy_&_program_design
-policy_&_program_design-d,Policy & Program Design-D,policy_&_program_design
-policy_&_program_design_-f,Policy & Program Design -F,policy_&_program_design
+policy_resrch_anlysgeomatic,Policy Resrch Anlys/Geomatic,labour_market_information
+policy_resrch_anlysgeomatic-b,Policy Resrch Anlys/Geomatic-B,policy_resrch_anlysgeomatic
+policy_resrch_anlysgeomatic-d,Policy Resrch Anlys/Geomatic-D,policy_resrch_anlysgeomatic
+policy_resrch_anlysgeomatic-e,Policy Resrch Anlys/Geomatic-E,policy_resrch_anlysgeomatic
+policy_community_partnership_office,Policy Community Partnership Office,skills__employment_branch
+temporary_foreign_workers_program,Temporary Foreign Workers Program,skills__employment_branch
+com_informatn_reports_mgt,"Com, Informatn /Reports Mgt",temporary_foreign_workers_program
+policy__program_design,Policy & Program Design,temporary_foreign_workers_program
+policy__program_design-2,Policy & Program Design-2,policy__program_design
+global_talent_stream_pp_-a,Global Talent Stream PP -A,policy__program_design-2
+policy__program_design-c,Policy & Program Design-C,policy__program_design
+policy__program_design-d,Policy & Program Design-D,policy__program_design
+policy__program_design_-f,Policy & Program Design -F,policy__program_design
 sector_policy_division,Sector Policy Division,temporary_foreign_workers_program
 program_integrity-d,Program Integrity-D,sector_policy_division
 sector_policy_division-d,Sector Policy Division-D,sector_policy_division
 sector_policy_division-e,Sector Policy Division-E,sector_policy_division
 employment_program_and_partnerships_directorate,Employment Program and Partnerships Directorate,temporary_foreign_workers_program
-"com.,_inf._and_reports_man.","Com., Inf. And Reports Man.",employment_program_and_partnerships_directorate
-program_integrity-c,Program Integrity-C,"com.,_inf._and_reports_man."
-"ei_part_ii,__benefits_&_measures","EI Part II,  Benefits & Measures",employment_program_and_partnerships_directorate
-pol-ei_partii/lmda-b,Pol-EI PartII/LMDA-B,"ei_part_ii,__benefits_&_measures"
-pol-ei_partii/lmda-c,Pol-EI PartII/LMDA-C,"ei_part_ii,__benefits_&_measures"
-pol-ei_partii/lmda-d,Pol-EI PartII/LMDA-D,"ei_part_ii,__benefits_&_measures"
-team_leader__data_analyst_team,Team Leader  Data Analyst Team,pol-ei_partii/lmda-d
-team_leader_-_it_systems,Team Leader - IT Systems,pol-ei_partii/lmda-d
-integ._pol.&prog._intel._div,Integ. Pol.&Prog. Intel. Div,employment_program_and_partnerships_directorate
-literacy_&_essential_skills,Literacy & Essential Skills,employment_program_and_partnerships_directorate
-literacy_&_essential_skills-b,Literacy & Essential Skills-B,literacy_&_essential_skills
-literacy_&_essential_skills-c,Literacy & Essential Skills-C,literacy_&_essential_skills
-literacy_&_essential_skills-d,Literacy & Essential Skills-D,literacy_&_essential_skills
+com_inf_and_reports_man,"Com., Inf. And Reports Man.",employment_program_and_partnerships_directorate
+program_integrity-c,Program Integrity-C,com_inf_and_reports_man
+ei_part_ii__benefits__measures,"EI Part II,  Benefits & Measures",employment_program_and_partnerships_directorate
+pol-ei_partiilmda-b,Pol-EI PartII/LMDA-B,ei_part_ii__benefits__measures
+pol-ei_partiilmda-c,Pol-EI PartII/LMDA-C,ei_part_ii__benefits__measures
+pol-ei_partiilmda-d,Pol-EI PartII/LMDA-D,ei_part_ii__benefits__measures
+team_leader__data_analyst_team,Team Leader  Data Analyst Team,pol-ei_partiilmda-d
+team_leader_-_it_systems,Team Leader - IT Systems,pol-ei_partiilmda-d
+integ_polprog_intel_div,Integ. Pol.&Prog. Intel. Div,employment_program_and_partnerships_directorate
+literacy__essential_skills,Literacy & Essential Skills,employment_program_and_partnerships_directorate
+literacy__essential_skills-b,Literacy & Essential Skills-B,literacy__essential_skills
+literacy__essential_skills-c,Literacy & Essential Skills-C,literacy__essential_skills
+literacy__essential_skills-d,Literacy & Essential Skills-D,literacy__essential_skills
 program_integrity-b,Program Integrity-B,employment_program_and_partnerships_directorate
 temporary_foreign_workers,Temporary Foreign Workers,employment_program_and_partnerships_directorate
-workforce_dev_agreements_&_targeted_prog,Workforce Dev Agreements & Targeted Prog,employment_program_and_partnerships_directorate
-pol-lbr_mrkt_agr/trgtd_tsfs-b,Pol-Lbr Mrkt Agr/Trgtd Tsfs-B,workforce_dev_agreements_&_targeted_prog
-pol-lbr_mrkt_agr/trgtd__tsfs-c,Pol-Lbr Mrkt Agr/Trgtd  Tsfs-C,workforce_dev_agreements_&_targeted_prog
-mgr_of_prov/territorial_desks,Mgr of Prov/Territorial Desks,temporary_foreign_workers_program
-youth_and_skills_innovation_directorate,Youth and Skills Innovation Directorate,skills_&_employment_branch
+workforce_dev_agreements__targeted_prog,Workforce Dev Agreements & Targeted Prog,employment_program_and_partnerships_directorate
+pol-lbr_mrkt_agrtrgtd_tsfs-b,Pol-Lbr Mrkt Agr/Trgtd Tsfs-B,workforce_dev_agreements__targeted_prog
+pol-lbr_mrkt_agrtrgtd__tsfs-c,Pol-Lbr Mrkt Agr/Trgtd  Tsfs-C,workforce_dev_agreements__targeted_prog
+mgr_of_provterritorial_desks,Mgr of Prov/Territorial Desks,temporary_foreign_workers_program
+youth_and_skills_innovation_directorate,Youth and Skills Innovation Directorate,skills__employment_branch
 students_work_placement,Students Work Placement,youth_and_skills_innovation_directorate
-"adm's_office,_seb","ADM's Office, SEB",skills_&_employment_branch
-"dir,fed.prov.terr_partnerships","Dir,Fed.Prov.Terr Partnerships",skills_&_employment_branch
+adm's_office_seb,"ADM's Office, SEB",skills__employment_branch
+dirfedprovterr_partnerships,"Dir,Fed.Prov.Terr Partnerships",skills__employment_branch
 strategic_and_service_policy_branch,Strategic and Service Policy Branch,deputy_minister_of_employment_and_social_development
 chief_data_office,Chief Data Office,strategic_and_service_policy_branch
 data_science,Data Science,chief_data_office
 advanced_analytics,Advanced Analytics,data_science
 machine_learn_and_artif_intell,Machine Learn and Artif Intell,data_science
-visualization_&_engineering,Visualization & Engineering,data_science
+visualization__engineering,Visualization & Engineering,data_science
 enterprise_data_strategy,Enterprise Data Strategy,chief_data_office
 data_development,Data Development,enterprise_data_strategy
 data_management,Data Management,data_development
-open_data_&_data_stewardship,Open Data & Data Stewardship,enterprise_data_strategy
+open_data__data_stewardship,Open Data & Data Stewardship,enterprise_data_strategy
 data_development_and_access,Data Development and Access,enterprise_data_strategy
-"manager,_eng_&_data_literacy","Manager, Eng & Data Literacy",enterprise_data_strategy
-performance_&_partnerships,Performance & Partnerships,enterprise_data_strategy
-"manager,_open_data","Manager, Open Data",enterprise_data_strategy
-"manager,_stewardship","Manager, Stewardship",enterprise_data_strategy
-data_strategies_&_development,Data Strategies & Development,chief_data_office
+manager_eng__data_literacy,"Manager, Eng & Data Literacy",enterprise_data_strategy
+performance__partnerships,Performance & Partnerships,enterprise_data_strategy
+manager_open_data,"Manager, Open Data",enterprise_data_strategy
+manager_stewardship,"Manager, Stewardship",enterprise_data_strategy
+data_strategies__development,Data Strategies & Development,chief_data_office
 chief_of_staff,Chief of Staff,strategic_and_service_policy_branch
 senior_adm_office_b,Senior ADM Office B,chief_of_staff
 director_general_corporate_planning_and_management,Director General Corporate Planning and Management,strategic_and_service_policy_branch
 branch_management_services_2,Branch Management Services 2,director_general_corporate_planning_and_management
-corp._planning_&_management,Corp. Planning & Management,branch_management_services_2
+corp_planning__management,Corp. Planning & Management,branch_management_services_2
 strategic_and_service_policy-d,Strategic and Service Policy-D,branch_management_services_2
 administrative_services,Administrative Services,strategic_and_service_policy-d
 financial_services,Financial Services,strategic_and_service_policy-d
@@ -902,14 +902,14 @@ communication_services-a,Communication Services-A,coe-workforce_strategies-d
 linguistic_services,Linguistic Services,branch_management_services_2
 strategic_management_services,Strategic Management Services,branch_management_services_2
 business_improvement_and_delivery,Business Improvement and Delivery,director_general_corporate_planning_and_management
-external_governance_&_research,External Governance & Research,business_improvement_and_delivery
+external_governance__research,External Governance & Research,business_improvement_and_delivery
 infrastructure_and_reporting,Infrastructure and Reporting,business_improvement_and_delivery
 performance_and_results,Performance and Results,business_improvement_and_delivery
 offical_languages_and_gba,Offical Languages and GBA,business_improvement_and_delivery
 planning,Planning,director_general_corporate_planning_and_management
 integrated_planning,Integrated Planning,planning
 administrative_services,administrative services,director_general_corporate_planning_and_management
-office_mgt_&_coordinatn,Office Mgt & Coordinatn,director_general_corporate_planning_and_management
+office_mgt__coordinatn,Office Mgt & Coordinatn,director_general_corporate_planning_and_management
 economic_policy_directorate,Economic Policy Directorate,strategic_and_service_policy_branch
 economic_analysis,Economic Analysis,economic_policy_directorate
 economic_analysis_b,Economic Analysis B,economic_analysis
@@ -917,12 +917,12 @@ evaluation_directorate,Evaluation Directorate,strategic_and_service_policy_branc
 director_b,Director B,evaluation_directorate
 partnership_evaluations-a,Partnership Evaluations-A,director_b
 director_c,Director C,evaluation_directorate
-privacy_policy_planning/repor,Privacy Policy Planning/Repor,director_c
-privacy_policy_planning/rprtng,Privacy Policy Planning/Rprtng,director_c
+privacy_policy_planningrepor,Privacy Policy Planning/Repor,director_c
+privacy_policy_planningrprtng,Privacy Policy Planning/Rprtng,director_c
 grants_and_contributions_evaluation,Grants and Contributions Evaluation,evaluation_directorate
-"manager,_strategic_policy","Manager, Strategic Policy",grants_and_contributions_evaluation
-statutory_and_g&c_evaluation_b,Statutory and G&C Evaluation B,grants_and_contributions_evaluation
-statutory_and_g&c_evaluation_d,Statutory and G&C Evaluation D,grants_and_contributions_evaluation
+manager_strategic_policy,"Manager, Strategic Policy",grants_and_contributions_evaluation
+statutory_and_gc_evaluation_b,Statutory and G&C Evaluation B,grants_and_contributions_evaluation
+statutory_and_gc_evaluation_d,Statutory and G&C Evaluation D,grants_and_contributions_evaluation
 partnership_evaluations-c,Partnership Evaluations-C,grants_and_contributions_evaluation
 ielcc_directorate,IELCC Directorate,strategic_and_service_policy_branch
 innovation_lab_directorate,Innovation Lab Directorate,strategic_and_service_policy_branch
@@ -953,12 +953,12 @@ social_development_policy,Social Development Policy,social_policy_directorate
 social_development_policy_a,Social Development Policy A,social_development_policy
 social_development_policy_b,Social Development Policy B,social_development_policy
 social_development_policy_c,Social Development Policy C,social_development_policy
-"manager,_strat._pol.","Manager, Strat. Pol.",social_development_policy
+manager_strat_pol,"Manager, Strat. Pol.",social_development_policy
 socio-economic_analysis,Socio-Economic Analysis,social_development_policy
 social_innovation,Social Innovation,social_policy_directorate
 social_innovation_a,Social Innovation A,social_innovation
 social_innovation_b,Social Innovation B,social_innovation
-mobility_crdtl_rcgt_&_integ-f,Mobility Crdtl Rcgt & Integ-F,social_innovation
+mobility_crdtl_rcgt__integ-f,Mobility Crdtl Rcgt & Integ-F,social_innovation
 social_research,Social Research,social_policy_directorate
 social_research_a,Social Research A,social_research
 social_research_c,Social Research C,social_research
@@ -966,16 +966,16 @@ social_research_innovation,Social Research Innovation,social_research
 microsimulation_unit,Microsimulation Unit,social_research
 executive_mgmt_support,Executive Mgmt Support,social_policy_directorate
 strategy_and_integration,Strategy and Integration,strategic_and_service_policy_branch
-f/p-t_relations,F/P-T Relations,strategy_and_integration
-f/p-t_relations_a,F/P-T Relations A,f/p-t_relations
-f/p-t_relations_b,F/P-T Relations B,f/p-t_relations
+fp-t_relations,F/P-T Relations,strategy_and_integration
+fp-t_relations_a,F/P-T Relations A,fp-t_relations
+fp-t_relations_b,F/P-T Relations B,fp-t_relations
 international_relations,International Relations,strategy_and_integration
 international_relations_a,International Relations A,international_relations
 policy_integration,Policy Integration,strategy_and_integration
 policy_integration_a,Policy Integration A,policy_integration
 strategy_and_cabinet_affairs,Strategy and Cabinet Affairs,strategy_and_integration
-strategy_&_cabinet_affairs_a,Strategy & Cabinet Affairs A,strategy_and_cabinet_affairs
-strategy_&_cabinet_affairs_b,Strategy & Cabinet Affairs B,strategy_and_cabinet_affairs
+strategy__cabinet_affairs_a,Strategy & Cabinet Affairs A,strategy_and_cabinet_affairs
+strategy__cabinet_affairs_b,Strategy & Cabinet Affairs B,strategy_and_cabinet_affairs
 cabinet_briefings,Cabinet Briefings,strategy_and_cabinet_affairs
 sustainable_development_goals_2030,Sustainable Development Goals 2030,strategy_and_integration
 resolution_of_policy,Resolution of Policy,sustainable_development_goals_2030
@@ -984,9 +984,9 @@ deputy_minister's_office_-_employment_and_social_development_canada,Deputy Minis
 workforce_transformation_hub,Workforce Transformation Hub,employment_and_social_development_canada
 project_management_services,Project Management Services,workforce_transformation_hub
 deputy_minister_of_labour,Deputy Minister of Labour,employment_and_social_development_canada
-"labour_program_-_compliance,_operations_and_program_development_directorate","Labour Program - Compliance, Operations and Program Development Directorate",deputy_minister_of_labour
-"adm's_office,_copd","ADM's Office, COPD","labour_program_-_compliance,_operations_and_program_development_directorate"
-federal_programs,Federal Programs,"labour_program_-_compliance,_operations_and_program_development_directorate"
+labour_program_-_compliance_operations_and_program_development_directorate,"Labour Program - Compliance, Operations and Program Development Directorate",deputy_minister_of_labour
+adm's_office_copd,"ADM's Office, COPD",labour_program_-_compliance_operations_and_program_development_directorate
+federal_programs,Federal Programs,labour_program_-_compliance_operations_and_program_development_directorate
 operations_federal_workers'_compensation_service,Operations Federal Workers' Compensation Service,federal_programs
 claims_operations_unit,Claims Operations Unit,operations_federal_workers'_compensation_service
 claims_operations_unit-c,Claims Operations Unit-C,claims_operations_unit
@@ -994,47 +994,47 @@ data_-_program_integrity_unit,Data - Program Integrity Unit,operations_federal_w
 fwcs-claims_operations_unit,FWCS-Claims Operations Unit,data_-_program_integrity_unit
 claims_operations_unit_b,Claims Operations Unit B,data_-_program_integrity_unit
 program_integrity_unit_(piu),Program Integrity Unit (Piu),operations_federal_workers'_compensation_service
-atlantic-_labout_standards,Atlantic- Labout Standards,"labour_program_-_compliance,_operations_and_program_development_directorate"
-atlantic_regional_director,Atlantic Regional Director,"labour_program_-_compliance,_operations_and_program_development_directorate"
-labour_operations_nf&_labrador,Labour Operations NF& Labrador,"labour_program_-_compliance,_operations_and_program_development_directorate"
-labour_operations_ohs,Labour Operations OHS,"labour_program_-_compliance,_operations_and_program_development_directorate"
-brandon_mb_-_ohs_&_ls,Brandon MB - OHS & LS,"labour_program_-_compliance,_operations_and_program_development_directorate"
-central_ohs,Central OHS,"labour_program_-_compliance,_operations_and_program_development_directorate"
-regional_operations,Regional Operations,"labour_program_-_compliance,_operations_and_program_development_directorate"
-vancouver_labour_standards,Vancouver Labour Standards,"labour_program_-_compliance,_operations_and_program_development_directorate"
-vancouver_occ._health_&_safety,Vancouver Occ. Health & Safety,"labour_program_-_compliance,_operations_and_program_development_directorate"
-ottawa_-_ohs,Ottawa - OHS,"labour_program_-_compliance,_operations_and_program_development_directorate"
-strategic_labour_initiatives,Strategic Labour initiatives,"labour_program_-_compliance,_operations_and_program_development_directorate"
-toronto_-_labour_standards,Toronto - Labour Standards,"labour_program_-_compliance,_operations_and_program_development_directorate"
-toronto_-_ohs,Toronto - OHS,"labour_program_-_compliance,_operations_and_program_development_directorate"
-montreal_quebec_-_ohs,Montreal Quebec - OHS,"labour_program_-_compliance,_operations_and_program_development_directorate"
-mtl_quebec_-_labour_standards,Mtl Quebec - Labour Standards,"labour_program_-_compliance,_operations_and_program_development_directorate"
-sainte-foy_quebec_-_osh,Sainte-Foy Quebec - OSH,"labour_program_-_compliance,_operations_and_program_development_directorate"
-regional_operations_and_compliance_directorate,Regional Operations and Compliance Directorate,"labour_program_-_compliance,_operations_and_program_development_directorate"
-reg_opertins_&_compliance_hq_a,Reg Opertins & Compliance HQ A,regional_operations_and_compliance_directorate
-manager_reg_ops_compliance,Manager Reg Ops Compliance,reg_opertins_&_compliance_hq_a
-reg_opertins_&_compliance_dir.,Reg Opertins & Compliance Dir.,reg_opertins_&_compliance_hq_a
-reg_opertins_&_compliance_ops,Reg Opertins & Compliance Ops,reg_opertins_&_compliance_hq_a
-regional_opertins_&_compliance,Regional Opertins & Compliance,reg_opertins_&_compliance_hq_a
-workplace_directorate,Workplace Directorate,"labour_program_-_compliance,_operations_and_program_development_directorate"
+atlantic-_labout_standards,Atlantic- Labout Standards,labour_program_-_compliance_operations_and_program_development_directorate
+atlantic_regional_director,Atlantic Regional Director,labour_program_-_compliance_operations_and_program_development_directorate
+labour_operations_nf_labrador,Labour Operations NF& Labrador,labour_program_-_compliance_operations_and_program_development_directorate
+labour_operations_ohs,Labour Operations OHS,labour_program_-_compliance_operations_and_program_development_directorate
+brandon_mb_-_ohs__ls,Brandon MB - OHS & LS,labour_program_-_compliance_operations_and_program_development_directorate
+central_ohs,Central OHS,labour_program_-_compliance_operations_and_program_development_directorate
+regional_operations,Regional Operations,labour_program_-_compliance_operations_and_program_development_directorate
+vancouver_labour_standards,Vancouver Labour Standards,labour_program_-_compliance_operations_and_program_development_directorate
+vancouver_occ_health__safety,Vancouver Occ. Health & Safety,labour_program_-_compliance_operations_and_program_development_directorate
+ottawa_-_ohs,Ottawa - OHS,labour_program_-_compliance_operations_and_program_development_directorate
+strategic_labour_initiatives,Strategic Labour initiatives,labour_program_-_compliance_operations_and_program_development_directorate
+toronto_-_labour_standards,Toronto - Labour Standards,labour_program_-_compliance_operations_and_program_development_directorate
+toronto_-_ohs,Toronto - OHS,labour_program_-_compliance_operations_and_program_development_directorate
+montreal_quebec_-_ohs,Montreal Quebec - OHS,labour_program_-_compliance_operations_and_program_development_directorate
+mtl_quebec_-_labour_standards,Mtl Quebec - Labour Standards,labour_program_-_compliance_operations_and_program_development_directorate
+sainte-foy_quebec_-_osh,Sainte-Foy Quebec - OSH,labour_program_-_compliance_operations_and_program_development_directorate
+regional_operations_and_compliance_directorate,Regional Operations and Compliance Directorate,labour_program_-_compliance_operations_and_program_development_directorate
+reg_opertins__compliance_hq_a,Reg Opertins & Compliance HQ A,regional_operations_and_compliance_directorate
+manager_reg_ops_compliance,Manager Reg Ops Compliance,reg_opertins__compliance_hq_a
+reg_opertins__compliance_dir,Reg Opertins & Compliance Dir.,reg_opertins__compliance_hq_a
+reg_opertins__compliance_ops,Reg Opertins & Compliance Ops,reg_opertins__compliance_hq_a
+regional_opertins__compliance,Regional Opertins & Compliance,reg_opertins__compliance_hq_a
+workplace_directorate,Workplace Directorate,labour_program_-_compliance_operations_and_program_development_directorate
 director_lswepp,Director LSWEPP,workplace_directorate
 ls_compliance_and_ops,LS Compliance and Ops,director_lswepp
 wage_earner_protection_program,Wage Earner Protection Program,director_lswepp
 harassment_and_violence_prev,Harassment and Violence Prev,workplace_directorate
-occupational_health_&_safety,Occupational Health & Safety,workplace_directorate
-ohs_compliance_&_ops,OHS Compliance & Ops,occupational_health_&_safety
-ohs_policy,OHS Policy,occupational_health_&_safety
-engagent&transformation_projec,Engagent&transformation projec,occupational_health_&_safety
-"performance,_analysis,_research_and_learning","Performance, Analysis, Research and Learning",workplace_directorate
-learning_solutions_a,Learning Solutions A,"performance,_analysis,_research_and_learning"
-performance_analysis/researcha,Performance Analysis/ResearchA,"performance,_analysis,_research_and_learning"
-program_information_&_analysis,Program Information & Analysis,"performance,_analysis,_research_and_learning"
-integrated_labour_syst._proj.,Integrated Labour Syst. Proj.,workplace_directorate
-"labour_program_-_deputy_minister's_office,_labour","Labour Program - Deputy Minister's Office, Labour",deputy_minister_of_labour
-"labour_program_-_policy,_dispute_resolution_&_international_affairs_directorate","Labour Program - Policy, Dispute Resolution & International Affairs Directorate",deputy_minister_of_labour
-"adm's_office,_pdria","ADM's Office, PDRIA","labour_program_-_policy,_dispute_resolution_&_international_affairs_directorate"
-bus_serv_unit_pdria,Bus Serv Unit PDRIA,"adm's_office,_pdria"
-federal_mediation_and_conciliation_service_directorate,Federal Mediation and Conciliation Service Directorate,"labour_program_-_policy,_dispute_resolution_&_international_affairs_directorate"
+occupational_health__safety,Occupational Health & Safety,workplace_directorate
+ohs_compliance__ops,OHS Compliance & Ops,occupational_health__safety
+ohs_policy,OHS Policy,occupational_health__safety
+engagenttransformation_projec,Engagent&transformation projec,occupational_health__safety
+performance_analysis_research_and_learning,"Performance, Analysis, Research and Learning",workplace_directorate
+learning_solutions_a,Learning Solutions A,performance_analysis_research_and_learning
+performance_analysisresearcha,Performance Analysis/ResearchA,performance_analysis_research_and_learning
+program_information__analysis,Program Information & Analysis,performance_analysis_research_and_learning
+integrated_labour_syst_proj,Integrated Labour Syst. Proj.,workplace_directorate
+labour_program_-_deputy_minister's_office_labour,"Labour Program - Deputy Minister's Office, Labour",deputy_minister_of_labour
+labour_program_-_policy_dispute_resolution__international_affairs_directorate,"Labour Program - Policy, Dispute Resolution & International Affairs Directorate",deputy_minister_of_labour
+adm's_office_pdria,"ADM's Office, PDRIA",labour_program_-_policy_dispute_resolution__international_affairs_directorate
+bus_serv_unit_pdria,Bus Serv Unit PDRIA,adm's_office_pdria
+federal_mediation_and_conciliation_service_directorate,Federal Mediation and Conciliation Service Directorate,labour_program_-_policy_dispute_resolution__international_affairs_directorate
 dir_disp_prev_rel_dev_svc,Dir Disp Prev Rel Dev Svc,federal_mediation_and_conciliation_service_directorate
 diro_dispute_resolutn_serv,DirO Dispute Resolutn Serv,federal_mediation_and_conciliation_service_directorate
 dispute_resolution_services,Dispute Resolution Services,diro_dispute_resolutn_serv
@@ -1044,99 +1044,99 @@ fmcs_regional_northwestern,FMCS Regional Northwestern,federal_mediation_and_conc
 fmcs_regional_ontario,FMCS Regional Ontario,federal_mediation_and_conciliation_service_directorate
 fmcs_regional_pacific,FMCS Regional Pacific,federal_mediation_and_conciliation_service_directorate
 fmcs_regional_quebec,FMCS Regional Quebec,federal_mediation_and_conciliation_service_directorate
-international_and_intergovernmental_labour_affairs_directorate,International and Intergovernmental Labour Affairs Directorate,"labour_program_-_policy,_dispute_resolution_&_international_affairs_directorate"
+international_and_intergovernmental_labour_affairs_directorate,International and Intergovernmental Labour Affairs Directorate,labour_program_-_policy_dispute_resolution__international_affairs_directorate
 bilateral_and_regional_labour_affairs,Bilateral and Regional Labour Affairs,international_and_intergovernmental_labour_affairs_directorate
-bilateral_&regional_affairs,Bilateral &Regional Affairs,bilateral_and_regional_labour_affairs
-bilateral&reg_labour_affairs-b,Bilateral&Reg Labour Affairs-B,bilateral_and_regional_labour_affairs
+bilateral_regional_affairs,Bilateral &Regional Affairs,bilateral_and_regional_labour_affairs
+bilateralreg_labour_affairs-b,Bilateral&Reg Labour Affairs-B,bilateral_and_regional_labour_affairs
 multilateral_labour_affairs,Multilateral Labour Affairs,international_and_intergovernmental_labour_affairs_directorate
 international_labour_affairs,International Labour Affairs,multilateral_labour_affairs
-"strategic_policy,_analysis_and_workplace_information_directorate","Strategic Policy, Analysis and Workplace Information Directorate","labour_program_-_policy,_dispute_resolution_&_international_affairs_directorate"
-dgo_spawid,DGO SPAWID,"strategic_policy,_analysis_and_workplace_information_directorate"
-pay_equity_-_regulatory_policy_and_implementation,Pay Equity - Regulatory Policy and Implementation,"strategic_policy,_analysis_and_workplace_information_directorate"
-strtgc_plicy/legislativ_refrm,Strtgc Plicy/Legislativ Refrm,"strategic_policy,_analysis_and_workplace_information_directorate"
-policy_analysis_&_special_proj,Policy Analysis & Special Proj,strtgc_plicy/legislativ_refrm
-workplace_info_&_research_div,Workplace Info & Research Div,"strategic_policy,_analysis_and_workplace_information_directorate"
-coll._bargain_set_&_data_dev,Coll. Bargain Set & Data Dev,workplace_info_&_research_div
-coll._bargai_set_&_data_dev-c,Coll. Bargai Set & Data Dev-C,coll._bargain_set_&_data_dev
-pay_equity_-_horizontal_policy_initiatives,Pay Equity - Horizontal Policy Initiatives,"strategic_policy,_analysis_and_workplace_information_directorate"
-occupational_health_and_safety_tribunal_canada,Occupational Health and Safety Tribunal Canada,"labour_program_-_policy,_dispute_resolution_&_international_affairs_directorate"
+strategic_policy_analysis_and_workplace_information_directorate,"Strategic Policy, Analysis and Workplace Information Directorate",labour_program_-_policy_dispute_resolution__international_affairs_directorate
+dgo_spawid,DGO SPAWID,strategic_policy_analysis_and_workplace_information_directorate
+pay_equity_-_regulatory_policy_and_implementation,Pay Equity - Regulatory Policy and Implementation,strategic_policy_analysis_and_workplace_information_directorate
+strtgc_plicylegislativ_refrm,Strtgc Plicy/Legislativ Refrm,strategic_policy_analysis_and_workplace_information_directorate
+policy_analysis__special_proj,Policy Analysis & Special Proj,strtgc_plicylegislativ_refrm
+workplace_info__research_div,Workplace Info & Research Div,strategic_policy_analysis_and_workplace_information_directorate
+coll_bargain_set__data_dev,Coll. Bargain Set & Data Dev,workplace_info__research_div
+coll_bargai_set__data_dev-c,Coll. Bargai Set & Data Dev-C,coll_bargain_set__data_dev
+pay_equity_-_horizontal_policy_initiatives,Pay Equity - Horizontal Policy Initiatives,strategic_policy_analysis_and_workplace_information_directorate
+occupational_health_and_safety_tribunal_canada,Occupational Health and Safety Tribunal Canada,labour_program_-_policy_dispute_resolution__international_affairs_directorate
 labour_program_-_strategic_integration_and_governance_directorate,Labour Program - Strategic Integration and Governance Directorate,deputy_minister_of_labour
-"governance,_engagement_and_management_services","Governance, Engagement and Management Services",labour_program_-_strategic_integration_and_governance_directorate
-governance_and_engagement,Governance and Engagement,"governance,_engagement_and_management_services"
-management_services,Management Services,"governance,_engagement_and_management_services"
-"strategic_integration,_and_information_solutions","Strategic Integration, and Information Solutions",labour_program_-_strategic_integration_and_governance_directorate
-information_and_solutions,Information and Solutions,"strategic_integration,_and_information_solutions"
-planning_and_reporting_unit,Planning and Reporting Unit,"strategic_integration,_and_information_solutions"
+governance_engagement_and_management_services,"Governance, Engagement and Management Services",labour_program_-_strategic_integration_and_governance_directorate
+governance_and_engagement,Governance and Engagement,governance_engagement_and_management_services
+management_services,Management Services,governance_engagement_and_management_services
+strategic_integration_and_information_solutions,"Strategic Integration, and Information Solutions",labour_program_-_strategic_integration_and_governance_directorate
+information_and_solutions,Information and Solutions,strategic_integration_and_information_solutions
+planning_and_reporting_unit,Planning and Reporting Unit,strategic_integration_and_information_solutions
 dmo_labour-a,DMO Labour-A,deputy_minister_of_labour
 dmo_labour-b,DMO Labour-B,deputy_minister_of_labour
 minister_of_seniors,Minister of Seniors,employment_and_social_development_canada
 senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada,Senior Associate Deputy Minister of ESD and Chief Operating Officer for Service Canada,employment_and_social_development_canada
-"chief_operating_officer's_office,_service_canada","Chief Operating Officer's Office, Service Canada",senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-"integrity_service_branch,_ontario","Integrity Service Branch, Ontario","chief_operating_officer's_office,_service_canada"
-isb/be_1,ISB/BE 1,"integrity_service_branch,_ontario"
-isb/operations/ops1,ISB/Operations/Ops1,"integrity_service_branch,_ontario"
-isb/operations/ops1/t,ISB/Operations/Ops1/T,isb/operations/ops1
-isb/operations/ops2,ISB/Operations/Ops2,"integrity_service_branch,_ontario"
-pensions,Pensions,"integrity_service_branch,_ontario"
+chief_operating_officer's_office_service_canada,"Chief Operating Officer's Office, Service Canada",senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+integrity_service_branch_ontario,"Integrity Service Branch, Ontario",chief_operating_officer's_office_service_canada
+isbbe_1,ISB/BE 1,integrity_service_branch_ontario
+isboperationsops1,ISB/Operations/Ops1,integrity_service_branch_ontario
+isboperationsops1t,ISB/Operations/Ops1/T,isboperationsops1
+isboperationsops2,ISB/Operations/Ops2,integrity_service_branch_ontario
+pensions,Pensions,integrity_service_branch_ontario
 service_canada_-_atlantic_region,Service Canada - Atlantic Region,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-"adm's_office,_atlantic","ADM's Office, Atlantic",service_canada_-_atlantic_region
-"exec_service_coord,_adm_office","Exec Service Coord, ADM Office","adm's_office,_atlantic"
-"benefits_delivery_services_branch,_atlantic","Benefits Delivery Services Branch, Atlantic",service_canada_-_atlantic_region
-bds/cc/dir_office,BDS/CC/Dir Office,"benefits_delivery_services_branch,_atlantic"
-ei_-_call_centre_operations,EI - Call Centre Operations,bds/cc/dir_office
-bds/cppd/dir_office,BDS/CPPD/Dir Office,"benefits_delivery_services_branch,_atlantic"
-service_manager_medical_nb,Service Manager Medical NB,bds/cppd/dir_office
-service_manager_medical_nl,Service Manager Medical NL,bds/cppd/dir_office
-service_manger_non_med_nl,Service Manger Non med NL,bds/cppd/dir_office
-bds/cpp-oas/dir_office,BDS/CPP-OAS/Dir Office,"benefits_delivery_services_branch,_atlantic"
-nl_cpp_pep_triennial_unit,NL CPP PEP Triennial Unit,"benefits_delivery_services_branch,_atlantic"
-bds/ei/level2/dir_office,BDS/EI/Level2/Dir Office,"benefits_delivery_services_branch,_atlantic"
-bds/ei/level1-ipoc-cp/tl-c-nb,BDS/EI/Level1-IPOC-CP/TL-C-NB,bds/ei/level2/dir_office
-bds/be/srmgr,BDS/BE/SrMgr,"benefits_delivery_services_branch,_atlantic"
-bds_be_call_centre,BDS BE call centre,bds/be/srmgr
-business_expertise,Business Expertise,bds/be/srmgr
-ssb/pasa/sr_bus_exp_mgr/atl,SSB/PASA/Sr Bus Exp Mgr/ATL,"benefits_delivery_services_branch,_atlantic"
-bds/ei/level1/dir_office,BDS/EI/Level1/Dir Office,"benefits_delivery_services_branch,_atlantic"
-grand_falls-windsor-ei,Grand Falls-Windsor-EI,bds/ei/level1/dir_office
-"citizen_services_&_program_delivery,_atlantic","Citizen Services & Program Delivery, Atlantic",service_canada_-_atlantic_region
-cspd/cs/nb,CSPD/CS/NB,"citizen_services_&_program_delivery,_atlantic"
-cspd/scc/bathurst_b,CSPD/SCC/Bathurst B,cspd/cs/nb
-cspd/cs/nl/lab,CSPD/CS/NL/LAB,"citizen_services_&_program_delivery,_atlantic"
-cspd/css/vanier,CSPD/CSS/Vanier,cspd/cs/nl/lab
-cspd/cs/ns/pe,CSPD/CS/NS/PE,"citizen_services_&_program_delivery,_atlantic"
-cspd/pd/ns-b,CSPD/PD/NS-B,"citizen_services_&_program_delivery,_atlantic"
-cspd/pd/tfw-f,CSPD/PD/TFW-F,"citizen_services_&_program_delivery,_atlantic"
-cspd/pd/tfw-a,CSPD/PD/TFW-A,"citizen_services_&_program_delivery,_atlantic"
-supervisory_services,Supervisory Services,cspd/pd/tfw-a
-cspd/be/twf/atlantic,CSPD/BE/TWF/Atlantic,"citizen_services_&_program_delivery,_atlantic"
+adm's_office_atlantic,"ADM's Office, Atlantic",service_canada_-_atlantic_region
+exec_service_coord_adm_office,"Exec Service Coord, ADM Office",adm's_office_atlantic
+benefits_delivery_services_branch_atlantic,"Benefits Delivery Services Branch, Atlantic",service_canada_-_atlantic_region
+bdsccdir_office,BDS/CC/Dir Office,benefits_delivery_services_branch_atlantic
+ei_-_call_centre_operations,EI - Call Centre Operations,bdsccdir_office
+bdscppddir_office,BDS/CPPD/Dir Office,benefits_delivery_services_branch_atlantic
+service_manager_medical_nb,Service Manager Medical NB,bdscppddir_office
+service_manager_medical_nl,Service Manager Medical NL,bdscppddir_office
+service_manger_non_med_nl,Service Manger Non med NL,bdscppddir_office
+bdscpp-oasdir_office,BDS/CPP-OAS/Dir Office,benefits_delivery_services_branch_atlantic
+nl_cpp_pep_triennial_unit,NL CPP PEP Triennial Unit,benefits_delivery_services_branch_atlantic
+bdseilevel2dir_office,BDS/EI/Level2/Dir Office,benefits_delivery_services_branch_atlantic
+bdseilevel1-ipoc-cptl-c-nb,BDS/EI/Level1-IPOC-CP/TL-C-NB,bdseilevel2dir_office
+bdsbesrmgr,BDS/BE/SrMgr,benefits_delivery_services_branch_atlantic
+bds_be_call_centre,BDS BE call centre,bdsbesrmgr
+business_expertise,Business Expertise,bdsbesrmgr
+ssbpasasr_bus_exp_mgratl,SSB/PASA/Sr Bus Exp Mgr/ATL,benefits_delivery_services_branch_atlantic
+bdseilevel1dir_office,BDS/EI/Level1/Dir Office,benefits_delivery_services_branch_atlantic
+grand_falls-windsor-ei,Grand Falls-Windsor-EI,bdseilevel1dir_office
+citizen_services__program_delivery_atlantic,"Citizen Services & Program Delivery, Atlantic",service_canada_-_atlantic_region
+cspdcsnb,CSPD/CS/NB,citizen_services__program_delivery_atlantic
+cspdsccbathurst_b,CSPD/SCC/Bathurst B,cspdcsnb
+cspdcsnllab,CSPD/CS/NL/LAB,citizen_services__program_delivery_atlantic
+cspdcssvanier,CSPD/CSS/Vanier,cspdcsnllab
+cspdcsnspe,CSPD/CS/NS/PE,citizen_services__program_delivery_atlantic
+cspdpdns-b,CSPD/PD/NS-B,citizen_services__program_delivery_atlantic
+cspdpdtfw-f,CSPD/PD/TFW-F,citizen_services__program_delivery_atlantic
+cspdpdtfw-a,CSPD/PD/TFW-A,citizen_services__program_delivery_atlantic
+supervisory_services,Supervisory Services,cspdpdtfw-a
+cspdbetwfatlantic,CSPD/BE/TWF/Atlantic,citizen_services__program_delivery_atlantic
 integrity_and_national_services,Integrity and National Services,service_canada_-_atlantic_region
-be_int&_nat_services_a,BE Int& Nat Services A,integrity_and_national_services
-cspd/ns/specprog-1,CSPD/NS/SpecProg-1,integrity_and_national_services
-ei_prem._red_program_sup,EI Prem. Red Program SUP,cspd/ns/specprog-1
+be_int_nat_services_a,BE Int& Nat Services A,integrity_and_national_services
+cspdnsspecprog-1,CSPD/NS/SpecProg-1,integrity_and_national_services
+ei_prem_red_program_sup,EI Prem. Red Program SUP,cspdnsspecprog-1
 dir_ris,Dir RIS,integrity_and_national_services
 regional_integrity_services,Regional Integrity Services,dir_ris
 regional_integrity_services-a,Regional Integrity Services-A,regional_integrity_services
 enforcement-a,Enforcement-A,dir_ris
 serv_mgr_isb_b,Serv Mgr ISB B,dir_ris
 workload_management_and_triage,Workload Management and Triage,dir_ris
-c_isp/ops/ei_invest,C ISP/Ops/EI Invest,dir_ris
-mrg_oas/cpp/tfinvest-a,Mrg OAS/CPP/TFInvest-A,dir_ris
-regional_integrit_services,Regional Integrit Services,mrg_oas/cpp/tfinvest-a
-isb/ops/investigation1,ISB/OPS/Investigation1,integrity_and_national_services
-"strategic_services_branch,_atlantic","Strategic Services Branch, Atlantic",service_canada_-_atlantic_region
-ssb/comms/dir/atl,SSB/COMMS/Dir/ATL,"strategic_services_branch,_atlantic"
-ssb/comms/mgr/atl,SSB/COMMS/Mgr/ATL,ssb/comms/dir/atl
-ssb/lmi/dir/atl,SSB/LMI/Dir/ATL,"strategic_services_branch,_atlantic"
-ssb/lmi/mgr_a/atl,SSB/LMI/Mgr A/ATL,ssb/lmi/dir/atl
-ssb/lmi/mgr_b/atl,SSB/LMI/Mgr B/ATL,ssb/lmi/dir/atl
-ssb/lmi/mrg_c/atl,SSB/LMI/Mrg C/ATL,ssb/lmi/dir/atl
-ssb/pasa/dir/atl,SSB/PASA/Dir/ATL,"strategic_services_branch,_atlantic"
-ssb/pasa/_sr_mgr/atl,SSB/PASA/ Sr Mgr/ATL,ssb/pasa/dir/atl
-ssb/pasa/acct_sr_srv_mgr/atl,SSB/PASA/Acct Sr Srv Mgr/ATL,ssb/pasa/dir/atl
-ssb/sprca/atip_mgr/_atl,SSB/SPRCA/ATIP Mgr/ ATL,service_canada_-_atlantic_region
-ssb/sprca/rms_sr_mgr/atl,SSB/SPRCA/RMS Sr Mgr/ATL,service_canada_-_atlantic_region
-ssb/sprca/rms_cas/atl,SSB/SPRCA/RMS CAS/ATL,ssb/sprca/rms_sr_mgr/atl
-ssb/pasa/plan_sr_serv_mgr/atl,SSB/PASA/Plan Sr Serv Mgr/ATL,service_canada_-_atlantic_region
+c_ispopsei_invest,C ISP/Ops/EI Invest,dir_ris
+mrg_oascpptfinvest-a,Mrg OAS/CPP/TFInvest-A,dir_ris
+regional_integrit_services,Regional Integrit Services,mrg_oascpptfinvest-a
+isbopsinvestigation1,ISB/OPS/Investigation1,integrity_and_national_services
+strategic_services_branch_atlantic,"Strategic Services Branch, Atlantic",service_canada_-_atlantic_region
+ssbcommsdiratl,SSB/COMMS/Dir/ATL,strategic_services_branch_atlantic
+ssbcommsmgratl,SSB/COMMS/Mgr/ATL,ssbcommsdiratl
+ssblmidiratl,SSB/LMI/Dir/ATL,strategic_services_branch_atlantic
+ssblmimgr_aatl,SSB/LMI/Mgr A/ATL,ssblmidiratl
+ssblmimgr_batl,SSB/LMI/Mgr B/ATL,ssblmidiratl
+ssblmimrg_catl,SSB/LMI/Mrg C/ATL,ssblmidiratl
+ssbpasadiratl,SSB/PASA/Dir/ATL,strategic_services_branch_atlantic
+ssbpasa_sr_mgratl,SSB/PASA/ Sr Mgr/ATL,ssbpasadiratl
+ssbpasaacct_sr_srv_mgratl,SSB/PASA/Acct Sr Srv Mgr/ATL,ssbpasadiratl
+ssbsprcaatip_mgr_atl,SSB/SPRCA/ATIP Mgr/ ATL,service_canada_-_atlantic_region
+ssbsprcarms_sr_mgratl,SSB/SPRCA/RMS Sr Mgr/ATL,service_canada_-_atlantic_region
+ssbsprcarms_casatl,SSB/SPRCA/RMS CAS/ATL,ssbsprcarms_sr_mgratl
+ssbpasaplan_sr_serv_mgratl,SSB/PASA/Plan Sr Serv Mgr/ATL,service_canada_-_atlantic_region
 service_canada_-_benefit_delivery_services_branch,Service Canada - Benefit Delivery Services Branch,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
 benefits_and_payments_ei,Benefits and Payments EI,service_canada_-_benefit_delivery_services_branch
 automation_and_client_serv,Automation and Client Serv,benefits_and_payments_ei
@@ -1184,31 +1184,31 @@ call_centre_prog_del_b1,Call Centre Prog Del B1,call_centre_prog_del_b
 call_centre_prog_del_c,Call Centre Prog Del C,call_centre_prog_delivery
 call_centre_prog_delivery_d,Call Centre Prog Delivery D,call_centre_prog_del_c
 call_centre_prog_del_d,Call Centre Prog Del D,call_centre_prog_delivery
-dir._hccs,Dir. HCCS,call_centres
-call_centre_operations_e,Call Centre Operations E,dir._hccs
-call_centre_operations_g,Call Centre Operations G,dir._hccs
-hccs_mgr_a,HCCS Mgr A,dir._hccs
-"hccs,_mgr_b","HCCS, Mgr B",dir._hccs
-"hccs,_mgr_e","HCCS, Mgr E",dir._hccs
+dir_hccs,Dir. HCCS,call_centres
+call_centre_operations_e,Call Centre Operations E,dir_hccs
+call_centre_operations_g,Call Centre Operations G,dir_hccs
+hccs_mgr_a,HCCS Mgr A,dir_hccs
+hccs_mgr_b,"HCCS, Mgr B",dir_hccs
+hccs_mgr_e,"HCCS, Mgr E",dir_hccs
 call_centre_operations_l,Call Centre Operations L,call_centres
 intradayd,IntradayD,call_centres
 change_management_leadership_and_organizational_readiness,Change Management Leadership and Organizational Readiness,service_canada_-_benefit_delivery_services_branch
 change_management_oversight,Change Management Oversight,change_management_leadership_and_organizational_readiness
 cpp_bus_solutions_m,CPP Bus Solutions M,change_management_leadership_and_organizational_readiness
-analysis_&_advice,Analysis & Advice,change_management_leadership_and_organizational_readiness
-strategy_&_methodologies,Strategy & Methodologies,change_management_leadership_and_organizational_readiness
-cpp/oas_program_and_services_oversight,CPP/OAS Program and Services Oversight,service_canada_-_benefit_delivery_services_branch
-cntr_of_expertise_oas_int_ops,Cntr of expertise OAS Int Ops,cpp/oas_program_and_services_oversight
+analysis__advice,Analysis & Advice,change_management_leadership_and_organizational_readiness
+strategy__methodologies,Strategy & Methodologies,change_management_leadership_and_organizational_readiness
+cppoas_program_and_services_oversight,CPP/OAS Program and Services Oversight,service_canada_-_benefit_delivery_services_branch
+cntr_of_expertise_oas_int_ops,Cntr of expertise OAS Int Ops,cppoas_program_and_services_oversight
 mgr_old_age_security_oprtns,Mgr Old Age Security Oprtns,cntr_of_expertise_oas_int_ops
 oas_io,OAS IO,cntr_of_expertise_oas_int_ops
 pension_program,Pension Program,cntr_of_expertise_oas_int_ops
 io_ben_process,IO Ben Process,pension_program
 oas__operationsmanager,OAS  OperationsManager,cntr_of_expertise_oas_int_ops
-cpp_business_operations,CPP Business Operations,cpp/oas_program_and_services_oversight
+cpp_business_operations,CPP Business Operations,cppoas_program_and_services_oversight
 cppoas_pmo_b,CPPOAS PMO B,cpp_business_operations
 cpp_sis_a,CPP SIS A,cpp_business_operations
 cpp_operations,CPP Operations,cpp_business_operations
-cpp_oas_business_solutions,CPP OAS Business Solutions,cpp/oas_program_and_services_oversight
+cpp_oas_business_solutions,CPP OAS Business Solutions,cppoas_program_and_services_oversight
 cpp_bus_solutions_b,CPP Bus Solutions B,cpp_oas_business_solutions
 cpp_bus_solutions_d,CPP Bus Solutions D,cpp_oas_business_solutions
 cpp_bus_solutions_e,CPP Bus Solutions E,cpp_oas_business_solutions
@@ -1216,27 +1216,27 @@ cpp_bus_solutions_i,CPP Bus Solutions I,cpp_oas_business_solutions
 cpp_bus_solutions_l,CPP Bus Solutions L,cpp_oas_business_solutions
 cpp_bus_solutions,CPP Bus Solutions,cpp_oas_business_solutions
 cppoas_transformation,CPPOAS Transformation,cpp_oas_business_solutions
-cpp_&_oas_bus_systems,CPP & OAS Bus Systems,cpp_oas_business_solutions
-cppoas_bus_trans,CPPOAS Bus Trans,cpp/oas_program_and_services_oversight
+cpp__oas_bus_systems,CPP & OAS Bus Systems,cpp_oas_business_solutions
+cppoas_bus_trans,CPPOAS Bus Trans,cppoas_program_and_services_oversight
 cppoas_bus_transf_a,CPPOAS Bus Transf A,cppoas_bus_trans
-cpp_oas_prog_servs_oversight_a,CPP OAS Prog Servs Oversight A,cpp/oas_program_and_services_oversight
-exec_cppoas_bus_ops,Exec CPPOAS Bus Ops,cpp/oas_program_and_services_oversight
+cpp_oas_prog_servs_oversight_a,CPP OAS Prog Servs Oversight A,cppoas_program_and_services_oversight
+exec_cppoas_bus_ops,Exec CPPOAS Bus Ops,cppoas_program_and_services_oversight
 cpp_business_operations_d,CPP Business Operations D,exec_cppoas_bus_ops
 cpp_procedure,CPP Procedure,exec_cppoas_bus_ops
 pekm,PEKM,exec_cppoas_bus_ops
-oas_sis_a,OAS SIS A,cpp/oas_program_and_services_oversight
+oas_sis_a,OAS SIS A,cppoas_program_and_services_oversight
 cpp_bus_solutions_c,CPP Bus Solutions C,oas_sis_a
 oas_sis_b,OAS SIS B,oas_sis_a
 oas_sis_c,OAS SIS C,oas_sis_a
 cpp-51,CPP-51,oas_sis_a
 major_projects_execution-a,Major Projects Execution-A,oas_sis_a
 major_projects_execution-b,Major Projects Execution-B,oas_sis_a
-proc_enq_and_knowledge_mgmt,Proc Enq and Knowledge Mgmt,cpp/oas_program_and_services_oversight
+proc_enq_and_knowledge_mgmt,Proc Enq and Knowledge Mgmt,cppoas_program_and_services_oversight
 pekm_a,PEKM A,proc_enq_and_knowledge_mgmt
 pekm_b,PEKM B,proc_enq_and_knowledge_mgmt
 pekm_c,PEKM C,proc_enq_and_knowledge_mgmt
 pensions_etool,Pensions eTool,proc_enq_and_knowledge_mgmt
-program_performance_cppoas,Program Performance CPPOAS,cpp/oas_program_and_services_oversight
+program_performance_cppoas,Program Performance CPPOAS,cppoas_program_and_services_oversight
 program_performance_a,Program Performance A,program_performance_cppoas
 program_performance_b,Program Performance B,program_performance_cppoas
 program_performance_c,Program Performance C,program_performance_cppoas
@@ -1261,10 +1261,10 @@ quality_services,Quality Services,policy_appeals_and_quality
 quality_services_b,Quality Services B,quality_services
 quality_services_c,Quality Services C,quality_services
 quality_services_e,Quality Services E,quality_services
-"senior_adm's_office,_tismb","Senior ADM's Office, TISMB",service_canada_-_benefit_delivery_services_branch
-"strategic_directions_directorate,_tismb","Strategic Directions Directorate, TISMB",service_canada_-_benefit_delivery_services_branch
-"transformation,_planning_design_and_oversight","Transformation, Planning Design and Oversight",service_canada_-_benefit_delivery_services_branch
-branch_management_services_1,Branch Management Services 1,"transformation,_planning_design_and_oversight"
+senior_adm's_office_tismb,"Senior ADM's Office, TISMB",service_canada_-_benefit_delivery_services_branch
+strategic_directions_directorate_tismb,"Strategic Directions Directorate, TISMB",service_canada_-_benefit_delivery_services_branch
+transformation_planning_design_and_oversight,"Transformation, Planning Design and Oversight",service_canada_-_benefit_delivery_services_branch
+branch_management_services_1,Branch Management Services 1,transformation_planning_design_and_oversight
 business_analysis_b,Business Analysis B,branch_management_services_1
 human_resources_services-a,Human Resources Services-A,business_analysis_b
 management_services_a,Management Services A,branch_management_services_1
@@ -1278,93 +1278,93 @@ management_services_e,Management Services E,management_services_j
 management_services_f,Management Services F,management_services_j
 management_services_g,Management Services G,management_services_j
 management_services_d,Management Services D,branch_management_services_1
-business_analysis,Business Analysis,"transformation,_planning_design_and_oversight"
+business_analysis,Business Analysis,transformation_planning_design_and_oversight
 business_analysis_a,Business Analysis A,business_analysis
-business_architecture-a,Business Architecture-A,"transformation,_planning_design_and_oversight"
+business_architecture-a,Business Architecture-A,transformation_planning_design_and_oversight
 business_architectures,Business Architectures,business_architecture-a
 business_architecture,Business architecture,business_architecture-a
-eisdm_c,EISDM C,"transformation,_planning_design_and_oversight"
+eisdm_c,EISDM C,transformation_planning_design_and_oversight
 eisdm_f,EISDM F,eisdm_c
-eisdm_e,EISDM E,"transformation,_planning_design_and_oversight"
-ei_serv_del_modernization,EI Serv Del Modernization,"transformation,_planning_design_and_oversight"
+eisdm_e,EISDM E,transformation_planning_design_and_oversight
+ei_serv_del_modernization,EI Serv Del Modernization,transformation_planning_design_and_oversight
 eisdm_a,EISDM A,ei_serv_del_modernization
-engagement,Engagement,"transformation,_planning_design_and_oversight"
+engagement,Engagement,transformation_planning_design_and_oversight
 special_projects,Special Projects,engagement
-enterprise_major_project_exec1,Enterprise Major Project Exec1,"transformation,_planning_design_and_oversight"
-enterprise_major_project_exec5,Enterprise Major Project Exec5,"transformation,_planning_design_and_oversight"
-enterprise_major_project_exec6,Enterprise Major Project Exec6,"transformation,_planning_design_and_oversight"
-enterprise_major_project_exec7,Enterprise Major Project Exec7,"transformation,_planning_design_and_oversight"
-enterprise_major_project_exec8,Enterprise Major Project Exec8,"transformation,_planning_design_and_oversight"
-enterprise_major_project_exec9,Enterprise Major Project Exec9,"transformation,_planning_design_and_oversight"
-enterprise_maj_proj_execution,Enterprise Maj Proj Execution,"transformation,_planning_design_and_oversight"
-epic_special_projects,EPIC Special Projects,"transformation,_planning_design_and_oversight"
-proj._integra._and_developm.,Proj. Integra. and Developm.,epic_special_projects
-proj.coord.liais._and_engag.,Proj.Coord.Liais. and Engag.,epic_special_projects
-proj._analysis_and_development,Proj. Analysis and Development,epic_special_projects
-governance_accountability,Governance Accountability,"transformation,_planning_design_and_oversight"
+enterprise_major_project_exec1,Enterprise Major Project Exec1,transformation_planning_design_and_oversight
+enterprise_major_project_exec5,Enterprise Major Project Exec5,transformation_planning_design_and_oversight
+enterprise_major_project_exec6,Enterprise Major Project Exec6,transformation_planning_design_and_oversight
+enterprise_major_project_exec7,Enterprise Major Project Exec7,transformation_planning_design_and_oversight
+enterprise_major_project_exec8,Enterprise Major Project Exec8,transformation_planning_design_and_oversight
+enterprise_major_project_exec9,Enterprise Major Project Exec9,transformation_planning_design_and_oversight
+enterprise_maj_proj_execution,Enterprise Maj Proj Execution,transformation_planning_design_and_oversight
+epic_special_projects,EPIC Special Projects,transformation_planning_design_and_oversight
+proj_integra_and_developm,Proj. Integra. and Developm.,epic_special_projects
+projcoordliais_and_engag,Proj.Coord.Liais. and Engag.,epic_special_projects
+proj_analysis_and_development,Proj. Analysis and Development,epic_special_projects
+governance_accountability,Governance Accountability,transformation_planning_design_and_oversight
 governance_accountability_a,Governance Accountability A,governance_accountability
 governance_and_oversight,Governance and Oversight,governance_accountability
 governance_accountability_b,Governance Accountability B,governance_accountability
-integrated_channel_management,Integrated Channel Management,"transformation,_planning_design_and_oversight"
-perform_reportng_&_analysis,Perform Reportng & Analysis,"transformation,_planning_design_and_oversight"
-serv._strat._oversight,Serv. Strat. Oversight,"transformation,_planning_design_and_oversight"
-cppoas_pmo_c,CPPOAS PMO C,serv._strat._oversight
-director_pdo_-_a.,Director PDO - A.,serv._strat._oversight
-roe_b,ROE B,serv._strat._oversight
-serv._stat._oversight_a,Serv. Stat. Oversight A,serv._strat._oversight
-strategic_services_&_oversight,Strategic Services & Oversight,serv._strat._oversight
-dir_org_structure_capabilities,Dir Org Structure Capabilities,"transformation,_planning_design_and_oversight"
+integrated_channel_management,Integrated Channel Management,transformation_planning_design_and_oversight
+perform_reportng__analysis,Perform Reportng & Analysis,transformation_planning_design_and_oversight
+serv_strat_oversight,Serv. Strat. Oversight,transformation_planning_design_and_oversight
+cppoas_pmo_c,CPPOAS PMO C,serv_strat_oversight
+director_pdo_-_a,Director PDO - A.,serv_strat_oversight
+roe_b,ROE B,serv_strat_oversight
+serv_stat_oversight_a,Serv. Stat. Oversight A,serv_strat_oversight
+strategic_services__oversight,Strategic Services & Oversight,serv_strat_oversight
+dir_org_structure_capabilities,Dir Org Structure Capabilities,transformation_planning_design_and_oversight
 org_capability_development,Org Capability Development,dir_org_structure_capabilities
-project_support_&_advice,Project Support & Advice,dir_org_structure_capabilities
-"egpe,_epayroll_gest","EGPE, Epayroll Gest","transformation,_planning_design_and_oversight"
+project_support__advice,Project Support & Advice,dir_org_structure_capabilities
+egpe_epayroll_gest,"EGPE, Epayroll Gest",transformation_planning_design_and_oversight
 management_services_h,Management Services H,service_canada_-_benefit_delivery_services_branch
-"manager,_channel_management","Manager, Channel Management",service_canada_-_benefit_delivery_services_branch
+manager_channel_management,"Manager, Channel Management",service_canada_-_benefit_delivery_services_branch
 planning_reporting,Planning Reporting,service_canada_-_benefit_delivery_services_branch
 governance_planning_reporting,Governance Planning Reporting,service_canada_-_benefit_delivery_services_branch
 governance_a,Governance A,service_canada_-_benefit_delivery_services_branch
 service_canada_-_citizen_services_branch,Service Canada - Citizen Services Branch,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-"accessibility,_project_management_and_service_strategies","Accessibility, Project Management and Service Strategies",service_canada_-_citizen_services_branch
-business_operations_and_strategies,Business Operations and Strategies,"accessibility,_project_management_and_service_strategies"
+accessibility_project_management_and_service_strategies,"Accessibility, Project Management and Service Strategies",service_canada_-_citizen_services_branch
+business_operations_and_strategies,Business Operations and Strategies,accessibility_project_management_and_service_strategies
 business_improvements,Business Improvements,business_operations_and_strategies
 bus_intel_and_opr_performance,Bus Intel and Opr Performance,business_operations_and_strategies
-channel_strategies_and_mgnt,Channel Strategies and Mgnt,"accessibility,_project_management_and_service_strategies"
+channel_strategies_and_mgnt,Channel Strategies and Mgnt,accessibility_project_management_and_service_strategies
 business_transformation_1-temp,Business Transformation 1-temp,channel_strategies_and_mgnt
-outreach_services,Outreach Services,"accessibility,_project_management_and_service_strategies"
+outreach_services,Outreach Services,accessibility_project_management_and_service_strategies
 community_outreach_lias_svcs,Community Outreach Lias Svcs,outreach_services
 monitoring_and_renewal,Monitoring and Renewal,outreach_services
-passport_strategic_modernization_office,Passport Strategic Modernization Office,"accessibility,_project_management_and_service_strategies"
+passport_strategic_modernization_office,Passport Strategic Modernization Office,accessibility_project_management_and_service_strategies
 in-person_channel_alignment,In-Person Channel Alignment,passport_strategic_modernization_office
-planning_and_business_improve,Planning and Business Improve,"accessibility,_project_management_and_service_strategies"
-"govern,_planning_&_reporting","Govern, planning & Reporting",planning_and_business_improve
-program_and_services_operations,Program and Services Operations,"accessibility,_project_management_and_service_strategies"
+planning_and_business_improve,Planning and Business Improve,accessibility_project_management_and_service_strategies
+govern_planning__reporting,"Govern, planning & Reporting",planning_and_business_improve
+program_and_services_operations,Program and Services Operations,accessibility_project_management_and_service_strategies
 correspondance_services-a,Correspondance Services-A,program_and_services_operations
-regional_engagement_and_liaison,Regional Engagement and Liaison,"accessibility,_project_management_and_service_strategies"
+regional_engagement_and_liaison,Regional Engagement and Liaison,accessibility_project_management_and_service_strategies
 business_infrastructure,Business Infrastructure,regional_engagement_and_liaison
 adm_office-_citizen_service_branch,ADM Office- Citizen Service Branch,service_canada_-_citizen_services_branch
 digital_service_directorate,Digital Service Directorate,service_canada_-_citizen_services_branch
 coe_digital_service_strategy,COE Digital Service Strategy,digital_service_directorate
 digital_serv_project_mgt,Digital Serv Project Mgt,coe_digital_service_strategy
 onboarding,Onboarding,coe_digital_service_strategy
-phone_ops_&_intrgd_content_mgt,Phone Ops & Intrgd Content Mgt,digital_service_directorate
-contact_centre_operations,Contact Centre Operations,phone_ops_&_intrgd_content_mgt
+phone_ops__intrgd_content_mgt,Phone Ops & Intrgd Content Mgt,digital_service_directorate
+contact_centre_operations,Contact Centre Operations,phone_ops__intrgd_content_mgt
 els_team_2,ELS Team 2,digital_service_directorate
 els_team_3,ELS Team 3,digital_service_directorate
 team_1_coordination,Team 1 Coordination,digital_service_directorate
 portfolio_web,Portfolio Web,digital_service_directorate
-"manager,_web_sites_main&pub","Manager, Web Sites Main&Pub",portfolio_web
-portfolio_publishing_a,Portfolio Publishing A,"manager,_web_sites_main&pub"
-portfolio_publishing_b,Portfolio Publishing B,"manager,_web_sites_main&pub"
-portfolio__publishing_c,Portfolio  Publishing C,"manager,_web_sites_main&pub"
-sites_coordination,Sites Coordination,"manager,_web_sites_main&pub"
+manager_web_sites_mainpub,"Manager, Web Sites Main&Pub",portfolio_web
+portfolio_publishing_a,Portfolio Publishing A,manager_web_sites_mainpub
+portfolio_publishing_b,Portfolio Publishing B,manager_web_sites_mainpub
+portfolio__publishing_c,Portfolio  Publishing C,manager_web_sites_mainpub
+sites_coordination,Sites Coordination,manager_web_sites_mainpub
 strategic_web_planning,Strategic Web Planning,portfolio_web
 web_planning,Web Planning,strategic_web_planning
 themes_management,Themes Management,portfolio_web
 principal_publisher,Principal Publisher,digital_service_directorate
-onboarding_&_info_architecture,Onboarding & Info Architecture,principal_publisher
-business_needs_ass.,Business Needs Ass.,onboarding_&_info_architecture
+onboarding__info_architecture,Onboarding & Info Architecture,principal_publisher
+business_needs_ass,Business Needs Ass.,onboarding__info_architecture
 project_management_web_renewal,Project Management Web Renewal,principal_publisher
 web_design_-_web_renewal,Web Design - Web Renewal,principal_publisher
-application_dev.,Application Dev.,web_design_-_web_renewal
+application_dev,Application Dev.,web_design_-_web_renewal
 web_service_-_web_renewal,Web Service - Web Renewal,principal_publisher
 analytics_and_mesurement,Analytics and Mesurement,web_service_-_web_renewal
 web_support_-_it,Web Support - IT,principal_publisher
@@ -1372,23 +1372,23 @@ web_support__b,Web Support  B,web_support_-_it
 secure_digital_solutions,Secure Digital Solutions,digital_service_directorate
 solution_design,Solution Design,secure_digital_solutions
 strategic_web_initiatives,Strategic Web Initiatives,digital_service_directorate
-"news,_social_media_&_mobile","News, Social Media & Mobile",strategic_web_initiatives
+news_social_media__mobile,"News, Social Media & Mobile",strategic_web_initiatives
 web_operations,Web Operations,digital_service_directorate
 publication_work_coordination,Publication Work Coordination,web_operations
 operations_support,Operations Support,publication_work_coordination
-"management_services,_csb","Management Services, CSB",service_canada_-_citizen_services_branch
-finance_&_administrative_serv,Finance & Administrative Serv,"management_services,_csb"
-finance_team,Finance Team,finance_&_administrative_serv
-business_mgnt_services-1,Business Mgnt Services-1,"management_services,_csb"
+management_services_csb,"Management Services, CSB",service_canada_-_citizen_services_branch
+finance__administrative_serv,Finance & Administrative Serv,management_services_csb
+finance_team,Finance Team,finance__administrative_serv
+business_mgnt_services-1,Business Mgnt Services-1,management_services_csb
 business_mgnt_services-3,Business Mgnt Services-3,business_mgnt_services-1
-hr_&_learning_services,HR & Learning Services,"management_services,_csb"
-"team_leader,_admin_services_hr","Team Leader, Admin Services HR",hr_&_learning_services
-partnerships_development_&_management,Partnerships Development & management,service_canada_-_citizen_services_branch
-official_languages_service_for_citizens,Official Languages Service for Citizens,partnerships_development_&_management
-accessible_services_for_citiz.,Accessible Services for Citiz.,official_languages_service_for_citizens
+hr__learning_services,HR & Learning Services,management_services_csb
+team_leader_admin_services_hr,"Team Leader, Admin Services HR",hr__learning_services
+partnerships_development__management,Partnerships Development & management,service_canada_-_citizen_services_branch
+official_languages_service_for_citizens,Official Languages Service for Citizens,partnerships_development__management
+accessible_services_for_citiz,Accessible Services for Citiz.,official_languages_service_for_citizens
 off_languages_governance_unit,Off Languages Governance Unit,official_languages_service_for_citizens
 off_languages_legislative_unit,Off Languages Legislative Unit,official_languages_service_for_citizens
-tier_1_-_coe_other_govt_depts,Tier 1 - COE Other Govt Depts,partnerships_development_&_management
+tier_1_-_coe_other_govt_depts,Tier 1 - COE Other Govt Depts,partnerships_development__management
 centre_of_expertise-operation,Centre of Expertise-Operation,tier_1_-_coe_other_govt_depts
 strategic_directions_directorate,Strategic Directions Directorate,service_canada_-_citizen_services_branch
 client_feedback_centre_of_expertise,Client Feedback Centre of Expertise,strategic_directions_directorate
@@ -1397,11 +1397,11 @@ client_insights_and_business_intelligence,Client Insights and Business Intellige
 business_intelligence,Business Intelligence,client_insights_and_business_intelligence
 strategies-a,Strategies-A,client_insights_and_business_intelligence
 client_insights,Client Insights,client_insights_and_business_intelligence
-"planning,_reporting_and_performance_measurement","Planning, Reporting and Performance Measurement",strategic_directions_directorate
-performance_measurement,Performance Measurement,"planning,_reporting_and_performance_measurement"
-planning_&_reporting,Planning & Reporting,"planning,_reporting_and_performance_measurement"
-project_management_office,Project Management Office,"planning,_reporting_and_performance_measurement"
-"strategic_directions,_projects","Strategic Directions, Projects",service_canada_-_citizen_services_branch
+planning_reporting_and_performance_measurement,"Planning, Reporting and Performance Measurement",strategic_directions_directorate
+performance_measurement,Performance Measurement,planning_reporting_and_performance_measurement
+planning__reporting,Planning & Reporting,planning_reporting_and_performance_measurement
+project_management_office,Project Management Office,planning_reporting_and_performance_measurement
+strategic_directions_projects,"Strategic Directions, Projects",service_canada_-_citizen_services_branch
 strategic_directions,Strategic Directions,service_canada_-_citizen_services_branch
 applied_behavioural_analytics,Applied Behavioural Analytics,strategic_directions
 service_canada_-_integrity_services_branch,Service Canada - Integrity Services Branch,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
@@ -1409,98 +1409,98 @@ branch_management_services,Branch Management Services,service_canada_-_integrity
 bpmo-proj_mgmt_delivery_-_io,BPMO-Proj Mgmt Delivery - IO,branch_management_services
 integrity_strategic_directions,Integrity Strategic Directions,service_canada_-_integrity_services_branch
 integrity_business_analysis,Integrity Business Analysis,integrity_strategic_directions
-intgrty_busanls/antclmodel,Intgrty BusAnls/AntclModel,integrity_business_analysis
-intgrty_bus_anls/data_team,Intgrty Bus Anls/Data Team,integrity_business_analysis
-integrity_policy_&_program_development,Integrity Policy & Program Development,integrity_strategic_directions
-integrity_pol_&_prog_devlpmt,Integrity Pol & Prog Devlpmt,integrity_policy_&_program_development
-intgrty_policy&progr_devpmnt,Intgrty Policy&Progr Devpmnt,integrity_policy_&_program_development
-intgrty_pol&prg_dev/fraud_moni,Intgrty Pol&Prg Dev/Fraud Moni,integrity_policy_&_program_development
-program_integrity_reviews,Program Integrity Reviews,integrity_policy_&_program_development
-"intgty_strat,plan&partnships","Intgty Strat,Plan&Partnships",integrity_strategic_directions
-"int_strat,plan&partns/spl_proj","Int Strat,Plan&Partns/Spl Proj","intgty_strat,plan&partnships"
-partnerships_&_info_sharing,Partnerships & Info Sharing,"intgty_strat,plan&partnships"
-"strat,plan&par/s_plan,proj_mgm","Strat,Plan&Par/S Plan,Proj Mgm","intgty_strat,plan&partnships"
-temp_foreign_wker_prog_info_sh,Temp Foreign Wker Prog Info Sh,"intgty_strat,plan&partnships"
-internal_integrity_&_security,Internal Integrity & Security,service_canada_-_integrity_services_branch
-corporate_security_&_internal_investigations,Corporate Security & Internal Investigations,internal_integrity_&_security
-corporate_security,Corporate Security,corporate_security_&_internal_investigations
-special_investigations_unit,Special Investigations Unit,corporate_security_&_internal_investigations
-special_investigation_unit,Special Investigation Unit,corporate_security_&_internal_investigations
-emergency_management_&_business_continuity,Emergency Management & Business Continuity,internal_integrity_&_security
-emergency_mgt&bus_continuity-a,Emergency Mgt&Bus Continuity-A,emergency_management_&_business_continuity
+intgrty_busanlsantclmodel,Intgrty BusAnls/AntclModel,integrity_business_analysis
+intgrty_bus_anlsdata_team,Intgrty Bus Anls/Data Team,integrity_business_analysis
+integrity_policy__program_development,Integrity Policy & Program Development,integrity_strategic_directions
+integrity_pol__prog_devlpmt,Integrity Pol & Prog Devlpmt,integrity_policy__program_development
+intgrty_policyprogr_devpmnt,Intgrty Policy&Progr Devpmnt,integrity_policy__program_development
+intgrty_polprg_devfraud_moni,Intgrty Pol&Prg Dev/Fraud Moni,integrity_policy__program_development
+program_integrity_reviews,Program Integrity Reviews,integrity_policy__program_development
+intgty_stratplanpartnships,"Intgty Strat,Plan&Partnships",integrity_strategic_directions
+int_stratplanpartnsspl_proj,"Int Strat,Plan&Partns/Spl Proj",intgty_stratplanpartnships
+partnerships__info_sharing,Partnerships & Info Sharing,intgty_stratplanpartnships
+stratplanpars_planproj_mgm,"Strat,Plan&Par/S Plan,Proj Mgm",intgty_stratplanpartnships
+temp_foreign_wker_prog_info_sh,Temp Foreign Wker Prog Info Sh,intgty_stratplanpartnships
+internal_integrity__security,Internal Integrity & Security,service_canada_-_integrity_services_branch
+corporate_security__internal_investigations,Corporate Security & Internal Investigations,internal_integrity__security
+corporate_security,Corporate Security,corporate_security__internal_investigations
+special_investigations_unit,Special Investigations Unit,corporate_security__internal_investigations
+special_investigation_unit,Special Investigation Unit,corporate_security__internal_investigations
+emergency_management__business_continuity,Emergency Management & Business Continuity,internal_integrity__security
+emergency_mgtbus_continuity-a,Emergency Mgt&Bus Continuity-A,emergency_management__business_continuity
 nhq_integrity_operations,NHQ Integrity Operations,service_canada_-_integrity_services_branch
 business_solution_and_performance_management,Business Solution and Performance Management,nhq_integrity_operations
 business_support_operations,Business Support Operations,business_solution_and_performance_management
-temp_forgn_work/intl_mblty_prg,Temp Forgn Work/Intl Mblty Prg,nhq_integrity_operations
-io/opertl_pol_&_issues_mgmt,IO/Opertl Pol & Issues Mgmt,temp_forgn_work/intl_mblty_prg
+temp_forgn_workintl_mblty_prg,Temp Forgn Work/Intl Mblty Prg,nhq_integrity_operations
+ioopertl_pol__issues_mgmt,IO/Opertl Pol & Issues Mgmt,temp_forgn_workintl_mblty_prg
 national_enforcement,National Enforcement,nhq_integrity_operations
 intelligence,Intelligence,national_enforcement
-trng_&_qltyl_monitoring,Trng & Qltyl Monitoring,national_enforcement
-"adm's_office,_integrity_services_branch","ADM's Office, Integrity Services Branch",service_canada_-_integrity_services_branch
+trng__qltyl_monitoring,Trng & Qltyl Monitoring,national_enforcement
+adm's_office_integrity_services_branch,"ADM's Office, Integrity Services Branch",service_canada_-_integrity_services_branch
 service_canada_-_ontario_region,Service Canada - Ontario Region,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-"adm's_office,_ontario_region","ADM's Office, Ontario Region",service_canada_-_ontario_region
-"benefit_delivery_service_branch,_ontario","Benefit Delivery Service Branch, Ontario",service_canada_-_ontario_region
-bdsb/be/pe/pen3,BDSB/BE/PE/Pen3,"benefit_delivery_service_branch,_ontario"
-bdsb/callcentres/ops,BDSB/CallCentres/Ops,"benefit_delivery_service_branch,_ontario"
-cppd/processing,CPPD/Processing,"benefit_delivery_service_branch,_ontario"
-ei/central,EI/Central,"benefit_delivery_service_branch,_ontario"
-employment_ins/ops/north_york,Employment Ins/ops/North York,ei/central
-ei/ops/northeast,EI/Ops/Northeast,"benefit_delivery_service_branch,_ontario"
-ins_payment_operation_ctr_e,INS Payment Operation Ctr E,ei/ops/northeast
-ins_payment_operation_ctr_f,INS Payment Operation Ctr F,ei/ops/northeast
-ei/southwest,EI/Southwest,"benefit_delivery_service_branch,_ontario"
-oas/cpp/processing,OAS/CPP/Processing,"benefit_delivery_service_branch,_ontario"
-oas/cpp/ops/scarbor10,OAS/CPP/Ops/Scarbor10,oas/cpp/processing
-bdsb/be,BDSB/BE,"benefit_delivery_service_branch,_ontario"
-oas/cpp/ops/scarborough_5,OAS/CPP/OPS/SCARBOROUGH 5,"benefit_delivery_service_branch,_ontario"
-cppd/ops/chathan_1g,CPPD/Ops/Chathan 1G,"benefit_delivery_service_branch,_ontario"
-oas/cpp/ops/scarborough_7,OAS/CPP/OPS/SCARBOROUGH 7,"benefit_delivery_service_branch,_ontario"
-employment_insurance,Employment Insurance,"benefit_delivery_service_branch,_ontario"
-oas/cpp/ops/scarborough_2,OAS/CPP/OPS/SCARBOROUGH 2,"benefit_delivery_service_branch,_ontario"
-employment_insurance/ops/ny1,Employment Insurance/Ops/NY1,"benefit_delivery_service_branch,_ontario"
-el_operations_london_2,El Operations London 2,"benefit_delivery_service_branch,_ontario"
-oas/cpp/ops/scarborough_8,OAS/CPP/OPS/SCARBOROUGH 8,"benefit_delivery_service_branch,_ontario"
-oas/cpp/ops/scarborough_3,OAS/CPP/OPS/SCARBOROUGH 3,"benefit_delivery_service_branch,_ontario"
-employment_insurance/ops/ny2,Employment Insurance/Ops/NY2,"benefit_delivery_service_branch,_ontario"
-bdsb/be/pe/ei/busadv-4,BDSB/BE/PE/EI/BusAdv-4,"benefit_delivery_service_branch,_ontario"
-ei_operations_kitchener,EI Operations Kitchener,"benefit_delivery_service_branch,_ontario"
-oas/cpp/ops/chathamf,OAS/CPP/Ops/ChathamF,"benefit_delivery_service_branch,_ontario"
-"citizen_services_branch,_ontario","Citizen Services Branch, Ontario",service_canada_-_ontario_region
-csb/be,CSB/BE,"citizen_services_branch,_ontario"
-ppmi_project_management,PPMI Project Management,csb/be
-msb/director,MSB/Director,"citizen_services_branch,_ontario"
-pass/ops-passport_program,PASS/Ops-Passport Program,"citizen_services_branch,_ontario"
-pdb/community_based_delivery,PDB/Community Based Delivery,"citizen_services_branch,_ontario"
-pdb/tfw/ws_dir,PDB/TFW/WS Dir,"citizen_services_branch,_ontario"
-pd/tfw/cp/sm,PD/TFW/CP/SM,pdb/tfw/ws_dir
-program_delivery_branch,Program Delivery Branch,"citizen_services_branch,_ontario"
-sa/east_central_ontario,SA/East Central Ontario,"citizen_services_branch,_ontario"
-sa/eastern_ontario,SA/Eastern Ontario,"citizen_services_branch,_ontario"
-sa/north_east_ontario,SA/North East Ontario,"citizen_services_branch,_ontario"
-sa/north_west_ontario,SA/North West Ontario,"citizen_services_branch,_ontario"
-sa/south_central_ontario,SA/South Central Ontario,"citizen_services_branch,_ontario"
-sa/york-durham,SA/York-Durham,"citizen_services_branch,_ontario"
-scc/lindsay,SCC/Lindsay,"citizen_services_branch,_ontario"
-scc/halton-peel,SCC/Halton-Peel,"citizen_services_branch,_ontario"
-pass/ops/tl-docmail_5,PASS/Ops/TL-DOCMAIL 5,"citizen_services_branch,_ontario"
-sa/toronto,SA/Toronto,"citizen_services_branch,_ontario"
-scc/to/sm-gerrard_sq,SCC/TO/SM-Gerrard Sq,sa/toronto
-scc/to/sm-west_humber,SCC/TO/SM-West Humber,sa/toronto
-scc/to/sm-etobicoke,SCC/TO/SM-Etobicoke,sa/toronto
-pdb/network_based_delivery,PDB/Network Based Delivery,"citizen_services_branch,_ontario"
-team_leader,Team Leader,"citizen_services_branch,_ontario"
-sa/london-windsor,SA/London-Windsor,"citizen_services_branch,_ontario"
-"program_delivery_branch,_ontario","Program Delivery Branch, Ontario",service_canada_-_ontario_region
-pdb-business_expertise,PDB-Business Expertise,"program_delivery_branch,_ontario"
-"strategic_services_branch,_ontario","Strategic Services Branch, Ontario",service_canada_-_ontario_region
-ssb/lmsi,SSB/LMSI,"strategic_services_branch,_ontario"
-ssb/pasa,SSB/PASA,"strategic_services_branch,_ontario"
-ssb/sprca,SSB/SPRCA,"strategic_services_branch,_ontario"
+adm's_office_ontario_region,"ADM's Office, Ontario Region",service_canada_-_ontario_region
+benefit_delivery_service_branch_ontario,"Benefit Delivery Service Branch, Ontario",service_canada_-_ontario_region
+bdsbbepepen3,BDSB/BE/PE/Pen3,benefit_delivery_service_branch_ontario
+bdsbcallcentresops,BDSB/CallCentres/Ops,benefit_delivery_service_branch_ontario
+cppdprocessing,CPPD/Processing,benefit_delivery_service_branch_ontario
+eicentral,EI/Central,benefit_delivery_service_branch_ontario
+employment_insopsnorth_york,Employment Ins/ops/North York,eicentral
+eiopsnortheast,EI/Ops/Northeast,benefit_delivery_service_branch_ontario
+ins_payment_operation_ctr_e,INS Payment Operation Ctr E,eiopsnortheast
+ins_payment_operation_ctr_f,INS Payment Operation Ctr F,eiopsnortheast
+eisouthwest,EI/Southwest,benefit_delivery_service_branch_ontario
+oascppprocessing,OAS/CPP/Processing,benefit_delivery_service_branch_ontario
+oascppopsscarbor10,OAS/CPP/Ops/Scarbor10,oascppprocessing
+bdsbbe,BDSB/BE,benefit_delivery_service_branch_ontario
+oascppopsscarborough_5,OAS/CPP/OPS/SCARBOROUGH 5,benefit_delivery_service_branch_ontario
+cppdopschathan_1g,CPPD/Ops/Chathan 1G,benefit_delivery_service_branch_ontario
+oascppopsscarborough_7,OAS/CPP/OPS/SCARBOROUGH 7,benefit_delivery_service_branch_ontario
+employment_insurance,Employment Insurance,benefit_delivery_service_branch_ontario
+oascppopsscarborough_2,OAS/CPP/OPS/SCARBOROUGH 2,benefit_delivery_service_branch_ontario
+employment_insuranceopsny1,Employment Insurance/Ops/NY1,benefit_delivery_service_branch_ontario
+el_operations_london_2,El Operations London 2,benefit_delivery_service_branch_ontario
+oascppopsscarborough_8,OAS/CPP/OPS/SCARBOROUGH 8,benefit_delivery_service_branch_ontario
+oascppopsscarborough_3,OAS/CPP/OPS/SCARBOROUGH 3,benefit_delivery_service_branch_ontario
+employment_insuranceopsny2,Employment Insurance/Ops/NY2,benefit_delivery_service_branch_ontario
+bdsbbepeeibusadv-4,BDSB/BE/PE/EI/BusAdv-4,benefit_delivery_service_branch_ontario
+ei_operations_kitchener,EI Operations Kitchener,benefit_delivery_service_branch_ontario
+oascppopschathamf,OAS/CPP/Ops/ChathamF,benefit_delivery_service_branch_ontario
+citizen_services_branch_ontario,"Citizen Services Branch, Ontario",service_canada_-_ontario_region
+csbbe,CSB/BE,citizen_services_branch_ontario
+ppmi_project_management,PPMI Project Management,csbbe
+msbdirector,MSB/Director,citizen_services_branch_ontario
+passops-passport_program,PASS/Ops-Passport Program,citizen_services_branch_ontario
+pdbcommunity_based_delivery,PDB/Community Based Delivery,citizen_services_branch_ontario
+pdbtfwws_dir,PDB/TFW/WS Dir,citizen_services_branch_ontario
+pdtfwcpsm,PD/TFW/CP/SM,pdbtfwws_dir
+program_delivery_branch,Program Delivery Branch,citizen_services_branch_ontario
+saeast_central_ontario,SA/East Central Ontario,citizen_services_branch_ontario
+saeastern_ontario,SA/Eastern Ontario,citizen_services_branch_ontario
+sanorth_east_ontario,SA/North East Ontario,citizen_services_branch_ontario
+sanorth_west_ontario,SA/North West Ontario,citizen_services_branch_ontario
+sasouth_central_ontario,SA/South Central Ontario,citizen_services_branch_ontario
+sayork-durham,SA/York-Durham,citizen_services_branch_ontario
+scclindsay,SCC/Lindsay,citizen_services_branch_ontario
+scchalton-peel,SCC/Halton-Peel,citizen_services_branch_ontario
+passopstl-docmail_5,PASS/Ops/TL-DOCMAIL 5,citizen_services_branch_ontario
+satoronto,SA/Toronto,citizen_services_branch_ontario
+scctosm-gerrard_sq,SCC/TO/SM-Gerrard Sq,satoronto
+scctosm-west_humber,SCC/TO/SM-West Humber,satoronto
+scctosm-etobicoke,SCC/TO/SM-Etobicoke,satoronto
+pdbnetwork_based_delivery,PDB/Network Based Delivery,citizen_services_branch_ontario
+team_leader,Team Leader,citizen_services_branch_ontario
+salondon-windsor,SA/London-Windsor,citizen_services_branch_ontario
+program_delivery_branch_ontario,"Program Delivery Branch, Ontario",service_canada_-_ontario_region
+pdb-business_expertise,PDB-Business Expertise,program_delivery_branch_ontario
+strategic_services_branch_ontario,"Strategic Services Branch, Ontario",service_canada_-_ontario_region
+ssblmsi,SSB/LMSI,strategic_services_branch_ontario
+ssbpasa,SSB/PASA,strategic_services_branch_ontario
+ssbsprca,SSB/SPRCA,strategic_services_branch_ontario
 internal_integrity_security,Internal Integrity Security,service_canada_-_ontario_region
 adm_office,ADM Office,service_canada_-_ontario_region
 service_canada_-_program_operations_branch,Service Canada - Program Operations Branch,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-"adm_office,_program_operations_branch","ADM Office, Program Operations Branch",service_canada_-_program_operations_branch
-"adm_office,_program_operations","ADM Office, Program Operations",service_canada_-_program_operations_branch
+adm_office_program_operations_branch,"ADM Office, Program Operations Branch",service_canada_-_program_operations_branch
+adm_office_program_operations,"ADM Office, Program Operations",service_canada_-_program_operations_branch
 branch_management_services,Branch Management Services,service_canada_-_program_operations_branch
 human_resources_and_finance,Human Resources and Finance,branch_management_services
 human_resources_team,Human Resources Team,human_resources_and_finance
@@ -1509,14 +1509,14 @@ information_management,Information Management,branch_management_services
 info_management_services,Info Management Services,information_management
 im_community_engagement,IM Community Engagement,information_management
 collaboration_management-a,Collaboration Management-A,im_community_engagement
-"im_enabling_technologies,_solutions,_and_services","IM Enabling Technologies, Solutions, and Services",information_management
-collab_&_info_mngmt_serv,Collab & Info Mngmt Serv,"im_enabling_technologies,_solutions,_and_services"
-collaboration_services-c,Collaboration Services-C,collab_&_info_mngmt_serv
-it_enabling_technology_project,IT Enabling Technology Project,"im_enabling_technologies,_solutions,_and_services"
+im_enabling_technologies_solutions_and_services,"IM Enabling Technologies, Solutions, and Services",information_management
+collab__info_mngmt_serv,Collab & Info Mngmt Serv,im_enabling_technologies_solutions_and_services
+collaboration_services-c,Collaboration Services-C,collab__info_mngmt_serv
+it_enabling_technology_project,IT Enabling Technology Project,im_enabling_technologies_solutions_and_services
 subject_matter_experts,Subject Matter Experts,information_management
 information_architecture-d,Information Architecture-D,subject_matter_experts
-"policy,_planning_and_performan","Policy, Planning and Performan",subject_matter_experts
-recorded_info._mgmt,Recorded Info. Mgmt,subject_matter_experts
+policy_planning_and_performan,"Policy, Planning and Performan",subject_matter_experts
+recorded_info_mgmt,Recorded Info. Mgmt,subject_matter_experts
 collaboration_management,Collaboration Management,subject_matter_experts
 record_management_services-b,Record Management Services-B,collaboration_management
 information_architecture-j,Information Architecture-J,subject_matter_experts
@@ -1525,30 +1525,30 @@ record_management_services-d,Record Management Services-D,subject_matter_experts
 record_management_services-c,Record Management Services-C,record_management_services-d
 record_management_services-e,Record Management Services-E,record_management_services-d
 information_management_projects,Information Management Projects,information_management
-"ling_ctrl,_atip","Ling Ctrl, ATIP",branch_management_services
-branch_man._services-admins,Branch Man. Services-Admins,"ling_ctrl,_atip"
+ling_ctrl_atip,"Ling Ctrl, ATIP",branch_management_services
+branch_man_services-admins,Branch Man. Services-Admins,ling_ctrl_atip
 project_delivery_office_-_senior_advisor,Project Delivery Office - Senior Advisor,branch_management_services
 operations,Operations,branch_management_services
 project_delivery_office,Project Delivery Office,branch_management_services
 finances_services,Finances Services,branch_management_services
 executive_briefing_and_project_management_unit,Executive Briefing and Project Management Unit,branch_management_services
 canada_service_corps,Canada Service Corps,service_canada_-_program_operations_branch
-"sp,_youth_serv_initiative_-_b","SP, Youth Serv Initiative - B",canada_service_corps
-"sp,_youth_serv_initiative_-_a","SP, Youth Serv Initiative - A",canada_service_corps
+sp_youth_serv_initiative_-_b,"SP, Youth Serv Initiative - B",canada_service_corps
+sp_youth_serv_initiative_-_a,"SP, Youth Serv Initiative - A",canada_service_corps
 indigenous_program_directorate,Indigenous Program Directorate,service_canada_-_program_operations_branch
-"performance,_program_and_services_oversight","Performance, Program and Services Oversight",indigenous_program_directorate
-performance_apo_-_e,Performance APO - E,"performance,_program_and_services_oversight"
-performance_idp,Performance IDP,"performance,_program_and_services_oversight"
-labour_market_&_social_development_programs,Labour Market & Social Development Programs,service_canada_-_program_operations_branch
-indigenous_programs_and_services,Indigenous Programs and Services,labour_market_&_social_development_programs
+performance_program_and_services_oversight,"Performance, Program and Services Oversight",indigenous_program_directorate
+performance_apo_-_e,Performance APO - E,performance_program_and_services_oversight
+performance_idp,Performance IDP,performance_program_and_services_oversight
+labour_market__social_development_programs,Labour Market & Social Development Programs,service_canada_-_program_operations_branch
+indigenous_programs_and_services,Indigenous Programs and Services,labour_market__social_development_programs
 indegenous_programs,Indegenous Programs,indigenous_programs_and_services
 strategic_operations,Strategic Operations,indigenous_programs_and_services
-program_delivery_-_employment_and_disability,Program Delivery - Employment and Disability,labour_market_&_social_development_programs
+program_delivery_-_employment_and_disability,Program Delivery - Employment and Disability,labour_market__social_development_programs
 business_analysis_-_h,Business Analysis - H,program_delivery_-_employment_and_disability
 centre_of_expertise_(pso)_-_b,Centre of Expertise (PSO) - B,program_delivery_-_employment_and_disability
 employment_program_unit,Employment Program Unit,program_delivery_-_employment_and_disability
 employment_programs,Employment Programs,program_delivery_-_employment_and_disability
-program_delivery_-_social,Program Delivery - Social,labour_market_&_social_development_programs
+program_delivery_-_social,Program Delivery - Social,labour_market__social_development_programs
 administration_unit,Administration Unit,program_delivery_-_social
 national_grants_and_contributions_delivery_centre,National Grants and Contributions Delivery Centre,service_canada_-_program_operations_branch
 strategic_directions,Strategic Directions,service_canada_-_program_operations_branch
@@ -1572,74 +1572,74 @@ business_expertise_and_strategic_integration,Business expertise and strategic in
 temporary_foreign_workers_-_b,Temporary Foreign Workers - B,temporary_foreign_worker_program
 management_services,Management services,service_canada_-_program_operations_branch
 business_analysis_-_b,Business Analysis - B,service_canada_-_program_operations_branch
-vul._populations_initiative,Vul. Populations Initiative,service_canada_-_program_operations_branch
+vul_populations_initiative,Vul. Populations Initiative,service_canada_-_program_operations_branch
 training,Training,service_canada_-_program_operations_branch
 service_canada_-_quebec_region,Service Canada - Quebec Region,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-"adm's_office,_chief_of_staff","ADM's Office, Chief of Staff",service_canada_-_quebec_region
+adm's_office_chief_of_staff,"ADM's Office, Chief of Staff",service_canada_-_quebec_region
 director_general_(dg),Director General (DG),service_canada_-_quebec_region
 regional_management_services-a,Regional management services-A,director_general_(dg)
-admin_&_accomodation_qc-a,Admin & Accomodation QC-A,regional_management_services-a
+admin__accomodation_qc-a,Admin & Accomodation QC-A,regional_management_services-a
 regional_management_services-b,Regional management services-B,regional_management_services-a
 regional_management_services-d,Regional management services-D,regional_management_services-a
 ssb-communications_marketing_a,SSB-Communications Marketing A,director_general_(dg)
-com_&_mrkg_dir_(cmd)-b,Com & Mrkg Dir (Cmd)-B,ssb-communications_marketing_a
+com__mrkg_dir_(cmd)-b,Com & Mrkg Dir (Cmd)-B,ssb-communications_marketing_a
 ssb-communications_marketing_b,SSB-Communications Marketing B,ssb-communications_marketing_a
-"ssb-strat_pol,_ext_&_min_aff","SSB-Strat Pol, Ext & Min Aff",ssb-communications_marketing_a
+ssb-strat_pol_ext__min_aff,"SSB-Strat Pol, Ext & Min Aff",ssb-communications_marketing_a
 ssb-labour_market_analysis,SSB-Labour Market Analysis,director_general_(dg)
-lm_info_analysts_&_reseachers,LM Info Analysts & Reseachers,ssb-labour_market_analysis
+lm_info_analysts__reseachers,LM Info Analysts & Reseachers,ssb-labour_market_analysis
 ssb-socio-economic_info,SSB-Socio-Economic Info,ssb-labour_market_analysis
-ssb-strat_pol_rel_&_cord_af,SSB-Strat Pol Rel & Cord Af,director_general_(dg)
-"eval,_performance_measurement","Eval, Performance measurement",ssb-strat_pol_rel_&_cord_af
-"ssb-planning,_accountability_and_strategic_advice","SSB-Planning, Accountability and Strategic Advice",director_general_(dg)
-operations/strategy,Operations/Strategy,"ssb-planning,_accountability_and_strategic_advice"
-strategic_planning,Strategic Planning,"ssb-planning,_accountability_and_strategic_advice"
-pilot_projects_team,Pilot projects team,"ssb-planning,_accountability_and_strategic_advice"
-"general_director,_citizen_services_branch","General Director, Citizen Services Branch",service_canada_-_quebec_region
-"director,_passport_-_central_operations","Director, Passport - Central Operations","general_director,_citizen_services_branch"
-financial_advisor,Financial Advisor,"director,_passport_-_central_operations"
-"director,_passport_office_montreal_-_service_canada_centre_lanaudière/centre-du-québec/mauricie","Director, Passport Office Montreal - Service Canada Centre Lanaudière/Centre-du-Québec/Mauricie","general_director,_citizen_services_branch"
-administrative_officer,Administrative Officer,"director,_passport_office_montreal_-_service_canada_centre_lanaudière/centre-du-québec/mauricie"
-"manager,_passport_office_-_montreal_(downtown)","Manager, Passport Office - Montreal (Downtown)","director,_passport_office_montreal_-_service_canada_centre_lanaudière/centre-du-québec/mauricie"
-service_canada_centre_-_trois-rivières,Service Canada Centre - Trois-Rivières,"director,_passport_office_montreal_-_service_canada_centre_lanaudière/centre-du-québec/mauricie"
-"director,_print_centre_and_call_center_passport_/_service_canada_centre_east_of_montreal","Director, Print Centre and Call Center Passport / Service Canada Centre East of Montreal","general_director,_citizen_services_branch"
-"manager,_passport_print_centre","Manager, Passport Print Centre","director,_print_centre_and_call_center_passport_/_service_canada_centre_east_of_montreal"
-"manager,_passport_call_centre","Manager, Passport Call Centre","director,_print_centre_and_call_center_passport_/_service_canada_centre_east_of_montreal"
-operational_program_advisor,Operational Program Advisor,"director,_print_centre_and_call_center_passport_/_service_canada_centre_east_of_montreal"
-service_canada_centre_-_pointe-aux-trembles,Service Canada Centre - Pointe-aux-Trembles,"director,_print_centre_and_call_center_passport_/_service_canada_centre_east_of_montreal"
-"director,_service_canada_centre_abitibi-témiscamingue/outaouais/laurentides/nord-du-québec","Director, Service Canada Centre Abitibi-Témiscamingue/Outaouais/Laurentides/Nord-du-Québec","general_director,_citizen_services_branch"
-"manager,_service_canada_centre_-_gatineau","Manager, Service Canada Centre - Gatineau","director,_service_canada_centre_abitibi-témiscamingue/outaouais/laurentides/nord-du-québec"
-service_canada_centre_-_rouyn-noranda,Service Canada Centre - Rouyn-Noranda,"director,_service_canada_centre_abitibi-témiscamingue/outaouais/laurentides/nord-du-québec"
-service_canada_centre_-_st-jérôme,Service Canada Centre - St-Jérôme,"director,_service_canada_centre_abitibi-témiscamingue/outaouais/laurentides/nord-du-québec"
-"director,_service_canada_centre_bas-st-laurent/gaspésie/les_îles/saguenay_lac-st-jean/côte-nord","Director, Service Canada Centre Bas-St-Laurent/Gaspésie/Les Îles/Saguenay Lac-St-Jean/Côte-Nord","general_director,_citizen_services_branch"
-service_canada_centre_-_baie_comeau,Service Canada Centre - Baie Comeau,"director,_service_canada_centre_bas-st-laurent/gaspésie/les_îles/saguenay_lac-st-jean/côte-nord"
-"manager,_service_canada_centre_and_passport_office_-_chicoutimi","Manager, Service Canada Centre and Passport Office - Chicoutimi","director,_service_canada_centre_bas-st-laurent/gaspésie/les_îles/saguenay_lac-st-jean/côte-nord"
-service_canada_centre_-_sept-îles,Service Canada Centre - Sept-Îles,"director,_service_canada_centre_bas-st-laurent/gaspésie/les_îles/saguenay_lac-st-jean/côte-nord"
-"director,_service_canada_centre_laval/west_of_montreal","Director, Service Canada Centre Laval/West of Montreal","general_director,_citizen_services_branch"
-"manager,_service_canada_centre_-_laval","Manager, Service Canada Centre - Laval","director,_service_canada_centre_laval/west_of_montreal"
-"manager,_passport_office_-_saint-laurent","Manager, Passport Office - Saint-Laurent","director,_service_canada_centre_laval/west_of_montreal"
-"manager,_passport_office_-_laval","Manager, Passport Office - Laval","director,_service_canada_centre_laval/west_of_montreal"
-"director,_service_canada_centre_montreal_(downtown)/québec/chaudière-appalaches","Director, Service Canada Centre Montreal (Downtown)/Québec/Chaudière-Appalaches","general_director,_citizen_services_branch"
-"manager,_service_canada_centre_-_lévis","Manager, Service Canada Centre - Lévis","director,_service_canada_centre_montreal_(downtown)/québec/chaudière-appalaches"
-"director,_service_canada_centre_montérégie/estrie","Director, Service Canada Centre Montérégie/Estrie","general_director,_citizen_services_branch"
-service_canada_centre_-_sherbrooke,Service Canada Centre - Sherbrooke,"director,_service_canada_centre_montérégie/estrie"
-service_canada_centre_-_saint-léonard,Service Canada Centre - Saint-Léonard,"director,_service_canada_centre_montérégie/estrie"
-service_canada_centre_-_longueuil,Service Canada Centre - Longueuil,"director,_service_canada_centre_montérégie/estrie"
-"executive_director,_business_expertise","Executive Director, Business Expertise","general_director,_citizen_services_branch"
-"senior_manager,_business_expertise_(passport)","Senior Manager, Business Expertise (Passport)","executive_director,_business_expertise"
-"senior_manager,_business_expertise","Senior Manager, Business Expertise","executive_director,_business_expertise"
-"senior_manager,_project_management","Senior Manager, Project Management","executive_director,_business_expertise"
-"senior_manager,_passport","Senior Manager, Passport","executive_director,_business_expertise"
-ppt-bem-1,PPT-BEM-1,"senior_manager,_passport"
-"integrity_services_branch,_quebec","Integrity Services Branch, Quebec",service_canada_-_quebec_region
-isbed-directorate,ISBED-Directorate,"integrity_services_branch,_quebec"
+ssb-strat_pol_rel__cord_af,SSB-Strat Pol Rel & Cord Af,director_general_(dg)
+eval_performance_measurement,"Eval, Performance measurement",ssb-strat_pol_rel__cord_af
+ssb-planning_accountability_and_strategic_advice,"SSB-Planning, Accountability and Strategic Advice",director_general_(dg)
+operationsstrategy,Operations/Strategy,ssb-planning_accountability_and_strategic_advice
+strategic_planning,Strategic Planning,ssb-planning_accountability_and_strategic_advice
+pilot_projects_team,Pilot projects team,ssb-planning_accountability_and_strategic_advice
+general_director_citizen_services_branch,"General Director, Citizen Services Branch",service_canada_-_quebec_region
+director_passport_-_central_operations,"Director, Passport - Central Operations",general_director_citizen_services_branch
+financial_advisor,Financial Advisor,director_passport_-_central_operations
+director_passport_office_montreal_-_service_canada_centre_lanaudièrecentre-du-québecmauricie,"Director, Passport Office Montreal - Service Canada Centre Lanaudière/Centre-du-Québec/Mauricie",general_director_citizen_services_branch
+administrative_officer,Administrative Officer,director_passport_office_montreal_-_service_canada_centre_lanaudièrecentre-du-québecmauricie
+manager_passport_office_-_montreal_(downtown),"Manager, Passport Office - Montreal (Downtown)",director_passport_office_montreal_-_service_canada_centre_lanaudièrecentre-du-québecmauricie
+service_canada_centre_-_trois-rivières,Service Canada Centre - Trois-Rivières,director_passport_office_montreal_-_service_canada_centre_lanaudièrecentre-du-québecmauricie
+director_print_centre_and_call_center_passport__service_canada_centre_east_of_montreal,"Director, Print Centre and Call Center Passport / Service Canada Centre East of Montreal",general_director_citizen_services_branch
+manager_passport_print_centre,"Manager, Passport Print Centre",director_print_centre_and_call_center_passport__service_canada_centre_east_of_montreal
+manager_passport_call_centre,"Manager, Passport Call Centre",director_print_centre_and_call_center_passport__service_canada_centre_east_of_montreal
+operational_program_advisor,Operational Program Advisor,director_print_centre_and_call_center_passport__service_canada_centre_east_of_montreal
+service_canada_centre_-_pointe-aux-trembles,Service Canada Centre - Pointe-aux-Trembles,director_print_centre_and_call_center_passport__service_canada_centre_east_of_montreal
+director_service_canada_centre_abitibi-témiscamingueoutaouaislaurentidesnord-du-québec,"Director, Service Canada Centre Abitibi-Témiscamingue/Outaouais/Laurentides/Nord-du-Québec",general_director_citizen_services_branch
+manager_service_canada_centre_-_gatineau,"Manager, Service Canada Centre - Gatineau",director_service_canada_centre_abitibi-témiscamingueoutaouaislaurentidesnord-du-québec
+service_canada_centre_-_rouyn-noranda,Service Canada Centre - Rouyn-Noranda,director_service_canada_centre_abitibi-témiscamingueoutaouaislaurentidesnord-du-québec
+service_canada_centre_-_st-jérôme,Service Canada Centre - St-Jérôme,director_service_canada_centre_abitibi-témiscamingueoutaouaislaurentidesnord-du-québec
+director_service_canada_centre_bas-st-laurentgaspésieles_îlessaguenay_lac-st-jeancôte-nord,"Director, Service Canada Centre Bas-St-Laurent/Gaspésie/Les Îles/Saguenay Lac-St-Jean/Côte-Nord",general_director_citizen_services_branch
+service_canada_centre_-_baie_comeau,Service Canada Centre - Baie Comeau,director_service_canada_centre_bas-st-laurentgaspésieles_îlessaguenay_lac-st-jeancôte-nord
+manager_service_canada_centre_and_passport_office_-_chicoutimi,"Manager, Service Canada Centre and Passport Office - Chicoutimi",director_service_canada_centre_bas-st-laurentgaspésieles_îlessaguenay_lac-st-jeancôte-nord
+service_canada_centre_-_sept-îles,Service Canada Centre - Sept-Îles,director_service_canada_centre_bas-st-laurentgaspésieles_îlessaguenay_lac-st-jeancôte-nord
+director_service_canada_centre_lavalwest_of_montreal,"Director, Service Canada Centre Laval/West of Montreal",general_director_citizen_services_branch
+manager_service_canada_centre_-_laval,"Manager, Service Canada Centre - Laval",director_service_canada_centre_lavalwest_of_montreal
+manager_passport_office_-_saint-laurent,"Manager, Passport Office - Saint-Laurent",director_service_canada_centre_lavalwest_of_montreal
+manager_passport_office_-_laval,"Manager, Passport Office - Laval",director_service_canada_centre_lavalwest_of_montreal
+director_service_canada_centre_montreal_(downtown)québecchaudière-appalaches,"Director, Service Canada Centre Montreal (Downtown)/Québec/Chaudière-Appalaches",general_director_citizen_services_branch
+manager_service_canada_centre_-_lévis,"Manager, Service Canada Centre - Lévis",director_service_canada_centre_montreal_(downtown)québecchaudière-appalaches
+director_service_canada_centre_montérégieestrie,"Director, Service Canada Centre Montérégie/Estrie",general_director_citizen_services_branch
+service_canada_centre_-_sherbrooke,Service Canada Centre - Sherbrooke,director_service_canada_centre_montérégieestrie
+service_canada_centre_-_saint-léonard,Service Canada Centre - Saint-Léonard,director_service_canada_centre_montérégieestrie
+service_canada_centre_-_longueuil,Service Canada Centre - Longueuil,director_service_canada_centre_montérégieestrie
+executive_director_business_expertise,"Executive Director, Business Expertise",general_director_citizen_services_branch
+senior_manager_business_expertise_(passport),"Senior Manager, Business Expertise (Passport)",executive_director_business_expertise
+senior_manager_business_expertise,"Senior Manager, Business Expertise",executive_director_business_expertise
+senior_manager_project_management,"Senior Manager, Project Management",executive_director_business_expertise
+senior_manager_passport,"Senior Manager, Passport",executive_director_business_expertise
+ppt-bem-1,PPT-BEM-1,senior_manager_passport
+integrity_services_branch_quebec,"Integrity Services Branch, Quebec",service_canada_-_quebec_region
+isbed-directorate,ISBED-Directorate,integrity_services_branch_quebec
 isbed-team_2,ISBED-Team 2,isbed-directorate
-"programs_branch,_quebec_region","Programs Branch, Quebec Region",service_canada_-_quebec_region
-pb-executive_director_bed,PB-Executive Director BED,"programs_branch,_quebec_region"
-pb-progcentra_dir,PB-ProgCentra Dir,"programs_branch,_quebec_region"
+programs_branch_quebec_region,"Programs Branch, Quebec Region",service_canada_-_quebec_region
+pb-executive_director_bed,PB-Executive Director BED,programs_branch_quebec_region
+pb-progcentra_dir,PB-ProgCentra Dir,programs_branch_quebec_region
 temp_foreign_worker_prog_-a,Temp foreign worker prog -A,pb-progcentra_dir
 temp_foreign_worker_prog_-b,Temp foreign worker prog -B,pb-progcentra_dir
 temp_foreign_worker_prog_-c,Temp foreign worker prog -C,pb-progcentra_dir
-pb-progdecentra_dir,PB-ProgDecentra Dir,"programs_branch,_quebec_region"
+pb-progdecentra_dir,PB-ProgDecentra Dir,programs_branch_quebec_region
 cspb-progdecentra_dir,CSPB-ProgDecentra Dir,pb-progdecentra_dir
 bdsb_ei_sccc_shawinigan_d,BDSB EI SCCC Shawinigan D,service_canada_-_quebec_region
 dsvp_crop-sv_ce-p2,DSVP CROP-SV_CE-P2,service_canada_-_quebec_region
@@ -1650,34 +1650,34 @@ enterprise_major_project_exec4,Enterprise Major Project Exec4,enterprise_major_p
 enterprise_major_project_exe10,Enterprise Major Project Exe10,enterprise_major_project_exec4
 enterprise_major_project_exec3,Enterprise Major Project Exec3,enterprise_major_project_exec4
 enterprise_major_project_exec2,Enterprise Major Project Exec2,enterprise_major_project_exec4
-"empe,_epayroll_mgr","EMPE, Epayroll Mgr",enterprise_major_projects_execution
-ppsb/be/pe/cpp/cppd,PPSB/BE/PE/CPP/CPPD,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+empe_epayroll_mgr,"EMPE, Epayroll Mgr",enterprise_major_projects_execution
+ppsbbepecppcppd,PPSB/BE/PE/CPP/CPPD,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
 edmonton_passports,Edmonton Passports,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-callcentre/ei/edmonton12,CallCentre/EI/Edmonton12,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-callcentre/ei/edmonton14,CallCentre/EI/Edmonton14,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-fs/vic-e,FS/Vic-E,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-ei/ops/edm2-a,EI/Ops/Edm2-A,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-csb/wpgse/wpgnescc,CSB/WpgSE/WpgNESCC,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-callcentre/ei/edmonton13,CallCentre/EI/Edmonton13,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-callcentre/ei/edmonton15,CallCentre/EI/Edmonton15,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-callcentre/ei/edmonton11,CallCentre/EI/Edmonton11,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-ei/ops/edm2_-_d,EI/Ops/Edm2 - D,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+callcentreeiedmonton12,CallCentre/EI/Edmonton12,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+callcentreeiedmonton14,CallCentre/EI/Edmonton14,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+fsvic-e,FS/Vic-E,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+eiopsedm2-a,EI/Ops/Edm2-A,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+csbwpgsewpgnescc,CSB/WpgSE/WpgNESCC,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+callcentreeiedmonton13,CallCentre/EI/Edmonton13,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+callcentreeiedmonton15,CallCentre/EI/Edmonton15,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+callcentreeiedmonton11,CallCentre/EI/Edmonton11,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+eiopsedm2_-_d,EI/Ops/Edm2 - D,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
 old_age_security,Old Age Security,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-callcentre/pen/edm6,CallCentre/PEN/Edm6,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+callcentrepenedm6,CallCentre/PEN/Edm6,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
 canada_pension_plan,Canada Pension Plan,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-ei/ops/edm2-c,EI/Ops/Edm2-C,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
-cppd/ops/non_med,CPPD/Ops/Non Med,employment_and_social_development_canada
+eiopsedm2-c,EI/Ops/Edm2-C,senior_associate_deputy_minister_of_esd_and_chief_operating_officer_for_service_canada
+cppdopsnon_med,CPPD/Ops/Non Med,employment_and_social_development_canada
 strategic_services_branch_-_finance_and_adminsitration_unit,Strategic Services Branch - Finance and Adminsitration Unit,employment_and_social_development_canada
 rms_coordinator_b,RMS Coordinator B,strategic_services_branch_-_finance_and_adminsitration_unit
 strategic_services_branch_-_workforce_unit,Strategic Services Branch - Workforce Unit,employment_and_social_development_canada
 rms_coordinator_a,RMS Coordinator A,strategic_services_branch_-_workforce_unit
-csb/scc/vic,CSB/SCC/VIC,employment_and_social_development_canada
-isb/ops/eiadjud,ISB/OPS/EIAdjud,employment_and_social_development_canada
-"minister_of_employment,_workforce_development_and_labour","Minister of Employment, Workforce Development and Labour",employment_and_social_development_canada
-"minister_of_family,_children_and_social_development","Minister of Family, Children and Social Development",employment_and_social_development_canada
-isb/ops/prairiestfw,ISB/OPS/PrairiesTFW,employment_and_social_development_canada
+csbsccvic,CSB/SCC/VIC,employment_and_social_development_canada
+isbopseiadjud,ISB/OPS/EIAdjud,employment_and_social_development_canada
+minister_of_employment_workforce_development_and_labour,"Minister of Employment, Workforce Development and Labour",employment_and_social_development_canada
+minister_of_family_children_and_social_development,"Minister of Family, Children and Social Development",employment_and_social_development_canada
+isbopsprairiestfw,ISB/OPS/PrairiesTFW,employment_and_social_development_canada
 canada_summer_jobs,Canada Summer Jobs,employment_and_social_development_canada
 legislative_affairs_unit,Legislative Affairs Unit,employment_and_social_development_canada
 program_development_unit,Program Development Unit,employment_and_social_development_canada
-reg._&_standards_dev._unit,Reg. & Standards Dev. Unit,employment_and_social_development_canada
+reg__standards_dev_unit,Reg. & Standards Dev. Unit,employment_and_social_development_canada
 results_and_delivery_unit,Results and Delivery Unit,employment_and_social_development_canada
