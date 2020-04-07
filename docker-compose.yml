@@ -13,7 +13,7 @@ services:
             - PASSWORD=odoo
             - NAME=odoo
         volumes:
-            - ./add-ons:/mnt/extra-addons
+            - ./add-ons:/var/lib/odoo/addons/13.0
             - ./odoo.conf:/etc/odoo/odoo.conf
 
     db:
