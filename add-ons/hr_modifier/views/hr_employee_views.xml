@@ -167,5 +167,16 @@
             <field name="active" eval="False" />
         </record>
 
+        <report
+            id="hr.hr_employee_print_badge"
+            string="Print Badge"
+            model="hr.employee"
+            report_type="qweb-pdf"
+            name="hr.print_employee_badge"
+            file="hr.print_employee_badge"
+            print_report_name="'Print Badge - %s' % (object.name).replace('/', '')"
+            menu="False"
+        />
+
     </data>
 </odoo>
