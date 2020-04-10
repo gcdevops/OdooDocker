@@ -33,6 +33,7 @@ for row in reader:
             dept_id = models.execute(db, uid, password,'hr.department','create', dept)
             print("Dept ID")
             print(dept_id)
+
             # Create Department External ID
             dept_map = {
             'name': row[0],
@@ -55,6 +56,7 @@ for row in reader:
             dept_id = models.execute(db, uid, password,'hr.department','create', dept)
             print("Dept ID")
             print(dept_id)
+
             # Create Department External ID
             dept_map = {
             'name': row[0],
@@ -84,6 +86,7 @@ for row in reader:
         user_id = models.execute(db, uid, password,'res.users','create', user)
         print("User ID")
         print(user_id)
+
         # Create User External ID
         user_map = {
         'name': row[0],
@@ -97,7 +100,7 @@ for row in reader:
 
 # Import Job Position
 
-filename = '/data/odoo-job-csv.csv'
+filename = '/data/odoo-jobs-csv.csv'
 reader = csv.reader(open(filename,"rt"))
 i = 0
 for row in reader:
@@ -111,6 +114,7 @@ for row in reader:
         job_id = models.execute(db, uid, password,'hr.job','create', job)
         print("Job ID")
         print(job_id)
+
         # Create Job External ID
         job_map = {
         'name': row[0],
@@ -124,41 +128,42 @@ for row in reader:
 
 # Import Employees
 
-#ID	Employee Name	Work Email	Work Phone	Department/External ID	Job Position/External ID
-
 filename = '/data/odoo-employees-csv.csv'
 reader = csv.reader(open(filename,"rt"))
 i = 0
 for row in reader:
-    # Get Department ID
-    dept = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[4]]]],{'fields': ['res_id']})
-    
-    # Get Job ID
-    job = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[5]]]],{'fields': ['res_id']})
+    if i == 0:
+        i = 1
+    else:
+        # Get Department ID
+        dept = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[4]]]],{'fields': ['res_id']})
+        
+        # Get Job ID
+        job = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[5]]]],{'fields': ['res_id']})
 
-    # Get User ID
-    user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[6]]]],{'fields': ['res_id']})
+        # Get User ID
+        user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[6]]]],{'fields': ['res_id']})
 
-    # Import
-    employee = {
-    'name': row[1],
-    'work_email': row[2],
-    'work_phone': row[3],
-    'user_id': int(user[0]["res_id"]),
-    'department_id': int(dept[0]["res_id"]),
-    'job_id': int(job[0]["res_id"])
-    }
-    employee_id = models.execute(db, uid, password,'hr.employee','create', employee)
-    print("Employee ID")
-    print(employee_id)
+        # Create Employee
+        employee = {
+        'name': row[1],
+        'work_email': row[2],
+        'work_phone': row[3],
+        'user_id': int(user[0]["res_id"]),
+        'department_id': int(dept[0]["res_id"]),
+        'job_id': int(job[0]["res_id"])
+        }
+        employee_id = models.execute(db, uid, password,'hr.employee','create', employee)
+        print("Employee ID")
+        print(employee_id)
 
-    # Create Employee External ID
-    employee_map = {
-    'name': row[0],
-    'module': '__import__',
-    'model': 'hr.employee',
-    'res_id': job_id
-    }
-    employee_map_id = models.execute(db, uid, password,'ir.model.data','create', employee_map)
-    print("Employee Ext ID")
-    print(employee_map_id)
+        # Create Employee External ID
+        employee_map = {
+        'name': row[0],
+        'module': '__import__',
+        'model': 'hr.employee',
+        'res_id': job_id
+        }
+        employee_map_id = models.execute(db, uid, password,'ir.model.data','create', employee_map)
+        print("Employee Ext ID")
+        print(employee_map_id)
