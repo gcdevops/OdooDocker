@@ -24,58 +24,96 @@ for row in reader:
     if i == 0:
         i = 1
     else:        
+
+        # Check if Department exists
+        exist_dept = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[0]]]],{'fields': ['res_id']})
+
         if not row[3]:
-            # Create Department without parent
+
             dept = {
             'name': row[1],
             'complete_name': row[1]
             }
-            dept_id = models.execute(db, uid, password,'hr.department','create', dept)
-            print("Dept ID")
-            print(dept_id)
 
-            # Create Department External ID
-            dept_map = {
-            'name': row[0],
-            'module': '__import__',
-            'model': 'hr.department',
-            'res_id': dept_id
-            }    
-            dept_map_id = models.execute(db, uid, password,'ir.model.data','create', dept_map)
-            print("Dept Ext ID")
-            print(dept_map_id)
+            if not exist_dept:
 
-            # Create Translation Name
+                # Create Department without parent
+                dept_id = models.execute(db, uid, password,'hr.department','create', dept)
+                print("Dept ID")
+                print(dept_id)
 
-            dept_translation = {
-            'name': 'hr.department,name',
-            'res_id': dept_id,
-            'lang': 'fr_CA',
-            'type': 'model',
-            'src': row[1],
-            'value': row[2],
-            'module': '__import__',
-            'state': 'translated'
-            }    
-            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
-            print("Dept Translation ID")
-            print(dept_translation_id)
+                # Create Department External ID
+                dept_map = {
+                'name': row[0],
+                'module': '__import__',
+                'model': 'hr.department',
+                'res_id': dept_id
+                }    
+                dept_map_id = models.execute(db, uid, password,'ir.model.data','create', dept_map)
+                print("Dept Ext ID")
+                print(dept_map_id)
 
-            # Create Translation Complete Name
+                # Create Translation Name
 
-            dept_translation = {
-            'name': 'hr.department,complete_name',
-            'res_id': dept_id,
-            'lang': 'fr_CA',
-            'type': 'model',
-            'src': row[1],
-            'value': row[2],
-            'module': '__import__',
-            'state': 'translated'
-            }    
-            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
-            print("Dept Translation ID")
-            print(dept_translation_id)
+                dept_translation = {
+                'name': 'hr.department,name',
+                'res_id': dept_id,
+                'lang': 'fr_CA',
+                'type': 'model',
+                'src': row[1],
+                'value': row[2],
+                'module': '__import__',
+                'state': 'translated'
+                }    
+                dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
+                print("Dept Translation ID")
+                print(dept_translation_id)
+
+                # Create Translation Complete Name
+
+                dept_translation = {
+                'name': 'hr.department,complete_name',
+                'res_id': dept_id,
+                'lang': 'fr_CA',
+                'type': 'model',
+                'src': row[1],
+                'value': row[2],
+                'module': '__import__',
+                'state': 'translated'
+                }    
+                dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
+                print("Dept Translation ID")
+                print(dept_translation_id)
+
+            else:
+
+                # Update Department without parent
+                models.execute_kw(db, uid, password,'hr.department','write', [exist_dept[0]["res_id"], dept])
+                print("Dept ID")
+                print(exist_dept[0]["res_id"])
+
+                # Update Translation Name
+
+                # Get Translation ID
+                exist_dept_translation = models.execute_kw(db, uid, password,'ir.translation', 'search_read',[['&', '&',('name', '=', 'hr.department,name'),('res_id', '=', exist_dept[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']})
+
+                dept_translation = {
+                'src': row[1],
+                'value': row[2]
+                }    
+                models.execute_kw(db, uid, password,'ir.translation','write', [exist_dept_translation[0]["id"], dept_translation])
+
+                # Update Translation Complete Name
+
+                # Get Translation ID
+                exist_dept_translation = models.execute_kw(db, uid, password,'ir.translation', 'search_read',[['&', '&',('name', '=', 'hr.department,complete_name'),('res_id', '=', exist_dept[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']})
+
+                dept_translation = {
+                'src': row[1],
+                'value': row[2]
+                }    
+                models.execute_kw(db, uid, password,'ir.translation','write', [exist_dept_translation[0]["id"], dept_translation])
+
         else:
             # Create Department with parent
             # Get Department ID
@@ -171,6 +209,10 @@ for row in reader:
     if i == 0:
         i = 1
     else:
+
+        # Check if Job exists
+        exist = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[0]]]],{'fields': ['res_id']})
+
         # Create Job
         job = {
         'name': row[1]
