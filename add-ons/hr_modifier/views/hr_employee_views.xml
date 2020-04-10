@@ -50,7 +50,7 @@
                                 Email: <field name="work_email" widget="email" required="False"/>
                             </p>
                             <p style="font-size:1.2em">
-                                Job Title: <field name="job_title" placeholder="Job Position" />
+                                Job Title: <field name="job_id"/>
                             </p>
                             <p style="font-size:1.2em"> 
                                 Department: <field name="department_id" context="{'hierarchical_naming': False}"/>
