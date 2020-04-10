@@ -142,7 +142,7 @@ for row in reader:
         job = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[5]]]],{'fields': ['res_id']})
 
         # Get User ID
-        user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[6]]]],{'fields': ['res_id']})
+        user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', 'user-' + row[2]]]],{'fields': ['res_id']})
 
         # Create Employee
         employee = {
@@ -162,7 +162,7 @@ for row in reader:
         'name': row[0],
         'module': '__import__',
         'model': 'hr.employee',
-        'res_id': job_id
+        'res_id': employee_id
         }
         employee_map_id = models.execute(db, uid, password,'ir.model.data','create', employee_map)
         print("Employee Ext ID")
