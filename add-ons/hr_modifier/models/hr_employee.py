@@ -83,6 +83,7 @@ class HrEmployeePrivate(models.Model):
 
     x_employee_remote_access_tool = fields.Selection(
         [
+            ('both', "Both"),
             ("vpn", "VPN"),
             ("appgate", "AppGate")
         ],
