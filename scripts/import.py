@@ -24,7 +24,7 @@ for row in reader:
     if i == 0:
         i = 1
     else:        
-        if not row[2]:
+        if not row[3]:
             # Create Department without parent
             dept = {
             'name': row[1],
@@ -44,10 +44,42 @@ for row in reader:
             dept_map_id = models.execute(db, uid, password,'ir.model.data','create', dept_map)
             print("Dept Ext ID")
             print(dept_map_id)
+
+            # Create Translation Name
+
+            dept_translation = {
+            'name': 'hr.department,name',
+            'res_id': dept_id,
+            'lang': 'fr_CA',
+            'type': 'model',
+            'src': row[1],
+            'value': row[2],
+            'module': '__import__',
+            'state': 'translated'
+            }    
+            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
+            print("Dept Translation ID")
+            print(dept_translation_id)
+
+            # Create Translation Complete Name
+
+            dept_translation = {
+            'name': 'hr.department,complete_name',
+            'res_id': dept_id,
+            'lang': 'fr_CA',
+            'type': 'model',
+            'src': row[1],
+            'value': row[2],
+            'module': '__import__',
+            'state': 'translated'
+            }    
+            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
+            print("Dept Translation ID")
+            print(dept_translation_id)
         else:
             # Create Department with parent
             # Get Department ID
-            res = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[2]]]],{'fields': ['res_id']})
+            res = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[3]]]],{'fields': ['res_id']})
             dept = {
             'name': row[1],
             'complete_name': row[1],
@@ -67,6 +99,38 @@ for row in reader:
             dept_map_id = models.execute(db, uid, password,'ir.model.data','create', dept_map)
             print("Dept Ext ID")
             print(dept_map_id)
+
+            # Create Department Translation Name
+
+            dept_translation = {
+            'name': 'hr.department,name',
+            'res_id': dept_id,
+            'lang': 'fr_CA',
+            'type': 'model',
+            'src': row[1],
+            'value': row[2],
+            'module': '__import__',
+            'state': 'translated'
+            }    
+            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
+            print("Dept Translation ID")
+            print(dept_translation_id)
+
+            # Create Department Translation Complete Name
+
+            dept_translation = {
+            'name': 'hr.department,complete_name',
+            'res_id': dept_id,
+            'lang': 'fr_CA',
+            'type': 'model',
+            'src': row[1],
+            'value': row[2],
+            'module': '__import__',
+            'state': 'translated'
+            }    
+            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
+            print("Dept Translation ID")
+            print(dept_translation_id)
 
 # Import Users
 
@@ -125,6 +189,22 @@ for row in reader:
         job_map_id = models.execute(db, uid, password,'ir.model.data','create', job_map)
         print("Job Ext ID")
         print(job_map_id)
+
+        # Create Job Translation
+
+        job_translation = {
+        'name': 'hr.job,name',
+        'res_id': job_id,
+        'lang': 'fr_CA',
+        'type': 'model',
+        'src': row[1],
+        'value': row[2],
+        'module': '__import__',
+        'state': 'translated'
+        }    
+        job_translation_id = models.execute(db, uid, password,'ir.translation','create', job_translation)
+        print("Job Translation ID")
+        print(job_translation_id)
 
 # Import Employees
 
