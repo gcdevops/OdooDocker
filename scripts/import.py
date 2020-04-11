@@ -1,177 +1,163 @@
-#!/usr/bin/env python
 # coding: utf-8
 
 import xmlrpc.client
+import os
+import sys
+import getopt
 import csv
 
-username =''
-password =''
-db =''
-url = 'http://localhost:8069'
+# get values from environment variables 
+username = os.environ.get("IMPORT_SCRIPT_USERNAME")
+password = os.environ.get("IMPORT_SCRIPT_PASSWORD")
+db = os.environ.get("IMPORT_SCRIPT_DATABASE")
+# url defaults to localhost
+url = os.environ.get("IMPORT_SCRIPT_URL") or 'http://localhost:8069'
 
-common = xmlrpc.client.ServerProxy('{}/xmlrpc/2/common'.format(url))
-common.version()
-uid = common.authenticate(db, username, password, {})
-
-models = xmlrpc.client.ServerProxy('{}/xmlrpc/2/object'.format(url))
+try:
+    common = xmlrpc.client.ServerProxy(url + '/xmlrpc/2/common')
+    common.version()
+    uid = common.authenticate(db, username, password, {})
+    models = xmlrpc.client.ServerProxy(url + '/xmlrpc/2/object')
+except Exception as e:
+    raise Exception("Could not successfully connect to RPC server").with_traceback(
+        e
+    )
 
 # Import Departments
-
 filename = '/data/odoo-org-csv.csv'
-reader = csv.reader(open(filename,"rt"))
-i = 0
-for row in reader:
-    if i == 0:
-        i = 1
-    else:        
-
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
         # Check if Department exists
-        exist_dept = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[0]]]],{'fields': ['res_id']})
+        exist_dept = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
-        if not row[3]:
+        dept = {
+            "name": row["Department Name"],
+            "complete_name": row["Department Name"]
+        }
 
-            dept = {
-            'name': row[1],
-            'complete_name': row[1]
-            }
+        if row["Parent Department/External ID"]:
+            dept["parent_external_id"] = row["Parent Department/External ID"]
 
-            if not exist_dept:
-
-                # Create Department without parent
-                dept_id = models.execute(db, uid, password,'hr.department','create', dept)
-                print("Dept ID")
-                print(dept_id)
-
-                # Create Department External ID
-                dept_map = {
-                'name': row[0],
-                'module': '__import__',
-                'model': 'hr.department',
-                'res_id': dept_id
-                }    
-                dept_map_id = models.execute(db, uid, password,'ir.model.data','create', dept_map)
-                print("Dept Ext ID")
-                print(dept_map_id)
-
-                # Create Translation Name
-
-                dept_translation = {
-                'name': 'hr.department,name',
-                'res_id': dept_id,
-                'lang': 'fr_CA',
-                'type': 'model',
-                'src': row[1],
-                'value': row[2],
-                'module': '__import__',
-                'state': 'translated'
-                }    
-                dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
-                print("Dept Translation ID")
-                print(dept_translation_id)
-
-                # Create Translation Complete Name
-
-                dept_translation = {
-                'name': 'hr.department,complete_name',
-                'res_id': dept_id,
-                'lang': 'fr_CA',
-                'type': 'model',
-                'src': row[1],
-                'value': row[2],
-                'module': '__import__',
-                'state': 'translated'
-                }    
-                dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
-                print("Dept Translation ID")
-                print(dept_translation_id)
-
-            else:
-
-                # Update Department without parent
-                models.execute_kw(db, uid, password,'hr.department','write', [exist_dept[0]["res_id"], dept])
-                print("Dept ID")
-                print(exist_dept[0]["res_id"])
-
-                # Update Translation Name
-
-                # Get Translation ID
-                exist_dept_translation = models.execute_kw(db, uid, password,'ir.translation', 'search_read',[['&', '&',('name', '=', 'hr.department,name'),('res_id', '=', exist_dept[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']})
-
-                dept_translation = {
-                'src': row[1],
-                'value': row[2]
-                }    
-                models.execute_kw(db, uid, password,'ir.translation','write', [exist_dept_translation[0]["id"], dept_translation])
-
-                # Update Translation Complete Name
-
-                # Get Translation ID
-                exist_dept_translation = models.execute_kw(db, uid, password,'ir.translation', 'search_read',[['&', '&',('name', '=', 'hr.department,complete_name'),('res_id', '=', exist_dept[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']})
-
-                dept_translation = {
-                'src': row[1],
-                'value': row[2]
-                }    
-                models.execute_kw(db, uid, password,'ir.translation','write', [exist_dept_translation[0]["id"], dept_translation])
-
-        else:
-            # Create Department with parent
-            # Get Department ID
-            res = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[3]]]],{'fields': ['res_id']})
-            dept = {
-            'name': row[1],
-            'complete_name': row[1],
-            'parent_id': int(res[0]["res_id"])
-            }
-            dept_id = models.execute(db, uid, password,'hr.department','create', dept)
+        if not exist_dept:
+            # if external_id is in the dictionary, replace it with parent_id 
+            if "parent_external_id" in dept:
+                res = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', dept["parent_external_id"]]]],{'fields': ['res_id']})
+                parent_id = int(res[0]["res_id"])
+                del dept["parent_external_id"]
+                dept["parent_id"] = parent_id
+            
+            print(dept)
+            dept_id = models.execute(
+                db, 
+                uid, 
+                password,
+                'hr.department',
+                'create', 
+                dept
+            )
             print("Dept ID")
             print(dept_id)
 
             # Create Department External ID
             dept_map = {
-            'name': row[0],
-            'module': '__import__',
-            'model': 'hr.department',
-            'res_id': dept_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'hr.department',
+                'res_id': dept_id
             }    
             dept_map_id = models.execute(db, uid, password,'ir.model.data','create', dept_map)
             print("Dept Ext ID")
             print(dept_map_id)
 
-            # Create Department Translation Name
+            # if we have a translation column
+            if ("Translation" in row):
+                translation_fields = ["name", "complete_name"]
+                for field in translation_fields:
+                    # Create Translation Name
+                    dept_translation = {
+                        'name': 'hr.department,' + field,
+                        'res_id': dept_id,
+                        'lang': 'fr_CA',
+                        'type': 'model',
+                        'src': row["Department Name"],
+                        'value': row["Translation"],
+                        'module': '__import__',
+                        'state': 'translated'
+                    }
 
-            dept_translation = {
-            'name': 'hr.department,name',
-            'res_id': dept_id,
-            'lang': 'fr_CA',
-            'type': 'model',
-            'src': row[1],
-            'value': row[2],
-            'module': '__import__',
-            'state': 'translated'
-            }    
-            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
-            print("Dept Translation ID")
-            print(dept_translation_id)
+                    dept_translation_id = models.execute(
+                        db,
+                        uid,
+                        password,
+                        'ir.translation',
+                        'create',
+                        dept_translation
+                    )
 
-            # Create Department Translation Complete Name
+                    print("Dept Translation ID")
+                    print(dept_translation_id)
 
-            dept_translation = {
-            'name': 'hr.department,complete_name',
-            'res_id': dept_id,
-            'lang': 'fr_CA',
-            'type': 'model',
-            'src': row[1],
-            'value': row[2],
-            'module': '__import__',
-            'state': 'translated'
-            }    
-            dept_translation_id = models.execute(db, uid, password,'ir.translation','create', dept_translation)
-            print("Dept Translation ID")
-            print(dept_translation_id)
+        else:
+            if "parent_external_id" in dept:
+                res = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', dept["parent_external_id"]]]],{'fields': ['res_id']})
+                parent_id = int(res[0]["res_id"])
+                del dept["parent_external_id"]
+                dept["parent_id"] = parent_id
+            
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.department',
+                'write', 
+                [exist_dept[0]["res_id"], dept]
+            )
+            print("Dept ID")
+            print(exist_dept[0]["res_id"])
+
+            # Update Translation Name
+
+            if ("Translation" in row):
+                # Get Translation ID
+                translation_fields = ["name", "complete_name"]
+                for field in translation_fields:
+                    exist_dept_translation = models.execute_kw(
+                        db, 
+                        uid, 
+                        password,
+                        'ir.translation', 
+                        'search_read',
+                        [['&', '&',('name', '=', 'hr.department,' + field),('res_id', '=', exist_dept[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']}
+                    )
+                    if exist_dept_translation:
+                        dept_translation = {
+                            'src': row["Department Name"],
+                            'value': row["Translation"]
+                        }
+                        models.execute_kw(db, uid, password,'ir.translation','write', [exist_dept_translation[0]["id"], dept_translation])
+
+                    else:
+                        dept_translation = {
+                            'name': 'hr.department,' + field,
+                            'res_id': dept_id,
+                            'lang': 'fr_CA',
+                            'type': 'model',
+                            'src': row["Department Name"],
+                            'value': row["Translation"],
+                            'module': '__import__',
+                            'state': 'translated'
+                        }
+                        dept_translation_id = models.execute(
+                            db,
+                            uid,
+                            password,
+                            'ir.translation',
+                            'create',
+                            dept_translation
+                        )
 
 # Import Users
-
 filename = '/data/odoo-users-csv.csv'
 reader = csv.reader(open(filename,"rt"))
 i = 0
@@ -247,8 +233,6 @@ for row in reader:
         job_translation_id = models.execute(db, uid, password,'ir.translation','create', job_translation)
         print("Job Translation ID")
         print(job_translation_id)
-
-# Import Employees
 
 filename = '/data/odoo-employees-csv.csv'
 reader = csv.reader(open(filename,"rt"))
