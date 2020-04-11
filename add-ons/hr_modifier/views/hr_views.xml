@@ -8,7 +8,7 @@
     id="menu_hr_root"
     name="Employees"
     action="hr.open_view_employee_list_my"
-    groups="group_hr_manager,group_hr_user,base.group_user"
+    groups="hr.group_hr_manager,group_hr_user,base.group_user"
     web_icon="hr,static/description/icon.png"
     sequence="75"/>
 
