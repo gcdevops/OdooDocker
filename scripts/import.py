@@ -140,7 +140,7 @@ if os.path.isfile(filename):
                     else:
                         dept_translation = {
                             'name': 'hr.department,' + field,
-                            'res_id': dept_id,
+                            'res_id': exist_dept[0]["res_id"],
                             'lang': 'fr_CA',
                             'type': 'model',
                             'src': row["Department Name"],
