@@ -5,7 +5,7 @@
     <menuitem id="hr.menu_hr_employee_user" groups="make_invisible" />
 
     <menuitem
-    id="menu_hr_root"
+    id="hr.menu_hr_root"
     name="Employees"
     action="hr.open_view_employee_list_my"
     groups="hr.group_hr_manager,hr.group_hr_user,base.group_user"
