@@ -24,7 +24,7 @@ except Exception as e:
     )
 
 # Import Departments
-filename = '/data/odoo-org-csv.csv'
+filename = '/data/org_structure/odoo-org-csv.csv'
 if os.path.isfile(filename):
     reader = csv.DictReader(open(filename,"r"))
     for row in reader:
@@ -157,7 +157,7 @@ if os.path.isfile(filename):
                         )
 
 # Import Users
-filename = '/data/odoo-users-csv.csv'
+filename = '/data/org_structure/odoo-users-csv.csv'
 reader = csv.reader(open(filename,"rt"))
 i = 0
 for row in reader:
@@ -233,7 +233,7 @@ for row in reader:
         print("Job Translation ID")
         print(job_translation_id)
 
-filename = '/data/odoo-employees-csv.csv'
+filename = '/data/org_structure/odoo-employees-csv.csv'
 reader = csv.reader(open(filename,"rt"))
 i = 0
 for row in reader:
