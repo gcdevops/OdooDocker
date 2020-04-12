@@ -69,6 +69,28 @@ if os.path.isfile(filename):
             print("Dept Ext ID")
             print(dept_map_id)
 
+            # Create en_CA Translation
+            dept_translation = {
+                'name': 'hr.department,name',
+                'res_id': dept_id,
+                'lang': 'en_CA',
+                'type': 'model',
+                'src': row["Department Name"],
+                'value': row["Department Name"],
+                'module': '__import__',
+                'state': 'translated'
+            }
+            dept_translation_id = models.execute(
+                db,
+                uid,
+                password,
+                'ir.translation',
+                'create',
+                dept_translation
+            )
+            print("Dept Translation ID")
+            print(dept_translation_id)
+
             # if we have a Translation
             if ("Translation" in row):
                 # Create Translation
@@ -107,10 +129,26 @@ if os.path.isfile(filename):
             )
             print("Dept ID")
             print(exist_dept[0]["res_id"])
+         
+            # Get en_CA Translation ID
+            exist_dept_translation = models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'ir.translation', 
+                'search_read',
+                [['&', '&',('name', '=', 'hr.department,name'),('res_id', '=', exist_dept[0]["res_id"]),('lang', '=', 'en_CA')]],{'fields': ['id']}
+            )
+            
+            # Update en_CA Translation
+            dept_translation = {
+                'src': row["Department Name"],
+                'value': row["Department Name"]
+            }
+            models.execute_kw(db, uid, password,'ir.translation','write', [exist_dept_translation[0]["id"], dept_translation])
 
-            # Update Translation
             if ("Translation" in row):
-                # Get Translation ID
+                # Get fr_CA Translation ID
                 exist_dept_translation = models.execute_kw(
                     db, 
                     uid, 
@@ -120,16 +158,16 @@ if os.path.isfile(filename):
                     [['&', '&',('name', '=', 'hr.department,name'),('res_id', '=', exist_dept[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']}
                 )
 
-                # If Translation exists
+                # If fr_CA Translation exists
                 if exist_dept_translation:
+                    # Update Translation
                     dept_translation = {
                         'src': row["Department Name"],
                         'value': row["Translation"]
                     }
-                    # Update Translation
                     models.execute_kw(db, uid, password,'ir.translation','write', [exist_dept_translation[0]["id"], dept_translation])
 
-                # If Translation doesn't exist
+                # If fr_CA Translation doesn't exist
                 else:
                     # Create Translation
                     dept_translation = {
