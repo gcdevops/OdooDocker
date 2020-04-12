@@ -32,8 +32,7 @@ if os.path.isfile(filename):
         exist_dept = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
         dept = {
-            "name": row["Department Name"],
-            "complete_name": row["Department Name"]
+            "name": row["Department Name"]
         }
 
         if row["Parent Department/External ID"]:
@@ -72,7 +71,7 @@ if os.path.isfile(filename):
 
             # if we have a translation column
             if ("Translation" in row):
-                translation_fields = ["name", "complete_name"]
+                translation_fields = ["name"]
                 for field in translation_fields:
                     # Create Translation Name
                     dept_translation = {
@@ -120,7 +119,7 @@ if os.path.isfile(filename):
 
             if ("Translation" in row):
                 # Get Translation ID
-                translation_fields = ["name", "complete_name"]
+                translation_fields = ["name"]
                 for field in translation_fields:
                     exist_dept_translation = models.execute_kw(
                         db, 
