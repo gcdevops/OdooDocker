@@ -64,14 +64,17 @@
                             </div>
                         </div>
                         <notebook>
-                            <page name="public" string="Personal Information">
+                            <page name="public" string="Management Information">
                                 <group>
+                                    <field name="x_employee_pri"/>
                                     <field name="x_employee_personal_home_address"/>
                                     <field name="x_employee_personal_postal_code"/>
                                     <field name="x_employee_personal_email" widget="email"/>
                                     <field name="x_employee_personal_phone" widget="phone"/>
-                                    <field name="x_employee_language"/>
+                                    <field name="x_employee_job_code"/>
+                                    <field name="x_employee_work_criticality"/>
                                 </group>
+                                <field name="employee_skill_ids"/>
                             </page>
                           <page name="work_info" string="Work Information">
                                 <div id="o_work_employee_container"> <!-- These two div are used to position org_chart -->
@@ -79,11 +82,9 @@
                                         <group>
                                             <group string = "Information">
                                                 <field name="parent_id"/>
-                                                <field name="x_employee_pri"/>
-                                                <field name="x_employee_job_code"/>
+                                                <field name="x_employee_language"/>
                                                 <field name="x_employee_job_type"/>
                                                 <field name="x_employee_status"/>
-                                                <field name="x_employee_work_criticality"/>
                                                 <field name="classification_id"/>
                                                 <field name="region_id" options="{'no_create_edit': True}"/>
                                             </group>
@@ -98,7 +99,7 @@
                                             <field name="company_id" groups="base.group_multi_company"/>
                                             <field name="user_id" string="Related User" invisible="1"/>
                                         </group>
-                                        <field name="employee_skill_ids"/>
+                                        
                                     </div>
                                 </div>
                             </page>
