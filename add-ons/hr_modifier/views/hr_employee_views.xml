@@ -66,11 +66,6 @@
                         <notebook>
                             <page name="public" string="Management Information">
                                 <group>
-                                    <field name="x_employee_pri"/>
-                                    <field name="x_employee_personal_home_address"/>
-                                    <field name="x_employee_personal_postal_code"/>
-                                    <field name="x_employee_personal_email" widget="email"/>
-                                    <field name="x_employee_personal_phone" widget="phone"/>
                                     <field name="x_employee_job_code"/>
                                     <field name="x_employee_work_criticality"/>
                                 </group>

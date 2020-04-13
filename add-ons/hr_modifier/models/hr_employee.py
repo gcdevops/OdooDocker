@@ -8,24 +8,31 @@ class HrEmployeePrivate(models.Model):
 
     x_employee_work_criticality = fields.Boolean("Work criticality")
 
+    # DEPRECIATED 
     x_employee_personal_home_address = fields.Char(
         "Home address",
         groups = "hr.group_hr_user"
     )
 
+    # DEPRECIATED 
     x_employee_personal_postal_code = fields.Char(
         "Postal code",
         groups = "hr.group_hr_user"
     )
+
+    # DEPRECIATED 
     x_employee_personal_phone = fields.Char(
         "Personal phone number",
         groups = "hr.group_hr_user"
     )
+
+    # DEPRECIATED 
     x_employee_personal_email = fields.Char(
         "Personal email",
         groups = "hr.group_hr_user"
     )
 
+    # DEPRECIATED 
     x_employee_pri = fields.Char("Employee PRI", groups="hr.group_hr_user")
     
     x_employee_job_code = fields.Char("Job code", groups="hr.group_hr_user")
