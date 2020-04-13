@@ -19,40 +19,28 @@ We are using the Stock Odoo 13.0 Docker image which you can find more info on on
 
 You should use the Odoo stock image for local development as you are able to easily reload changes to modules
 
-Step 1. Start the database container 
+Step 1. Start the containers using docker-compose
 
 ```sh
-docker-compose up -d db
+docker-compose up
 ```
 
-Step 3. Build your odoo container
-
-```sh
-docker-compose build --no-cache odoo
-```
-
-Step 4. Start odoo container
-
-```sh
-docker-compose up -d odoo
-```
-
-Step 5. Create the database and your admin credentials. The database name can be whatever you want it to be. For the email, it does not need to actually be an email. You can enter a simple user name like odoo. Be sure to remember what you set for your email and password fields as this will be your login information.
+Step 2. Create the database and your admin credentials. The database name can be whatever you want it to be. For the email, it does not need to actually be an email. You can enter a simple user name like odoo. Be sure to remember what you set for your email and password fields as this will be your login information.
 
 ![create database odoo](./images/create-database-odoo.png)
 
-Step 6. Install the HR Module. 
+Step 3. Install the HR Module. 
 
 Go to apps and clear the apps filter
 ![remove apps filter from odoo search](./images/remove-apps-filter.png)
 ![odoo apps](./images/odoo-apps.png)
 
-Step 7. Search hr_mod and press enter and install the module that appears.
+Step 4. Search hr_mod and press enter and install the module that appears.
 
 ![install the hr module](./images/install_hr_mod.png)
 
 
-Step 8. Activate developer mode by going to general settings 
+Step 5. Activate developer mode by going to general settings 
 
 ![activate developer mode](./images/activate-developer-mode.png)
 
@@ -61,12 +49,14 @@ You should now be ready to develop modules
 To take down Odoo completely, i.e. restart from scratch 
 
 ```sh
+# ctrl + C first if you are in the same shell 
 $ docker-compose down
 ```
 
 To stop Odoo and continue where you left off later
 
 ```sh
+# or ctrl + C if you are in the same shell
 $ docker-compose stop
 ```
 
@@ -129,6 +119,8 @@ Step 5. Find your module and upgrade it
 
 Your changes should now be reflected
 
+
+Note that if you make changes to ```python``` files, you will need to restart the server. To do this simply ```stop``` the containers by either ctrl + C if you are in the same shell, or docker-compose stop. Then start the containers back up again and upgrade your module with the altered code. 
 
 ## Creating Modules 
 

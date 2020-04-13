@@ -11,7 +11,6 @@
         'base', 'hr', 'hr_skills'
     ],
     'data': [
-        'security/base_groups.xml',
         'security/hr_security.xml',
         'security/ir.model.access.csv',
         'views/hr_job_views.xml',
@@ -21,7 +20,13 @@
         'views/hr_employee_views.xml',
         'views/hr_department_views.xml',
         'views/hr_employee_classification_views.xml',
-        'views/hr_views.xml'
+        'views/hr_employee_region_views.xml',
+        'views/hr_views.xml',
+        'views/mail_channel_views.xml'
+    ],
+    'qweb': [
+        'static/src/xml/chatter.xml',
+        'static/src/xml/systray.xml'
     ],
     'installable': True,
     'application': False,
