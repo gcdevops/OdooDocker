@@ -11,7 +11,6 @@
         'base', 'hr', 'hr_skills'
     ],
     'data': [
-        'security/base_groups.xml',
         'security/hr_security.xml',
         'security/ir.model.access.csv',
         'views/hr_job_views.xml',
