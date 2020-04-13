@@ -1,0 +1,421 @@
+ID,Name,Company Type,Address Type,Street,City,Zip,State/External ID,Country/External ID
+ab-brooks,AB-BROOKS,company,contact,608 2nd Street West,Brooks,T1R 1A8,base.state_ca_ab,base.ca
+ab-calgary-harry_hays,AB-CALGARY-Harry_Hays,company,contact,220 4th Ave South-East,Calgary,T2G 4X3,base.state_ca_ab,base.ca
+ab-calgary-harry_haysppt,AB-CALGARY-Harry_HaysPPT,company,contact,220 4th Ave South-East,Calgary,T2G 4X3,base.state_ca_ab,base.ca
+ab-calgary-one_executive_place,AB-CALGARY-One_Executive_Place,company,contact,1816 Crowchild Trail North-West,Calgary,T2M 3Y7,base.state_ca_ab,base.ca
+ab-calgary-royal_vista,AB-CALGARY-Royal_Vista,company,contact,15 Royal Vista Place NW,Calgary,T3R 0P3,base.state_ca_ab,base.ca
+ab-calgary-southppt,AB-CALGARY-SouthPPT,company,contact,120-23 Sunpark Drive SE,Calgary,T2X 3V1,base.state_ca_ab,base.ca
+ab-calgary-temple_cross_mall,AB-CALGARY-Temple_Cross_Mall,company,contact,5401 Temple Drive,Calgary,T1Y 3R7,base.state_ca_ab,base.ca
+ab-camrose,AB-CAMROSE,company,contact,4901 50th Ave,Camrose,T4V 0S2,base.state_ca_ab,base.ca
+ab-canmore,AB-CANMORE,company,contact,802 Bow Valley Trail West,Canmore,T1W 1N6,base.state_ca_ab,base.ca
+ab-edmonton-canada_place,AB-EDMONTON-Canada_Place,company,contact,9700 Jasper Ave North-West,Edmonton,T5J 4C1,base.state_ca_ab,base.ca
+ab-edmonton-capital_boulevard,AB-EDMONTON-Capital_Boulevard,company,contact,10044 108 Street,Edmonton,T5J 3S7,base.state_ca_ab,base.ca
+ab-edmonton-file_management_centre,AB-EDMONTON-File_Management_Centre,company,contact,17412 116 Avenue North West,Edmonton,T5L 4L2,base.state_ca_ab,base.ca
+ab-edmonton-hermitage_square,AB-EDMONTON-Hermitage_Square,company,contact,12735 50 Street,Edmonton,T5A 4L8,base.state_ca_ab,base.ca
+ab-edmonton-millbourne_mall,AB-EDMONTON-Millbourne_Mall,company,contact,148 38 Avenue & Millwoods Rd,Edmonton,T6K 3L6,base.state_ca_ab,base.ca
+ab-edmonton-roper_ridge_business_park,AB-EDMONTON-Roper_Ridge_Business_Park,company,contact,5605 70th Street North-West,Edmonton,T6B 3P6,base.state_ca_ab,base.ca
+ab-edmonton-sunwapta_park,AB-EDMONTON-Sunwapta_Park,company,contact,9700 Jasper Ave North-West,Edmonton,T5J 4C3,base.state_ca_ab,base.ca
+ab-edmonton-westlink,AB-EDMONTON-Westlink,company,contact,100-16826 107 Avenue,Edmonton,T5P 4C3,base.state_ca_ab,base.ca
+ab-edson,AB-EDSON,company,contact,4905 4th Avenue,Edson,T7E 1T2,base.state_ca_ab,base.ca
+ab-fort_mcmurray,AB-FORT_MCMURRAY,company,contact,8530 Manning Ave.,Fort McMurray,T9H 5G2,base.state_ca_ab,base.ca
+ab-grande_prairie,AB-GRANDE_PRAIRIE,company,contact,101-11601 101st Avenue,Grande Prairie,T8V 3X9,base.state_ca_ab,base.ca
+ab-lethbridge,AB-LETHBRIDGE,company,contact,101-920 2A Ave North,Lethbridge,T1H 0E3,base.state_ca_ab,base.ca
+ab-lloydminster,AB-LLOYDMINSTER,company,contact,4114 70th Avenue,Lloydminster,T9V 2X3,base.state_ca_ab,base.ca
+ab-medicine_hat,AB-MEDICINE_HAT,company,contact,78 8th Street Northwest,Medicine Hat,T1A 6P1,base.state_ca_ab,base.ca
+ab-red_deer,AB-RED_DEER,company,contact,101-4901 46th Street,Red Deer,T4N 1N2,base.state_ca_ab,base.ca
+ab-saint_paul,AB-SAINT_PAUL,company,contact,4807 50th Ave,St. Paul,T0A 3A0,base.state_ca_ab,base.ca
+ab-slave_lake,AB-SLAVE_LAKE,company,contact,100 Main Street South,Slave Lake,T0G 2A3,base.state_ca_ab,base.ca
+bc-abbotsford,BC-ABBOTSFORD,company,contact,100-32525 Simon Ave,Abbotsford,V2T 6T6,base.state_ca_bc,base.ca
+bc-burnaby-gilmore_way,BC-BURNABY-Gilmore_Way,company,contact,100-3480 Gilmore Way,Burnaby,V5G 4Y1,base.state_ca_bc,base.ca
+bc-campbell_river,BC-CAMPBELL_RIVER,company,contact,950 Alder Street,Campbell River,V9W 2P8,base.state_ca_bc,base.ca
+bc-chilliwack,BC-CHILLIWACK,company,contact,9345 Main Street,Chilliwack,V2P 4M3,base.state_ca_bc,base.ca
+bc-coquitlam,BC-COQUITLAM,company,contact,2963 Glen Drive,Coquitlam,V3B 2P7,base.state_ca_bc,base.ca
+bc-courtenay,BC-COURTENAY,company,contact,130 19th Street,Courtenay,V9N 8S1,base.state_ca_bc,base.ca
+bc-cranbrook,BC-CRANBROOK,company,contact,1113 Baker Street,Cranbrook,V1C 1A7,base.state_ca_bc,base.ca
+bc-dawson_creek,BC-DAWSON_CREEK,company,contact,103-1508 102nd Ave,Dawson Creek,V1G 2E2,base.state_ca_bc,base.ca
+bc-duncan,BC-DUNCAN,company,contact,211 Jubilee Street,Duncan,V9L 1W8,base.state_ca_bc,base.ca
+bc-kamloops,BC-KAMLOOPS,company,contact,317 Seymour Street,Kamloops,V2C 2E8,base.state_ca_bc,base.ca
+bc-kamloops_520_seymour,BC-KAMLOOPS_520_Seymour,company,contact,520 Seymour Street,Kamloops,V2C 2G9,base.state_ca_bc,base.ca
+bc-kelowna,BC-KELOWNA,company,contact,471 Queensway Ave,Kelowna,V1Y 6S5,base.state_ca_bc,base.ca
+bc-kelowna-capri,BC-KELOWNA-CAPRI,company,contact,1835 Gordon Drive,Kelowna,V1Y 3H5,base.state_ca_bc,base.ca
+bc-langley,BC-LANGLEY,company,contact,102-8747 204th Street,Langley,V1M 2Y5,base.state_ca_bc,base.ca
+bc-langley-warehouse,BC-LANGLEY-Warehouse,company,contact,9355 198 Street,Langley,V3A 4P8,base.state_ca_bc,base.ca
+bc-maple_ridge,BC-MAPLE_RIDGE,company,contact,22325 Lougheed Highway,Maple Ridge,V2X 2T3,base.state_ca_bc,base.ca
+bc-nanaimo,BC-NANAIMO,company,contact,60 Front Street,Nanaimo,V9R 5H7,base.state_ca_bc,base.ca
+bc-nelson-chahko_mika_mall,BC-NELSON-Chahko_Mika_Mall,company,contact,1125 Lakeside Dr,Nelson,V1L 5Z3,base.state_ca_bc,base.ca
+bc-new_westminster,BC-NEW_WESTMINSTER,company,contact,201-620 Royal Avenue,New Westminster,V3M 1J2,base.state_ca_bc,base.ca
+bc-north_vancouver,BC-NORTH_VANCOUVER,company,contact,221 Esplanade West,North Vancouver,V7M 3N7,base.state_ca_bc,base.ca
+bc-penticton,BC-PENTICTON,company,contact,101-386 Ellis Street,Penticton,V2A 8C9,base.state_ca_bc,base.ca
+bc-port_alberni,BC-PORT_ALBERNI,company,contact,"4805 Mar Street, Unit A",Port Alberni,V9Y 8J5,base.state_ca_bc,base.ca
+bc-powell_river,BC-POWELL_RIVER,company,contact,7061 Duncan Street,Powell River,V8A 1W1,base.state_ca_bc,base.ca
+bc-prince_george,BC-PRINCE_GEORGE,company,contact,1363 4th Ave,Prince George,V2L 3J6,base.state_ca_bc,base.ca
+bc-prince_rupert,BC-PRINCE_RUPERT,company,contact,215 3rd Street,Prince Rupert,V8J 3T1,base.state_ca_bc,base.ca
+bc-quesnel,BC-QUESNEL,company,contact,283 Reid Street East,Quesnel,V2J 2M1,base.state_ca_bc,base.ca
+bc-richmond,BC-RICHMOND,company,contact,5611 Cooney Road,Richmond,V6X 3J6,base.state_ca_bc,base.ca
+bc-richmondppt,BC-RICHMONDPPT,company,contact,5611 Cooney Road,Richmond,V6X 3J6,base.state_ca_bc,base.ca
+bc-salmon_arm,BC-SALMON_ARM,company,contact,191 Shuswap Street North West,Salmon Arm,V1E 4P6,base.state_ca_bc,base.ca
+bc-smithers,BC-SMITHERS,company,contact,1020 Murray Street,Smithers,V0J 2N0,base.state_ca_bc,base.ca
+bc-squamish,BC-SQUAMISH,company,contact,1440 Winnipeg Street,Squamish,V8B 0B2,base.state_ca_bc,base.ca
+bc-surrey-discovery_place,BC-SURREY-Discovery_Place,company,contact,100-13889 104th Avenue,Surrey,V3T 1W8,base.state_ca_bc,base.ca
+bc-surrey-sullivan_square,BC-SURREY-Sullivan_Square,company,contact,103-15295 Highway 10,Surrey,V3S 0X9,base.state_ca_bc,base.ca
+bc-surreyppt,BC-SURREYPPT,company,contact,10153 King George Boulevard,Surrey,V3T 2W1,base.state_ca_bc,base.ca
+bc-terrace,BC-TERRACE,company,contact,4630 Lazelle Ave,Terrace,V8G 1S6,base.state_ca_bc,base.ca
+bc-trail,BC-TRAIL,company,contact,1101 Dewdney Ave,Trail,V1R 4T1,base.state_ca_bc,base.ca
+bc-vancouver_east,BC-VANCOUVER_East,company,contact,1420 Kingsway,Vancouver,V5N 2R5,base.state_ca_bc,base.ca
+bc-vancouver-300_west_georgia_st,BC-VANCOUVER-300_West_Georgia_St,company,contact,1100 - 300 West Georgia Street,Vancouver,V6B 6G3,base.state_ca_bc,base.ca
+bc-vancouver-harbour_centre,BC-VANCOUVER-Harbour_Centre,company,contact,400-555 Hastings Street West,Vancouver,V6B 1M1,base.state_ca_bc,base.ca
+bc-vancouver-harry_stevens_business,BC-VANCOUVER-Harry_Stevens_Business,company,contact,125 10th Ave East,Vancouver,V5T 1Z3,base.state_ca_bc,base.ca
+bc-vancouver-library_square,BC-VANCOUVER-Library_Square,company,contact,300 West Georgia Street,Vancouver,V6B 6G3,base.state_ca_bc,base.ca
+bc-vancouver-nesbitt_thompson,BC-VANCOUVER-Nesbitt_Thompson,company,contact,890 Pender,Vancouver,V6C 2V6,base.state_ca_bc,base.ca
+bc-vancouver-sinclair_centre,BC-VANCOUVER-Sinclair_Centre,company,contact,757 Hastings Street West,Vancouver,V6C 1A1,base.state_ca_bc,base.ca
+bc-vancouver-west_broadway,BC-Vancouver-West_Broadway,company,contact,1263 W Broadway,Vancouver,V6H 1G7,base.state_ca_bc,base.ca
+bc-vanderhoof,BC-VANDERHOOF,company,contact,189 Stewart Street East,Vanderhoof,V0J 3A0,base.state_ca_bc,base.ca
+bc-vernon,BC-VERNON,company,contact,3202 31st Street,Vernon,V1T 5J1,base.state_ca_bc,base.ca
+bc-victoria-1150_douglas_st_ppt-old,BC-VICTORIA-1150_Douglas_ST_PPT-old,company,contact,1150 Douglas Street,Victoria,V8W 3M9,base.state_ca_bc,base.ca
+bc-victoria-fort_st,BC-VICTORIA-Fort_St,company,contact,754 Fort Street,Victoria,V8W 1H2,base.state_ca_bc,base.ca
+bc-victoria-government_st,BC-VICTORIA-Government_St,company,contact,1230 Government Street,Victoria,V8W 3M4,base.state_ca_bc,base.ca
+bc-victoria-jacklin_rd,BC-VICTORIA-Jacklin_Rd,company,contact,3179 Jacklin Road,Victoria,V9B 3Y7,base.state_ca_bc,base.ca
+bc-williams_lake,BC-WILLIAMS_LAKE,company,contact,79 4th Ave South,Williams Lake,V2G 1J6,base.state_ca_bc,base.ca
+mb-brandon,MB-BRANDON,company,contact,1039 Princess Ave,Brandon,R7A 6E2,base.state_ca_mb,base.ca
+mb-dauphin,MB-DAUPHIN,company,contact,181 1st Ave NE,Dauphin,R7N 1A6,base.state_ca_mb,base.ca
+mb-flin_flon,MB-FLIN_FLON,company,contact,111 Main Street,Flin Flon,R8A 1J9,base.state_ca_mb,base.ca
+mb-morden,MB-MORDEN,company,contact,158 Stephen Street,Morden,R6M 1T3,base.state_ca_mb,base.ca
+mb-portage_la_prairie,MB-PORTAGE_LA_PRAIRIE,company,contact,1016 Saskatchewan Ave East,Portage La Prairie,R1N 3V2,base.state_ca_mb,base.ca
+mb-selkirk,MB-SELKIRK,company,contact,51 Main St,Selkirk,R1A 1P9,base.state_ca_mb,base.ca
+mb-st_pierre_jolys,MB-ST_PIERRE_JOLYS,company,contact,427 Sabourin Street,St-Pierre-Jolys,R0A 1V0,base.state_ca_mb,base.ca
+mb-steinbach,MB-STEINBACH,company,contact,321 Main Street,Steinbach,R5G 1Z2,base.state_ca_mb,base.ca
+mb-swan_river,MB-SWAN_RIVER,company,contact,"355 Kelsey Trail, Unit-1",Swan River,R0L 1Z0,base.state_ca_mb,base.ca
+mb-the_pas,MB-THE_PAS,company,contact,333 Edwards Avenue,The Pas,R9A 1K7,base.state_ca_mb,base.ca
+mb-thompson,MB-THOMPSON,company,contact,40 B Moak Cres,Thompson,R8N 2B7,base.state_ca_mb,base.ca
+mb-winnipeg-centre,MB-WINNIPEG-Centre,company,contact,393 Portage Ave,Winnipeg,R3B 3H6,base.state_ca_mb,base.ca
+mb-winnipeg-crestview_shopping_centre,MB-WINNIPEG-Crestview_Shopping_Centre,company,contact,3393 Portage Ave,Winnipeg,R3K 2G7,base.state_ca_mb,base.ca
+mb-winnipeg-investors,MB-WINNIPEG-Investors,company,contact,280 Broadway Ave,Winnipeg,R3C 0R8,base.state_ca_mb,base.ca
+mb-winnipeg-kemp,MB-WINNIPEG-Kemp,company,contact,111 Lombard Avenue,Winnipeg,R3B 0T4,base.state_ca_mb,base.ca
+mb-winnipeg-rivergrove_mall,MB-WINNIPEG-Rivergrove_Mall,company,contact,2599 Main Street,Winnipeg,R3Y 0Z9,base.state_ca_mb,base.ca
+mb-winnipeg-st_vital_office,MB-WINNIPEG-St_Vital_Office,company,contact,1001 St. Mary's Road,Winnipeg,R2M 3S4,base.state_ca_mb,base.ca
+mb-winnipegppt,MB-WINNIPEGPPT,company,contact,433 Main Street,Winnipeg,R3B 1B3,base.state_ca_mb,base.ca
+on-ottawa-mcarthur,ON-OTTAWA-Mcarthur,company,contact,248 McArthur Ave,Ottawa,K1A 0L1,base.state_ca_on,base.ca
+on-ottawa-minto_place,ON-OTTAWA-Minto_Place,company,contact,344 Slater Street,Ottawa,K1R 7Y3,base.state_ca_on,base.ca
+on-ottawa-narono,ON-OTTAWA-Narono,company,contact,360 Laurier Ave West,Ottawa,K1P 1C8,base.state_ca_on,base.ca
+on-ottawa-place_vanier_tower_a,ON-OTTAWA-Place_Vanier_Tower_A,company,contact,333 North River Road,Ottawa,K1L 8B9,base.state_ca_on,base.ca
+on-ottawa-time_square,ON-OTTAWA-Time_Square,company,contact,47 Clarence Street,Ottawa,K1A 0J0,base.state_ca_on,base.ca
+on-ottawa-woodward,ON-OTTAWA-Woodward,company,contact,1725 Woodward,Ottawa,K2C 0P9,base.state_ca_on,base.ca
+qc-gatineau-190_promenade_du_portage,QC-GATINEAU-190_Promenade_du_Portage,company,contact,190 Promenade du Portage,Gatineau,K1A 0J9,base.state_ca_qc,base.ca
+qc-gatineau-eddy,QC-GATINEAU-EDDY,company,contact,22 Eddy Street,Gatineau,J8X 2V6,base.state_ca_qc,base.ca
+qc-gatineau-itprov,QC-Gatineau-ITPROV,company,contact,140 Promenade du Portage -  Level 02,Gatineau,K1A 0J9,base.state_ca_qc,base.ca
+qc-gatineau-montcalm_tower_2,QC-GATINEAU-Montcalm_Tower_2,company,contact,200 Montcalm Street,Gatineau,J8Y 3B5,base.state_ca_qc,base.ca
+qc-gatineau-phase2,QC-GATINEAU-Phase2,company,contact,165 de l'Hôtel-de-Ville Street,Gatineau,J8X 3X2,base.state_ca_qc,base.ca
+qc-gatineau-phase4,QC-GATINEAU-Phase4,company,contact,140 Promenade du Portage,Gatineau,K1A 0J9,base.state_ca_qc,base.ca
+qc-gatineau-place_bell,QC-GATINEAU-Place_Bell,company,contact,105 de l'Hôtel-de-Ville Street,Gatineau,J8X 4H7,base.state_ca_qc,base.ca
+qc-gatineau-place_de_la_cite,QC-GATINEAU-Place_de_la_Cite,company,contact,550 de la Cité Boulevard,Gatineau,J8T 8R3,base.state_ca_qc,base.ca
+qc-gatineau-place_du_centre,QC-GATINEAU-Place_Du_Centre,company,contact,200 Promenade du Portage,Gatineau,J8X 4B7,base.state_ca_qc,base.ca
+qc-gatineau-place_du_centreppt,QC-GATINEAU-Place_Du_CentrePPT,company,contact,200 Promenade du Portage,Gatineau,J8X 4B7,base.state_ca_qc,base.ca
+qc-gatineau-wellington,QC-GATINEAU-Wellington,company,contact,10 Wellington Street,Gatineau,K1A 0H4,base.state_ca_qc,base.ca
+nb-bathurst,NB-BATHURST,company,contact,120 Harbourview Boulevard,Bathurst,E2A 7R2,base.state_ca_nb,base.ca
+nb-campbellton,NB-CAMPBELLTON,company,contact,157 Water Street,Campbellton,E3N 3L3,base.state_ca_nb,base.ca
+nb-caraquet,NB-CARAQUET,company,contact,20E St. Pierre Boulevard West,Caraquet,E1W 1B7,base.state_ca_nb,base.ca
+nb-dalhousie,NB-DALHOUSIE,company,contact,14-110 Plaza Boulevard,Dalhousie,E8C 2E2,base.state_ca_nb,base.ca
+nb-edmundston,NB-EDMUNDSTON,company,contact,22 Emmerson Street,Edmundston,E3V 1R8,base.state_ca_nb,base.ca
+nb-fredericton-1133_regent,NB-FREDERICTON-1133_Regent,company,contact,1133 Regent St.,Fredericton,E3B 3Z2,base.state_ca_nb,base.ca
+nb-fredericton-federal,NB-FREDERICTON-Federal,company,contact,633 Queen Street,Fredericton,E3B 1C3,base.state_ca_nb,base.ca
+nb-fredericton-frederick_square,NB-FREDERICTON-Frederick_Square,company,contact,77 Westmorland Street,Fredericton,E3B 6Z3,base.state_ca_nb,base.ca
+nb-grand_falls,NB-GRAND_FALLS,company,contact,"441 Madawaska Road, Suite 100",Grand Falls,E3Y 1A3,base.state_ca_nb,base.ca
+nb-isp_fredericton-carriage_place_mall,NB-ISP_FREDERICTON-Carriage_Place_Mall,company,contact,900 Hanwell Rd,Fredericton,E3B 6A2,base.state_ca_nb,base.ca
+nb-miramichi,NB-MIRAMICHI,company,contact,139 Douglastown Boulevard,Miramichi,E1V 0A4,base.state_ca_nb,base.ca
+nb-moncton-gocb,NB-MONCTON-GOCB,company,contact,33 Weldon Street,Moncton,E1C 0N5,base.state_ca_nb,base.ca
+nb-moncton-gocb2,NB-MONCTON-Gocb2,company,contact,1081 Main Street,Moncton,E1C 1H1,base.state_ca_nb,base.ca
+nb-moncton-heritage_court,NB-MONCTON-Heritage_Court,company,contact,95 Foundry Street,Moncton,E1C 5H7,base.state_ca_nb,base.ca
+nb-richibucto,NB-RICHIBUCTO,company,contact,25 Cartier Boulevard,Richibucto,E4W 3W7,base.state_ca_nb,base.ca
+nb-saint_john,NB-SAINT_JOHN,company,contact,1 Agar Place,Saint John,E2L 5G4,base.state_ca_nb,base.ca
+nb-shediac,NB-SHEDIAC,company,contact,342 Main Street,Shediac,E4P 2E7,base.state_ca_nb,base.ca
+nb-shippagan,NB-SHIPPAGAN,company,contact,196A J.D Gauthier Boulevard,Shippagan,E8S 1P2,base.state_ca_nb,base.ca
+nb-st_quentin,NB-ST_QUENTIN,company,contact,193 Canada Street,Saint-Quentin,E8A 1J8,base.state_ca_nb,base.ca
+nb-st_stephen,NB-ST_STEPHEN,company,contact,93 Milltown Boulevard,St. Stephen,E3L 1G5,base.state_ca_nb,base.ca
+nb-sussex,NB-SUSSEX,company,contact,10 Gateway Street,Sussex,E4E 1T1,base.state_ca_nb,base.ca
+nb-tracadie-sheila,NB-TRACADIE-SHEILA,company,contact,17-3409 Principale Street,Tracadie-Sheila,E1X 1C7,base.state_ca_nb,base.ca
+nb-woodstock,NB-WOODSTOCK,company,contact,680 Main Street,Woodstock,E7M 5C1,base.state_ca_nb,base.ca
+nl-clarenville,NL-CLARENVILLE,company,contact,50 Manitoba Drive,Clarenville,A5A 1K5,base.state_ca_nl,base.ca
+nl-corner_brook,NL-CORNER_BROOK,company,contact,1 Regent Square,Corner Brook,A2H 7K6,base.state_ca_nl,base.ca
+nl-gander,NL-GANDER,company,contact,1 Markham Place,Gander,A1V 1W7,base.state_ca_nl,base.ca
+nl-grand_falls,NL-GRAND_FALLS,company,contact,,Grand Falls-Windsor,A2A 2T5,base.state_ca_nl,base.ca
+nl-happy_valley,NL-HAPPY_VALLEY,company,contact,,Happy Valley,A0P 1E0,base.state_ca_nl,base.ca
+nl-harbour_grace,NL-HARBOUR_GRACE,company,contact,29 Harvey Street,Harbour Grace,A0A 2M0,base.state_ca_nl,base.ca
+nl-labrador_city,NL-LABRADOR_CITY,company,contact,500 Vanier Ave,Labrador City,A2V 2W7,base.state_ca_nl,base.ca
+nl-marystown,NL-MARYSTOWN,company,contact,130-140 Ville-de-Marie Drive,Marystown,A0E 2M0,base.state_ca_nl,base.ca
+nl-placentia,NL-PLACENTIA,company,contact,61 Blockhouse Road,Placentia,A0B 2Y0,base.state_ca_nl,base.ca
+nl-port_aux_basques,NL-PORT_AUX_BASQUES,company,contact,64 Main Street,Port aux Basques,A0M 1C0,base.state_ca_nl,base.ca
+nl-port_aux_basques-old,NL-PORT_AUX_BASQUES-old,company,contact,16 High Street,Port aux Basques,A0M 1C0,base.state_ca_nl,base.ca
+nl-rocky_harbour,NL-ROCKY_HARBOUR,company,contact,118 Pond Road,Rocky Harbour,A0K 4N0,base.state_ca_nl,base.ca
+nl-springdale,NL-SPRINGDALE,company,contact,130 Main Street,Springdale,A0J 1T0,base.state_ca_nl,base.ca
+nl-st_anthony,NL-ST_ANTHONY,company,contact,1 Goose Cove Road,St Anthony,A0K 4S0,base.state_ca_nl,base.ca
+nl-st_johns-100_hebron_way,NL-ST_JOHNS-100_Hebron_Way,company,contact,100 Hebron Way,St. John's,A1A 0L9,base.state_ca_nl,base.ca
+nl-st_johns-building_223,NL-ST_JOHNS-Building_223,company,contact,223 Churchill Ave,St. John's,A1A 1N3,base.state_ca_nl,base.ca
+nl-st_johns-mews,NL-ST_JOHNS-MEWS,company,contact,40 Mews Place,St. John's,A1B 4M3,base.state_ca_nl,base.ca
+nl-st_johns-sir_humphrey_gilbert,NL-ST_JOHNS-Sir_Humphrey_Gilbert,company,contact,165 Duckworth Street,St. John's,A1C 1G4,base.state_ca_nl,base.ca
+nl-st_johns-td_place,NL-ST_JOHNS-TD_Place,company,contact,140 Water Street,St. John's,A1C 1A9,base.state_ca_nl,base.ca
+nl-st_johns-topsail_rd,NL-ST_JOHNS-Topsail_Rd,company,contact,689 Topsail Road,St. John's,A1B 3Z4,base.state_ca_nl,base.ca
+nl-stephenville,NL-STEPHENVILLE,company,contact,159-161 Minnesota Drive,Stephenville,A2N 3Y3,base.state_ca_nl,base.ca
+nt-fort_simpson,NT-FORT_SIMPSON,company,contact,9606 100 Street,Fort Simpson,X0E 0N0,base.state_ca_nt,base.ca
+nt-fort_smith,NT-FORT_SMITH,company,contact,149 McDougal Road,Fort Smith,X0E 0P0,base.state_ca_nt,base.ca
+nt-hay_river,NT-HAY_RIVER,company,contact,41 Capital Drive,Hay River,X0E 1G2,base.state_ca_nt,base.ca
+nt-inuvik,NT-INUVIK,company,contact,85 Kingmingya Road,Inuvik,X0E 0T0,base.state_ca_nt,base.ca
+nt-yellowknife,NT-YELLOWKNIFE,company,contact,5101 50th Ave,Yellowknife,X1A 2N8,base.state_ca_nt,base.ca
+ns-amherst,NS-AMHERST,company,contact,26-28 Prince Arthur Street,Amherst,B4H 1V6,base.state_ca_ns,base.ca
+ns-antigonish,NS-ANTIGONISH,company,contact,325 Main Street,Antigonish,B2G 2C3,base.state_ca_ns,base.ca
+ns-bedford,NS-BEDFORD,company,contact,1597 Bedford Highway,Bedford,B4A 1E7,base.state_ca_ns,base.ca
+ns-bridgewater,NS-BRIDGEWATER,company,contact,77 Dufferin Street,Bridgewater,B4V 3J1,base.state_ca_ns,base.ca
+ns-dartmouth-belmont_house,NS-DARTMOUTH-Belmont_House,company,contact,33 Alderney Drive,Dartmouth,B2Y 2N4,base.state_ca_ns,base.ca
+ns-dartmouth-cromarty,NS-DARTMOUTH-Cromarty,company,contact,126 Cromarty Drive,Dartmouth,B3B 0E9,base.state_ca_ns,base.ca
+ns-dartmouth-mellor,NS-DARTMOUTH-Mellor,company,contact,48 Mellor Avenue,Dartmouth,B3B 0K6,base.state_ca_ns,base.ca
+ns-digby,NS-DIGBY,company,contact,98 Sydney St,Digby,B0V 1A0,base.state_ca_ns,base.ca
+ns-glace_bay,NS-GLACE_BAY,company,contact,633 Main Street,Glace Bay,B1A 6J3,base.state_ca_ns,base.ca
+ns-guysborough,NS-GUYSBOROUGH,company,contact,9996 Highway 16,Guysborough,B0H 1N0,base.state_ca_ns,base.ca
+ns-halifax-1800_argyle,NS-HALIFAX-1800_Argyle,company,contact,"1800 Argyle St., Suite 101",Halifax,B3J 3N8,base.state_ca_ns,base.ca
+ns-halifax-cornwallis_house,NS-HALIFAX-Cornwallis_House,company,contact,5475 Spring Garden Road,Halifax,B3J 3T2,base.state_ca_ns,base.ca
+ns-halifax-founders_square,NS-HALIFAX-Founders_Square,company,contact,1701 Hollis St,Halifax,B3J 2T9,base.state_ca_ns,base.ca
+ns-halifax-maritime_centre,NS-HALIFAX-Maritime_Centre,company,contact,1505 Barrington Street,Halifax,B3J 3K5,base.state_ca_ns,base.ca
+ns-halifax-quinpool,NS-HALIFAX-Quinpool,company,contact,6206 Quinpool Road,Halifax,B3L 1A3,base.state_ca_ns,base.ca
+ns-inverness,NS-INVERNESS,company,contact,15926 Central Ave,Inverness,B0E 1N0,base.state_ca_ns,base.ca
+ns-kentville,NS-KENTVILLE,company,contact,495 Main Street,Kentville,B4N 3W5,base.state_ca_ns,base.ca
+ns-new_glasgow,NS-NEW_GLASGOW,company,contact,340 East River Road,New Glasgow,B2H 3P7,base.state_ca_ns,base.ca
+ns-north_sydney,NS-NORTH_SYDNEY,company,contact,105 King Street,North Sydney,B2A 3S1,base.state_ca_ns,base.ca
+ns-port_hawkesbury,NS-PORT_HAWKESBURY,company,contact,811 Reeves Street,Port Hawkesbury,B9A 2S4,base.state_ca_ns,base.ca
+ns-shelburne,NS-SHELBURNE,company,contact,218 Water Street,Shelburne,B0T 1W0,base.state_ca_ns,base.ca
+ns-sydney,NS-SYDNEY,company,contact,15 Dorchester Street,Sydney,B1P 6J3,base.state_ca_ns,base.ca
+ns-truro,NS-TRURO,company,contact,181 Willow Street,Truro,B2N 4Z9,base.state_ca_ns,base.ca
+ns-windsor,NS-WINDSOR,company,contact,80 Water Street,Windsor,B0N 2T0,base.state_ca_ns,base.ca
+ns-yarmouth,NS-YARMOUTH,company,contact,13 Willow Street,Yarmouth,B5A 4B2,base.state_ca_ns,base.ca
+nu-cambridge_bay,NU-CAMBRIDGE_BAY,company,contact,"16 Mitik Street, PO Box 2010",Cambridge Bay,X0B 0C0,base.state_ca_nu,base.ca
+nu-iqaluit,NU-IQALUIT,company,contact,933 Mivvik Street,Iqaluit,X0A 0H0,base.state_ca_nu,base.ca
+nu-rankin_inlet,NU-RANKIN_INLET,company,contact,164-1 Mivvik Ave,Rankin Inlet,X0C 0G0,base.state_ca_nu,base.ca
+on-ajax,ON-AJAX,company,contact,200-274 MacKenzie Ave,Ajax,L1S 2E9,base.state_ca_on,base.ca
+on-arnprior-heritage_square,ON-ARNPRIOR-Heritage_Square,company,contact,75 Elgin Street West,Arnprior,K7S 3T9,base.state_ca_on,base.ca
+on-bancroft-fairway_plaza,ON-BANCROFT-Fairway_Plaza,company,contact,5 Fairway Boulevard,Bancroft,K0L 1C0,base.state_ca_on,base.ca
+on-barrie,ON-BARRIE,company,contact,48 Owen Street,Barrie,L4M 3H1,base.state_ca_on,base.ca
+on-belleville-11_station,ON-BELLEVILLE-11_Station,company,contact,11 Station Street,Belleville,K8N 2S3,base.state_ca_on,base.ca
+on-belleville-business_building,ON-BELLEVILLE-Business_Building,company,contact,1 Front Street North,Belleville,K8P 5G9,base.state_ca_on,base.ca
+on-belleville-government_of_canada_building,ON-BELLEVILLE-Government_of_Canada_Building,company,contact,494 Dundas Street East,Belleville,K8N 1G3,base.state_ca_on,base.ca
+on-belleville-warehouse,ON-BELLEVILLE-Warehouse,company,contact,45 Lahr Drive,Belleville,K8N 3B0,base.state_ca_on,base.ca
+on-bracebridge,ON-BRACEBRIDGE,company,contact,98 Manitoba Street,Bracebridge,P1L 1S1,base.state_ca_on,base.ca
+on-brampton_40_gillingham,ON-BRAMPTON_40_Gillingham,company,contact,40 Gillingham Drive,Brampton,L6X 4X7,base.state_ca_on,base.ca
+on-brampton_60_gillingham,ON-BRAMPTON_60_Gillingham,company,contact,60 Gillingham Drive,Brampton,L6X 6B2,base.state_ca_on,base.ca
+on-brantford-195_henry,ON-BRANTFORD-195_Henry,company,contact,6B-195 Henry Street,Brantford,N3S 5C9,base.state_ca_on,base.ca
+on-brockville-canada_trust_building,ON-BROCKVILLE-Canada_Trust_Building,company,contact,14 Court House Avenue,Brockville,K6V 4T1,base.state_ca_on,base.ca
+on-burlington,ON-BURLINGTON,company,contact,E108-676 Appleby Line,Burlington,L7L 5Y1,base.state_ca_on,base.ca
+on-cambridge,ON-CAMBRIDGE,company,contact,350 Conestoga Boulevard,Cambridge,N1R 7L7,base.state_ca_on,base.ca
+on-carleton_place,ON-CARLETON_PLACE,company,contact,46 Lansdowne Ave,Carleton Place,K7C 2T8,base.state_ca_on,base.ca
+on-chatham-federal_building,ON-CHATHAM-Federal_Building,company,contact,120 Wellington Street West,Chatham-Kent,N7M 4V9,base.state_ca_on,base.ca
+on-chatham-judy_lamarsh,ON-CHATHAM-Judy_LaMarsh,company,contact,65 William Street,Chatham-Kent,N7M 4S2,base.state_ca_on,base.ca
+on-cobourg-federal_building,ON-COBOURG-Federal_Building,company,contact,318-1005 Elgin Street West,Cobourg,K9A 5J4,base.state_ca_on,base.ca
+on-collingwood,ON-COLLINGWOOD,company,contact,44 Hurontario Street,Collingwood,L9Y 2L6,base.state_ca_on,base.ca
+on-cornwall-campbell_drive,ON-CORNWALL-Campbell_Drive,company,contact,551 Campbell Street,Cornwall,K6H 6X5,base.state_ca_on,base.ca
+on-cornwall-lionel_chevrier_building,ON-CORNWALL-Lionel_Chevrier_Building,company,contact,111 Water Street East,Cornwall,K6H 6S2,base.state_ca_on,base.ca
+on-dryden,ON-DRYDEN,company,contact,119 King St,Dryden,P8N 9X9,base.state_ca_on,base.ca
+on-east_gwillimbury,ON-EAST_GWILLIMBURY,company,contact,18183 Yonge Street,East Gwillimbury,L9N 0H9,base.state_ca_on,base.ca
+on-elliot_lake-spine_rd,ON-ELLIOT_LAKE-Spine_Rd,company,contact,3 Kilborn Way,Elliot Lake,P5A 2T1,base.state_ca_on,base.ca
+on-espanola,ON-ESPANOLA,company,contact,721 Centre Street,Espanola,P5E 1T3,base.state_ca_on,base.ca
+on-etobicoke,ON-ETOBICOKE,company,contact,101-5353 Dundas Street West,Toronto,M9B 6H8,base.state_ca_on,base.ca
+on-fort_frances,ON-FORT_FRANCES,company,contact,301 Scott Street,Fort Frances,P9A 1H1,base.state_ca_on,base.ca
+on-gananoque,ON-GANANOQUE,company,contact,5 Charles Street South,Gananoque,K7G 1V9,base.state_ca_on,base.ca
+on-georgetown,ON-GEORGETOWN,company,contact,232 Guelph Street,Georgetown,L7G 4B1,base.state_ca_on,base.ca
+on-geraldton,ON-GERALDTON,company,contact,208 Beamish Ave West,Geraldton,P0T 1M0,base.state_ca_on,base.ca
+on-gloucester-beacon_hill_shopping_centre,ON-GLOUCESTER-Beacon_Hill_Shopping_Centre,company,contact,2339 Ogilvie Road,Gloucester,K1J 8M6,base.state_ca_on,base.ca
+on-goderich,ON-GODERICH,company,contact,52 East Street,Goderich,N7A 1N3,base.state_ca_on,base.ca
+on-guelph,ON-GUELPH,company,contact,259 Woodlawn Road West,Guelph,N1H 8J1,base.state_ca_on,base.ca
+on-hamilton_king_street,ON-HAMILTON_King_Street,company,contact,120 King Street West,Hamilton,L8N 1B2,base.state_ca_on,base.ca
+on-hamilton_upper_james,ON-HAMILTON_Upper_James,company,contact,13B-1550 Upper James Street,Hamilton,L9B 2L6,base.state_ca_on,base.ca
+on-hamilton-barton_street_east,ON-HAMILTON-Barton_Street_East,company,contact,2255 Barton Street East,Hamilton,L8H 7T4,base.state_ca_on,base.ca
+on-hamilton-robert_thompson_building,ON-HAMILTON-Robert_Thompson_Building,company,contact,710-110 King Street West,Hamilton,L8P 4S6,base.state_ca_on,base.ca
+on-hawkesbury,ON-HAWKESBURY,company,contact,519 - 521 Main Street East,Hawkesbury,K6A 1B3,base.state_ca_on,base.ca
+on-kapuskasing,ON-KAPUSKASING,company,contact,8 Queen Street,Kapuskasing,P5N 1G7,base.state_ca_on,base.ca
+on-kenora-kenora_market_square,ON-KENORA-Kenora_Market_Square,company,contact,308 2nd Street South,Kenora,P9N 3X9,base.state_ca_on,base.ca
+on-kingston,ON-KINGSTON,company,contact,299 Concession Street,Kingston,K7K 2B9,base.state_ca_on,base.ca
+on-kingston-frontenac_mall,ON-KINGSTON-Frontenac_Mall,company,contact,1300 Bath Rd,Kingston,K7M 4X4,base.state_ca_on,base.ca
+on-kirkland_lake-ontario_northlands_telecommunications,ON-KIRKLAND_LAKE-Ontario_Northlands_Telecommunications,company,contact,8 Oakes Avenue,Kirkland Lake,P2N 3R3,base.state_ca_on,base.ca
+on-kitchener-gos,ON-KITCHENER-GOS,company,contact,4295 King Street East,Kitchener,N2P 0C6,base.state_ca_on,base.ca
+on-kitchener-market_square,ON-KITCHENER-MARKET_SQUARE,company,contact,25 Frederick Street,Kitchener,N2H 6M6,base.state_ca_on,base.ca
+on-kitchener-the_galleria,ON-KITCHENER-The_Galleria,company,contact,40 Weber Street East,Kitchener,N2H 6R3,base.state_ca_on,base.ca
+on-leamington-leamington_mall,ON-LEAMINGTON-Leamington_Mall,company,contact,215 Talbot Street East,Leamington,N8H 3X5,base.state_ca_on,base.ca
+on-lindsay,ON-LINDSAY,company,contact,65 Kent Street West,Lindsay,K9V 2Y3,base.state_ca_on,base.ca
+on-listowel-federal_building,ON-LISTOWEL-Federal_Building,company,contact,210 Main Street East,Listowel,N4W 2B7,base.state_ca_on,base.ca
+on-london-cherryhill,ON-LONDON-Cherryhill,company,contact,301 Oxford Street West,London,N6H 1S6,base.state_ca_on,base.ca
+on-london-dominion_public_building,ON-LONDON-Dominion_Public_Building,company,contact,457 Richmond Street,London,N6A 3E3,base.state_ca_on,base.ca
+on-malton,ON-MALTON,company,contact,"6877 Goreway Drive, Unit 5",Malton,L4T 1L9,base.state_ca_on,base.ca
+on-marathon-peninsula_square,ON-MARATHON-Peninsula_Square,company,contact,975 Alloy Drive,Thunder Bay,P7B 5Z8,base.state_ca_on,base.ca
+on-markham,ON-MARKHAM,company,contact,14 - 5051 Highway 7 East,Markham,L3R 1N3,base.state_ca_on,base.ca
+on-midland-huronia_mall,ON-MIDLAND-Huronia_Mall,company,contact,9225 Highway 93,Midland,L4R 4K4,base.state_ca_on,base.ca
+on-milton,ON-MILTON,company,contact,433 Steeles Avenue East,Milton,L9T 2V2,base.state_ca_on,base.ca
+on-mississauga-2240_speakman_drive,ON-MISSISSAUGA-2240_Speakman_Drive,company,contact,2240 Speakman Drive,Mississauga,L5K 1A9,base.state_ca_on,base.ca
+on-mississauga-courtney_park,ON-MISSISSAUGA-Courtney_Park,company,contact,430 Courtney Park Drive East,Mississauga,L5T 2S5,base.state_ca_on,base.ca
+on-mississauga-west,ON-MISSISSAUGA-West,company,contact,3085 Glen Erin Drive,Mississauga,L5L 1J3,base.state_ca_on,base.ca
+on-mississaugappt,ON-MISSISSAUGAPPT,company,contact,377 Burnhamthorpe Road East,Mississauga,L5A 3Y1,base.state_ca_on,base.ca
+on-napanee-dael_plaza,ON-NAPANEE-Dael_Plaza,company,contact,2 Dairy Ave,Napanee,K7R 3T1,base.state_ca_on,base.ca
+on-new_liskeard,ON-NEW_LISKEARD,company,contact,280 Armstrong Street North,New Liskeard,P0J 1P0,base.state_ca_on,base.ca
+on-niagara_falls,ON-NIAGARA_FALLS,company,contact,6080 McLoed Road,Niagara Falls,L2G 7T4,base.state_ca_on,base.ca
+on-north_bay-canada_place,ON-NORTH_BAY-Canada_Place,company,contact,107 Shirreff Ave,North Bay,P1B 7K8,base.state_ca_on,base.ca
+on-north_york-joseph_shepard_building,ON-NORTH_YORK-Joseph_Shepard_Building,company,contact,4900 Yonge Street,Toronto,M2N 6A8,base.state_ca_on,base.ca
+on-north_york-lawrence_square,ON-NORTH_YORK-Lawrence_Square,company,contact,700 Lawrence Ave West,Toronto,M6A 3B4,base.state_ca_on,base.ca
+on-north-yorkppt,ON-NORTH-YORKPPT,company,contact,4900 Yonge Street,Toronto,M2N 6A8,base.state_ca_on,base.ca
+on-oakville,ON-OAKVILLE,company,contact,B5-117 Cross Ave,Oakville,L6J 2W7,base.state_ca_on,base.ca
+on-orangeville,ON-ORANGEVILLE,company,contact,102-210 Broadway Ave,Orangeville,L9W 5G4,base.state_ca_on,base.ca
+on-orillia,ON-ORILLIA,company,contact,50 Andrew Street South,Orillia,L3V 7T5,base.state_ca_on,base.ca
+on-oshawa-john,ON-OSHAWA-JOHN,company,contact,200 John Street West,Oshawa,L1J 2B4,base.state_ca_on,base.ca
+on-ottawa_west_ouest-lincoln_heights_galleria,ON-OTTAWA_WEST_OUEST-Lincoln_Heights_Galleria,company,contact,2525 Carling Ave,Ottawa,K2B 7Z2,base.state_ca_on,base.ca
+on-ottawa-city_hall_hotel_de_ville,ON-OTTAWA-CITY_HALL_HOTEL_DE_VILLE,company,contact,110 Laurier Ave West,Ottawa,K1P 1J1,base.state_ca_on,base.ca
+on-ottawa-constitution_square,ON-OTTAWA-Constitution_Square,company,contact,360 Albert Street,Ottawa,K1R 7X7,base.state_ca_on,base.ca
+on-ottawa-john_g_diefenbaker,ON-OTTAWA-John_G_Diefenbaker,company,contact,111 Sussex Drive,Ottawa,K1N 1J1,base.state_ca_on,base.ca
+on-ottawa-rideauview_mall,ON-OTTAWA-Rideauview_Mall,company,contact,885 Meadowlands Drive East,Ottawa,K2C 3N2,base.state_ca_on,base.ca
+on-owen_sound-heritage_place_shopping_centre,ON-OWEN_SOUND-Heritage_Place_Shopping_Centre,company,contact,1350 16th Street East,Owen Sound,N4K 6N7,base.state_ca_on,base.ca
+on-parry_sound,ON-PARRY_SOUND,company,contact,74 James Street,Parry Sound,P2A 1T8,base.state_ca_on,base.ca
+on-pembroke,ON-PEMBROKE,company,contact,141 Lake Street,Pembroke,K8A 5L8,base.state_ca_on,base.ca
+on-perth,ON-PERTH,company,contact,40 Sunset Blvd,Perth,K7H 2Y4,base.state_ca_on,base.ca
+on-peterborough-crawford_dr,ON-PETERBOROUGH-Crawford_Dr,company,contact,1161 Crawford,Peterborough,K9J 6X6,base.state_ca_on,base.ca
+on-peterborough-george,ON-PETERBOROUGH-George,company,contact,215-219 George Street,Peterborough,K9J 3G7,base.state_ca_on,base.ca
+on-picton,ON-PICTON,company,contact,1 Pitt Street,Picton,K0K 2T0,base.state_ca_on,base.ca
+on-picton-old,ON-PICTON-Old,company,contact,229 Main Street,Picton,K0K 2T0,base.state_ca_on,base.ca
+on-prescott,ON-PRESCOTT,company,contact,292 Centre Street,Prescott,K0E 1T0,base.state_ca_on,base.ca
+on-renfrew,ON-RENFREW,company,contact,350 Raglan Avenue,Renfrew,K7V 1R7,base.state_ca_on,base.ca
+on-richmond_hill,ON-RICHMOND_HILL,company,contact,35 Beresford Drive,Richmond Hill,L4B 4M3,base.state_ca_on,base.ca
+on-richmond_hill-via_renzo,ON-RICHMOND_HILL-VIA_RENZO,company,contact,5 Via Renzo Drive,Richmond Hill,L4S 0B6,base.state_ca_on,base.ca
+on-sarnia,ON-SARNIA,company,contact,529 Exmouth Street,Sarnia,N7T 5P6,base.state_ca_on,base.ca
+on-sault_ste_marie,ON-SAULT_STE_MARIE,company,contact,22 Bay Street,Sault Ste Marie,P6A 5S2,base.state_ca_on,base.ca
+on-scarborough-canada_centre,ON-SCARBOROUGH-Canada_Centre,company,contact,200 Town Centre Court,Toronto,M1P 4X9,base.state_ca_on,base.ca
+on-scarborough-canada_centreppt,ON-SCARBOROUGH-Canada_CentrePPT,company,contact,200 Town Centre Court,Toronto,M1P 4X8,base.state_ca_on,base.ca
+on-simcoe,ON-SIMCOE,company,contact,5 Queensway East,Simcoe,N3Y 5K2,base.state_ca_on,base.ca
+on-smiths_falls,ON-SMITHS_FALLS,company,contact,91 Cornelia Street West,Smiths Falls,K7A 5L3,base.state_ca_on,base.ca
+on-st_catharines-henley_square,ON-ST_CATHARINES-Henley_Square,company,contact,"Units E&F, 395 Ontario St",St. Catharines,L2N 7N6,base.state_ca_on,base.ca
+on-st_thomas-employment_services_elgin,ON-ST_THOMAS-Employment_Services_Elgin,company,contact,1010 Talbot Street,St. Thomas,N5P 4N2,base.state_ca_on,base.ca
+on-stratford_lorne,ON-STRATFORD_Lorne,company,contact,"61 Lorne Ave, Floor: Ground, Unit 2",Stratford,N5A 6S4,base.state_ca_on,base.ca
+on-sudbury-federal_building,ON-SUDBURY-Federal_Building,company,contact,19 Lisgar Street,Sudbury,P3E 6L1,base.state_ca_on,base.ca
+on-thunder_bay,ON-THUNDER_BAY,company,contact,975 Alloy Drive,Thunder Bay,P7B 5Z8,base.state_ca_on,base.ca
+on-tillsonburg,ON-TILLSONBURG,company,contact,96 Tillson Ave,Tillsonburg,N4G 3A1,base.state_ca_on,base.ca
+on-timmins,ON-TIMMINS,company,contact,179 Third Ave,Timmins,P4N 1C7,base.state_ca_on,base.ca
+on-timmins-120_cedar,ON-TIMMINS-120_Cedar,company,contact,120 Cedar Street South,Timmins,P4N 2G0,base.state_ca_on,base.ca
+on-toronto-arthur_meighen_building,ON-TORONTO-Arthur_Meighen_Building,company,contact,25 St. Clair Ave East,Toronto,M4T 3A4,base.state_ca_on,base.ca
+on-toronto-college_steet,ON-TORONTO-College_Steet,company,contact,559 College St,Toronto,M6G 1A9,base.state_ca_on,base.ca
+on-toronto-gerrard_square,ON-TORONTO-Gerrard_Square,company,contact,1000 Gerrard Street East,Toronto,M4M 3G6,base.state_ca_on,base.ca
+on-toronto-malvern_mall,ON-TORONTO-Malvern_Mall,company,contact,31 Tapscott Road,Toronto,M1B 4Y7,base.state_ca_on,base.ca
+on-toronto-south_tower,ON-TORONTO-South_Tower,company,contact,110 Yonge Street,Toronto,M5C 1T4,base.state_ca_on,base.ca
+on-toronto-west_humber,ON-TORONTO-WEST_HUMBER,company,contact,2291 Kipling Ave,Toronto,M9W 4L6,base.state_ca_on,base.ca
+on-trenton,ON-TRENTON,company,contact,50 Dundas Street West,Trenton,K8V 6R5,base.state_ca_on,base.ca
+on-vaughan-mills,ON-VAUGHAN-Mills,company,contact,180 Bass Pro Mills Drive,Vaughan,L4K 0G9,base.state_ca_on,base.ca
+on-walkerton,ON-WALKERTON,company,contact,200 McNab Street,Walkerton,N0G 2V0,base.state_ca_on,base.ca
+on-wallaceburg,ON-WALLACEBURG,company,contact,786 Dufferin Ave,Wallaceburg,N8A 2V3,base.state_ca_on,base.ca
+on-welland,ON-WELLAND,company,contact,250 Thorold Road West,Welland,L3C 3W3,base.state_ca_on,base.ca
+on-whitbyppt,ON-WHITBYPPT,company,contact,1615 Dundas Street East,Whitby,L1N 2L1,base.state_ca_on,base.ca
+on-windsor,ON-WINDSOR,company,contact,400 City Hall Square East,Windsor,N9A 7K6,base.state_ca_on,base.ca
+on-windsor-cibc,ON-WINDSOR-CIBC,company,contact,100 Ouellette Street,Windsor,N9A 6T3,base.state_ca_on,base.ca
+on-woodstock,ON-WOODSTOCK,company,contact,959 Dundas Street West,Woodstock,N4S 1H2,base.state_ca_on,base.ca
+pe-charlottetown-jean_canfield,PE-CHARLOTTETOWN-Jean_Canfield,company,contact,191 Great George Street,Charlottetown,C1A 4L2,base.state_ca_pe,base.ca
+pe-montague-main,PE-MONTAGUE-Main,company,contact,491 Main Street,Montague,C0A 1R0,base.state_ca_pe,base.ca
+pe-oleary,PE-OLEARY,company,contact,371 Main Street,O'Leary,C0B 1V0,base.state_ca_pe,base.ca
+pe-souris,PE-SOURIS,company,contact,173 Main Street,Souris,C0A 2B0,base.state_ca_pe,base.ca
+pe-summerside,PE-SUMMERSIDE,company,contact,294 Church Street,Summerside,C1N 0C1,base.state_ca_pe,base.ca
+qc-alma,QC-ALMA,company,contact,100 Saint-Joseph Ave South,Alma,G8B 7A6,base.state_ca_qc,base.ca
+qc-amos,QC-AMOS,company,contact,502 4th Street,Amos,J9T 9X9,base.state_ca_qc,base.ca
+qc-asbestos,QC-ASBESTOS,company,contact,309 Chassé Street,Asbestos,J1T 2B4,base.state_ca_qc,base.ca
+qc-baie-comeau,QC-BAIE-COMEAU,company,contact,300 Boulevard Lasalle,Baie Comeau,G4Z 2K2,base.state_ca_qc,base.ca
+qc-baie-comeau-old,QC-BAIE-COMEAU-Old,company,contact,625 Laflèche Boulevard West,Baie-Comeau,G5C 1C5,base.state_ca_qc,base.ca
+qc-boucherville,QC-BOUCHERVILLE,company,contact,540 D'Avaugour Street,Boucherville,J4B 0G6,base.state_ca_qc,base.ca
+qc-brossard,QC-BROSSARD,company,contact,2501 Lapinière Boulevard,Brossard,J4Z 3P1,base.state_ca_qc,base.ca
+qc-campbells_bay,QC-CAMPBELLS_BAY,company,contact,2 John Street,Campbell's Bay,J0X 1K0,base.state_ca_qc,base.ca
+qc-cap-aux-meules,QC-CAP-AUX-MEULES,company,contact,380 Principale Street,Cap-aux-Meules,G4T 1S2,base.state_ca_qc,base.ca
+qc-causapscal,QC-CAUSAPSCAL,company,contact,8 St-Jacques Street North,Causapscal,G0J 1J0,base.state_ca_qc,base.ca
+qc-chandler,QC-CHANDLER,company,contact,75 Rene Levesque Boulevard East,Chandler,G0C 1K0,base.state_ca_qc,base.ca
+qc-chateauguay,QC-CHATEAUGUAY,company,contact,245 Saint-Jean-Baptiste Boulevard,Châteauguay,J6K 3C3,base.state_ca_qc,base.ca
+qc-chibougamau,QC-CHIBOUGAMAU,company,contact,623 3rd Street,Chibougamau,G8P 3A2,base.state_ca_qc,base.ca
+qc-chicoutimi,QC-CHICOUTIMI,company,contact,98 Racine Street East,Chicoutimi,G7H 1R1,base.state_ca_qc,base.ca
+qc-chisasibi,QC-CHISASIBI,company,contact,"457, rue Wolverine",Chisasibi,J0M 1E0,base.state_ca_qc,base.ca
+qc-coaticook,QC-COATICOOK,company,contact,289 Baldwin Street,Coaticook,J1A 2A2,base.state_ca_qc,base.ca
+qc-cowansville,QC-COWANSVILLE,company,contact,,Cowansville,J2K 2X4,base.state_ca_qc,base.ca
+qc-dolbeau,QC-DOLBEAU,company,contact,1400 des Érables Street,Dolbeau-Mistassini,G8L 1C4,base.state_ca_qc,base.ca
+qc-donnacona,QC-DONNACONA,company,contact,100 Highway 138,Donnacona,G3M 1B5,base.state_ca_qc,base.ca
+qc-drummondville-1175_janelle,QC-DRUMMONDVILLE-1175_Janelle,company,contact,1175 Janelle,Drummondville,J2C 3E2,base.state_ca_qc,base.ca
+qc-forestville,QC-FORESTVILLE,company,contact,25 Highway 138 East,Forestville,G0T 1E0,base.state_ca_qc,base.ca
+qc-gaspe,QC-GASPE,company,contact,98 de la Reine Street,Gaspé,G4X 2V4,base.state_ca_qc,base.ca
+qc-gatineau-22_de_varennes,QC-GATINEAU-22_de_Varennes,company,contact,22 rue de Varennes,Gatineau,J8T 8R1,base.state_ca_qc,base.ca
+qc-gatineau-455_blvd_hopital,QC-GATINEAU-455_Blvd_Hopital,company,contact,455 Boulevard de l'Hopital,Gatineau,J8T 7X7,base.state_ca_qc,base.ca
+qc-gatineau-saint_joseph,QC-GATINEAU-Saint_Joseph,company,contact,455 Boulevard de l'Hopital,Gatineau,J8T 7X7,base.state_ca_qc,base.ca
+qc-granby,QC-GRANBY,company,contact,82 Robinson Street,Granby,J2G 7L4,base.state_ca_qc,base.ca
+qc-joliette,QC-JOLIETTE,company,contact,46 Gauthier Street South,Joliette,J6E 4J4,base.state_ca_qc,base.ca
+qc-jonquiere,QC-JONQUIERE,company,contact,3750 du Royaume Boulevard,Jonquière,G7X 0A2,base.state_ca_qc,base.ca
+qc-jonquiere-centre_fiscal,QC-JONQUIERE-Centre_fiscal,company,contact,3223 Ste-Émilie Street,Saguenay,G7S 5L1,base.state_ca_qc,base.ca
+qc-la_malbaie,QC-LA_MALBAIE,company,contact,541 Saint-Étienne Street,La Malbaie,G5A 1J3,base.state_ca_qc,base.ca
+qc-la_pocatiere,QC-LA_POCATIERE,company,contact,103-708 4th Ave,La Pocatière,G0R 1Z0,base.state_ca_qc,base.ca
+qc-la_sarre,QC-LA_SARRE,company,contact,319 Principale Street,La Sarre,J9Z 1Z4,base.state_ca_qc,base.ca
+qc-la_tuque,QC-LA_TUQUE,company,contact,290 Saint-Joseph Street,La Tuque,G9X 3Z8,base.state_ca_qc,base.ca
+qc-lac_megantic,QC-LAC_MEGANTIC,company,contact,5550 Frontenac,Lac Mégantic,G6B 1H5,base.state_ca_qc,base.ca
+qc-laval,QC-LAVAL,company,contact,100-1041 Boulevard des Laurentides,Laval,H7G 2W2,base.state_ca_qc,base.ca
+qc-laval-ctpc,QC-LAVAL-CTPC,company,contact,1575 Chomedey Boulevard,Laval,H7V 2X2,base.state_ca_qc,base.ca
+qc-lavalppt,QC-LAVALPPT,company,contact,3 Place Laval,Laval,H7N 1A2,base.state_ca_qc,base.ca
+qc-levis,QC-LEVIS,company,contact,175-50 route du Président-Kennedy,Lévis,G6V 6W8,base.state_ca_qc,base.ca
+qc-longueuil-centre,QC-LONGUEUIL-Centre,company,contact,1195 du Tremblay Chemin,Longueuil,J4N 1R4,base.state_ca_qc,base.ca
+qc-longueuil-centre_d_appel,QC-LONGUEUIL-Centre_d_appel,company,contact,1225 Saint-Charles Street West,Longueuil,J4K 0B9,base.state_ca_qc,base.ca
+qc-louiseville,QC-LOUISEVILLE,company,contact,507 Marcel Street,Louiseville,J5V 1N1,base.state_ca_qc,base.ca
+qc-magog,QC-MAGOG,company,contact,1700 Sherbrooke Street,Magog,J1X 5B4,base.state_ca_qc,base.ca
+qc-maniwaki,QC-MANIWAKI,company,contact,100 Principale Street South,Maniwaki,J9E 3L4,base.state_ca_qc,base.ca
+qc-matane,QC-MATANE,company,contact,750 du Phare Ave West,Matane,G4W 3W8,base.state_ca_qc,base.ca
+qc-mistissini,QC-MISTISSINI,company,contact,32 Amisk Street,Mistissini,G0W 1C0,base.state_ca_qc,base.ca
+qc-mont-laurier,QC-MONT-LAURIER,company,contact,431 de la Madone Street,Mont-Laurier,J9L 1S1,base.state_ca_qc,base.ca
+qc-montmagny,QC-MONTMAGNY,company,contact,37 Sainte-Brigitte Ave South,Montmagny,G5V 2Y3,base.state_ca_qc,base.ca
+qc-montreal-complexe_guy_favreau,QC-MONTREAL-Complexe_Guy_Favreau,company,contact,200 René-Lévesque Boulevard West,Montréal,H2Z 1X4,base.state_ca_qc,base.ca
+qc-montreal-complexe_guy_favreauppt,QC-MONTREAL-Complexe_Guy_FavreauPPT,company,contact,200 René-Lévesque Boulevard West,Montréal,H2Z 1X4,base.state_ca_qc,base.ca
+qc-montreal-decarie,QC-MONTREAL-Decarie,company,contact,700-5160 Décarie Boulevard,Montréal,H3X 2H9,base.state_ca_qc,base.ca
+qc-montreal-maisonneuve,QC-MONTREAL-Maisonneuve,company,contact,1001 De Maisonneuve Boulevard East,Montréal,H2L 4P9,base.state_ca_qc,base.ca
+qc-montreal-parc_extension,QC-MONTREAL-Parc_Extension,company,contact,540 Avenue Beaumont,Montréal,H3N 1V1,base.state_ca_qc,base.ca
+qc-montreal-peel,QC-MONTREAL-Peel,company,contact,715 Peel Street,Montréal ,H3C 4H6,base.state_ca_qc,base.ca
+qc-montreal-place_bonaventure,QC-MONTREAL-Place_Bonaventure,company,contact,800 De La Gauchetière St West,Montréal,H5A 1K6,base.state_ca_qc,base.ca
+qc-new-richmond,QC-NEW-RICHMOND,company,contact,"Floor 2, 152 Perron Boulevard West",New Richmond,G0C 2B0,base.state_ca_qc,base.ca
+qc-pointe_aux_trembles,QC-Pointe_aux_Trembles,company,contact,13313 Sherbrooke Street East,Montréal,H1A 1C2,base.state_ca_qc,base.ca
+qc-pointe-claire,QC-POINTE-CLAIRE,company,contact,120-6500 Trans-Canadienne Highway,Pointe-Claire,H9R 0A5,base.state_ca_qc,base.ca
+qc-quebec-beauport,QC-QUEBEC-Beauport,company,contact,2500 Montmorency,Québec,G1J 5C7,base.state_ca_qc,base.ca
+qc-quebec-centre_de_traitement,QC-QUEBEC-Centre_de_traitement,company,contact,1305 du Blizzard St.,Québec,G2K 0A1,base.state_ca_qc,base.ca
+qc-quebec-gare_du_palais,QC-QUEBEC-Gare_du_Palais,company,contact,330 De la Gare du Palais,Québec,G1K 3X2,base.state_ca_qc,base.ca
+qc-quebec-sainte_foy,QC-QUEBEC-Sainte_Foy,company,contact,3229 Chemin Quatre-Bourgeois,Sainte-Foy,G1W 0C1,base.state_ca_qc,base.ca
+qc-repentigny,QC-REPENTIGNY,company,contact,667 Notre-Dame Street,Repentigny,J6A 3W5,base.state_ca_qc,base.ca
+qc-rimouski,QC-RIMOUSKI,company,contact,"287 Pierre Saindon Street, Suite 102",Rimouski,G5L 9A7,base.state_ca_qc,base.ca
+qc-riviere_du_loup,QC-RIVIERE_DU_LOUP,company,contact,,Rivière-du-Loup,G5R 4C2,base.state_ca_qc,base.ca
+qc-roberval,QC-ROBERVAL,company,contact,755 St-Joseph Boulevard,Roberval,G8H 2L4,base.state_ca_qc,base.ca
+qc-rouyn-noranda,QC-ROUYN-NORANDA,company,contact,151 du Lac Ave,Rouyn-Noranda,J9X 4N6,base.state_ca_qc,base.ca
+qc-saint-eustache,QC-SAINT-EUSTACHE,company,contact,250 Arthur-Sauvé Boulevard,Saint-Eustache,J7R 2H9,base.state_ca_qc,base.ca
+qc-saint-georges,QC-SAINT-GEORGES,company,contact,11400 1st Ave East,Saint-Georges,G5Y 5S4,base.state_ca_qc,base.ca
+qc-saint-hyacinthe,QC-SAINT-HYACINTHE,company,contact,,Saint-Hyacinthe,J2S 0H7,base.state_ca_qc,base.ca
+qc-saint-jean-sur-richelieu,QC-SAINT-JEAN-SUR-RICHELIEU,company,contact,"1235, rue douglas",Saint-Jean-sur-Richelieu,J2W 0J2,base.state_ca_qc,base.ca
+qc-saint-jerome,QC-SAINT-JEROME,company,contact,339 Jean-Paul Hogue Boulevard,Saint-Jérôme,J7Z 7A5,base.state_ca_qc,base.ca
+qc-saint-laurent,QC-SAINT-LAURENT,company,contact,2089 Marcel-Laurin,Montréal,H4R 1K4,base.state_ca_qc,base.ca
+qc-sainte-agathe,QC-SAINTE-AGATHE,company,contact,118 Principale,Sainte-Agathe-des-Monts,J8C 1K1,base.state_ca_qc,base.ca
+qc-sainte-anne_des_monts,QC-SAINTE-ANNE_DES_MONTS,company,contact,230 1ère avenue Ouest,Sainte-Anne-des-Monts,G4V 1E2,base.state_ca_qc,base.ca
+qc-sainte-foy-2640_laurier,QC-SAINTE-FOY-2640_Laurier,company,contact,2640 Laurier Boulevard,Sainte-Foy,G1V 5C2,base.state_ca_qc,base.ca
+qc-sainte-therese,QC-SAINTE-THERESE,company,contact,100 Ducharme Boulevard,Sainte-Thérèse,J7E 1X2,base.state_ca_qc,base.ca
+qc-senneterre,QC-SENNETERRE,company,contact,761 10th Ave,Senneterre,J0Y 2M0,base.state_ca_qc,base.ca
+qc-sept-iles,QC-SEPT-ILES,company,contact,701 Laure Boulevard,Sept-Îles,G4R 1X8,base.state_ca_qc,base.ca
+qc-shawinigan,QC-SHAWINIGAN,company,contact,444 5th Street,Shawinigan,G9N 1E6,base.state_ca_qc,base.ca
+qc-shawinigan-centre_d_appel,QC-SHAWINIGAN-Centre_d_appel,company,contact,4695 Shawinigan-Sud Boulevard,Shawinigan,G5P 5H9,base.state_ca_qc,base.ca
+qc-sherbrooke-place_de_la_cite,QC-SHERBROOKE-Place_de_la_Cite,company,contact,"50 King, Place de la Cité, Suite 140",Sherbrooke,J1H 4G9,base.state_ca_qc,base.ca
+qc-sorel,QC-SOREL,company,contact,,Sorel-Tracy,J3P 1A8,base.state_ca_qc,base.ca
+qc-st_leonard,QC-ST_LEONARD,company,contact,500-6020 Jean-Talon Street East,Montréal,H1S 3B1,base.state_ca_qc,base.ca
+qc-terrebonne,QC-TERREBONNE,company,contact,835 montée Masson,Lachenaie,J6W 2C7,base.state_ca_qc,base.ca
+qc-thetford-mines,QC-THETFORD-MINES,company,contact,350 Frontenac West,Thetford-Mines,G6G 6N7,base.state_ca_qc,base.ca
+qc-trois-rivieres,QC-TROIS-RIVIERES,company,contact,1660 Royale Street,Trois-Rivières,G9A 4K3,base.state_ca_qc,base.ca
+qc-val_dor,QC-VAL_DOR,company,contact,400 Centrale Ave,Val-d'Or,J9P 1P3,base.state_ca_qc,base.ca
+qc-valleyfield,QC-VALLEYFIELD,company,contact,"73 Maden Street, Suite 100",Salaberry-de-Valleyfield,J6S 3V4,base.state_ca_qc,base.ca
+qc-vaudreuil-dorion,QC-VAUDREUIL-DORION,company,contact,2555 Dutrisac Ave,Vaudreuil-Dorion,J7V 7E6,base.state_ca_qc,base.ca
+qc-verdun,QC-VERDUN,company,contact,4110 Wellington Street,Verdun,H4G 1V7,base.state_ca_qc,base.ca
+qc-victoriaville,QC-VICTORIAVILLE,company,contact,84 Boulevard Labbé Sud,Victoriaville,G6S 1K4,base.state_ca_qc,base.ca
+qc-ville-marie,QC-VILLE-MARIE,company,contact,69B Ste-Anne Street,Ville-Marie,J9V 2B6,base.state_ca_qc,base.ca
+sk-buffalo_narrows,SK-BUFFALO_NARROWS,company,contact,"1491 Pederson Avenue, Unit 4",Buffalo Narrows,S0M 0J0,base.state_ca_sk,base.ca
+sk-estevan,SK-ESTEVAN,company,contact,419 Kensington,Estevan,S4A 2T5,base.state_ca_sk,base.ca
+sk-la_ronge,SK-LA_RONGE,company,contact,503 La Ronge Ave,La Ronge,S0J 1L0,base.state_ca_sk,base.ca
+sk-melfort,SK-MELFORT,company,contact,104 McKendry Plaza,Melfort,S0E 1A0,base.state_ca_sk,base.ca
+sk-moose_jaw,SK-MOOSE_JAW,company,contact,501-111 Fairford Street East,Moose Jaw,S6H 7X5,base.state_ca_sk,base.ca
+sk-north_battleford,SK-NORTH_BATTLEFORD,company,contact,1401 101 Street,North Battleford,S9A 1A1,base.state_ca_sk,base.ca
+sk-prince_albert,SK-PRINCE_ALBERT,company,contact,2995 2nd Avenue West,Prince Albert,S6V 5V5,base.state_ca_sk,base.ca
+sk-regina-alvin_hamilton_building,SK-REGINA-Alvin_Hamilton_Building,company,contact,1783 Hamilton Street,Regina,S4P 2B6,base.state_ca_sk,base.ca
+sk-reginappt,SK-REGINAPPT,company,contact,1870 Albert Street,Regina,S4P 4B7,base.state_ca_sk,base.ca
+sk-saskatoon,SK-SASKATOON,company,contact,101 22nd Street East,Saskatoon,S7K 0E2,base.state_ca_sk,base.ca
+sk-saskatoon-market_mall,SK-SASKATOON-Market_Mall,company,contact,2325 Preston Avenue,Saskatoon,S7J 0J1,base.state_ca_sk,base.ca
+sk-saskatoonppt,SK-SASKATOONPPT,company,contact,101 22nd Street East,Saskatoon,S7K 0E1,base.state_ca_sk,base.ca
+sk-swift_current,SK-SWIFT_CURRENT,company,contact,250 Central Avenue North,Swift Current,S9H 4G3,base.state_ca_sk,base.ca
+sk-weyburn,SK-WEYBURN,company,contact,110 Souris Ave,Weyburn,S4H 2Z8,base.state_ca_sk,base.ca
+sk-yorkton,SK-YORKTON,company,contact,214 Smith Street East,Yorkton,S3N 3S6,base.state_ca_sk,base.ca
+yt-whitehorse,YT-WHITEHORSE,company,contact,300 Main Street,Whitehorse,Y1A 2B5,base.state_ca_yt,base.ca
