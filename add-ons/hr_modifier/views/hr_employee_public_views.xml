@@ -57,7 +57,7 @@
                             </div>
                             <field name="company_id" string="Company" invisible="1"/>
                         <notebook>
-                           <page name="work_info" string="Work Information">
+                            <page name="work_info" string="Work Information">
                                 <div id="o_work_employee_container"> <!-- These two div are used to position org_chart -->
                                     <div id="o_work_employee_main">
                                         <group>
@@ -82,7 +82,7 @@
                                     </div>
                                 </div>
                             </page>
-                            <page name="access_information" string="Access Information" groups="hr.group_hr_user">
+                            <page name="public" string="Access Information" groups="hr.group_hr_user">
                                 <group>
                                     <field name="x_employee_access_gov_office"/>
                                     <field name="x_employee_device_type"/>
