@@ -110,6 +110,13 @@
                                     <field name="x_employee_headset"/>
                                 </group>
                             </page>
+                            <page name="hr_settings" string="HR Settings" groups="hr.group_hr_manager">
+                                <group>
+                                    <group string='Status' name="active_group">
+                                        <field name="user_id" string="Related User"/>
+                                    </group>
+                                </group>
+                            </page>
                         </notebook>
                     </sheet>
                     <div class="oe_chatter">
