@@ -56,12 +56,6 @@
                                 Department: <field name="department_id" context="{'hierarchical_naming': False}"/>
                             </p>
                             <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags"  groups="hr.group_hr_manager"/>
-                            <div>
-                                <b style="font-size:1.3em">
-                                    Please note all information contained within these tabs are considered Protected information and should 
-                                    be handled in accordance with departmental and Government of Canada directives, policies and laws
-                                </b>
-                            </div>
                         </div>
                         <notebook>
                             <page name="public" string="Management Information">
