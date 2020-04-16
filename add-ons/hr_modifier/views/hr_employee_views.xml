@@ -78,7 +78,7 @@
                                                 <field name="region_id" options="{'no_create_edit': True}"/>
                                             </group>
                                             <group string="Work Address">
-                                                <field name="address_id" context="{'show_address': 1}" options="{&quot;always_reload&quot;: True, &quot;highlight_first_line&quot;: True}"/>
+                                                <field name="address_id" context="{'show_address': 1, 'default_is_company': True}" options="{&quot;always_reload&quot;: True, &quot;highlight_first_line&quot;: True}"/>
                                                 <field name="x_employee_is_remote" />
                                                 <field name="x_employee_office_floor"/>
                                                 <field name="x_employee_office_cubicle"/>
