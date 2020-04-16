@@ -21,9 +21,9 @@
         'views/hr_department_views.xml',
         'views/hr_employee_classification_views.xml',
         'views/hr_employee_region_views.xml',
+        'views/hr_location_views.xml',
         'views/hr_views.xml',
         'views/mail_channel_views.xml',
-        'views/hr_location_views.xml'
         'views/res_partner_views.xml'
     ],
     'qweb': [
