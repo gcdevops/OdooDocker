@@ -98,7 +98,7 @@ Step 8. Similarly, import [odoo-jobs-csv.csv](./data/org_structure/odoo-jobs-csv
 
 ![importing jobs](./images/import-jobs.png)
 
-Step 9. And then same thing for Skills
+Step 9. And then same thing for ```Skills```
 
 ![Employees page with Skills highlighted](./images/employees-page-skills-highlighted.png)
 
