@@ -58,10 +58,25 @@
     sequence="2"/>
 
     <menuitem
-    id="hr_skills.hr_skill_type_menu"
+    id="hr_skill_main_menu"
     name="Skills"
-    action="hr_skills.hr_skill_type_action"
     parent="hr.menu_human_resources_configuration_employee"
+    sequence="3"
+    groups="hr.group_hr_manager,group_hr_senior_management"/>
+
+    <menuitem
+    id="hr_skills.hr_skill_type_menu"
+    name="Types"
+    action="hr_skills.hr_skill_type_action"
+    parent="hr_skill_main_menu"
+    sequence="3"
+    groups="hr.group_hr_manager,group_hr_senior_management"/>
+
+    <menuitem
+    id="hr_skill_sub_skill_menu"
+    name="Sub Skills"
+    action="hr_sub_skill_action"
+    parent="hr_skill_main_menu"
     sequence="3"
     groups="hr.group_hr_manager,group_hr_senior_management"/>
 
