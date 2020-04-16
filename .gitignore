@@ -2,3 +2,6 @@
 .dev.env
 
 .idea
+
+/add-ons/filestore
+/add-ons/sessions
