@@ -1,38 +1,38 @@
-name;skill_ids/name;skill_level_ids/name;skill_level_ids/level_progress
-1. Employment Insurance (EI);Call centres;1;100
-;Claims processing;;
-;Work-Sharing – agreement approval and EI eligibility determination and processing;;
-"2. Old Age Security (OAS; including OAS Pension, GIS & Allowances)";Call centres;1;100
-;Claims processing;;
-"3. Canada Pension Plan (CPP; including Retirement  Disability, Survivor Benefits)";Call centres;1;100
-;Claims processing;;
-4. Social Insurance Number (SIN);Tier 2 EI;1;100
-;Tier 2 Employment;;
-5. Service Canada Centres (SCC) & Outreach;Service Canada Centres (SCC) & Outreach;1;100
-6. General Enquiry Service (1-800 O Canada & CIS);1-800 O Canada call centre;1;100
-;10 specialised call centres;;
-7. Principal Publisher Service (including external communications);Principal Publisher Service (including external communications);1;100
-8. Canada Student Loans Program (National Student Loans Centre);Canada Student Loans Program (National Student Loans Centre);1;100
-9. Passport Services;Urgent passports;1;100
-;Concierge service for passports;;
-;Concierge service for EI;;
-;Concierge service for SIN;;
-;Concierge service for Outreach;;
-10. Occupational Health & Safety (Federally Regularly Workplaces);Emergency refusal to work inspections;1;100
-;Government Employees Compensation Act;;
-11. Grants & Contributions (Gs & Cs);Canada Summer Jobs (CSJ);1;100
-;New Horizons for Seniors (NHSP);;
-;One other one…;;
-12. Temporary Foreign Worker Program (TFW);Investigations;1;100
-;Labour Market Impact Assessments (LMIA);;
-13. Policy (by priority);Policy (by priority);1;100
-14. Remaining Enabling Services ;Emergency Management;1;100
-;Personnel Security;;
-;Cyber-security;;
-;Finance & Contracting;;
-;Communications;;
-;Information Technology Operations (e.g. telephony, email, collaboration, desktop support);;
-15. Job Bank;Job Bank;1;100
-16. Projects (according to ESDC’s prioritised list, adjusted for the short-term);OAS Service Improvement Strategy (OAS SIS) Project;1;100
-;Departmental Accounts Receivable System (DARS) Replacement Project;;
-17. All Others;All Others;1;100
+name,skill_ids/name,skill_level_ids/name,skill_level_ids/level_progress
+1. Employment Insurance (EI),Call centres,1,100
+,Claims processing,,
+,Work-Sharing â€“ agreement approval and EI eligibility determination and processing,,
+"2. Old Age Security (OAS; including OAS Pension, GIS & Allowances)",Call centres,1,100
+,Claims processing,,
+"3. Canada Pension Plan (CPP; including Retirement  Disability, Survivor Benefits)",Call centres,1,100
+,Claims processing,,
+4. Social Insurance Number (SIN),Tier 2 EI,1,100
+,Tier 2 Employment,,
+5. Service Canada Centres (SCC) & Outreach,Service Canada Centres (SCC) & Outreach,1,100
+6. General Enquiry Service (1-800 O Canada & CIS),1-800 O Canada call centre,1,100
+,10 specialised call centres,,
+7. Principal Publisher Service (including external communications),Principal Publisher Service (including external communications),1,100
+8. Canada Student Loans Program (National Student Loans Centre),Canada Student Loans Program (National Student Loans Centre),1,100
+9. Passport Services,Urgent passports,1,100
+,Concierge service for passports,,
+,Concierge service for EI,,
+,Concierge service for SIN,,
+,Concierge service for Outreach,,
+10. Occupational Health & Safety (Federally Regularly Workplaces),Emergency refusal to work inspections,1,100
+,Government Employees Compensation Act,,
+11. Grants & Contributions (Gs & Cs),Canada Summer Jobs (CSJ),1,100
+,New Horizons for Seniors (NHSP),,
+,One other oneâ€¦,,
+12. Temporary Foreign Worker Program (TFW),Investigations,1,100
+,Labour Market Impact Assessments (LMIA),,
+13. Policy (by priority),Policy (by priority),1,100
+14. Remaining Enabling Services ,Emergency Management,1,100
+,Personnel Security,,
+,Cyber-security,,
+,Finance & Contracting,,
+,Communications,,
+,"Information Technology Operations (e.g. telephony, email, collaboration, desktop support)",,
+15. Job Bank,Job Bank,1,100
+"16. Projects (according to ESDCâ€™s prioritised list, adjusted for the short-term)",OAS Service Improvement Strategy (OAS SIS) Project,1,100
+,Departmental Accounts Receivable System (DARS) Replacement Project,,
+17. All Others,All Others,1,100
