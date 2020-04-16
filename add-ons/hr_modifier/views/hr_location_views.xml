@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_location_form" model="ir.ui.view">
+            <field name="name">hr.location.form</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <form string="Location">
+                <sheet>
+                    <group> 
+                        <field name="name"  placeholder="e.g. "/>
+                    </group>
+                </sheet>    
+                </form>
+            </field>
+        </record>
+        <record id ="view_location_tree" model="ir.ui.view">
+            <field name="name">hr.location.tree</field>
+            <field name="model">res.partner</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Locations">
+                    <field name="display_name" string="Name"/>
+                    <field name="function" invisible="1"/>
+                    <field name="phone" class="o_force_ltr" optional="show"/>
+                    <field name="email" optional="show"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="city" optional="hide"/>
+                    <field name="state_id" optional="hide"/>
+                    <field name="country_id" optional="hide"/>
+                    <field name="vat" optional="hide"/>
+                    <field name="user_id" invisible="1"/>
+                    <field name="is_company" invisible="1"/>
+                    <field name="parent_id" invisible="1"/>
+                    <field name="active" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_location_filter" model="ir.ui.view">
+            <field name="name">hr.location.search</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <search string="Regions">
+                    <field name="name" string="Name"/>
+                    <group expand="0" string="Group By">
+                        <filter 
+                            string="Name" 
+                            name="name" 
+                            domain="[]" 
+                            context="{'group_by': 'name'}" 
+                        />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_hr_locations" model="ir.actions.act_window">
+            <field name="name">Locations</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="search_view_id" ref="view_location_filter"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Add a location!
+              </p><p>
+                Let's create a location.
+              </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>
