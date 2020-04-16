@@ -92,13 +92,21 @@ Once the loading screen stops. You should see the ESDC org structure has been im
 
 Step 7. Now you will need to load Job Titles. This is the same process as Departments except you navigate to ```Job Positions```
 
-![Jobs page with employees highlighted](./images/employees-page-job-highlighted.png)
+![Employees page with Job Positions highlighted](./images/employees-page-job-highlighted.png)
 
 Step 8. Similarly, import [odoo-jobs-csv.csv](./data/org_structure/odoo-jobs-csv.csv)
 
 ![importing jobs](./images/import-jobs.png)
 
-Step 9. Now import employees by navigating to the ```Employees``` page and then importing [odoo-employees-csv.csv](./data/org_structure/odoo-employees-csv.csv). Note this will take 15-20 minutes due to the large amount of records.
+Step 9. And then same thing for Skills
+
+![Employees page with Skills highlighted](./images/employees-page-skills-highlighted.png)
+
+Step 10. By importing [odoo-skills-csv.csv](./data/org_structure/odoo-skills-csv.csv)
+
+![importing skills](./images/import-skills.png)
+
+Step 11. Now import employees by navigating to the ```Employees``` page and then importing [odoo-employees-csv.csv](./data/org_structure/odoo-employees-csv.csv). Note this will take 15-20 minutes due to the large amount of records.
 
 ![import employees](./images/import-employees.png)
 ![imported employees](./images/imported-employees.png)
