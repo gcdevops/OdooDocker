@@ -98,4 +98,4 @@ class HrEmployeeBase(models.AbstractModel):
         groups = "hr.group_hr_user",
         string = "Remote connection tool"
     )
-    
+    address_id = fields.Many2one('res.partner', 'Work Address', domain="['&', '|', ('company_id', '=', False), ('company_id', '=', company_id), ('is_company', '=', True)]")
