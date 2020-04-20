@@ -30,12 +30,16 @@
             <field name="arch" type="xml">
                 <search string="Location">
                     <field name="name" string="Name"/>
+                    <field name="city" string="City"/>
+                    <field name="country_id" string="Country"/>
+                    <field name="state_id" string="Province"/>
+                    <field name="stree" string="Street"/>
                     <group expand="0" string="Group By">
-                        <filter 
-                            string="Name" 
-                            name="name" 
-                            domain="[]" 
-                            context="{'group_by': 'name'}" 
+                        <filter
+                            string="Province"
+                            name="state_id"
+                            domain="[]"
+                            context="{'group_by': 'state_id'}"
                         />
                     </group>
                 </search>
