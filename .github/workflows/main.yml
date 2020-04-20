@@ -4,18 +4,19 @@ name: dts-test-publish-deploy
 on: 
   push:
     branches:
+      - master
       - develop
     paths:
       - 'add-ons/*'
-      - 'themes/*'
+      - 'odoo.conf'
       - 'Dockerfile'
   pull_request:
     branches: 
       - master
       - develop
     paths:
-      - 'add-ons'
-      - 'themes'
+      - 'add-ons/*'
+      - 'odoo.conf'
       - 'Dockerfile'
 jobs:
   publish_Deploy:
