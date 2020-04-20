@@ -10,21 +10,22 @@ on:
       - 'add-ons/*'
       - 'odoo.conf'
       - 'Dockerfile'
-  pull_request:
-    branches: 
-      - master
-      - develop
-    paths:
-      - 'add-ons/*'
-      - 'odoo.conf'
-      - 'Dockerfile'
 jobs:
-  publish_Deploy:
+  publish_Deploy_Develop:
     name: Publish and Deploy
-    if: github.event_name == 'push'
+    if: github.ref == 'refs/heads/develop'
     runs-on: ubuntu-latest
     steps:
     - name: jenkins deployment
       uses: wei/curl@v1
       with:
         args: -X POST https://jenkins.covid-dev.dts-stn.com/job/HRM-Odoo-Docker-Build/build?token=${{ secrets.DTS_COVID_JENKINS_TOKEN }} --insecure --user jenkinsbot:${{ secrets.DTS_COVID_JENKINSBOT_PASSWORD }}
+  publish_Deploy_Staging:
+    name: Publish and Deploy
+    if: github.ref == 'refs/heads/master'
+    runs-on: ubuntu-latest
+    steps:
+    - name: jenkins deployment
+      uses: wei/curl@v1
+      with:
+        args: -X POST https://jenkins.covid-dev.dts-stn.com/job/HRM-Odoo-Docker-Build-Staging/build?token=${{ secrets.DTS_COVID_JENKINS_TOKEN }} --insecure --user jenkinsbot:${{ secrets.DTS_COVID_JENKINSBOT_PASSWORD }}
