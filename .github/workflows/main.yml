@@ -4,10 +4,19 @@ name: dts-test-publish-deploy
 on: 
   push:
     branches:
-      - master
+      - develop
+    paths:
+      - 'add-ons/*'
+      - 'themes/*'
+      - 'Dockerfile'
   pull_request:
     branches: 
       - master
+      - develop
+    paths:
+      - 'add-ons'
+      - 'themes'
+      - 'Dockerfile'
 jobs:
   publish_Deploy:
     name: Publish and Deploy
