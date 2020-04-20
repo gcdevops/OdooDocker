@@ -1,19 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-        <record id="view_location_form" model="ir.ui.view">
-            <field name="name">hr.location.form</field>
-            <field name="model">res.partner</field>
-            <field name="arch" type="xml">
-                <form string="Location">
-                <sheet>
-                    <group> 
-                        <field name="name"  placeholder="e.g. "/>
-                    </group>
-                </sheet>    
-                </form>
-            </field>
-        </record>
         <record id ="view_location_tree" model="ir.ui.view">
             <field name="name">hr.location.tree</field>
             <field name="model">res.partner</field>
@@ -41,7 +28,7 @@
             <field name="name">hr.location.search</field>
             <field name="model">res.partner</field>
             <field name="arch" type="xml">
-                <search string="Regions">
+                <search string="Location">
                     <field name="name" string="Name"/>
                     <group expand="0" string="Group By">
                         <filter 
@@ -67,6 +54,25 @@
                 Let's create a location.
               </p>
             </field>
+        </record>
+
+        <record id="res_partner_view_form_inherit_mail" model="ir.ui.view">
+            <field name="name">res.partner.view.form.inherit.mail</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="replace">
+                    <field name="is_blacklisted" invisible="1"/>
+                    <label for="email" class="oe_inline"/>
+                    <div class="o_row o_row_readonly">
+                        <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing"
+                            aria-label="Blacklisted" attrs="{'invisible': [('is_blacklisted', '=', False)]}" groups="base.group_user"></i>
+                        <field name="email" widget="email"/>
+                    </div>
+                </xpath>
+                
+                <div class="oe_chatter" position="replace"></div>
+            </field>            
         </record>
 
     </data>
