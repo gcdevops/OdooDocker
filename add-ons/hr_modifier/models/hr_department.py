@@ -9,5 +9,4 @@ class Department(models.Model):
     _inherit='hr.department'
     name = fields.Char('Department Name', required=True, translate = True)
     complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=True, translate=True)
-
-   
+    x_coordinators_ids = fields.Many2many('hr.employee', 'hr_department_coordinator_rel', 'dept', 'employee', string='Coordinators')
