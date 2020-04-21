@@ -171,5 +171,11 @@
             menu="False"
         />
 
+        <template id="hr_modifier_backend_assets" name="HR modifier assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/hr_modifier/static/src/js/base_view.js" />
+            </xpath>
+        </template>
+        
     </data>
 </odoo>
