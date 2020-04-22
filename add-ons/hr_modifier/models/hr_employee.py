@@ -59,7 +59,3 @@ class HrEmployeePrivate(models.Model):
         if self.region_id != self.parent_id.region_id:
             self.region_id = self.parent_id.region_id
     
-    @api.onchange("x_department_coordinators_ids")
-    def _onchange_coordinator(self):
-        [ self.env[i].clear_caches() for i in self.env ]
-    

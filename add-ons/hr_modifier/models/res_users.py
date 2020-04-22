@@ -9,7 +9,3 @@ class Users(models.Model):
         readonly=False,
         related_sudo=False
     )
-    
-    @api.onchange("x_department_coordinators_ids")
-    def _onchange_coordinator(self):
-        [ self.env[i].clear_caches() for i in self.env ]
