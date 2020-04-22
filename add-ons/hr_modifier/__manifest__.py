@@ -30,6 +30,9 @@
         'static/src/xml/chatter.xml',
         'static/src/xml/systray.xml'
     ],
+    'css': [
+        'static/src/css/employee_views.css'
+    ],
     'installable': True,
     'application': False,
 }

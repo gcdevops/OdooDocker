@@ -171,5 +171,26 @@
             menu="False"
         />
 
+        <template id="assets_backend" inherit_id="web.assets_backend"> 
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/hr_modifier/static/src/css/employee_views.css"/> 
+            </xpath>        
+        </template>
+        
+        <record id="hr_employee_view_form_inherit_org_chart" model="ir.ui.view">
+            <field name="name">hr.employee.view.form.inherit.org_chart</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <div id="o_employee_right" position="replace"></div>
+                <div id="o_work_employee_container" position="after">
+                    <div id="o_employee_right">
+                        <h4 class="o_org_chart_title mb16 mt0">Organization Chart</h4>
+                        <field name="child_ids" widget="hr_org_chart"/>
+                    </div>
+                </div>
+            </field>
+        </record>
+        
     </data>
 </odoo>
