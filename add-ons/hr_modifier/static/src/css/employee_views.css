@@ -3,3 +3,9 @@
     padding-left: 0;
     border-left: none;
 }
+
+.o_search_panel {
+    resize: horizontal;
+    overflow: auto;
+    flex: none !important;
+}
