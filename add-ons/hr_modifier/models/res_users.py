@@ -12,4 +12,4 @@ class Users(models.Model):
     
     @api.onchange("x_department_coordinators_ids")
     def _onchange_coordinator(self):
-        self.env['ir.rule'].clear_caches()
+        [ self.env[i].clear_caches() for i in self.env ]
