@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import models, fields, api
 
 class Users(models.Model):
     _inherit = 'res.users'
@@ -10,3 +10,6 @@ class Users(models.Model):
         related_sudo=False
     )
     
+    @api.onchange("x_department_coordinators_ids")
+    def _onchange_coordinator(self):
+        self.env['ir.rule'].clear_caches()
