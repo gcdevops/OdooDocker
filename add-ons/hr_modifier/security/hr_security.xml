@@ -20,7 +20,7 @@
         <field name="perm_write" eval="1"/>
         <field name="perm_create" eval="1"/>
         <field name="perm_unlink" eval="1"/>
-        <field name="domain_force">['|', ('id', 'child_of', [employee.id for employee in user.employee_ids]), ('department_id.x_coordinator_ids','child_of',[employee.id for employee in user.employee_ids])]</field>
+        <field name="domain_force">['|', ('id', 'child_of', [employee.id for employee in user.employee_ids]), ('department_id','child_of',[user.x_department_coordinators_ids])]</field>
       </record>
 
       <record id="base.default_user" model="res.users">
