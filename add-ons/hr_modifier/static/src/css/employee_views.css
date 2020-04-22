@@ -1,0 +1,5 @@
+.o_search_panel {
+    resize: horizontal;
+    overflow: auto;
+    flex: none !important;
+}
