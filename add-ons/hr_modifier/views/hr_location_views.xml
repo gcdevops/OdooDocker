@@ -50,7 +50,6 @@
             <field name="name">Locations</field>
             <field name="res_model">res.partner</field>
             <field name="view_mode">tree,form</field>
-            <field name="context">{'default_is_company': True}</field>
             <field name="search_view_id" ref="view_location_filter"/>
             <field name="help" type="html">
               <p class="o_view_nocontent_smiling_face">
@@ -61,7 +60,7 @@
             </field>
         </record>
 
-        <record id="mail.res_partner_view_form_inherit_mail" model="ir.ui.view">
+        <record id="res_partner_view_form_inherit_mail" model="ir.ui.view">
             <field name="name">res.partner.view.form.inherit.mail</field>
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
@@ -75,6 +74,8 @@
                         <field name="email" widget="email"/>
                     </div>
                 </xpath>
+                
+                <div class="oe_chatter" position="replace"></div>
             </field>            
         </record>
 
