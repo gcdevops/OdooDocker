@@ -44,5 +44,9 @@
           <field name="groups_id" eval="[(3,ref('hr.group_hr_manager')), (3,ref('hr.group_hr_user'))]"/>
       </record>
 
+      <record id="hr.menu_hr_department_tree" model="ir.ui.menu">
+          <field name="groups_id" eval="[(3,ref('hr.group_hr_user'))]"/>
+      </record>
+
     </data>
 </odoo>
