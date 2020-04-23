@@ -120,7 +120,36 @@ Step 5. Find your module and upgrade it
 Your changes should now be reflected
 
 
-Note that if you make changes to ```python``` files, you will need to restart the server. To do this simply ```stop``` the containers by either ctrl + C if you are in the same shell, or docker-compose stop. Then start the containers back up again and upgrade your module with the altered code. 
+Note that if you make changes to ```python``` files, you will need to restart the server. To do this simply ```stop``` the containers by either ctrl + C if you are in the same shell, or docker-compose stop. Then start the containers back up again and upgrade your module with the altered code.
+
+## Activating Application Logging
+
+It is recommened that organizational data is imported first before this is activated since the batch import will be unnecessarily logged
+
+Step 1. Install the ```Audit Log``` application from the apps page in odoo
+
+![install audit log application](./images/install-audit-log.png)
+
+Step 2. Activate the developer mode if you do not have it activated already 
+
+![activate developer mode](./images/activate-developer-mode.png)
+
+Step 3. Navigate to the rules page (Settings > Technical > Audit > Rules). This is where you define what should be logged 
+
+![navigate to rules page](./images/navigate-to-rules.png)
+
+Step 4. Import the rules set [odoo-logging-rules-csv.csv](./data/odoo-logging-rules-csv.csv)
+
+![import rules set](./images/import-rules-set.png)
+
+![rules set being imported](./images/importing-rules-set.png)
+
+events within the application will now be logged according to rules imported. You can see these logs by heading over to the logs page ( Settings > Technical > Audit > Logs)
+
+![logs menu](./images/view-logs.png)
+
+![logs page](./images/view-written-logs.png)
+
 
 ## Creating Modules 
 
