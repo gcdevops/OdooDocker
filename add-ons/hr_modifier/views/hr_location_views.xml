@@ -33,7 +33,7 @@
                     <field name="city" string="City"/>
                     <field name="country_id" string="Country"/>
                     <field name="state_id" string="Province"/>
-                    <field name="stree" string="Street"/>
+                    <field name="street" string="Street"/>
                     <group expand="0" string="Group By">
                         <filter
                             string="Province"
