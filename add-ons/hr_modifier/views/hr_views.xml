@@ -89,6 +89,22 @@
     groups="hr.group_hr_manager"/>
 
     <menuitem
+    id="hr_skill_sub_skill_menu"
+    name="Sub Skills"
+    action="hr_sub_skill_action"
+    parent="hr.menu_human_resources_configuration"
+    sequence="3"
+    groups="hr.group_hr_manager"/>
+
+    <menuitem
+    id="hr_skill_level_menu"
+    name="Skill Levels"
+    action="hr_sub_skill_levels_action"
+    parent="hr.menu_human_resources_configuration"
+    sequence="3"
+    groups="hr.group_hr_manager"/>
+
+    <menuitem
     id = "hr.menu_human_resources_configuration_regions"
     name = "Regions"
     parent="hr.menu_human_resources_configuration"
