@@ -35,15 +35,16 @@
     sequence="100"/>
 
     <menuitem
-    id="hr.menu_view_employee_category_form"
-    name="Tags"
-    action="hr.open_view_categ_form"
+    id = "hr.menu_human_resources_configuration_classification"
+    name = "Classifications"
     parent="hr.menu_human_resources_configuration"
-    groups="hr.group_hr_manager"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    action="action_hr_classifications"
     sequence="1"/>
 
     <menuitem
     id="hr.menu_hr_department_tree"
+    name = "Departments"
     action="hr.open_module_tree_department"
     parent="hr.menu_human_resources_configuration"
     sequence="2"
@@ -57,51 +58,42 @@
     groups="group_hr_coordinator"/>
 
     <menuitem
-    id = "hr.menu_human_resources_configuration_classification"
-    name = "Classifications"
+    id="hr.menu_view_hr_job"
+    name="Job Positions"
+    action="hr.action_hr_job"
+    parent="hr.menu_human_resources_configuration"
+    sequence="3"/>
+
+    <menuitem
+    id = "hr.menu_human_resources_configuration_locations"
+    name = "Locations"
     parent="hr.menu_human_resources_configuration"
     groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
-    action="action_hr_classifications"
-    sequence="2"/>
+    action="action_hr_locations"
+    sequence="4"/>
 
     <menuitem
     id="hr_skills.hr_skill_type_menu"
-    name="Skills"
+    name="Profiles"
     action="hr_skills.hr_skill_type_action"
     parent="hr.menu_human_resources_configuration"
-    sequence="3"
+    sequence="5"
     groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"/>
 
     <menuitem
     id="hr_skill_sub_skill_menu"
-    name="Sub Skills"
+    name="- Enabling Services"
     action="hr_sub_skill_action"
     parent="hr.menu_human_resources_configuration"
-    sequence="3"
+    sequence="6"
     groups="hr.group_hr_manager"/>
 
     <menuitem
     id="hr_skill_level_menu"
-    name="Skill Levels"
+    name="- Levels"
     action="hr_sub_skill_levels_action"
     parent="hr.menu_human_resources_configuration"
-    sequence="3"
-    groups="hr.group_hr_manager"/>
-
-    <menuitem
-    id="hr_skill_sub_skill_menu"
-    name="Sub Skills"
-    action="hr_sub_skill_action"
-    parent="hr.menu_human_resources_configuration"
-    sequence="3"
-    groups="hr.group_hr_manager"/>
-
-    <menuitem
-    id="hr_skill_level_menu"
-    name="Skill Levels"
-    action="hr_sub_skill_levels_action"
-    parent="hr.menu_human_resources_configuration"
-    sequence="3"
+    sequence="7"
     groups="hr.group_hr_manager"/>
 
     <menuitem
@@ -110,15 +102,89 @@
     parent="hr.menu_human_resources_configuration"
     groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
     action="action_hr_regions"
-    sequence="3"/>
+    sequence="8"/>
 
     <menuitem
-    id = "hr.menu_human_resources_configuration_locations"
-    name = "Locations"
+    id="hr.menu_view_employee_category_form"
+    name="Tags"
+    action="hr.open_view_categ_form"
     parent="hr.menu_human_resources_configuration"
-    groups="hr.group_hr_manager,group_hr_senior_management"
-    action="action_hr_locations"
-    sequence="4"/>
+    groups="hr.group_hr_manager"
+    sequence="9"/>
+
+    <menuitem
+    id="hr_skills.menu_human_resources_configuration_resume"
+    name="Resumé"
+    parent="hr.menu_human_resources_configuration"
+    sequence="10"
+    groups="base.group_no_one"/>
+
+    <menuitem
+    id="hr_skills.hr_resume_line_type_menu"
+    name="Types"
+    action="hr_skills.hr_resume_type_action"
+    parent="hr_skills.menu_human_resources_configuration_resume"
+    sequence="11"
+    groups="base.group_no_one"/>
+
+    <record id="hr_skills.hr_employee_skill_type_view_form" model="ir.ui.view">
+        <field name="name">hr.skill.type.form</field>
+        <field name="model">hr.skill.type</field>
+        <field name="arch" type="xml">
+            <form string="Skill Type">
+                <field name="id" invisible="1"/>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" placeholder="Profile" required="True"/>
+                        </h1>
+                    </div>
+                    <group string="Enabling Services">
+                        <field name="skill_ids" nolabel="1" context="{'default_skill_type_id': id}">
+                            <tree editable="bottom">
+                                <field name="name"/>
+                            </tree>
+                        </field>
+                    </group>
+                    <group string="Levels">
+                        <field name="skill_level_ids" nolabel="1" context="{'default_skill_type_id': id}"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_skills.hr_skill_type_action" model="ir.actions.act_window">
+        <field name="name">Profiles</field>
+        <field name="res_model">hr.skill.type</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="hr_skills.employee_skill_view_form" model="ir.ui.view">
+        <field name="name">hr.employees.skill.form</field>
+        <field name="model">hr.employee.skill</field>
+        <field name="arch" type="xml">
+            <form string="Skills">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="skill_type_id" string="Profile"/>
+                            <field
+                                name="skill_id"
+                                domain="[('skill_type_id', '=', skill_type_id)]"
+                                options="{'no_create_edit':True}"
+                                string="Enabling Service"/>
+                        </group>
+                        <group>
+                            <field name="skill_level_id" domain="[('skill_type_id', '=', skill_type_id)]" string="Level"/>
+                            <field name="level_progress" widget="progressbar"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
 </data>
 </odoo>
