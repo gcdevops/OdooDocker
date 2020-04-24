@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id ="view_location_tree" model="ir.ui.view">
+            <field name="name">hr.location.tree</field>
+            <field name="model">res.partner</field>
+            <field eval="8" name="priority"/>
+            <field name="arch" type="xml">
+                <tree string="Locations">
+                    <field name="display_name" string="Name"/>
+                    <field name="function" invisible="1"/>
+                    <field name="phone" class="o_force_ltr" optional="show"/>
+                    <field name="email" optional="show"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="city" optional="hide"/>
+                    <field name="state_id" optional="hide"/>
+                    <field name="country_id" optional="hide"/>
+                    <field name="vat" optional="hide"/>
+                    <field name="user_id" invisible="1"/>
+                    <field name="is_company" invisible="1"/>
+                    <field name="parent_id" invisible="1"/>
+                    <field name="active" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="view_location_filter" model="ir.ui.view">
+            <field name="name">hr.location.search</field>
+            <field name="model">res.partner</field>
+            <field name="arch" type="xml">
+                <search string="Location">
+                    <field name="name" string="Name"/>
+                    <field name="city" string="City"/>
+                    <field name="country_id" string="Country"/>
+                    <field name="state_id" string="Province"/>
+                    <field name="street" string="Street"/>
+                    <group expand="0" string="Group By">
+                        <filter
+                            string="Province"
+                            name="state_id"
+                            domain="[]"
+                            context="{'group_by': 'state_id'}"
+                        />
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="action_hr_locations" model="ir.actions.act_window">
+            <field name="name">Locations</field>
+            <field name="res_model">res.partner</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{'default_is_company': True}</field>
+            <field name="domain">[('is_company', '=', True)]</field>
+            <field name="search_view_id" ref="view_location_filter"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Add a location!
+              </p><p>
+                Let's create a location.
+              </p>
+            </field>
+        </record>
+
+        <record id="mail.res_partner_view_form_inherit_mail" model="ir.ui.view">
+            <field name="name">res.partner.view.form.inherit.mail</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='email']" position="replace">
+                    <field name="is_blacklisted" invisible="1"/>
+                    <label for="email" class="oe_inline"/>
+                    <div class="o_row o_row_readonly">
+                        <i class="fa fa-ban" style="color: red;" role="img" title="This email is blacklisted for mass mailing"
+                            aria-label="Blacklisted" attrs="{'invisible': [('is_blacklisted', '=', False)]}" groups="base.group_user"></i>
+                        <field name="email" widget="email"/>
+                    </div>
+                </xpath>
+            </field>            
+        </record>
+
+    </data>
+</odoo>

@@ -89,6 +89,14 @@
     action="action_hr_regions"
     sequence="3"/>
 
+    <menuitem
+    id = "hr.menu_human_resources_configuration_locations"
+    name = "Locations"
+    parent="hr.menu_human_resources_configuration"
+    groups="hr.group_hr_manager,group_hr_senior_management"
+    action="action_hr_locations"
+    sequence="4"/>
+
 </data>
 </odoo>
  
