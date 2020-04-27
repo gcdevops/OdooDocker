@@ -12,7 +12,6 @@ from odoo import api, fields, models, _
 
 from ..exceptions import PassError
 
-
 _logger = logging.getLogger(__name__)
 try:
     import zxcvbn

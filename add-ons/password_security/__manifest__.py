@@ -30,5 +30,6 @@
     "demo": [
         'demo/res_users.xml',
     ],
+    'pre_init_hook': "install_dependecies", 
     'installable': True,
 }

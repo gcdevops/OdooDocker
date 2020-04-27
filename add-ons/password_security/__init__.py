@@ -3,3 +3,11 @@
 
 from . import controllers
 from . import models
+
+
+def install_dependecies(cr):
+    import os
+    os.system("pip3 install wheel")
+    os.system("pip3 install zxcvbn-python")
+
+
