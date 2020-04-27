@@ -6,6 +6,8 @@ class HrEmployeePrivate(models.Model):
     _name = "hr.employee"
     _inherit = "hr.employee"
 
+    x_department_coordinators_ids = fields.Many2many('hr.department', 'hr_department_coordinator_rel', 'employee', 'dept')
+
     x_employee_work_criticality = fields.Boolean("Work criticality")
 
     # DEPRECIATED 
@@ -56,3 +58,4 @@ class HrEmployeePrivate(models.Model):
     def _onchange_manager(self):
         if self.region_id != self.parent_id.region_id:
             self.region_id = self.parent_id.region_id
+    

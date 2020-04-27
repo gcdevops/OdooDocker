@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
+    
+        <template id="assets_backend" inherit_id="web.assets_backend"> 
+            <xpath expr="." position="inside">
+                <link rel="stylesheet" href="/hr_modifier/static/src/css/employee_views.css"/> 
+            </xpath>        
+        </template>
+
         <record id="hr.view_employee_filter" model="ir.ui.view">
             <field name="name">hr.employee.search</field>
             <field name="model">hr.employee</field>
@@ -171,5 +178,11 @@
             menu="False"
         />
 
+        <template id="hr_modifier_backend_assets" name="HR modifier assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/hr_modifier/static/src/js/base_view.js" />
+            </xpath>
+        </template>
+        
     </data>
 </odoo>
