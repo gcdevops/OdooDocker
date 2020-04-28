@@ -1,4 +1,6 @@
-from odoo import fields, models
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
+import re
 
 class HrEmployeeBase(models.AbstractModel):
     _name = "hr.employee.base"
@@ -99,3 +101,18 @@ class HrEmployeeBase(models.AbstractModel):
         string = "Remote connection tool"
     )
     address_id = fields.Many2one('res.partner', 'Work Address', domain="['&', '|', ('company_id', '=', False), ('company_id', '=', company_id), ('is_company', '=', True)]")
+
+    # Validation
+
+    # allow upper case, lower case, hyphens
+    @api.constrains("name")
+    def _check_name_allowed_characters(self):
+        for record in self:
+            if re.search("[^a-zA-Z\s\-]", record.name):
+                raise ValidationError("The employee name can only contain letters and hyphens")
+    
+    @api.constrains("work_email")
+    def _check_work_email_allowed_characters(self):
+        for record in self:
+            if re.search(r"['\"*?;/\\]", record.work_email):
+                raise ValidationError("The work email is invalid")

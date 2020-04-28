@@ -9,9 +9,9 @@ class HrJob(models.Model):
 
     #  Validation
 
-    # allow [a-zA-Z0-9 -]
+    # allow upper case, lower case, hyphens, digits, spaces
     @api.constrains("name")
-    def _check_alpha_numeric_space_dash(self):
+    def _check_name_allowed_characters(self):
         for record in self:
             if re.search("[^a-zA-Z\d\s:\-,]", record.name):
                 raise ValidationError("The job position can only contain letters, numbers, spaces, commas, and hyphens")
