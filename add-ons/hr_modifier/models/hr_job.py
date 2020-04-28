@@ -13,5 +13,6 @@ class HrJob(models.Model):
     @api.constrains("name")
     def _check_name_allowed_characters(self):
         for record in self:
-            if re.search("[^a-zA-Z\d\s:\-,]", record.name):
-                raise ValidationError("The job position can only contain letters, numbers, spaces, commas, and hyphens")
+            if record.name:
+                if re.search("[^a-zA-Z\d\s:\-,]", record.name):
+                    raise ValidationError("The job position can only contain letters, numbers, spaces, commas, and hyphens")
