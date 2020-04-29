@@ -3,3 +3,11 @@
     overflow: auto;
     flex: none !important;
 }
+
+.o_required_modifier.o_input, .o_required_modifier .o_input {
+    background-color: white !important;
+}
+
+.toast_header {
+    font-weight: normal;
+}
