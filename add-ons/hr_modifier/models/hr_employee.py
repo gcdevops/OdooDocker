@@ -59,3 +59,30 @@ class HrEmployeePrivate(models.Model):
         if self.region_id != self.parent_id.region_id:
             self.region_id = self.parent_id.region_id
     
+    @api.onchange("user_partner_id")
+    def _onchange_department(self):
+        # get the current user groups
+        current_user = self.env.user 
+        current_user_groups = list(map(lambda x: x.name, current_user.groups_id))
+
+        # if Senior Management or Coordinator is in the user groups, return the restricted domain 
+        if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+            return {
+                "domain": {
+                    "department_id": ['|', ('id', 'child_of', [
+                        employee.department_id.id for employee in current_user.employee_ids
+                    ]), ('id','child_of',[ 
+                        department.id for department in current_user.x_department_coordinators_ids
+                    ])],
+                    "parent_id": ['|', ('id', 'child_of', [
+                        employee.id for employee in current_user.employee_ids
+                    ]), ('department_id', 'child_of', [
+                        department.id for department in current_user.x_department_coordinators_ids
+                    ])]
+                }
+            }
+        
+
+
+
+
