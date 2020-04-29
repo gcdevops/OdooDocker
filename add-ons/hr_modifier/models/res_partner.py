@@ -19,22 +19,25 @@ class Partner(models.Model):
     # allow alphanumeric, spaces, and hyphens
     @api.constrains("street", "street2")
     def _check_street_allowed_characters(self):
-        street_regex = "[a-zA-Z\s\-\d]"
+        street_regex = "[^a-zA-Z\s\-\d]"
         for record in self:
             if record.street:
-                if not re.search(street_regex, record.street):
-                    raise ValidationError("The street field can only contain letters, numbers, and hyphens")
+                res = re.search(street_regex, record.street)
+                if res:
+                    raise ValidationError("The street field contains an invalid character: " + res.group(0))
             if record.street2:
-                if not re.search(street_regex, record.street2):
-                    raise ValidationError("The street 2 field can only contain letters, numbers, hyphens")
+                res = re.search(street_regex, record.street)
+                if res:
+                    raise ValidationError("The street 2 field contains an invalid character: " + res.group(0))
     
     # allow letters, spaces, and hyphens
     @api.constrains("city")
     def _check_city_allowed_characters(self):
         for record in self:
             if record.city:
-                if not re.search("[a-zA-Z\s\-]", record.city):
-                    raise ValidationError("The city field can only contain letters")
+                res = re.search("[^a-zA-Z\s\-]", record.city)
+                if res:
+                    raise ValidationError("The city field contains an invalid character: " + res.group(0))
     
     # allow postal code formats, uppercase or lowercase, space or no space
     @api.constrains("zip")
@@ -49,11 +52,13 @@ class Partner(models.Model):
         for record in self:
             phone_disallowed_chars = "[^\d\-]"
             if record.phone:
-                if re.search(phone_disallowed_chars, record.phone):
-                    raise ValidationError("The phone number can only contain numbers, hyphens")
+                res = re.search(phone_disallowed_chars, record.phone)
+                if res:
+                    raise ValidationError("The phone number contains an invalid character: "+ re.group(0))
             if record.mobile:
-                if re.search(phone_disallowed_chars, record.mobile):
-                    raise ValidationError("The mobile phone number can only contain numbers, hyphens")
+                res = re.search(phone_disallowed_chars, record.mobile)
+                if res:
+                    raise ValidationError("The mobile phone number contains an invalid character: " + res.group(0))
 
     # if special characters are found, raise an error
     @api.constrains("email")

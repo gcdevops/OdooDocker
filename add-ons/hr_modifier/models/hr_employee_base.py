@@ -109,8 +109,9 @@ class HrEmployeeBase(models.AbstractModel):
     def _check_name_allowed_characters(self):
         for record in self:
             if record.name:
-                if not re.search("[a-zA-Z\s\-]", record.name):
-                    raise ValidationError("The employee name can only contain letters and hyphens")
+                res = re.search("[^a-zA-Z\s\-]", record.name)
+                if res:
+                    raise ValidationError("The employee name contains an invalid character: " + res.group(0))
     
     # if special characters are found, raise an error
     @api.constrains("work_email")
