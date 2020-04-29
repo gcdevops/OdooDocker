@@ -1,5 +1,9 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
+import json
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class HrEmployeePrivate(models.Model):
@@ -9,6 +13,60 @@ class HrEmployeePrivate(models.Model):
     x_department_coordinators_ids = fields.Many2many('hr.department', 'hr_department_coordinator_rel', 'employee', 'dept')
 
     x_employee_work_criticality = fields.Boolean("Work criticality")
+
+    department_id_domain = fields.Char(
+        compute = "_compute_department_id_domain",
+        readonly = True,
+        store = False 
+    )
+
+    parent_id_domain = fields.Char(
+        compute = "_compute_parent_id_domain",
+        readonly = True,
+        store = False
+    )
+
+    @api.depends("department_id")
+    def _compute_department_id_domain(self):
+         # get the current user groups
+        current_user = self.env.user 
+        current_user_groups = list(map(lambda x: x.name, current_user.groups_id))
+
+        # if Senior Management or Coordinator is in the user groups, return the restricted domain
+
+        for rec in self: 
+            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+                rec.department_id_domain = json.dumps(
+                    ['|', ('id', 'child_of', [
+                            employee.department_id.id for employee in current_user.employee_ids
+                        ]), ('id','child_of',[ 
+                            department.id for department in current_user.x_department_coordinators_ids
+                    ])]
+                )
+            else:
+                rec.department_id_domain = json.dumps([("active", "=", True)])
+    
+    @api.depends("parent_id")
+    def _compute_parent_id_domain(self):
+        # get the current user groups
+        current_user = self.env.user 
+        current_user_groups = list(map(lambda x: x.name, current_user.groups_id))
+
+        # if Senior Management or Coordinator is in the user groups, return the restricted domain
+
+        for rec in self: 
+            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+                rec.parent_id_domain = json.dumps(
+                    ['|', ('id', 'child_of', [
+                        employee.id for employee in current_user.employee_ids
+                    ]), ('department_id', 'child_of', [
+                        department.id for department in current_user.x_department_coordinators_ids
+                    ])]
+                )
+            else:
+                rec.parent_id_domain = json.dumps([("active", "=", True)])
+
+
 
     # DEPRECIATED 
     x_employee_personal_home_address = fields.Char(
@@ -58,7 +116,7 @@ class HrEmployeePrivate(models.Model):
     def _onchange_manager(self):
         if self.region_id != self.parent_id.region_id:
             self.region_id = self.parent_id.region_id
-    
+    """
     @api.onchange("user_partner_id")
     def _onchange_department(self):
         # get the current user groups
@@ -81,6 +139,7 @@ class HrEmployeePrivate(models.Model):
                     ])]
                 }
             }
+    """
         
 
 
