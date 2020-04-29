@@ -61,7 +61,7 @@
                             </p>
                             <p style="font-size:1.2em"> 
                                 <field name="department_id_domain" invisible="1"/>
-                                Department: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"/>
+                                Department: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"  required="True"/>
                             </p>
                             <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags"  groups="hr.group_hr_manager"/>
                         </div>
