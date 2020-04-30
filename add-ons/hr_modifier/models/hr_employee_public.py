@@ -1,4 +1,6 @@
-from odoo import fields, models 
+from odoo import fields, models, api
+from odoo.exceptions import ValidationError
+import re
 
 class HrEmployeePublic(models.Model):
     _name= "hr.employee.public"
