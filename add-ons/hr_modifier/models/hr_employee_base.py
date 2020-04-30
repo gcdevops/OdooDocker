@@ -157,14 +157,7 @@ class HrEmployeeBase(models.AbstractModel):
 
     # Validation
 
-    # allow upper case, lower case, hyphens
-    @api.constrains("name")
-    def _check_name_allowed_characters(self):
-        for record in self:
-            if record.name:
-                res = re.search("[^a-zA-Z\s\-]", record.name)
-                if res:
-                    raise ValidationError("The employee name contains an invalid character: " + res.group(0))
+    
     
     # if special characters are found, raise an error
     @api.constrains("work_email")
@@ -173,3 +166,13 @@ class HrEmployeeBase(models.AbstractModel):
             if record.work_email:
                 if re.search(r"['\"*?;/\\]", record.work_email):
                     raise ValidationError("The work email is invalid")
+
+
+    # allow upper case, lower case, hyphens
+    @api.constrains("name")
+    def _check_name_allowed_characters(self):
+        for record in self:
+            if record.name:
+                res = re.search("[[^a-zA-Z\d\s:\-,.''\(\)/&.@À-Öà-ö]]", record.name)
+                if res:
+                    raise ValidationError("The employee name contains an invalid character: " + res.group(0))
