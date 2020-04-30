@@ -19,4 +19,4 @@ class Employee(models.Model):
             if record.name:
                 res = re.search("[^a-zA-Z\d\s:\-,\(\)/&.@À-Öà-ö]", record.name)
                 if res:
-                    raise ValidationError("The job position contains an invalid character: " + res.group(0))
+                    raise ValidationError("The resume name contains an invalid character: " + res.group(0))

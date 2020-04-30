@@ -24,6 +24,6 @@ class Department(models.Model):
     def _check_name_allowed_characters(self):
         for record in self:
             if record.name:
-                res = re.search("[^a-zA-Z0-9\s\- \.]", record.name)
+                res = re.search(r"[^\w\d\s\-.,'&/()@]", record.name)
                 if res:
                     raise ValidationError("The department name contains an invalid character: " + res.group(0))

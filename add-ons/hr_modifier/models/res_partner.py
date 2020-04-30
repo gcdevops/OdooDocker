@@ -19,7 +19,7 @@ class Partner(models.Model):
     # allow alphanumeric, spaces, and hyphens
     @api.constrains("street", "street2")
     def _check_street_allowed_characters(self):
-        street_regex = "[^a-zA-Z\s\-\d]"
+        street_regex = "[^a-zA-ZÀ-Öà-ö\s\-\d&.,':]"
         for record in self:
             if record.street:
                 res = re.search(street_regex, record.street)
@@ -35,7 +35,7 @@ class Partner(models.Model):
     def _check_city_allowed_characters(self):
         for record in self:
             if record.city:
-                res = re.search("[^a-zA-Z\s\-]", record.city)
+                res = re.search("[^a-zA-ZÀ-Öà-ö\s\-\d&.,']", record.city)
                 if res:
                     raise ValidationError("The city field contains an invalid character: " + res.group(0))
     
