@@ -29,7 +29,7 @@
                         <filter name="group_job" string="Job" domain="[]" context="{'group_by': 'job_id'}"/>
                     </group>
                     <searchpanel>
-                        <field name="company_id" groups="base.group_multi_company" icon="fa-building"/>
+                        <field name="company_id" groups="base.group_multi_company" icon="fa-building" invisible="1"/>
                         <field name="department_id" icon="fa-users"/>
                     </searchpanel>
                 </search>
@@ -60,7 +60,8 @@
                                 Job Title: <field name="job_id"/>
                             </p>
                             <p style="font-size:1.2em"> 
-                                Department: <field name="department_id" context="{'hierarchical_naming': False}"/>
+                                <field name="department_id_domain" invisible="1"/>
+                                Department: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"  required="True"/>
                             </p>
                             <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags"  groups="hr.group_hr_manager"/>
                         </div>
@@ -77,7 +78,8 @@
                                     <div id="o_work_employee_main">
                                         <group>
                                             <group string = "Information">
-                                                <field name="parent_id"/>
+                                                <field name="parent_id_domain" invisible="1"/>
+                                                <field name="parent_id" domain="parent_id_domain"/>
                                                 <field name="x_employee_language"/>
                                                 <field name="x_employee_job_type"/>
                                                 <field name="x_employee_status"/>

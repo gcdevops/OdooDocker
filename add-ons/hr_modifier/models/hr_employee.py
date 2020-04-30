@@ -2,6 +2,7 @@ from odoo import models, fields, api
 from odoo.exceptions import ValidationError
 
 
+
 class HrEmployeePrivate(models.Model):
     _name = "hr.employee"
     _inherit = "hr.employee"
@@ -9,6 +10,7 @@ class HrEmployeePrivate(models.Model):
     x_department_coordinators_ids = fields.Many2many('hr.department', 'hr_department_coordinator_rel', 'employee', 'dept')
 
     x_employee_work_criticality = fields.Boolean("Work criticality")
+
 
     # DEPRECIATED 
     x_employee_personal_home_address = fields.Char(
