@@ -63,5 +63,6 @@ class HrEmployeePrivate(models.Model):
                 int(record.x_employee_pri)
             except:
                 raise ValidationError("Employee PRI must be a number")
-
+    
+    
     
