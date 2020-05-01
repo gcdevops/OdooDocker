@@ -29,7 +29,8 @@
     ],
     'qweb': [
         'static/src/xml/chatter.xml',
-        'static/src/xml/systray.xml'
+        'static/src/xml/systray.xml',
+        'static/src/xml/button_add.xml'
     ],
     'css': [
         'static/src/css/employee_views.css'
