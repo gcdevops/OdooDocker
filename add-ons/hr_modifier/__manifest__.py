@@ -24,6 +24,7 @@
         'views/res_partner_views.xml',
         'views/hr_location_views.xml',
         'views/hr_skills.xml',
+        'views/hr_search_views.xml',
         'views/hr_views.xml',
         'views/mail_channel_views.xml',
     ],
