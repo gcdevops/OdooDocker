@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-name="hr_modifier.languageToggle">
+        <li t-attr-class = "o_language_toggle_menu_item">
+            <button t-attr-class="o_language_toggle_button"></button>
+        </li>
+    </t>
+</templates>
