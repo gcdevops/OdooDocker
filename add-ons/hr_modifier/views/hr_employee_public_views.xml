@@ -62,7 +62,8 @@
                                     <div id="o_work_employee_main">
                                         <group>
                                             <group string = "Information">
-                                                <field name="parent_id"/>
+                                                <field name="parent_id_domain" invisible="1"/>
+                                                <field name="parent_id" domain="parent_id_domain"/>
                                                 <field name="x_employee_language"/>
                                                 <field name="x_employee_job_type"/>
                                                 <field name="classification_id"/>

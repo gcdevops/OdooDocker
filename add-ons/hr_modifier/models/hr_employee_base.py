@@ -1,4 +1,7 @@
-from odoo import fields, models
+from odoo import models, fields, api
+from odoo.exceptions import ValidationError
+import re
+import json
 
 class HrEmployeeBase(models.AbstractModel):
     _name = "hr.employee.base"
@@ -14,6 +17,58 @@ class HrEmployeeBase(models.AbstractModel):
     )
 
     x_employee_job_type = fields.Char("Job type", groups="hr.group_hr_user")
+
+    department_id_domain = fields.Char(
+        compute = "_compute_department_id_domain",
+        readonly = True,
+        store = False 
+    )
+
+    parent_id_domain = fields.Char(
+        compute = "_compute_parent_id_domain",
+        readonly = True,
+        store = False
+    )
+
+    @api.depends("department_id")
+    def _compute_department_id_domain(self):
+         # get the current user groups
+        current_user = self.env.user 
+        current_user_groups = list(map(lambda x: x.name, current_user.groups_id))
+
+        # if Senior Management or Coordinator is in the user groups, return the restricted domain
+
+        for rec in self: 
+            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+                rec.department_id_domain = json.dumps(
+                    ['|', ('id', 'child_of', [
+                            employee.department_id.id for employee in current_user.employee_ids
+                        ]), ('id','child_of',[ 
+                            department.id for department in current_user.x_department_coordinators_ids
+                    ])]
+                )
+            else:
+                rec.department_id_domain = json.dumps([("active", "=", True)])
+    
+    @api.depends("parent_id")
+    def _compute_parent_id_domain(self):
+        # get the current user groups
+        current_user = self.env.user 
+        current_user_groups = list(map(lambda x: x.name, current_user.groups_id))
+
+        # if Senior Management or Coordinator is in the user groups, return the restricted domain
+
+        for rec in self: 
+            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+                rec.parent_id_domain = json.dumps(
+                    ['|', ('id', 'child_of', [
+                        employee.id for employee in current_user.employee_ids
+                    ]), ('department_id', 'child_of', [
+                        department.id for department in current_user.x_department_coordinators_ids
+                    ])]
+                )
+            else:
+                rec.parent_id_domain = json.dumps([("active", "=", True)])
     
     x_employee_status = fields.Selection(
         [
@@ -99,3 +154,15 @@ class HrEmployeeBase(models.AbstractModel):
         string = "Remote connection tool"
     )
     address_id = fields.Many2one('res.partner', 'Work Address', domain="['&', '|', ('company_id', '=', False), ('company_id', '=', company_id), ('is_company', '=', True)]")
+
+    # Validation
+
+    
+    
+    # if special characters are found, raise an error
+    @api.constrains("work_email")
+    def _check_work_email_allowed_characters(self):
+        for record in self:
+            if record.work_email:
+                if re.search(r"['\"*?;/\\]", record.work_email):
+                    raise ValidationError("The work email is invalid")

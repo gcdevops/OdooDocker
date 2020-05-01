@@ -1,5 +1,7 @@
 from odoo import models, fields, api
 from odoo.exceptions import ValidationError
+import re
+
 
 
 class HrEmployeePrivate(models.Model):
@@ -9,6 +11,7 @@ class HrEmployeePrivate(models.Model):
     x_department_coordinators_ids = fields.Many2many('hr.department', 'hr_department_coordinator_rel', 'employee', 'dept')
 
     x_employee_work_criticality = fields.Boolean("Work criticality")
+
 
     # DEPRECIATED 
     x_employee_personal_home_address = fields.Char(
@@ -44,6 +47,13 @@ class HrEmployeePrivate(models.Model):
         ('user_uniq', 'unique (user_id, company_id)', "A user cannot be linked to multiple employees in the same company."),
         ("pri_uniq", 'unique (x_employee_pri)', "The Employee PRI must be unique, this one is already assigned to another employee")
     ]
+    
+    @api.onchange("parent_id")
+    def _onchange_manager(self):
+        if self.region_id != self.parent_id.region_id:
+            self.region_id = self.parent_id.region_id
+    
+    # Validation
 
     # check if employee pri is an integer
     @api.constrains("x_employee_pri")
@@ -54,8 +64,5 @@ class HrEmployeePrivate(models.Model):
             except:
                 raise ValidationError("Employee PRI must be a number")
     
-    @api.onchange("parent_id")
-    def _onchange_manager(self):
-        if self.region_id != self.parent_id.region_id:
-            self.region_id = self.parent_id.region_id
+    
     
