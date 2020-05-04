@@ -118,7 +118,7 @@
 
 
       <record id="hr.hr_employee_public_action" model="ir.actions.act_window">
-          <field name="name">Employees</field>
+          <field name="name">Public Directory</field>
           <field name="res_model">hr.employee.public</field>
           <field name="view_mode">tree,form</field>
           <field name="domain">[]</field>
