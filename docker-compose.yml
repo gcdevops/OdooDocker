@@ -16,7 +16,7 @@ services:
             - ./add-ons:/mnt/extra-addons
             - ./odoo-dev.conf:/etc/odoo/odoo.conf
             - ./scripts:/scripts
-            - ./data/org_structure:/data
+            - ./data:/data
 
     db:
         image: postgres:11
