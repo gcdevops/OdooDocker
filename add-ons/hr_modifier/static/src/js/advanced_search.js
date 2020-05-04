@@ -18,7 +18,7 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
         name: "Advanced Search",
         res_model: "hr.employee",
         views: [[false, "form"]],
-        target: "new",
+        target: "current",
         view_type: "form",
         view_mode: "form",
         flags: {"form": {"action_buttons": true, "options": {"mode": "edit"}}}

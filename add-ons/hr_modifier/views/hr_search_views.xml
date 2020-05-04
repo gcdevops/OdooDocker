@@ -16,6 +16,16 @@
             </group>
           </sheet>
         </form>
+        <!-- <xpath expr="//button[@class='o_form_button_save']" position="replace">
+          <div class="o_form_buttons_edit" role="toolbar" aria-label="Main actions" data-original-title="" title="">
+            <button type="button" class="btn btn-primary o_form_button_save" accesskey="s">
+            Search
+            </button>
+            <button type="button" class="btn btn-secondary o_form_button_cancel" accesskey="j">
+            Cancel
+            </button>
+          </div>
+        </xpath> -->
       </field>
     </record>
 
@@ -24,7 +34,7 @@
       <field name="res_model">hr.employee</field>
       <field name="view_mode">form</field>
       <field name="view_id" ref="view_advanced_search_form"/>
-      <field name="target">new</field>
+      <field name="target">current</field>
     </record>
 
   </data>
