@@ -60,50 +60,6 @@ To stop Odoo and continue where you left off later
 $ docker-compose stop
 ```
 
-#### Loading Data 
-
-You can optionally load in organizational data from GEDS. Please note these data sets were developed using the GEDS Open Data Set. No protected or classified information is contained within these data sets. No protected or classified information should be added to these data sets. If you are interested in how these datasets were created, vist this [repo](https://github.com/gcdevops/HRWhiteListing-data).
-
-Step 1. Ensure you have developer mode activated 
-
-Step 2. Navigate to the ```Employees``` (HR) module by selecting the four squares in the top left corner and clicking Employees. Then click on ```Departments``` as shown
-
-![Employees page with departments highlighted](./images/employees-page-department-highlight.png)
-
-Step 3. Delete any existing data that's there
-
-![Delete existing department](./images/delete-existing-departments.png)
-
-Step 4. Select import and navigate to the department import page and then select ```Load File```
-![Department Import Page](./images/department-import-page.png) 
-
-Step 5. Select [odoo-org-csv.csv](./data/org_structure/odoo-org-csv.csv) and import
-
-![import organizational structure](./images/import-org.png)
-
-Step 6. Be patient ! This might take 5-10 minutes depending on your system
-
-![organizational structure import loading](./images/import-org-loading.png)
-
-Once the loading screen stops. You should see the ESDC org structure has been imported 
-
-![org structure imported](./images/imported-org.png)
-![org structure visualization](./images/imported-org-visualized.png)
-
-Step 7. Now you will need to load Job Titles. This is the same process as Departments except you navigate to ```Job Positions```
-
-![Jobs page with employees highlighted](./images/employees-page-job-highlighted.png)
-
-Step 8. Similarly, import [odoo-jobs-csv.csv](./data/org_structure/odoo-jobs-csv.csv)
-
-![importing jobs](./images/import-jobs.png)
-
-Step 9. Now import employees by navigating to the ```Employees``` page and then importing [odoo-employees-csv.csv](./data/org_structure/odoo-employees-csv.csv). Note this will take 15-20 minutes due to the large amount of records.
-
-![import employees](./images/import-employees.png)
-![imported employees](./images/imported-employees.png)
-
-You should now have the GEDS DataSet for the ESDC Organization imported 
 
 #### Reloading changes 
 
@@ -121,34 +77,6 @@ Your changes should now be reflected
 
 
 Note that if you make changes to ```python``` files, you will need to restart the server. To do this simply ```stop``` the containers by either ctrl + C if you are in the same shell, or docker-compose stop. Then start the containers back up again and upgrade your module with the altered code.
-
-## Activating Application Logging
-
-It is recommened that organizational data is imported first before this is activated since the batch import will be unnecessarily logged
-
-Step 1. Install the ```Audit Log``` application from the apps page in odoo
-
-![install audit log application](./images/install-audit-log.png)
-
-Step 2. Activate the developer mode if you do not have it activated already 
-
-![activate developer mode](./images/activate-developer-mode.png)
-
-Step 3. Navigate to the rules page (Settings > Technical > Audit > Rules). This is where you define what should be logged 
-
-![navigate to rules page](./images/navigate-to-rules.png)
-
-Step 4. Import the rules set [odoo-logging-rules-csv.csv](./data/odoo-logging-rules-csv.csv)
-
-![import rules set](./images/import-rules-set.png)
-
-![rules set being imported](./images/importing-rules-set.png)
-
-events within the application will now be logged according to rules imported. You can see these logs by heading over to the logs page ( Settings > Technical > Audit > Logs)
-
-![logs menu](./images/view-logs.png)
-
-![logs page](./images/view-written-logs.png)
 
 
 ## Creating Modules 
@@ -314,8 +242,6 @@ Take a close look at the id for this record
 ```
 
 We are using the ```External ID``` for the Department window view. When the hr_modifier module is installed it will overwrite that window record in the database and thus removing the ability to select the kanban view ! 
-
-
 
 
 

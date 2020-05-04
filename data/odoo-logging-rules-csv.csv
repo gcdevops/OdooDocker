@@ -1,3 +1,0 @@
-ID,Name,Model,Type,Log Writes,Log Deletes,Log Creates,Log Reads,state
-departments_log_rule,Departments,hr.department,full,TRUE,TRUE,TRUE,FALSE,subscribed
-employees_log_rule,Employees,hr.employee,full,TRUE,TRUE,TRUE,FALSE,subscribed
