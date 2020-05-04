@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template xml:space="preserve">
+  <t t-extend="ListView.buttons" >
+    <t t-jquery="button.o_list_button_add" t-operation="after">
+      <button t-if="widget.modelName == 'hr.employee'" type="button" class="btn btn-secondary btn-md oe_filter_button" accesskey="f">
+        Advanced search
+      </button>
+    </t>
+  </t>
+</template>

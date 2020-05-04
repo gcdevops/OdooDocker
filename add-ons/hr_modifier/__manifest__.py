@@ -30,7 +30,8 @@
     ],
     'qweb': [
         'static/src/xml/chatter.xml',
-        'static/src/xml/systray.xml'
+        'static/src/xml/systray.xml',
+        'static/src/xml/advanced_search.xml'
     ],
     'css': [
         'static/src/css/employee_views.css'

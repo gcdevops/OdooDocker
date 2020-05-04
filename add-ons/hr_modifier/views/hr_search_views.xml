@@ -1,29 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
-        <record id="view_search_employee_form" model="ir.ui.view">
-            <field name="name">hr.employee.search.form</field>
-            <field name="model">hr.employee</field>
-            <field name="arch" type="xml">
-                <form string="Search">
-                <sheet>
-                    <group> 
-                        <field name="name"  placeholder="e.g. "/>
-                    </group>
-                </sheet>    
-                </form>
-            </field>
-        </record>
+  <data>
 
-        <record id="action_hr_search" model="ir.actions.act_window">
-            <field name="name">Search</field>
-            <field name="res_model">hr.employee</field>
-            <field name="view_mode">tree,form</field>
-            <field name="search_view_id" ref="view_region_filter"/>
-            <field name="help" type="xml">
-              
-            </field>
-        </record>
+    <!-- <template id="hr_advanced_view_button" name="" inherit_id="hr.view_employee_filter">
+            <xpath expr="//" position="after">
+                <div>
+                    <button>Advanced search</button>
+                </div>
+            </xpath>
+        </template> -->
 
-    </data>
+    <!-- <template xml:space="preserve">
+      <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="after">
+          <button type="button" class="btn btn-primary btn-sm oe_filter_button" accesskey="f">
+            Advanced Filters
+          </button>
+        </t>
+      </t>
+    </template> -->
+
+  </data>
 </odoo>

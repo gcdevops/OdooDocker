@@ -185,6 +185,6 @@
                 <script type="text/javascript" src="/hr_modifier/static/src/js/base_view.js" />
             </xpath>
         </template>
-        
+
     </data>
 </odoo>
