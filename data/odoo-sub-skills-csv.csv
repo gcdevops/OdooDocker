@@ -1,0 +1,109 @@
+ID,Name
+e-o-e-m-other,Other
+e-o-e-m-ei:e-s-c-c,EI: EI Specialized Call Centre
+e-o-e-m-isb:n-a-r-e-o-c,ISB: National and Regional Emergency Operations Centres
+e-o-e-m-tpfw:g-t-r-o-i-i,TPFW: Guidance to Regions on inspection inquries (BESS)
+e-o-e-m-policy:s-f-c-r-p,Policy: Support for COVID-19 Response Package
+e-o-e-m-iitb:a-s,IITB: All Services
+e-o-e-m-cslp:r-s-i-s-a-a-c-c,"CSLP: Resolve SFA issues, students account; applications; complex calls  "
+e-o-e-m-sin:n-s-f-e,SIN: New SIN for Employment
+e-o-e-m-sst:o,SST: Other
+e-o-e-m-ei:u-r-w-s-p,EI: Urgent requests with stop payment (ISB)
+e-o-e-m-ei:n-c,EI: New claims
+e-o-e-m-reoc:e-m,REOC: Emergency Management
+e-o-e-m-cpp:c,CPP: Claims
+e-o-e-m-outreach,Outreach
+e-o-e-m-isb:p-s,ISB: Physical Security
+e-o-e-m-canada.ca:p-s,Canada.ca: Publishing Services
+e-i-ei:e-s-c-c,EI: EI Specialized Call Centre
+e-i-cpp:c,CPP: Claims
+e-i-ei:n-c,EI: New claims
+e-i-policy:a-s-f-r-h,Policy: Additional support for Reaching Home
+e-i-iitb:a-s,IITB: All Services
+e-i-policy:s-f-c-r-p,Policy: Support for COVID-19 Response Package
+e-i-policy:s-f-i-i-o-a-g-b,Policy: Support for increase in OAS and/or GIS benefits
+e-i-sin:c-o-s-f-e,SIN: Confirmation of SIN for EI
+e-i-other,Other
+e-i-policy:s-f-c-o-c-t-f,Policy: Support for creation of Citizen Task Force
+e-i-scc-ps-outreach:a-e-f-c-s,SCC-PS-Outreach: Alternate e-service for critical services
+w-s-ei:e-s-c-c,EI: EI Specialized Call Centre
+w-s-ei:n-c,EI: New claims
+w-s-o,Other
+g-a-c-ei:e-s-c-c,EI: EI Specialized Call Centre
+g-a-c-iitb:a-s,IITB: All Services
+g-a-c-gs&cs:p,Gs&Cs: Payments
+g-a-c-policy:s-n-m,Policy: Support new measures
+g-a-c-o,Other
+t-f-w-p-ei:e-s-c-c,EI: EI Specialized Call Centre
+t-f-w-p-iitb:a-s,IITB: All Services
+t-f-w-p-policy:s-f-c-r-p,Policy: Support for COVID-19 Response Package
+t-f-w-p-tpfw:t-l-p,TPFW: Tip line/online portal
+t-f-w-p-tpfw:g-t-r-o-i-i,TPFW: Guidance to Regions on inspection inquries (BESS)
+t-f-w-p-o,Other
+e-s-isb:p-s,ISB: Personnel Security
+e-s-cfob:p-a-p-s-p-p,"CFOB: Priority accounts payable, Section 33 - Payment processing"
+e-s-cfob:e-f-s,CFOB: Emergency facilities services
+e-s-sst:o,SST: Other
+e-s-cfob:a-t-f-b-a-c-f-m-p-f-m-s,CFOB: Access to funding; budget and cash flow management; priority financial management support
+e-s-cfob:m-p-p,CFOB: myEMS(SAP) payment processing
+e-s-iitb:a-s,IITB: All Services
+e-s-isb:p-s-1,ISB: Physical Security
+e-s-cfob:p-o,CFOB: Procurement Operations
+e-s-policy:s-n-m,Policy: Support new measures
+e-s-other,Other
+e-s-isb:n-a-r-e-o-c,ISB: National and Regional Emergency Operations Centres
+e-s-sin:n-s-f-e,SIN: New SIN for Employment
+e-s-sst:c-c,SST: Call Center
+e-s-cslp:r-s-i-s-a-a-c-c,"CSLP: Resolve SFA issues, students account; applications; complex calls  "
+e-s-p-h-c-a-i-ei:e-s-c-c,EI: EI Specialized Call Centre
+e-s-p-h-c-a-i-policy:s-f-c-r-p,Policy: Support for COVID-19 Response Package
+e-s-p-h-c-a-i-cpp:c,CPP: Claims
+e-s-p-h-c-a-i-policy:a-s-f-r-h,Policy: Additional support for Reaching Home
+e-s-p-h-c-a-i-policy:s-f-i-i-o-a-g-b,Policy: Support for increase in OAS and/or GIS benefits
+e-s-p-h-c-a-i-policy:s-f-c-o-c-t-f,Policy: Support for creation of Citizen Task Force
+e-s-p-h-c-a-i-policy:p-s-f-e-m-i-t-w-l,"Policy: Policy support for emergency measures (EI, IS, TFWP, WS, Leg+Reg)"
+e-s-p-h-c-a-i-reoc:e-m,REOC: Emergency Management
+e-s-p-h-c-a-i-works-p-a,Work Sharing: Processing Applications
+e-s-p-h-c-a-i-ei:r,EI: Renewal
+e-s-p-h-c-a-i-o,Other
+c-p-p-b-cpp:c,CPP: Claims
+c-p-p-b-iitb:a-s,IITB: All Services
+c-p-p-b-ei:e-s-c-c,EI: EI Specialized Call Centre
+c-p-p-b-oas:p-s-c-c,OAS: Pension Specialized Call Centre
+c-p-p-b-o,Other
+s-i-n-sin:n-s-f-e,SIN: New SIN for Employment
+s-i-n-sin:c-o-s-f-e,SIN: Confirmation of SIN for EI
+s-i-n-ei:e-s-c-c,EI: EI Specialized Call Centre
+s-i-n-iitb:a-s,IITB: All Services
+s-i-n-o,Other
+s-c-c-a-o-other,Other
+s-c-c-a-o-scc-ps-outreach:a-e-f-c-s,SCC-PS-Outreach: Alternate e-service for critical services
+s-c-c-a-o-ei:e-s-c-c,EI: EI Specialized Call Centre
+s-c-c-a-o-iitb:a-s,IITB: All Services
+s-c-c-a-o-policy:j-b-p-s-f-c-e-t-c-c,"Policy: Job Bank providing support for CSJ, EI through call centres        "
+s-c-c-a-o-1800:o,1800: 1 800 O-Canada (1-800-622-6232)
+s-c-c-a-o-canada.ca:s-m-a-m,Canada.ca: Social Media Account Management
+g-e-s-a-c-ei:e-s-c-c,EI: EI Specialized Call Centre
+g-e-s-a-c-1800:o,1800: 1 800 O-Canada (1-800-622-6232)
+g-e-s-a-c-o,Other
+p-p-s-e-c-canada.ca:p-s,Canada.ca: Publishing Services
+p-p-s-e-c-other,Other
+p-p-s-e-c-canada.ca:s-m-a-m,Canada.ca: Social Media Account Management
+p-p-s-e-c-1800:c-e-e-t-t-s,1800: Canada.ca email enquiries (includes Text Telephone (TTY) Services)
+c-s-l-p-n-s-l-s-c-policy:s-f-c-r-p,Policy: Support for COVID-19 Response Package
+c-s-l-p-n-s-l-s-c-cslp:r-s-i-s-a-a-c-c,"CSLP: Resolve SFA issues, students account; applications; complex calls  "
+c-s-l-p-n-s-l-s-c-iitb:a-s,IITB: All Services
+c-s-l-p-n-s-l-s-c-o,Other
+p-s-p-o-other,Other
+o-h-a-s-p-f-r-w-labour:a-a-g,Labour: Advice and Guidance (internal)
+o-h-a-s-p-f-r-w-labour:r-t-w-a,Labour: Refusal to Work Assessments
+o-h-a-s-p-f-r-w-labour:c-p-t-b,Labour: Compensation Payments to Beneficiaries
+o-h-a-s-p-f-r-w-o,Other
+o-h-a-s-p-f-r-w-labour:h-o-i,Labour: Hazardous Occurance Investigations
+o-h-a-s-p-f-r-w-labour:g-t-w-r,Labour: Group Termination Waiver requests
+o-h-a-s-p-f-r-w-labour:f-m-a-c,Labour: Federal Mediation and Conciliation
+o-h-a-s-p-f-r-w-labour:w-f-l,Labour: Work/Support for legislation
+o-h-a-s-p-f-r-w-reoc:e-m,REOC: Emergency Management
+o-h-a-s-p-f-r-w-labour:g-e-i-v-a-h,"Labour: General enquiries, including Violence and Harrassment"
+o-h-a-s-p-f-r-w-labour:c-u-d,Labour: Complaints - Unjust dismissal
+o-h-a-s-p-f-r-w-labour:c-s-a,Labour: Complaints - Serious Allegations

@@ -7,7 +7,7 @@
             <field name="arch" type="xml">
                 <search string="Employees">
                     <field name="name" string="Employees" filter_domain="['|',('work_email','ilike',self),('name','ilike',self)]"/>
-                    <field name="job_title" string="Job Title"/>
+                    <field name="job_id"/>
                     <field name="department_id" string="Department"/>
                     <field name="parent_id" string="Manager"/>
                     <field name="company_id" string="Company"/>
@@ -49,7 +49,7 @@
                                     Email: <field name="work_email" widget="email" required="False"/>
                                 </p>
                                 <p style="font-size:1.2em">
-                                    Job Title: <field name="job_title" placeholder="Job Position" />
+                                    Job Title: <field name="job_id"/>
                                 </p>
                                 <p style="font-size:1.2em"> 
                                     Department: <field name="department_id" context="{'hierarchical_naming': False}"/>
@@ -57,14 +57,43 @@
                             </div>
                             <field name="company_id" string="Company" invisible="1"/>
                         <notebook>
-                            <page name="public" string="Work Information">
+                            <page name="work_info" string="Work Information">
                                 <div id="o_work_employee_container"> <!-- These two div are used to position org_chart -->
                                     <div id="o_work_employee_main">
-                                        <group name="managers" >
-                                            <field name="parent_id"/>
+                                        <group>
+                                            <group string = "Information">
+                                                <field name="parent_id_domain" invisible="1"/>
+                                                <field name="parent_id" domain="parent_id_domain"/>
+                                                <field name="x_employee_language"/>
+                                                <field name="x_employee_job_type"/>
+                                                <field name="classification_id"/>
+                                                <field name="region_id" options="{'no_create_edit': True}"/>
+                                            </group>
+                                            <group string="Work Address">
+                                                <field name="address_id" context="{'show_address': 1}" options="{&quot;always_reload&quot;: True, &quot;highlight_first_line&quot;: True}"/>
+                                                <field name="x_employee_is_remote" />
+                                                <field name="x_employee_office_floor"/>
+                                                <field name="x_employee_office_cubicle"/>
+                                                <field name="work_phone" widget="phone"/>
+                                                <field name="mobile_phone" widget="phone"/>
+                                            </group>
+                                            <field name="company_id" groups="base.group_multi_company"/>
+                                            <field name="user_id" string="Related User" invisible="1"/>
                                         </group>
                                     </div>
                                 </div>
+                            </page>
+                            <page name="public" string="Access Information" groups="hr.group_hr_user">
+                                <group>
+                                    <field name="x_employee_access_gov_office"/>
+                                    <field name="x_employee_device_type"/>
+                                    <field name="x_employee_asset_number"/>
+                                    <field name="x_employee_second_monitor"/>
+                                    <field name="x_employee_remote_access_network"/>
+                                    <field name="x_employee_remote_access_tool"/>
+                                    <field name="x_employee_mobile_hotspot"/>
+                                    <field name="x_employee_headset"/>
+                                </group>
                             </page>
                         </notebook>
                     </sheet>
@@ -80,7 +109,7 @@
                   <field name="name"/>
                   <field name="work_email"/>
                   <field name="department_id"/>
-                  <field name="job_title"/>
+                  <field name="job_id"/>
                   <field name="parent_id"/>
                   <field name="company_id" string="Company" invisible="1"/>
               </tree>
@@ -93,7 +122,7 @@
           <field name="res_model">hr.employee.public</field>
           <field name="view_mode">tree,form</field>
           <field name="domain">[]</field>
-          <field name="context">{}</field>
+          <field name="context">{'hierarchical_naming': False}</field>
           <field name="view_id" eval="False"/>
           <field name="search_view_id" ref="hr.hr_employee_public_view_search"/>
           <field name="help" type="html">

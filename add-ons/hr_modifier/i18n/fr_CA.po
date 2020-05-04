@@ -41,19 +41,6 @@ msgid "'Print Badge - %s' % (object.name).replace('/', '')"
 msgstr "'Imprimer le Badge - %s' % (object.name).replace('/', '')"
 
 #. module: hr
-#: model_terms:ir.ui.view,arch_db:hr.view_employee_form
-msgid ""
-"<b style=\"font-size:1.3em\">\n"
-"                                    Please note all information contained within these tabs are considered Protected information and should \n"
-"                                    be handled in accordance with departmental and Government of Canada directives, policies and laws\n"
-"                                </b>"
-msgstr ""
-"<b style=\"font-size:1.3em\">\n"
-"                                    Veuillez noter que toutes les informations contenues dans ces onglets sont considérées comme des informations protégées et doivent \n"
-"                                    être traitées conformément aux directives, aux politiques et aux lois du ministère et du gouvernement du Canada\n"
-"                                </b>"
-
-#. module: hr
 #: code:addons/hr/models/hr_employee.py:0
 #, python-format
 msgid ""

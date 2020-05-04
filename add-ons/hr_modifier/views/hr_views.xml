@@ -1,64 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 <data>
+
+    <menuitem id="hr.menu_hr_employee_user" groups="make_invisible" />
+
     <menuitem
-        id="hr.menu_hr_employee_payroll"
-        name="My Team"
-        parent="hr.menu_hr_root"
-        action="hr.open_view_employee_list_my"
-        groups="hr.group_hr_manager,group_hr_senior_management"
-        sequence="3"/>
-        <menuitem id="hr.menu_hr_employee_user" groups="make_invisible" />
+    id="hr.menu_hr_root"
+    name="Employees"
+    action="hr.open_view_employee_list_my"
+    groups="hr.group_hr_manager,hr.group_hr_user,base.group_user"
+    web_icon="hr,static/description/icon.png"
+    sequence="75"/>
+
+    <menuitem
+    id="hr.menu_hr_employee_payroll"
+    name="My Team"
+    parent="hr.menu_hr_root"
+    action="hr.open_view_employee_list_my"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    sequence="1"/>
+
     <menuitem
     id="hr.menu_hr_employee"
     name="Public Directory"
     action="hr.hr_employee_public_action"
     parent="hr.menu_hr_root"
-    sequence="4"/>
+    sequence="2"/>
 
     <menuitem
     id="hr.menu_human_resources_configuration"
     name="Configuration"
     parent="hr.menu_hr_root"
-    groups="hr.group_hr_manager,group_hr_senior_management"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
     sequence="100"/>
 
     <menuitem
-    id="hr_skills.hr_skill_type_menu"
-    name="Skills"
-    action="hr_skills.hr_skill_type_action"
-    parent="hr.menu_human_resources_configuration_employee"
-    sequence="3"
+    id = "hr.menu_human_resources_configuration_classification"
+    name = "Classifications"
+    parent="hr.menu_human_resources_configuration"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    action="action_hr_classifications"
+    sequence="1"/>
+
+    <menuitem
+    id="hr.menu_hr_department_tree"
+    name = "Departments"
+    action="hr.open_module_tree_department"
+    parent="hr.menu_human_resources_configuration"
+    sequence="2"
     groups="hr.group_hr_manager,group_hr_senior_management"/>
 
     <menuitem
-    id="hr.menu_human_resources_configuration_employee"
-    name="Employee"
+    id="menu_hr_department_tree_coordinator"
+    action="hr_modifier.open_module_tree_department_coordinator"
+    parent="hr.menu_human_resources_configuration"
+    sequence="2"
+    groups="group_hr_coordinator"/>
+
+    <menuitem
+    id="hr.menu_view_hr_job"
+    name="Job Positions"
+    action="hr.action_hr_job"
+    parent="hr.menu_human_resources_configuration"
+    sequence="3"/>
+
+    <menuitem
+    id = "hr.menu_human_resources_configuration_locations"
+    name = "Locations"
+    parent="hr.menu_human_resources_configuration"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    action="action_hr_locations"
+    sequence="4"/>
+
+    <menuitem
+    id="hr_skills.hr_skill_type_menu"
+    name="Profiles"
+    action="hr_skills.hr_skill_type_action"
+    parent="hr.menu_human_resources_configuration"
+    sequence="5"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"/>
+
+    <menuitem
+    id="hr_skill_sub_skill_menu"
+    name="- Enabling Services"
+    action="hr_sub_skill_action"
+    parent="hr.menu_human_resources_configuration"
+    sequence="6"
+    groups="hr.group_hr_manager"/>
+
+    <menuitem
+    id="hr_skill_level_menu"
+    name="- Levels"
+    action="hr_sub_skill_levels_action"
+    parent="hr.menu_human_resources_configuration"
+    sequence="7"
+    groups="hr.group_hr_manager"/>
+
+    <menuitem
+    id = "hr.menu_human_resources_configuration_regions"
+    name = "Regions"
+    parent="hr.menu_human_resources_configuration"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    action="action_hr_regions"
+    sequence="8"/>
+
+    <menuitem
+    id="hr.menu_view_employee_category_form"
+    name="Tags"
+    action="hr.open_view_categ_form"
     parent="hr.menu_human_resources_configuration"
     groups="hr.group_hr_manager"
-    sequence="1"/>
+    sequence="9"/>
+
     <menuitem
-       id = "hr.menu_human_resources_configuration_classification"
-       name = "Classifications"
-       parent="hr.menu_human_resources_configuration_employee"
-       groups="hr.group_hr_manager"
-       action="action_hr_classifications"
-       sequence="2"
-    />
+    id="hr_skills.menu_human_resources_configuration_resume"
+    name="Resumé"
+    parent="hr.menu_human_resources_configuration"
+    sequence="10"
+    groups="base.group_no_one"/>
+
     <menuitem
-       id = "hr.menu_human_resources_configuration_regions"
-       name = "Regions"
-       parent="hr.menu_human_resources_configuration_employee"
-       groups="hr.group_hr_manager"
-       action="action_hr_regions"
-       sequence="3"/>
-    <menuitem
-        id="hr.menu_view_employee_category_form"
-        name="Tags"
-        action="hr.open_view_categ_form"
-        parent="hr.menu_human_resources_configuration_employee"
-        groups="hr.group_hr_manager"
-        sequence="1"/>
+    id="hr_skills.hr_resume_line_type_menu"
+    name="Types"
+    action="hr_skills.hr_resume_type_action"
+    parent="hr_skills.menu_human_resources_configuration_resume"
+    sequence="11"
+    groups="base.group_no_one"/>
+
 </data>
 </odoo>
- 

@@ -62,7 +62,54 @@ $ docker-compose stop
 
 #### Loading Data 
 
-You can optionally load in organizational data from GEDS. Please note these data sets were developed using the GEDS Open Data Set. No protected or classified information is contained within these data sets. No protected or classified information should be added to these data sets. If you are interested in how these datasets were created, vist this [repo](https://github.com/gcdevops/HRWhiteListing-data).
+You can optionally load in organizational data. Please note these data sets were developed using a non classified dataset. No protected or classified information is contained within these data sets. No protected or classified information should be added to these data sets. If you are interested in how these datasets were created, vist this [repo](https://github.com/gcdevops/HRWhiteListing-data).
+
+There two options for loading data into Odoo. The first is to restore your local environment with a database dump. This is the preferred method as not only is it faster to get your local environment up to speed, but will also create various test users to allow you to quickly test your changes. The second method is to load data from scratch by uploading prepared csv's to the application.
+
+##### Method 1: Using the database dump 
+
+Step 1. If you are starting odoo from the first time you can skip this step. If you already have an existing environment, head over to http://localhost:8069/web/database/manager. You will need to delete your current database by clicking on the red Delete button.
+
+![Database manager view where you can delete an existing database](./images/database-manager-view.png)
+
+Step 2. If you are starting odoo from the first time or have just followed step 1. You should see the database creation form. You will need to click on ```or restore a database``` beside the blue ```Create Database``` button 
+
+![Create database view where you can create or restore a database](./images/create-database-view.png)
+
+Step 3. You should then see the restore database form. Upload the [zip file](./data/local-dev-db.zip) to the designated area. You can set whatever name you like. It is impotant to select the ```This database was moved``` option as it will not work with the ```This database was copied option```
+
+![Database restore form where you can restore a database](./images/database-restore-view.png)
+
+
+Step 4. Click on ```Continue``` and be patient while the database gets restored. Once this process is completed you should see the database management screen with the name you have specified for the database you restored. If you click on this, you should be redirected to the log in page for the application 
+
+![Database manager view with the new database created](./images/database-restored-view.png)
+![Log in page for the applocation](./images/log-in-page.png)
+
+
+There are three users with the roles Admin, Coordinator, and Manager respectively. These have the following usernames 
+
+```
+Administrator 
+
+admin@hrsdc-rhdcc.gc.ca
+
+Coordinator 
+
+coordinator@hrsdc-rhdcc.gc.ca
+
+Manager
+
+manager@hrsdc-rhdcc.gc.ca
+```
+
+All of them have the password: *Password*
+
+
+
+
+
+##### Method 2: Loading data from csv's
 
 Step 1. Ensure you have developer mode activated 
 
@@ -77,7 +124,7 @@ Step 3. Delete any existing data that's there
 Step 4. Select import and navigate to the department import page and then select ```Load File```
 ![Department Import Page](./images/department-import-page.png) 
 
-Step 5. Select [odoo-org-csv.csv](./data/org_structure/odoo-org-csv.csv) and import
+Step 5. Select [odoo-org-csv.csv](./data/odoo-org-csv.csv) and import
 
 ![import organizational structure](./images/import-org.png)
 
@@ -94,16 +141,37 @@ Step 7. Now you will need to load Job Titles. This is the same process as Depart
 
 ![Jobs page with employees highlighted](./images/employees-page-job-highlighted.png)
 
-Step 8. Similarly, import [odoo-jobs-csv.csv](./data/org_structure/odoo-jobs-csv.csv)
+Step 8. Similarly, import [odoo-jobs-csv.csv](./data/odoo-jobs-csv.csv)
 
 ![importing jobs](./images/import-jobs.png)
 
-Step 9. Now import employees by navigating to the ```Employees``` page and then importing [odoo-employees-csv.csv](./data/org_structure/odoo-employees-csv.csv). Note this will take 15-20 minutes due to the large amount of records.
+Step 9. Import locations by going to Configuration > Locations and then importing [odoo-buildings-csv.csv](./data/odoo-buildings-csv.csv)
+
+Step 10. Import skill levels by going to Configuration > - Levels and then importing [odoo-skill-levels-csv.csv](./data/odoo-skill-levels-csv.csv)
+
+Step 11. Import enabling services by going to Configuration > - Enabling Services and then importing [odoo-sub-skills-csv.csv](./data/odoo-sub-skills-csv.csv)
+
+Step 12. Import profiles by going to Configuration > Profiles and then importing [odoo-skills-csv.csv](./data/odoo-skills-csv.csv)
+
+Step 13. Import regions by going to Configuration > Regions and then importing [odoo-regions-csv.csv](./data/odoo-regions-csv.csv)
+
+Step 14. Now import employees by navigating to the ```Employees``` page and then importing [odoo-employees-csv.csv](./data/odoo-employees-csv.csv). Note this will take 15-20 minutes due to the large amount of records.
 
 ![import employees](./images/import-employees.png)
 ![imported employees](./images/imported-employees.png)
 
 You should now have the GEDS DataSet for the ESDC Organization imported 
+
+#### Creating a Database Dump 
+
+To create a new database dump others can use to get their local environments up to speed. 
+
+Step 1. Go to the database manager http://localhost:8069/web/database/manager and click on the ```Backup``` button. Ensure the ```Backup Format``` is ```zip (include filestore)``` and click on ```Backup``` again. 
+
+![Database manager view with database we will generate dump for](./images/database-restored-view.png)
+![Create a database dump from the selected database](./images/create-database-dump.png)
+
+Step 2. You should have a zip file being downloaded. Once this is done downloading please rename this to ```local-dev-db.zip``` and add it to the [data folder](./data)
 
 #### Reloading changes 
 
@@ -120,7 +188,36 @@ Step 5. Find your module and upgrade it
 Your changes should now be reflected
 
 
-Note that if you make changes to ```python``` files, you will need to restart the server. To do this simply ```stop``` the containers by either ctrl + C if you are in the same shell, or docker-compose stop. Then start the containers back up again and upgrade your module with the altered code. 
+Note that if you make changes to ```python``` files, you will need to restart the server. To do this simply ```stop``` the containers by either ctrl + C if you are in the same shell, or docker-compose stop. Then start the containers back up again and upgrade your module with the altered code.
+
+## Activating Application Logging
+
+It is recommened that organizational data is imported first before this is activated since the batch import will be unnecessarily logged
+
+Step 1. Install the ```Audit Log``` application from the apps page in odoo
+
+![install audit log application](./images/install-audit-log.png)
+
+Step 2. Activate the developer mode if you do not have it activated already 
+
+![activate developer mode](./images/activate-developer-mode.png)
+
+Step 3. Navigate to the rules page (Settings > Technical > Audit > Rules). This is where you define what should be logged 
+
+![navigate to rules page](./images/navigate-to-rules.png)
+
+Step 4. Import the rules set [odoo-logging-rules-csv.csv](./data/odoo-logging-rules-csv.csv)
+
+![import rules set](./images/import-rules-set.png)
+
+![rules set being imported](./images/importing-rules-set.png)
+
+events within the application will now be logged according to rules imported. You can see these logs by heading over to the logs page ( Settings > Technical > Audit > Logs)
+
+![logs menu](./images/view-logs.png)
+
+![logs page](./images/view-written-logs.png)
+
 
 ## Creating Modules 
 
@@ -285,8 +382,6 @@ Take a close look at the id for this record
 ```
 
 We are using the ```External ID``` for the Department window view. When the hr_modifier module is installed it will overwrite that window record in the database and thus removing the ability to select the kanban view ! 
-
-
 
 
 
