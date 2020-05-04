@@ -2,23 +2,28 @@
 <odoo>
   <data>
 
-    <!-- <template id="hr_advanced_view_button" name="" inherit_id="hr.view_employee_filter">
-            <xpath expr="//" position="after">
-                <div>
-                    <button>Advanced search</button>
-                </div>
-            </xpath>
-        </template> -->
+    <record id="view_advanced_search_form" model="ir.ui.view">
+      <field name= "name">hr.advanced.search.form</field>
+      <field name= "model">hr.employee</field>
+      <field name="arch" type="xml">
+        <form string = "Search">
+          <sheet>
+            <group>
+              <field name = "name" placeholder="e.g. John Smith"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
 
-    <!-- <template xml:space="preserve">
-      <t t-extend="ListView.buttons">
-        <t t-jquery="button.o_list_button_add" t-operation="after">
-          <button type="button" class="btn btn-primary btn-sm oe_filter_button" accesskey="f">
-            Advanced Filters
-          </button>
-        </t>
-      </t>
-    </template> -->
+    <record id="action_hr_advanced_search" model="ir.actions.act_window">
+      <field name="name">Advanced search</field>
+      <field name="res_model">hr.employee</field>
+      <!-- <field name="view_type">form</field> -->
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="view_advanced_search_form"/>
+      <field name="target">new</field>
+    </record>
 
   </data>
 </odoo>
