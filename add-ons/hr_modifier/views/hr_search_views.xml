@@ -3,13 +3,16 @@
   <data>
 
     <record id="view_advanced_search_form" model="ir.ui.view">
-      <field name= "name">hr.advanced.search.form</field>
-      <field name= "model">hr.employee</field>
+      <field name="name">hr.advanced.search.form</field>
+      <field name="model">hr.employee</field>
       <field name="arch" type="xml">
-        <form string = "Search">
+        <form string="Search">
           <sheet>
             <group>
-              <field name = "name" placeholder="e.g. John Smith"/>
+              <field name="name"/>
+              <field name="work_email"/>
+              <!-- <field name="job_id"/> -->
+              <!-- <field name="department_id"/> -->
             </group>
           </sheet>
         </form>
@@ -19,7 +22,6 @@
     <record id="action_hr_advanced_search" model="ir.actions.act_window">
       <field name="name">Advanced search</field>
       <field name="res_model">hr.employee</field>
-      <!-- <field name="view_type">form</field> -->
       <field name="view_mode">form</field>
       <field name="view_id" ref="view_advanced_search_form"/>
       <field name="target">new</field>
