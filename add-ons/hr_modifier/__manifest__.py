@@ -31,6 +31,7 @@
     'qweb': [
         'static/src/xml/chatter.xml',
         'static/src/xml/systray.xml',
+        'static/src/xml/button_add.xml'
         'static/src/xml/language_toggle.xml'
     ],
     'css': [

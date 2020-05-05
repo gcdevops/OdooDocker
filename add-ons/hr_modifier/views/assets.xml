@@ -6,5 +6,11 @@
                 <script type="text/javascript" src="/hr_modifier/static/src/js/language_toggle.js"></script>
             </xpath>
         </template>
+
+        <template id="hr_mod_assets_backend" name="hr_modifier assets" inherit_id="web.assets_backend">
+            <xpath expr="." position="inside">
+                <script type="text/javascript" src="/hr_modifier/static/src/js/base_view.js" />
+            </xpath>
+        </template>
     </data>
 </odoo>
