@@ -8,12 +8,6 @@
             </xpath>        
         </template>
 
-        <template id="extended_libs" name="extended libs" inherit_id="web.assets_backend">
-            <xpath expr="." position="inside">
-                <script type="text/javascript" src="/hr_modifier/static/js/base_view.js"></script>
-            </xpath>
-        </template>
-
         <record id="hr.view_employee_filter" model="ir.ui.view">
             <field name="name">hr.employee.search</field>
             <field name="model">hr.employee</field>
