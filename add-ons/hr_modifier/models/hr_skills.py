@@ -5,12 +5,18 @@ from odoo import api, fields, models, _
 from odoo.exceptions import ValidationError
 import re
 
+class Skill(models.Model):
+    _name = 'hr.skill'
+    _inherit='hr.skill'
+
+    name = fields.Char(translate = True)
+
 class SkillType(models.Model):
     _name = 'hr.skill.type'
     _inherit='hr.skill.type'
 
+    name = fields.Char(translate = True)
     skill_ids = fields.One2many(string="Enabling Services")
-
 
 class EmployeeSkill(models.Model):
     _name = 'hr.employee.skill'
