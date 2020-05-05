@@ -26,7 +26,7 @@ except Exception as e:
     )
 
 # Import Departments
-filename = '/data/org_structure/odoo-org-csv.csv'
+filename = '/data/odoo-org-csv.csv'
 if os.path.isfile(filename):
     reader = csv.DictReader(open(filename,"r"))
     for row in reader:
@@ -38,7 +38,6 @@ if os.path.isfile(filename):
         if row["Parent Department/External ID"]:
             res = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Parent Department/External ID"]]]],{'fields': ['res_id']})
             dept["parent_id"] = int(res[0]["res_id"])
-
         print(dept)
 
         # Check if Department exists
@@ -190,118 +189,1009 @@ if os.path.isfile(filename):
                     )
 
 # Import Users
-filename = '/data/org_structure/odoo-users-csv.csv'
-reader = csv.reader(open(filename,"rt"))
-i = 0
-for row in reader:
-    if i == 0:
-        i = 1
-    else:
-        # Create User
-        user = {
-        'name': row[2],
-        'email': row[3],
-        'login': row[4]
-        }
-        user_id = models.execute(db, uid, password,'res.users','create', user)
-        print("User ID")
-        print(user_id)
+filename = '/data/odoo-users-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
 
-        # Create User External ID
-        user_map = {
-        'name': row[0],
-        'module': '__import__',
-        'model': 'res.users',
-        'res_id': user_id
-        }    
-        user_map_id = models.execute(db, uid, password,'ir.model.data','create', user_map)
-        print("User Ext ID")
-        print(user_map_id)
+        user = {
+            "name": row["Name"],
+            'email': row["Email"],
+            'login': row["Login"]
+        }        
+
+        # Check if User exists
+        exist_user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        # If User doesn't exist
+        if not exist_user:
+
+            # Create User
+            user_id = models.execute(db, uid, password,'res.users','create', user)
+            print("User ID")
+            print(user_id)
+
+            # Create User External ID
+            user_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'res.users',
+            'res_id': user_id
+            }    
+            user_map_id = models.execute(db, uid, password,'ir.model.data','create', user_map)
+            print("User Ext ID")
+            print(user_map_id)
+
+        # If User exists
+        else:
+            
+            # Update User
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'res.users',
+                'write', 
+                [exist_user[0]["res_id"], user]
+            )
+            print("User ID")
+            print(exist_user[0]["res_id"])
 
 # Import Job Position
 
 filename = '/data/odoo-jobs-csv.csv'
-reader = csv.reader(open(filename,"rt"))
-i = 0
-for row in reader:
-    if i == 0:
-        i = 1
-    else:
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
 
         # Check if Job exists
-        exist = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[0]]]],{'fields': ['res_id']})
+        exist_job = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
-        # Create Job
         job = {
-        'name': row[1]
+        'name': row["Job Position"]
         }
-        job_id = models.execute(db, uid, password,'hr.job','create', job)
-        print("Job ID")
-        print(job_id)
 
-        # Create Job External ID
-        job_map = {
-        'name': row[0],
-        'module': '__import__',
-        'model': 'hr.job',
-        'res_id': job_id
+        # If Job doesn't exist
+        if not exist_job:
+
+            print("test")
+
+            # Create Job
+            job_id = models.execute(db, uid, password,'hr.job','create', job)
+            print("Job ID")
+            print(job_id)
+
+            # Create Job External ID
+            job_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'hr.job',
+            'res_id': job_id
+            }
+            job_map_id = models.execute(db, uid, password,'ir.model.data','create', job_map)
+            print("Job Ext ID")
+            print(job_map_id)
+
+            # Create en_CA Translation
+            job_translation = {
+                'name': 'hr.job,name',
+                'res_id': job_id,
+                'lang': 'en_CA',
+                'type': 'model',
+                'src': row["Job Position"],
+                'value': row["Job Position"],
+                'module': '__import__',
+                'state': 'translated'
+            }
+            job_translation_id = models.execute(
+                db,
+                uid,
+                password,
+                'ir.translation',
+                'create',
+                job_translation
+            )
+            print("Job Translation ID")
+            print(job_translation_id)
+
+            # if we have a Translation
+            if ("Translation" in row):
+                # Create Translation
+                job_translation = {
+                    'name': 'hr.job,name',
+                    'res_id': job_id,
+                    'lang': 'fr_CA',
+                    'type': 'model',
+                    'src': row["Job Position"],
+                    'value': row["Translation"],
+                    'module': '__import__',
+                    'state': 'translated'
+                }
+                job_translation_id = models.execute(
+                    db,
+                    uid,
+                    password,
+                    'ir.translation',
+                    'create',
+                    job_translation
+                )
+                print("Job Translation ID")
+                print(job_translation_id)
+
+
+        # If Job exists
+        else:
+                    
+            # Update Job
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.job',
+                'write', 
+                [exist_job[0]["res_id"], job]
+            )
+            print("Job ID")
+            print(exist_job[0]["res_id"])
+         
+            # Get en_CA Translation ID
+            exist_job_translation = models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'ir.translation', 
+                'search_read',
+                [['&', '&',('name', '=', 'hr.job,name'),('res_id', '=', exist_job[0]["res_id"]),('lang', '=', 'en_CA')]],{'fields': ['id']}
+            )
+            
+            # Update en_CA Translation
+            job_translation = {
+                'src': row["Job Position"],
+                'value': row["Job Position"]
+            }
+            models.execute_kw(db, uid, password,'ir.translation','write', [exist_job_translation[0]["id"], job_translation])
+
+            if ("Translation" in row):
+                # Get fr_CA Translation ID
+                exist_job_translation = models.execute_kw(
+                    db, 
+                    uid, 
+                    password,
+                    'ir.translation', 
+                    'search_read',
+                    [['&', '&',('name', '=', 'hr.job,name'),('res_id', '=', exist_job[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']}
+                )
+
+                # If fr_CA Translation exists
+                if exist_job_translation:
+                    # Update Translation
+                    job_translation = {
+                        'src': row["Job Position"],
+                        'value': row["Translation"]
+                    }
+                    models.execute_kw(db, uid, password,'ir.translation','write', [exist_job_translation[0]["id"], job_translation])
+
+                # If fr_CA Translation doesn't exist
+                else:
+                    # Create Translation
+                    job_translation = {
+                        'name': 'hr.job,name',
+                        'res_id': exist_job[0]["res_id"],
+                        'lang': 'fr_CA',
+                        'type': 'model',
+                        'src': row["Job Position"],
+                        'value': row["Translation"],
+                        'module': '__import__',
+                        'state': 'translated'
+                    }
+                    job_translation_id = models.execute(
+                        db,
+                        uid,
+                        password,
+                        'ir.translation',
+                        'create',
+                        job_translation
+                    )
+
+# Import Building
+
+filename = '/data/odoo-buildings-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        # Check if Building exists
+        exist_building = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        #Get Country ID
+        country = row["Country/External ID"]
+        country = country.replace('base.', '')
+        print(country)
+        country_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[['&',('model', '=', 'res.country'),('name', '=', country)]],{'fields': ['res_id']})
+        print(country_id[0]["res_id"])
+
+        #Get State ID
+        state = row["State/External ID"]
+        state = state.replace('base.', '')
+        print(state)
+        state_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[['&',('model', '=', 'res.country.state'),('name', '=', state)]],{'fields': ['res_id']})
+        print(state_id[0]["res_id"])
+
+        building = {
+        'name': row["Name"],
+        'is_company': "true",
+        'street': row["Street"],
+        'city': row["City"],
+        'zip': row["Zip"],
+        'street': row["Street"],
+        'country_id': country_id[0]["res_id"],
+        'state_id': state_id[0]["res_id"]
         }
-        job_map_id = models.execute(db, uid, password,'ir.model.data','create', job_map)
-        print("Job Ext ID")
-        print(job_map_id)
 
-        # Create Job Translation
+        # If Building doesn't exist
+        if not exist_building:
 
-        job_translation = {
-        'name': 'hr.job,name',
-        'res_id': job_id,
-        'lang': 'fr_CA',
-        'type': 'model',
-        'src': row[1],
-        'value': row[2],
-        'module': '__import__',
-        'state': 'translated'
-        }    
-        job_translation_id = models.execute(db, uid, password,'ir.translation','create', job_translation)
-        print("Job Translation ID")
-        print(job_translation_id)
+            # Create Building
+            building_id = models.execute(db, uid, password,'res.partner','create', building)
+            print("Building ID")
+            print(building_id)
 
-filename = '/data/org_structure/odoo-employees-csv.csv'
-reader = csv.reader(open(filename,"rt"))
-i = 0
-for row in reader:
-    if i == 0:
-        i = 1
-    else:
-        # Get Department ID
-        dept = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[4]]]],{'fields': ['res_id']})
-        
-        # Get Job ID
-        job = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row[5]]]],{'fields': ['res_id']})
+            # Create Building External ID
+            building_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'res.partner',
+            'res_id': building_id
+            }
+            building_map_id = models.execute(db, uid, password,'ir.model.data','create', building_map)
+            print("Building Ext ID")
+            print(building_map_id)
 
-        # Get User ID
-        user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', 'user-' + row[2]]]],{'fields': ['res_id']})
+        # If Building exists
+        else:
+                    
+            # Update Building
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'res.partner',
+                'write', 
+                [exist_building[0]["res_id"], building]
+            )
+            print("Building ID")
+            print(exist_building[0]["res_id"])
 
-        # Create Employee
+# Import Region
+
+filename = '/data/odoo-regions-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        # Check if Region exists
+        exist_region = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        region = {
+        'name': row["Name"]
+        }
+
+        # If Region doesn't exist
+        if not exist_region:
+
+            # Create Region
+            region_id = models.execute(db, uid, password,'hr.region','create', region)
+            print("Region ID")
+            print(region_id)
+
+            # Create Region External ID
+            region_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'hr.region',
+            'res_id': region_id
+            }
+            region_map_id = models.execute(db, uid, password,'ir.model.data','create', region_map)
+            print("Region Ext ID")
+            print(region_map_id)
+
+            # Create en_CA Translation
+            region_translation = {
+                'name': 'hr.region,name',
+                'res_id': region_id,
+                'lang': 'en_CA',
+                'type': 'model',
+                'src': row["Name"],
+                'value': row["Name"],
+                'module': '__import__',
+                'state': 'translated'
+            }
+            region_translation_id = models.execute(
+                db,
+                uid,
+                password,
+                'ir.translation',
+                'create',
+                region_translation
+            )
+            print("Region Translation ID")
+            print(region_translation_id)
+
+            # if we have a Translation
+            if ("Translation" in row):
+                # Create Translation
+                region_translation = {
+                    'name': 'hr.region,name',
+                    'res_id': region_id,
+                    'lang': 'fr_CA',
+                    'type': 'model',
+                    'src': row["Name"],
+                    'value': row["Translation"],
+                    'module': '__import__',
+                    'state': 'translated'
+                }
+                region_translation_id = models.execute(
+                    db,
+                    uid,
+                    password,
+                    'ir.translation',
+                    'create',
+                    region_translation
+                )
+                print("Region Translation ID")
+                print(region_translation_id)
+
+
+        # If Region exists
+        else:
+                    
+            # Update Region
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.region',
+                'write', 
+                [exist_region[0]["res_id"], region]
+            )
+            print("Region ID")
+            print(exist_region[0]["res_id"])
+         
+            # Get en_CA Translation ID
+            exist_region_translation = models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'ir.translation', 
+                'search_read',
+                [['&', '&',('name', '=', 'hr.region,name'),('res_id', '=', exist_region[0]["res_id"]),('lang', '=', 'en_CA')]],{'fields': ['id']}
+            )
+            
+            # Update en_CA Translation
+            region_translation = {
+                'src': row["Name"],
+                'value': row["Name"]
+            }
+            models.execute_kw(db, uid, password,'ir.translation','write', [exist_region_translation[0]["id"], region_translation])
+
+            if ("Translation" in row):
+                # Get fr_CA Translation ID
+                exist_region_translation = models.execute_kw(
+                    db, 
+                    uid, 
+                    password,
+                    'ir.translation', 
+                    'search_read',
+                    [['&', '&',('name', '=', 'hr.region,name'),('res_id', '=', exist_region[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']}
+                )
+
+                # If fr_CA Translation exists
+                if exist_region_translation:
+                    # Update Translation
+                    region_translation = {
+                        'src': row["Name"],
+                        'value': row["Translation"]
+                    }
+                    models.execute_kw(db, uid, password,'ir.translation','write', [exist_region_translation[0]["id"], region_translation])
+
+                # If fr_CA Translation doesn't exist
+                else:
+                    # Create Translation
+                    region_translation = {
+                        'name': 'hr.region,name',
+                        'res_id': exist_region[0]["res_id"],
+                        'lang': 'fr_CA',
+                        'type': 'model',
+                        'src': row["Name"],
+                        'value': row["Translation"],
+                        'module': '__import__',
+                        'state': 'translated'
+                    }
+                    region_translation_id = models.execute(
+                        db,
+                        uid,
+                        password,
+                        'ir.translation',
+                        'create',
+                        region_translation
+                    )
+
+# Import Skill Level
+
+filename = '/data/odoo-skill-levels-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        # Check if Skill Level exists
+        exist_skill_level = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        skill_level = {
+        'name': row["Name"],
+        'level_progress': row["level_progress"],
+        }
+
+        # If Skill Level doesn't exist
+        if not exist_skill_level:
+
+            # Create Skill Level
+            skill_level_id = models.execute(db, uid, password,'hr.skill.level','create', skill_level)
+            print("Skill Level ID")
+            print(skill_level_id)
+
+            # Create Skill Level External ID
+            skill_level_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'hr.skill.level',
+            'res_id': skill_level_id
+            }
+            skill_level_map_id = models.execute(db, uid, password,'ir.model.data','create', skill_level_map)
+            print("Skill Level Ext ID")
+            print(skill_level_map_id)
+
+        # If Skill Level exists
+        else:
+                    
+            # Update Skill Level
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.skill.level',
+                'write', 
+                [exist_skill_level[0]["res_id"], skill_level]
+            )
+            print("Skill Level ID")
+            print(exist_skill_level[0]["res_id"])
+
+# Import Sub-skill
+
+filename = '/data/odoo-sub-skills-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        # Check if Sub-skill exists
+        exist_sub_skill = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        sub_skill = {
+        'name': row["Name"]
+        }
+
+        # If Sub-skill doesn't exist
+        if not exist_sub_skill:
+
+            # Create Sub-skill
+            sub_skill_id = models.execute(db, uid, password,'hr.skill','create', sub_skill)
+            print("Sub-skill ID")
+            print(sub_skill_id)
+
+            # Create Sub-skill External ID
+            sub_skill_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'hr.skill',
+            'res_id': sub_skill_id
+            }
+            sub_skill_map_id = models.execute(db, uid, password,'ir.model.data','create', sub_skill_map)
+            print("Sub-skill Ext ID")
+            print(sub_skill_map_id)
+
+            # Create en_CA Translation
+            sub_skill_translation = {
+                'name': 'hr.skill,name',
+                'res_id': sub_skill_id,
+                'lang': 'en_CA',
+                'type': 'model',
+                'src': row["Name"],
+                'value': row["Name"],
+                'module': '__import__',
+                'state': 'translated'
+            }
+            sub_skill_translation_id = models.execute(
+                db,
+                uid,
+                password,
+                'ir.translation',
+                'create',
+                sub_skill_translation
+            )
+            print("Sub-skill Translation ID")
+            print(sub_skill_translation_id)
+
+            # if we have a Translation
+            if ("Translation" in row):
+                # Create Translation
+                sub_skill_translation = {
+                    'name': 'hr.skill,name',
+                    'res_id': sub_skill_id,
+                    'lang': 'fr_CA',
+                    'type': 'model',
+                    'src': row["Name"],
+                    'value': row["Translation"],
+                    'module': '__import__',
+                    'state': 'translated'
+                }
+                sub_skill_translation_id = models.execute(
+                    db,
+                    uid,
+                    password,
+                    'ir.translation',
+                    'create',
+                    sub_skill_translation
+                )
+                print("Sub-skill Translation ID")
+                print(sub_skill_translation_id)
+
+
+        # If Sub-skill exists
+        else:
+                    
+            # Update Sub-skill
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.skill',
+                'write', 
+                [exist_sub_skill[0]["res_id"], sub_skill]
+            )
+            print("Sub-skill ID")
+            print(exist_sub_skill[0]["res_id"])
+         
+            # Get en_CA Translation ID
+            exist_sub_skill_translation = models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'ir.translation', 
+                'search_read',
+                [['&', '&',('name', '=', 'hr.skill,name'),('res_id', '=', exist_sub_skill[0]["res_id"]),('lang', '=', 'en_CA')]],{'fields': ['id']}
+            )
+            
+            # Update en_CA Translation
+            sub_skill_translation = {
+                'src': row["Name"],
+                'value': row["Name"]
+            }
+            models.execute_kw(db, uid, password,'ir.translation','write', [exist_sub_skill_translation[0]["id"], sub_skill_translation])
+
+            if ("Translation" in row):
+                # Get fr_CA Translation ID
+                exist_sub_skill_translation = models.execute_kw(
+                    db, 
+                    uid, 
+                    password,
+                    'ir.translation', 
+                    'search_read',
+                    [['&', '&',('name', '=', 'hr.skill,name'),('res_id', '=', exist_sub_skill[0]["res_id"]),('lang', '=', 'fr_CA')]],{'fields': ['id']}
+                )
+
+                # If fr_CA Translation exists
+                if exist_sub_skill_translation:
+                    # Update Translation
+                    sub_skill_translation = {
+                        'src': row["Name"],
+                        'value': row["Translation"]
+                    }
+                    models.execute_kw(db, uid, password,'ir.translation','write', [exist_sub_skill_translation[0]["id"], sub_skill_translation])
+
+                # If fr_CA Translation doesn't exist
+                else:
+                    # Create Translation
+                    sub_skill_translation = {
+                        'name': 'hr.skill,name',
+                        'res_id': exist_sub_skill[0]["res_id"],
+                        'lang': 'fr_CA',
+                        'type': 'model',
+                        'src': row["Name"],
+                        'value': row["Translation"],
+                        'module': '__import__',
+                        'state': 'translated'
+                    }
+                    sub_skill_translation_id = models.execute(
+                        db,
+                        uid,
+                        password,
+                        'ir.translation',
+                        'create',
+                        sub_skill_translation
+                    )
+
+# Import Skill Type
+
+filename = '/data/odoo-skills-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        if row["ID"] != "":
+            
+            # Check if Skill Type exists
+            exist_skill_type = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+            skill_type = {
+            'name': row["name"]
+            }
+
+            # If Skill Type doesn't exist
+            if not exist_skill_type:
+
+                # Create Skill Type
+                skill_type_id = models.execute(db, uid, password,'hr.skill.type','create', skill_type)
+                print("Skill Type ID")
+                print(skill_type_id)
+
+                # Create Skill Type External ID
+                skill_type_map = {
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'hr.skill.type',
+                'res_id': skill_type_id
+                }
+                skill_type_map_id = models.execute(db, uid, password,'ir.model.data','create', skill_type_map)
+                print("Skill Type Ext ID")
+                print(skill_type_map_id)
+
+                # Create en_CA Translation
+                skill_type_translation = {
+                    'name': 'hr.skill.type,name',
+                    'res_id': skill_type_id,
+                    'lang': 'en_CA',
+                    'type': 'model',
+                    'src': row["name"],
+                    'value': row["name"],
+                    'module': '__import__',
+                    'state': 'translated'
+                }
+                skill_type_translation_id = models.execute(
+                    db,
+                    uid,
+                    password,
+                    'ir.translation',
+                    'create',
+                    skill_type_translation
+                )
+                print("Skill Type Translation ID")
+                print(skill_type_translation_id)
+
+                # if we have a Translation
+                if ("Translation" in row):
+                    # Create Translation
+                    skill_type_translation = {
+                        'name': 'hr.skill.type,name',
+                        'res_id': skill_type_id,
+                        'lang': 'fr_CA',
+                        'type': 'model',
+                        'src': row["name"],
+                        'value': row["Translation"],
+                        'module': '__import__',
+                        'state': 'translated'
+                    }
+                    skill_type_translation_id = models.execute(
+                        db,
+                        uid,
+                        password,
+                        'ir.translation',
+                        'create',
+                        skill_type_translation
+                    )
+                    print("Skill Type Translation ID")
+                    print(skill_type_translation_id)
+
+
+            # If Skill Type exists
+            else:
+                
+                skill_type_id = exist_skill_type[0]["res_id"]
+
+                # Update Skill Type
+                models.execute_kw(
+                    db, 
+                    uid, 
+                    password,
+                    'hr.skill.type',
+                    'write', 
+                    [skill_type_id, skill_type]
+                )
+                print("Skill Type ID")
+                print(skill_type_id)
+            
+                # Get en_CA Translation ID
+                exist_skill_type_translation = models.execute_kw(
+                    db, 
+                    uid, 
+                    password,
+                    'ir.translation', 
+                    'search_read',
+                    [['&', '&',('name', '=', 'hr.skill.type,name'),('res_id', '=', skill_type_id),('lang', '=', 'en_CA')]],{'fields': ['id']}
+                )
+                
+                # Update en_CA Translation
+                skill_type_translation = {
+                    'src': row["name"],
+                    'value': row["name"]
+                }
+                models.execute_kw(db, uid, password,'ir.translation','write', [exist_skill_type_translation[0]["id"], skill_type_translation])
+
+                if ("Translation" in row):
+                    # Get fr_CA Translation ID
+                    exist_skill_type_translation = models.execute_kw(
+                        db, 
+                        uid, 
+                        password,
+                        'ir.translation', 
+                        'search_read',
+                        [['&', '&',('name', '=', 'hr.skill.type,name'),('res_id', '=', skill_type_id),('lang', '=', 'fr_CA')]],{'fields': ['id']}
+                    )
+
+                    # If fr_CA Translation exists
+                    if exist_skill_type_translation:
+                        # Update Translation
+                        skill_type_translation = {
+                            'src': row["name"],
+                            'value': row["Translation"]
+                        }
+                        models.execute_kw(db, uid, password,'ir.translation','write', [exist_skill_type_translation[0]["id"], skill_type_translation])
+
+                    # If fr_CA Translation doesn't exist
+                    else:
+                        # Create Translation
+                        skill_type_translation = {
+                            'name': 'hr.skill.type,name',
+                            'res_id': skill_type_id,
+                            'lang': 'fr_CA',
+                            'type': 'model',
+                            'src': row["name"],
+                            'value': row["Translation"],
+                            'module': '__import__',
+                            'state': 'translated'
+                        }
+                        skill_type_translation_id = models.execute(
+                            db,
+                            uid,
+                            password,
+                            'ir.translation',
+                            'create',
+                            skill_type_translation
+                        )
+
+        if ("skill_ids/id" in row):
+
+            #Get Skill ID
+            exist_skill = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["skill_ids/id"]]]],{'fields': ['res_id']})
+
+            skill = {
+            'skill_type_id': skill_type_id
+            }
+
+            # Update Skill by adding/updating Skill Type
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.skill',
+                'write', 
+                [exist_skill[0]["res_id"], skill]
+            )
+            print("Skill ID")
+            print(exist_skill[0]["res_id"])
+
+
+        if row["skill_level_ids/id"] != "":
+
+            #Get Skill Level ID
+            exist_skill_level = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["skill_level_ids/id"]]]],{'fields': ['res_id']})
+
+            skill_level = {
+            'skill_type_id': skill_type_id
+            }
+
+            # Update Skill by adding/updating Skill Level
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.skill.level',
+                'write', 
+                [exist_skill_level[0]["res_id"], skill_level]
+            )
+            print("Skill Level ID")
+            print(exist_skill_level[0]["res_id"])
+
+# Import Audit Rules
+
+filename = '/data/odoo-logging-rules-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        # Check if Audit Rule exists
+        exist_audit_rule = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        #Get Model ID
+        model_id = models.execute_kw(db, uid, password,'ir.model', 'search_read',[[['model', '=', row["Model"]]]],{'fields': ['id']})
+        print(model_id[0]["id"])
+
+        audit_rule = {
+        'name': row["Name"],
+        'model_id': model_id[0]["id"],
+        'log_type': row["Type"],
+        'log_write': row["Log Writes"],        
+        'log_unlink': row["Log Deletes"],
+        'log_create': row["Log Creates"],
+        'log_read': eval(row["Log Reads"]),
+        'state': row["state"],
+        }
+
+        # If Audit Rule doesn't exist
+        if not exist_audit_rule:
+
+            # Create Audit Rule
+            audit_rule_id = models.execute(db, uid, password,'auditlog.rule','create', audit_rule)
+            print("Audit Rule ID")
+            print(audit_rule_id)
+
+            # Create Audit Rule External ID
+            audit_rule_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'auditlog.rule',
+            'res_id': audit_rule_id
+            }
+            audit_rule_map_id = models.execute(db, uid, password,'ir.model.data','create', audit_rule_map)
+            print("Audit Rule Ext ID")
+            print(audit_rule_map_id)
+
+        # If Audit Rule exists
+        else:
+                    
+            # Update Audit Rule
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'auditlog.rule',
+                'write', 
+                [exist_audit_rule[0]["res_id"], audit_rule]
+            )
+            print("Audit Rule ID")
+            print(exist_audit_rule[0]["res_id"])
+
+# Import Employees
+
+filename = '/data/odoo-employees-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        # Check if Employee exists
+        exist_employee = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        #Get Department ID
+        department_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Department/External ID"]]]],{'fields': ['res_id']})
+        department_id = department_id[0]["res_id"]
+
+        #Get Job Position ID
+        job_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Job Position/External ID"]]]],{'fields': ['res_id']})
+        job_id = job_id[0]["res_id"]
+
+        #Get Work Address ID
+        work_address_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Work Address/External ID"]]]],{'fields': ['res_id']})
+        work_address_id = work_address_id[0]["res_id"]
+
+        #Get Region ID
+        region_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Region/External ID"]]]],{'fields': ['res_id']})
+        region_id = region_id[0]["res_id"]
+
+        #Get User ID
+        user_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', 'user-' + row["ID"]]]],{'fields': ['res_id']})
+        user_id = user_id[0]["res_id"]
+
         employee = {
-        'name': row[1],
-        'work_email': row[2],
-        'work_phone': row[3],
-        'user_id': int(user[0]["res_id"]),
-        'department_id': int(dept[0]["res_id"]),
-        'job_id': int(job[0]["res_id"])
+            'user_id': user_id,
+            'name': row["Employee Name"],
+            'work_email': row["Work Email"],
+            'work_phone': row["Work Phone"],
+            'x_employee_office_floor': row["Office floor"],
+            'x_employee_office_cubicle': row["Office cubicle"],
+            'x_employee_status': row["Employment status"],
+            'x_employee_device_type': row["Device type"],
+            'x_employee_asset_number': row["Asset number"],
+            'x_employee_headset': eval(row["Headset availability"]),
+            'x_employee_second_monitor': eval(row["Second monitor availability"]),
+            'x_employee_mobile_hotspot': eval(row["Mobile hotspot availability"]),
+            'x_employee_remote_access_network': eval(row["Remote access to network"]),
+            'x_employee_remote_access_tool': row["Remote connection tool"],
+            'department_id': department_id,
+            'job_id': job_id,
+            'address_id': work_address_id,
+            'region_id': region_id
         }
-        employee_id = models.execute(db, uid, password,'hr.employee','create', employee)
-        print("Employee ID")
-        print(employee_id)
 
-        # Create Employee External ID
-        employee_map = {
-        'name': row[0],
-        'module': '__import__',
-        'model': 'hr.employee',
-        'res_id': employee_id
-        }
-        employee_map_id = models.execute(db, uid, password,'ir.model.data','create', employee_map)
-        print("Employee Ext ID")
-        print(employee_map_id)
+        # If Employee doesn't exist
+        if not exist_employee:
+
+            # Create Employee
+            employee_id = models.execute(db, uid, password,'hr.employee','create', employee)
+            print("Employee ID")
+            print(employee_id)
+
+            # Create Employee External ID
+            employee_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'hr.employee',
+            'res_id': employee_id
+            }
+            employee_map_id = models.execute(db, uid, password,'ir.model.data','create', employee_map)
+            print("Employee Ext ID")
+            print(employee_map_id)
+
+        # If Employee exists
+        else:
+            
+            employee_id = exist_employee[0]["res_id"]
+
+            # Update Employee
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'hr.employee',
+                'write', 
+                [employee_id, employee]
+            )
+            print("Employee ID")
+            print(employee_id)
+
+        #Get Skill Type ID
+        skill_type_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill Type/External ID"]]]],{'fields': ['res_id']})
+        skill_type_id = skill_type_id[0]["res_id"]
+
+        #Get Skill ID
+        skill_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill/External ID"]]]],{'fields': ['res_id']})
+        skill_id = skill_id[0]["res_id"]
+
+        #Get Skill Level ID
+        skill_level_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill Level/External ID"]]]],{'fields': ['res_id']})
+        skill_level_id = skill_level_id[0]["res_id"]
+
+        # Check if Employee Skill Map exists
+        exist_employee_skill_map = models.execute_kw(db, uid, password,'hr.employee.skill', 'search_read',[['&', '&', '&', ('employee_id', '=', employee_id), ('skill_id', '=', skill_id), ('skill_level_id', '=', skill_level_id), ('skill_type_id', '=', skill_type_id)]],{'fields': ['id']})
+
+        # If Employee Skill Map doesn't exist
+        if not exist_employee_skill_map:
+
+            employee_skill = {
+                'employee_id': employee_id,
+                'skill_id': skill_id,
+                'skill_level_id': skill_level_id,
+                'skill_type_id': skill_type_id
+            }
+
+            # Create Employee Skill Map
+            employee_skill_id = models.execute(db, uid, password,'hr.employee.skill','create', employee_skill)
+            print("Employee Skill ID")
+            print(employee_skill_id)
