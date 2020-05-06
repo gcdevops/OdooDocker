@@ -25,7 +25,6 @@ except Exception as e:
         e
     )
 
-
 # Import Departments
 filename = '/data/odoo-org-csv.csv'
 if os.path.isfile(filename):
@@ -188,57 +187,6 @@ if os.path.isfile(filename):
                         'create',
                         dept_translation
                     )
-
-
-# Import Users
-filename = '/data/odoo-users-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
-    for row in reader:
-
-        user = {
-            "name": row["Name"],
-            'email': row["Email"],
-            'login': row["Login"]
-        }        
-
-        # Check if User exists
-        exist_user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
-
-        # If User doesn't exist
-        if not exist_user:
-
-            # Create User
-            user_id = models.execute(db, uid, password,'res.users','create', user)
-            print("User ID")
-            print(user_id)
-
-            # Create User External ID
-            user_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'res.users',
-            'res_id': user_id
-            }    
-            user_map_id = models.execute(db, uid, password,'ir.model.data','create', user_map)
-            print("User Ext ID")
-            print(user_map_id)
-
-        # If User exists
-        else:
-            
-            # Update User
-            models.execute_kw(
-                db, 
-                uid, 
-                password,
-                'res.users',
-                'write', 
-                [exist_user[0]["res_id"], user]
-            )
-            print("User ID")
-            print(exist_user[0]["res_id"])
-
 
 # Import Job Position
 
@@ -1090,6 +1038,54 @@ if os.path.isfile(filename):
             print("Audit Rule ID")
             print(exist_audit_rule[0]["res_id"])
 
+# Import Users
+filename = '/data/odoo-users-csv.csv'
+if os.path.isfile(filename):
+    reader = csv.DictReader(open(filename,"r"))
+    for row in reader:
+
+        user = {
+            "name": row["Name"],
+            'email': row["Email"],
+            'login': row["Login"]
+        }        
+
+        # Check if User exists
+        exist_user = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
+
+        # If User doesn't exist
+        if not exist_user:
+
+            # Create User
+            user_id = models.execute(db, uid, password,'res.users','create', user)
+            print("User ID")
+            print(user_id)
+
+            # Create User External ID
+            user_map = {
+            'name': row["ID"],
+            'module': '__import__',
+            'model': 'res.users',
+            'res_id': user_id
+            }    
+            user_map_id = models.execute(db, uid, password,'ir.model.data','create', user_map)
+            print("User Ext ID")
+            print(user_map_id)
+
+        # If User exists
+        else:
+            
+            # Update User
+            models.execute_kw(
+                db, 
+                uid, 
+                password,
+                'res.users',
+                'write', 
+                [exist_user[0]["res_id"], user]
+            )
+            print("User ID")
+            print(exist_user[0]["res_id"])
 
 # Import Employees
 
@@ -1098,28 +1094,29 @@ if os.path.isfile(filename):
     reader = csv.DictReader(open(filename,"r"))
     for row in reader:
 
-        # Check if Employee exists
-        exist_employee = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
-
-        #Get Department ID
-        department_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Department/External ID"]]]],{'fields': ['res_id']})
-        department_id = department_id[0]["res_id"]
-
-        #Get Job Position ID
-        job_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Job Position/External ID"]]]],{'fields': ['res_id']})
-        job_id = job_id[0]["res_id"]
-
-        #Get Work Address ID
-        work_address_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Work Address/External ID"]]]],{'fields': ['res_id']})
-        work_address_id = work_address_id[0]["res_id"]
-
-        #Get Region ID
-        region_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Region/External ID"]]]],{'fields': ['res_id']})
-        region_id = region_id[0]["res_id"]
-
         #Get User ID
         user_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', 'user-' + row["ID"]]]],{'fields': ['res_id']})
         user_id = user_id[0]["res_id"]
+
+        #Get Department ID
+        department_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Department/External ID"]]]],{'fields': ['res_id']})
+        if department_id:
+            department_id = department_id[0]["res_id"]
+
+        #Get Job Position ID
+        job_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Job Position/External ID"]]]],{'fields': ['res_id']})
+        if job_id:
+            job_id = job_id[0]["res_id"]
+
+        #Get Work Address ID
+        work_address_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Work Address/External ID"]]]],{'fields': ['res_id']})
+        if work_address_id:
+            work_address_id = work_address_id[0]["res_id"]
+
+        #Get Region ID
+        region_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Region/External ID"]]]],{'fields': ['res_id']})
+        if region_id:
+            region_id = region_id[0]["res_id"]
 
         employee = {
             'user_id': user_id,
@@ -1141,6 +1138,9 @@ if os.path.isfile(filename):
             'address_id': work_address_id,
             'region_id': region_id
         }
+
+        # Check if Employee exists
+        exist_employee = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
         # If Employee doesn't exist
         if not exist_employee:
@@ -1180,30 +1180,31 @@ if os.path.isfile(filename):
 
         #Get Skill Type ID
         skill_type_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill Type/External ID"]]]],{'fields': ['res_id']})
-        skill_type_id = skill_type_id[0]["res_id"]
+        if skill_type_id:
+            skill_type_id = skill_type_id[0]["res_id"]
 
-        #Get Skill ID
-        skill_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill/External ID"]]]],{'fields': ['res_id']})
-        skill_id = skill_id[0]["res_id"]
+            #Get Skill ID
+            skill_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill/External ID"]]]],{'fields': ['res_id']})
+            skill_id = skill_id[0]["res_id"]
 
-        #Get Skill Level ID
-        skill_level_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill Level/External ID"]]]],{'fields': ['res_id']})
-        skill_level_id = skill_level_id[0]["res_id"]
+            #Get Skill Level ID
+            skill_level_id = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["Skills/Skill Level/External ID"]]]],{'fields': ['res_id']})
+            skill_level_id = skill_level_id[0]["res_id"]
 
-        # Check if Employee Skill Map exists
-        exist_employee_skill_map = models.execute_kw(db, uid, password,'hr.employee.skill', 'search_read',[['&', '&', '&', ('employee_id', '=', employee_id), ('skill_id', '=', skill_id), ('skill_level_id', '=', skill_level_id), ('skill_type_id', '=', skill_type_id)]],{'fields': ['id']})
+            # Check if Employee Skill Map exists
+            exist_employee_skill_map = models.execute_kw(db, uid, password,'hr.employee.skill', 'search_read',[['&', '&', '&', ('employee_id', '=', employee_id), ('skill_id', '=', skill_id), ('skill_level_id', '=', skill_level_id), ('skill_type_id', '=', skill_type_id)]],{'fields': ['id']})
 
-        # If Employee Skill Map doesn't exist
-        if not exist_employee_skill_map:
+            # If Employee Skill Map doesn't exist
+            if not exist_employee_skill_map:
 
-            employee_skill = {
-                'employee_id': employee_id,
-                'skill_id': skill_id,
-                'skill_level_id': skill_level_id,
-                'skill_type_id': skill_type_id
-            }
+                employee_skill = {
+                    'employee_id': employee_id,
+                    'skill_id': skill_id,
+                    'skill_level_id': skill_level_id,
+                    'skill_type_id': skill_type_id
+                }
 
-            # Create Employee Skill Map
-            employee_skill_id = models.execute(db, uid, password,'hr.employee.skill','create', employee_skill)
-            print("Employee Skill ID")
-            print(employee_skill_id)
+                # Create Employee Skill Map
+                employee_skill_id = models.execute(db, uid, password,'hr.employee.skill','create', employee_skill)
+                print("Employee Skill ID")
+                print(employee_skill_id)
