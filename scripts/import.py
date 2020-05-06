@@ -25,6 +25,7 @@ except Exception as e:
         e
     )
 
+
 # Import Departments
 filename = '/data/odoo-org-csv.csv'
 if os.path.isfile(filename):
@@ -188,6 +189,7 @@ if os.path.isfile(filename):
                         dept_translation
                     )
 
+
 # Import Users
 filename = '/data/odoo-users-csv.csv'
 if os.path.isfile(filename):
@@ -236,6 +238,7 @@ if os.path.isfile(filename):
             )
             print("User ID")
             print(exist_user[0]["res_id"])
+
 
 # Import Job Position
 
@@ -1022,6 +1025,14 @@ if os.path.isfile(filename):
 
 # Import Audit Rules
 
+def str_to_bool(s):
+    if s == 'TRUE':
+         return True
+    elif s == 'FALSE':
+         return False
+    else:
+         raise ValueError
+
 filename = '/data/odoo-logging-rules-csv.csv'
 if os.path.isfile(filename):
     reader = csv.DictReader(open(filename,"r"))
@@ -1038,10 +1049,10 @@ if os.path.isfile(filename):
         'name': row["Name"],
         'model_id': model_id[0]["id"],
         'log_type': row["Type"],
-        'log_write': row["Log Writes"],        
-        'log_unlink': row["Log Deletes"],
-        'log_create': row["Log Creates"],
-        'log_read': eval(row["Log Reads"]),
+        'log_write': str_to_bool(row["Log Writes"]),
+        'log_unlink': str_to_bool(row["Log Deletes"]),
+        'log_create': str_to_bool(row["Log Creates"]),
+        'log_read': str_to_bool(row["Log Reads"]),
         'state': row["state"],
         }
 
@@ -1078,6 +1089,7 @@ if os.path.isfile(filename):
             )
             print("Audit Rule ID")
             print(exist_audit_rule[0]["res_id"])
+
 
 # Import Employees
 
