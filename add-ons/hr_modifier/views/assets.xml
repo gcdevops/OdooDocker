@@ -4,17 +4,11 @@
         <template id="hr_mod_assets_backend" name="hr_modifier assets" inherit_id="web.assets_backend">
             <xpath expr="//script[last()]" position="after">
                 <script type="text/javascript" src="/hr_modifier/static/src/js/base_view.js" />
-                <script type="text/javascript" src="/hr_modifier/static/src/js/language_toggle.js"></script>
-                <script type="text/javascript" src="/hr_modifier/static/src/js/advanced_search.js"></script>
+                <script type="text/javascript" src="/hr_modifier/static/src/js/language_toggle.js"/>
+                <script type="text/javascript" src="/hr_modifier/static/src/js/advanced_search.js"/>
             </xpath>
             <xpath expr="." position="inside">
                 <link rel="stylesheet" href="/hr_modifier/static/src/css/employee_views.css"/> 
-            </xpath>
-        </template>
-
-        <template id="hr_mod_assets_backend" name="hr_modifier assets" inherit_id="web.assets_backend">
-            <xpath expr="." position="inside">
-                <script type="text/javascript" src="/hr_modifier/static/src/js/base_view.js" />
             </xpath>
         </template>
     </data>

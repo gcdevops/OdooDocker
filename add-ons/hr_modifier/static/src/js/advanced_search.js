@@ -1,3 +1,4 @@
+
 odoo.define('hr_modifier.advanced_search_button', function (require) {
   "use strict";
   var core = require('web.core');
@@ -21,9 +22,9 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
         target: "current",
         view_type: "form",
         view_mode: "form",
-        flags: {"form": {"action_buttons": true, "options": {"mode": "edit"}}}
+        flags: { "form": { "action_buttons": true, "options": { "mode": "edit" } } }
       };
       return this.do_action(action);
     }
   });
-})
+});
