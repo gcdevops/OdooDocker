@@ -19,7 +19,7 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
         name: "Advanced Search",
         res_model: "hr.employee",
         views: [[false, "form"]],
-        target: "current",
+        target: "new",
         view_type: "form",
         view_mode: "form",
         flags: { "form": { "action_buttons": true, "options": { "mode": "edit" } } }
@@ -28,3 +28,10 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
     }
   });
 });
+
+odoo.define("hr_modifier.search_model", function(require) {
+  "use strict";
+
+  var ControlPanelModel = require("web.ControlPanelModel");
+
+})

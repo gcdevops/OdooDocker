@@ -8,4 +8,11 @@
       </button>
     </t>
   </t>
+
+  <t t-name="hr_modifier.advanced_search">
+    <div>
+      <h3>Name</h3>
+      <input type="text" id="as_name"/>
+    </div>
+  </t>
 </template>

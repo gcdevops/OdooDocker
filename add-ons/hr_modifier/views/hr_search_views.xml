@@ -7,6 +7,7 @@
       <field name="model">hr.employee</field>
       <field name="arch" type="xml">
         <form string="Search">
+          <t t-call="hr_modifier.advanced_search"/>
           <sheet>
             <group>
               <field name="name"/>
@@ -34,7 +35,7 @@
       <field name="res_model">hr.employee</field>
       <field name="view_mode">form</field>
       <field name="view_id" ref="view_advanced_search_form"/>
-      <field name="target">current</field>
+      <field name="target">new</field>
     </record>
 
   </data>
