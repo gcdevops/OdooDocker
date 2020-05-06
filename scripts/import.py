@@ -15,6 +15,18 @@ db = os.environ.get("IMPORT_SCRIPT_DATABASE")
 # url defaults to localhost
 url = os.environ.get("IMPORT_SCRIPT_URL") or 'http://localhost:8069'
 
+# Filename Paths
+org_path = '/data/odoo-org-csv.csv'
+jobs_path = '/data/odoo-jobs-csv.csv'
+buildings_path = '/data/odoo-buildings-csv.csv'
+regions_path = '/data/odoo-regions-csv.csv'
+skill_levels_path = '/data/odoo-skill-levels-csv.csv'
+sub_skills_path = '/data/odoo-sub-skills-csv.csv'
+skill_types_path = '/data/odoo-skills-csv.csv'
+logging_rules_path = '/data/odoo-logging-rules-csv.csv'
+users_path = '/data/odoo-users-csv.csv'
+employees_path = '/data/odoo-employees-csv.csv'
+
 try:
     common = xmlrpc.client.ServerProxy(url + '/xmlrpc/2/common')
     common.version()
@@ -25,10 +37,18 @@ except Exception as e:
         e
     )
 
-# Import Departments
-filename = '/data/odoo-org-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+def str_to_bool(s):
+    if s == 'TRUE':
+         return True
+    elif s == 'FALSE':
+         return False
+    else:
+         raise ValueError
+
+# Import Teams
+
+if os.path.isfile(org_path):
+    reader = csv.DictReader(open(org_path,"r"))
     for row in reader:
         dept = {
             "name": row["Department Name"]
@@ -188,18 +208,17 @@ if os.path.isfile(filename):
                         dept_translation
                     )
 
-# Import Job Position
+# Import Job Positions
 
-filename = '/data/odoo-jobs-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(jobs_path):
+    reader = csv.DictReader(open(jobs_path,"r"))
     for row in reader:
 
         # Check if Job exists
         exist_job = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
         job = {
-        'name': row["Job Position"]
+            'name': row["Job Position"]
         }
 
         # If Job doesn't exist
@@ -214,10 +233,10 @@ if os.path.isfile(filename):
 
             # Create Job External ID
             job_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'hr.job',
-            'res_id': job_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'hr.job',
+                'res_id': job_id
             }
             job_map_id = models.execute(db, uid, password,'ir.model.data','create', job_map)
             print("Job Ext ID")
@@ -344,11 +363,10 @@ if os.path.isfile(filename):
                         job_translation
                     )
 
-# Import Building
+# Import Buildings
 
-filename = '/data/odoo-buildings-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(buildings_path):
+    reader = csv.DictReader(open(buildings_path,"r"))
     for row in reader:
 
         # Check if Building exists
@@ -369,14 +387,14 @@ if os.path.isfile(filename):
         print(state_id[0]["res_id"])
 
         building = {
-        'name': row["Name"],
-        'is_company': "true",
-        'street': row["Street"],
-        'city': row["City"],
-        'zip': row["Zip"],
-        'street': row["Street"],
-        'country_id': country_id[0]["res_id"],
-        'state_id': state_id[0]["res_id"]
+            'name': row["Name"],
+            'is_company': "true",
+            'street': row["Street"],
+            'city': row["City"],
+            'zip': row["Zip"],
+            'street': row["Street"],
+            'country_id': country_id[0]["res_id"],
+            'state_id': state_id[0]["res_id"]
         }
 
         # If Building doesn't exist
@@ -389,10 +407,10 @@ if os.path.isfile(filename):
 
             # Create Building External ID
             building_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'res.partner',
-            'res_id': building_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'res.partner',
+                'res_id': building_id
             }
             building_map_id = models.execute(db, uid, password,'ir.model.data','create', building_map)
             print("Building Ext ID")
@@ -413,18 +431,17 @@ if os.path.isfile(filename):
             print("Building ID")
             print(exist_building[0]["res_id"])
 
-# Import Region
+# Import Regions
 
-filename = '/data/odoo-regions-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(regions_path):
+    reader = csv.DictReader(open(regions_path,"r"))
     for row in reader:
 
         # Check if Region exists
         exist_region = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
         region = {
-        'name': row["Name"]
+            'name': row["Name"]
         }
 
         # If Region doesn't exist
@@ -437,10 +454,10 @@ if os.path.isfile(filename):
 
             # Create Region External ID
             region_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'hr.region',
-            'res_id': region_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'hr.region',
+                'res_id': region_id
             }
             region_map_id = models.execute(db, uid, password,'ir.model.data','create', region_map)
             print("Region Ext ID")
@@ -567,19 +584,18 @@ if os.path.isfile(filename):
                         region_translation
                     )
 
-# Import Skill Level
+# Import Skill Levels
 
-filename = '/data/odoo-skill-levels-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(skill_levels_path):
+    reader = csv.DictReader(open(skill_levels_path,"r"))
     for row in reader:
 
         # Check if Skill Level exists
         exist_skill_level = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
         skill_level = {
-        'name': row["Name"],
-        'level_progress': row["level_progress"],
+            'name': row["Name"],
+            'level_progress': row["level_progress"],
         }
 
         # If Skill Level doesn't exist
@@ -592,10 +608,10 @@ if os.path.isfile(filename):
 
             # Create Skill Level External ID
             skill_level_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'hr.skill.level',
-            'res_id': skill_level_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'hr.skill.level',
+                'res_id': skill_level_id
             }
             skill_level_map_id = models.execute(db, uid, password,'ir.model.data','create', skill_level_map)
             print("Skill Level Ext ID")
@@ -616,18 +632,17 @@ if os.path.isfile(filename):
             print("Skill Level ID")
             print(exist_skill_level[0]["res_id"])
 
-# Import Sub-skill
+# Import Sub-skills
 
-filename = '/data/odoo-sub-skills-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(sub_skills_path):
+    reader = csv.DictReader(open(sub_skills_path,"r"))
     for row in reader:
 
         # Check if Sub-skill exists
         exist_sub_skill = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
         sub_skill = {
-        'name': row["Name"]
+            'name': row["Name"]
         }
 
         # If Sub-skill doesn't exist
@@ -640,10 +655,10 @@ if os.path.isfile(filename):
 
             # Create Sub-skill External ID
             sub_skill_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'hr.skill',
-            'res_id': sub_skill_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'hr.skill',
+                'res_id': sub_skill_id
             }
             sub_skill_map_id = models.execute(db, uid, password,'ir.model.data','create', sub_skill_map)
             print("Sub-skill Ext ID")
@@ -770,11 +785,10 @@ if os.path.isfile(filename):
                         sub_skill_translation
                     )
 
-# Import Skill Type
+# Import Skill Types
 
-filename = '/data/odoo-skills-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(skill_types_path):
+    reader = csv.DictReader(open(skill_types_path,"r"))
     for row in reader:
 
         if row["ID"] != "":
@@ -783,7 +797,7 @@ if os.path.isfile(filename):
             exist_skill_type = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["ID"]]]],{'fields': ['res_id']})
 
             skill_type = {
-            'name': row["name"]
+                'name': row["name"]
             }
 
             # If Skill Type doesn't exist
@@ -796,10 +810,10 @@ if os.path.isfile(filename):
 
                 # Create Skill Type External ID
                 skill_type_map = {
-                'name': row["ID"],
-                'module': '__import__',
-                'model': 'hr.skill.type',
-                'res_id': skill_type_id
+                    'name': row["ID"],
+                    'module': '__import__',
+                    'model': 'hr.skill.type',
+                    'res_id': skill_type_id
                 }
                 skill_type_map_id = models.execute(db, uid, password,'ir.model.data','create', skill_type_map)
                 print("Skill Type Ext ID")
@@ -934,7 +948,7 @@ if os.path.isfile(filename):
             exist_skill = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["skill_ids/id"]]]],{'fields': ['res_id']})
 
             skill = {
-            'skill_type_id': skill_type_id
+                'skill_type_id': skill_type_id
             }
 
             # Update Skill by adding/updating Skill Type
@@ -956,7 +970,7 @@ if os.path.isfile(filename):
             exist_skill_level = models.execute_kw(db, uid, password,'ir.model.data', 'search_read',[[['name', '=', row["skill_level_ids/id"]]]],{'fields': ['res_id']})
 
             skill_level = {
-            'skill_type_id': skill_type_id
+                'skill_type_id': skill_type_id
             }
 
             # Update Skill by adding/updating Skill Level
@@ -973,17 +987,8 @@ if os.path.isfile(filename):
 
 # Import Audit Rules
 
-def str_to_bool(s):
-    if s == 'TRUE':
-         return True
-    elif s == 'FALSE':
-         return False
-    else:
-         raise ValueError
-
-filename = '/data/odoo-logging-rules-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(logging_rules_path):
+    reader = csv.DictReader(open(logging_rules_path,"r"))
     for row in reader:
 
         # Check if Audit Rule exists
@@ -994,14 +999,14 @@ if os.path.isfile(filename):
         print(model_id[0]["id"])
 
         audit_rule = {
-        'name': row["Name"],
-        'model_id': model_id[0]["id"],
-        'log_type': row["Type"],
-        'log_write': str_to_bool(row["Log Writes"]),
-        'log_unlink': str_to_bool(row["Log Deletes"]),
-        'log_create': str_to_bool(row["Log Creates"]),
-        'log_read': str_to_bool(row["Log Reads"]),
-        'state': row["state"],
+            'name': row["Name"],
+            'model_id': model_id[0]["id"],
+            'log_type': row["Type"],
+            'log_write': str_to_bool(row["Log Writes"]),
+            'log_unlink': str_to_bool(row["Log Deletes"]),
+            'log_create': str_to_bool(row["Log Creates"]),
+            'log_read': str_to_bool(row["Log Reads"]),
+            'state': row["state"],
         }
 
         # If Audit Rule doesn't exist
@@ -1014,10 +1019,10 @@ if os.path.isfile(filename):
 
             # Create Audit Rule External ID
             audit_rule_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'auditlog.rule',
-            'res_id': audit_rule_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'auditlog.rule',
+                'res_id': audit_rule_id
             }
             audit_rule_map_id = models.execute(db, uid, password,'ir.model.data','create', audit_rule_map)
             print("Audit Rule Ext ID")
@@ -1039,9 +1044,9 @@ if os.path.isfile(filename):
             print(exist_audit_rule[0]["res_id"])
 
 # Import Users
-filename = '/data/odoo-users-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+
+if os.path.isfile(users_path):
+    reader = csv.DictReader(open(users_path,"r"))
     for row in reader:
 
         user = {
@@ -1063,10 +1068,10 @@ if os.path.isfile(filename):
 
             # Create User External ID
             user_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'res.users',
-            'res_id': user_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'res.users',
+                'res_id': user_id
             }    
             user_map_id = models.execute(db, uid, password,'ir.model.data','create', user_map)
             print("User Ext ID")
@@ -1089,9 +1094,8 @@ if os.path.isfile(filename):
 
 # Import Employees
 
-filename = '/data/odoo-employees-csv.csv'
-if os.path.isfile(filename):
-    reader = csv.DictReader(open(filename,"r"))
+if os.path.isfile(employees_path):
+    reader = csv.DictReader(open(employees_path,"r"))
     for row in reader:
 
         #Get User ID
@@ -1152,10 +1156,10 @@ if os.path.isfile(filename):
 
             # Create Employee External ID
             employee_map = {
-            'name': row["ID"],
-            'module': '__import__',
-            'model': 'hr.employee',
-            'res_id': employee_id
+                'name': row["ID"],
+                'module': '__import__',
+                'model': 'hr.employee',
+                'res_id': employee_id
             }
             employee_map_id = models.execute(db, uid, password,'ir.model.data','create', employee_map)
             print("Employee Ext ID")
