@@ -44,7 +44,7 @@
 
     <menuitem
     id="hr.menu_hr_department_tree"
-    name = "Departments"
+    name = "Teams"
     action="hr.open_module_tree_department"
     parent="hr.menu_human_resources_configuration"
     sequence="2"
