@@ -306,7 +306,7 @@
 
     <!-- Top menu item -->
 
-    <menuitem name="Helpdesk" id="menu_root" action="helpdesk_ticket_categ_act0"/>
+    <menuitem name="Helpdesk" id="menu_root" action="helpdesk_ticket_categ_act0" sequence="80"/>
 
 
     <!-- menu categories -->
