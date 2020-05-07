@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!--    <record id="helpdesk_lite.model_helpdesk_lite_ticket" model="ir.model">-->
+<!--&lt;!&ndash;        <field name="website_form_default_field_id" ref="helpdesk_lite.field_helpdesk_lite__description" />&ndash;&gt;-->
+<!--        <field name="website_form_access">True</field>-->
+<!--        <field name="website_form_label">Create a Ticket</field>-->
+<!--    </record>-->
+    <data noupdate="1">
+        <record model="helpdesk_lite.stage" id="stage_new">
+            <field name="name">New</field>
+            <field name="sequence">1</field>
+        </record>
+        <record model="helpdesk_lite.stage" id="stage_inprogress">
+            <field name="name">InProgress</field>
+            <field name="sequence">2</field>
+        </record>
+        <record model="helpdesk_lite.stage" id="stage_solved">
+            <field name="name">Solved</field>
+            <field name="fold" eval="False"/>
+            <field name="sequence">70</field>
+        </record>
+        <record model="helpdesk_lite.stage" id="stage_canceled">
+            <field name="name">Canceled</field>
+            <field name="fold" eval="True"/>
+            <field name="sequence">80</field>
+        </record>
+        <record model="helpdesk_lite.team" id="team_alpha">
+            <field name="name">Alpha Team</field>
+        </record>
+    </data>
+</odoo>

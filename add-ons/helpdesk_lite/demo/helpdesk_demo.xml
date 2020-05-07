@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+
+           <record id="ticket1" model="helpdesk_lite.ticket">
+             <field name="name">Ticket 1</field>
+           </record>
+           <record id="ticket2" model="helpdesk_lite.ticket">
+             <field name="name">Ticket 2</field>
+           </record>
+           <record id="ticket3" model="helpdesk_lite.ticket">
+             <field name="name">Ticket 3</field>
+           </record>
+    </data>
+</odoo>
