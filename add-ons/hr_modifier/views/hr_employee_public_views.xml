@@ -12,7 +12,6 @@
                     <field name="parent_id" string="Manager"/>
                     <field name="company_id" string="Company"/>
                     <separator/>
-                    <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
                     <group expand="0" string="Group By">
                         <filter name="group_manager" string="Manager" domain="[]" context="{'group_by':'parent_id'}"/>
                         <filter name="group_department" string="Department" domain="[]" context="{'group_by':'department_id'}"/>

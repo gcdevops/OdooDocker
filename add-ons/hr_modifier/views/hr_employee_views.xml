@@ -22,7 +22,6 @@
                       domain="[('x_employee_work_criticality', '=', True)]"
                       groups="hr.group_hr_user"
                     />
-                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
                     <group expand="0" string="Group By">
                         <filter name="group_manager" string="Manager" domain="[]" context="{'group_by': 'parent_id'}"/>
                         <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
