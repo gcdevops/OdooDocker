@@ -29,9 +29,22 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
   });
 });
 
-odoo.define("hr_modifier.search_model", function(require) {
-  "use strict";
+var AbstractController = require('web.AbstractController');
+var AbstractModel = require('web.AbstractModel');
+var AbstractRenderer = require('web.AbstractRenderer');
+var AbstractView = require('web.AbstractView');
 
-  var ControlPanelModel = require("web.ControlPanelModel");
+var MapController = AbstractController.extend({});
+var MapRenderer = AbstractRenderer.extend({});
+var MapModel = AbstractModel.extend({});
 
-})
+var MapView = AbstractView.extend({
+    config: {
+        Model: MapModel,
+        Controller: MapController,
+        Renderer: MapRenderer,
+    },
+});
+var viewRegistry = require('web.view_registry');
+
+viewRegistry.add('map', MapView);

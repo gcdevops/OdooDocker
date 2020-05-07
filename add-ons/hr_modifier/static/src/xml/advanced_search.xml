@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<template xml:space="preserve">
+<templates xml:space="preserve">
   <t t-extend="ListView.buttons" >
     <t t-jquery="button.o_list_button_add" t-operation="after">
       <button t-if="widget.modelName == 'hr.employee'" type="button" class="btn btn-secondary btn-md oe_filter_button oe_advanced_search_button" accesskey="f">
@@ -10,9 +10,6 @@
   </t>
 
   <t t-name="hr_modifier.advanced_search">
-    <div>
-      <h3>Name</h3>
-      <input type="text" id="as_name"/>
-    </div>
+    <div style="background-color: red;">This is some simple HTML</div>
   </t>
-</template>
+</templates>

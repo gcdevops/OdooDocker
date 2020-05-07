@@ -10,3 +10,4 @@ from . import hr_skills
 from . import res_users
 from . import res_partner
 from . import hr_job
+from . import hr_advanced_search
