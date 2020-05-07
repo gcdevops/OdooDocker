@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "HelpDesk",
+    'name': "Helpdesk Lite",
     'version': "1.1.1",
     'author': "Golubev",
     'category': "Tools",
