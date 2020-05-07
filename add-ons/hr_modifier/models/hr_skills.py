@@ -15,5 +15,10 @@ class SkillType(models.Model):
 class EmployeeSkill(models.Model):
     _name = 'hr.employee.skill'
     _inherit = 'hr.employee.skill'
+    _order = "skill_type_id"
 
     skill_id = fields.Many2one(string="Profiles")
+    skill_level_id = fields.Many2one(required=False)
+
+    def _check_skill_level(self):
+        return True
