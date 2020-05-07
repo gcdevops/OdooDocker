@@ -27,7 +27,7 @@
                     </div>
                     <group>
                         <group>
-                            <field name="partner_id" widget="many2one"
+                            <field name="partner_id" widget="many2one" domain="[('is_company', '=', False)]"
                                    context="{'default_name': contact_name, 'default_email': email_from}" />
                             <field name="contact_name" attrs="{'invisible': [('partner_id', '!=', False)]}"/>
                             <field name="email_from"/>
