@@ -65,7 +65,6 @@ class HelpdeskTicket(models.Model):
         """
         self.email_from = self.partner_id.email
 
-    @api.multi
     def copy(self, default=None):
         if default is None:
             default = {}
@@ -79,7 +78,6 @@ class HelpdeskTicket(models.Model):
             return False
         return True
 
-    @api.multi
     def message_get_suggested_recipients(self):
         recipients = super(HelpdeskTicket, self).message_get_suggested_recipients()
         try:
@@ -168,7 +166,6 @@ class HelpdeskTicket(models.Model):
         return res
 
 
-    @api.multi
     def write(self, vals):
         # stage change: update date_last_stage_update
         if 'stage_id' in vals:
@@ -191,7 +188,6 @@ class HelpdeskTicket(models.Model):
         stage_ids = stages._search(search_domain, order=order, access_rights_uid=SUPERUSER_ID)
         return stages.browse(stage_ids)
 
-    @api.multi
     def takeit(self):
         self.ensure_one()
         vals = {
@@ -200,7 +196,6 @@ class HelpdeskTicket(models.Model):
         }
         return super(HelpdeskTicket, self).write(vals)
 
-    @api.model_cr
     def _register_hook(self):
         HelpdeskTicket.website_form = bool(self.env['ir.module.module'].
                                            search([('name', '=', 'website_form'), ('state', '=', 'installed')]))

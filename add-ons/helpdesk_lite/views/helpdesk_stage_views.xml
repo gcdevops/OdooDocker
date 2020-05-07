@@ -53,7 +53,7 @@
     <record id="helpdesk_stage_action" model="ir.actions.act_window">
         <field name="name">Stages</field>
         <field name="res_model">helpdesk_lite.stage</field>
-        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
         <field name="view_id" ref="helpdesk_lite.helpdesk_stage_tree"/>
         <field name="help" type="html">
             <p class="oe_view_nocontent_create">

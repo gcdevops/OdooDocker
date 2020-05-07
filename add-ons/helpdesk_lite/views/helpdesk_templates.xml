@@ -108,7 +108,7 @@
                                 <span t-field="ticket.stage_id.name" class="pull-right label label-info"
                                       title="Current stage of this ticket"/>
                                 <a class="btn btn-info"
-                                   t-att-href="'/web#return_label=Website&amp;model=helpdesk_lite.ticket&amp;id=%s&amp;view_type=form' % (ticket.id)"
+                                   t-att-href="'/web#return_label=Website&amp;model=helpdesk_lite.ticket&amp;id=%s&amp;view_mode=form' % (ticket.id)"
                                    groups="helpdesk_lite.group_helpdesk_lite_user">Edit Task
                                 </a>
                             </h4>

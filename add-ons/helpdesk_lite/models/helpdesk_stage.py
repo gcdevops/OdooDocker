@@ -16,6 +16,7 @@ class Stage(models.Model):
     _order = "sequence, name, id"
 
     name = fields.Char('Stage Name', required=True, translate=True)
+    description = fields.Text('Private Note')
     sequence = fields.Integer('Sequence', default=1, help="Used to order stages. Lower is better.")
     requirements = fields.Text('Requirements', help="Enter here the internal requirements for this stage (ex: Offer sent to customer). It will appear as a tooltip over the stage's name.")
     fold = fields.Boolean('Folded in Pipeline',

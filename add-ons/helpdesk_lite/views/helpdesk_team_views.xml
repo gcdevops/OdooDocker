@@ -24,7 +24,7 @@
         <record id="support_team_dashboard_action" model="ir.actions.act_window">
             <field name="name">Dashboard</field>
             <field name="res_model">helpdesk_lite.team</field>
-            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
             <field name="view_mode">kanban,form</field>
             <field name="context">{}</field>
             <field name="view_id" ref="support_team_search"/>
@@ -134,7 +134,7 @@
         <!--<record id="support_team_act" model="ir.actions.act_window">-->
             <!--<field name="name">Support Teams</field>-->
             <!--<field name="res_model">helpdesk_lite.team</field>-->
-            <!--<field name="view_type">form</field>-->
+            <!--<field name="view_mode">form</field>-->
             <!--<field name="view_id" ref="support_team_view_tree"/>-->
             <!--<field name="help" type="html">-->
                 <!--<p class="oe_view_nocontent_create">-->
@@ -160,7 +160,7 @@
         <record id="support_team_config_action" model="ir.actions.act_window">
             <field name="name">Support Teams</field>
             <field name="res_model">helpdesk_lite.team</field>
-            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
             <field name="view_mode">tree,form</field>
             <field name="context">{}</field>
             <field name="view_id" ref="support_team_search"/>
