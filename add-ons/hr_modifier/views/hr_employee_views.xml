@@ -22,10 +22,9 @@
                       domain="[('x_employee_work_criticality', '=', True)]"
                       groups="hr.group_hr_user"
                     />
-                    <filter string="Archived" name="inactive" domain="[('active', '=', False)]"/>
                     <group expand="0" string="Group By">
                         <filter name="group_manager" string="Manager" domain="[]" context="{'group_by': 'parent_id'}"/>
-                        <filter name="group_department" string="Department" domain="[]" context="{'group_by': 'department_id'}"/>
+                        <filter name="group_department" string="Team" domain="[]" context="{'group_by': 'department_id'}"/>
                         <filter name="group_job" string="Job" domain="[]" context="{'group_by': 'job_id'}"/>
                     </group>
                     <searchpanel>
@@ -61,7 +60,7 @@
                             </p>
                             <p style="font-size:1.2em"> 
                                 <field name="department_id_domain" invisible="1"/>
-                                Department: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"  required="True"/>
+                                Team: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"  required="True"/>
                             </p>
                             <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags"  groups="hr.group_hr_manager"/>
                         </div>
@@ -179,12 +178,6 @@
             print_report_name="'Print Badge - %s' % (object.name).replace('/', '')"
             menu="False"
         />
-
-        <template id="hr_modifier_backend_assets" name="HR modifier assets" inherit_id="web.assets_backend">
-            <xpath expr="." position="inside">
-                <script type="text/javascript" src="/hr_modifier/static/src/js/base_view.js" />
-            </xpath>
-        </template>
         
     </data>
 </odoo>

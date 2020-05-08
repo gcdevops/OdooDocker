@@ -8,6 +8,9 @@
     background-color: white !important;
 }
 
+.o_list_button_add {
+    width: 10em;
+}
 .o_language_toggle_menu_item {
     height: 46px;
     align-items: center;
