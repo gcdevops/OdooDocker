@@ -20,7 +20,7 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
         res_model: "hr.employee",
         views: [[false, "form"]],
         target: "new",
-        view_type: "form",
+        //view_type: "form",
         view_mode: "form",
         flags: { "form": { "action_buttons": true, "options": { "mode": "edit" } } }
       };
@@ -34,17 +34,17 @@ var AbstractModel = require('web.AbstractModel');
 var AbstractRenderer = require('web.AbstractRenderer');
 var AbstractView = require('web.AbstractView');
 
-var MapController = AbstractController.extend({});
-var MapRenderer = AbstractRenderer.extend({});
-var MapModel = AbstractModel.extend({});
+var AdvancedSearchController = AbstractController.extend({});
+var AdvancedSearchRenderer = AbstractRenderer.extend({});
+var AdvancedSearchModel = AbstractModel.extend({});
 
-var MapView = AbstractView.extend({
+var AdvancedSearchView = AbstractView.extend({
     config: {
-        Model: MapModel,
-        Controller: MapController,
-        Renderer: MapRenderer,
+        Model: AdvancedSearchModel,
+        Controller: AdvancedSearchController,
+        Renderer: AdvancedSearchRenderer,
     },
 });
 var viewRegistry = require('web.view_registry');
 
-viewRegistry.add('map', MapView);
+viewRegistry.add('advanced_search', AdvancedSearchView);

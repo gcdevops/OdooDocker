@@ -2,13 +2,13 @@
 <odoo>
   <data>
 
-    <record id="customer_map_view" model="ir.ui.view">
-      <field name="name">customer.map.view</field>
-      <field name="model">res.partner</field>
+    <record id="hr_advanced_search" model="ir.ui.view">
+      <field name="name">hr_advanced_search</field>
+      <field name="model">hr.employee</field>
       <field name="arch" type="xml">
-        <map latitude="partner_latitude" longitude="partner_longitude">
+        <advanced_search>
           <field name="name"/>
-        </map>
+        </advanced_search>
       </field>
     </record>
 
@@ -16,7 +16,7 @@
       <field name="name">Advanced search</field>
       <field name="res_model">hr.employee</field>
       <field name="view_mode">form</field>
-      <field name="view_id" ref="hr.view_employee_form"/>
+      <field name="view_id" ref="hr_advanced_search"/>
       <field name="target">new</field>
     </record>
 
