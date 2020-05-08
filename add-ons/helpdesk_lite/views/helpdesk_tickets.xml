@@ -249,7 +249,6 @@
 
     <record id="act_helpdesk_lite_ticket_all" model="ir.actions.act_window">
         <field name="res_model">helpdesk_lite.ticket</field>
-        <field name="view_mode">form</field>
         <field name="name">Tickets</field>
         <field name="view_mode">kanban,tree,form,calendar,graph,pivot</field>
         <field name="context">{
@@ -266,7 +265,6 @@
 
     <record id="action_view_tickets" model="ir.actions.act_window">
         <field name="res_model">helpdesk_lite.ticket</field>
-        <field name="view_mode">form</field>
         <field name="name">Tickets</field>
         <field name="view_mode">kanban,tree,form,calendar,graph</field>
         <field name="help" type="html">
@@ -281,7 +279,6 @@
     <record id="helpdesk_ticket_categ_act0" model="ir.actions.act_window">
         <field name="name">Tickets</field>
         <field name="res_model">helpdesk_lite.ticket</field>
-        <field name="view_mode">form</field>
         <field name="view_mode">kanban,tree,form,pivot,graph</field>
         <field name="view_id" eval="False"/>
         <field name="domain" eval=""/>
