@@ -11,7 +11,7 @@ class Department(models.Model):
     _inherit='hr.department'
     parent_id = fields.Many2one(string='Parent Team')
     name = fields.Char('Team Name', required=True, translate = True)
-    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=True, translate=True)
+    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=False, translate=True)
     x_coordinators_ids = fields.Many2many('hr.employee', 'hr_department_coordinator_rel', 'dept', 'employee', string='Coordinators')
 
     @api.onchange("x_coordinators_ids")
