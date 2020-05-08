@@ -154,15 +154,3 @@ class HrEmployeeBase(models.AbstractModel):
         string = "Remote connection tool"
     )
     address_id = fields.Many2one('res.partner', 'Work Address', domain="['&', '|', ('company_id', '=', False), ('company_id', '=', company_id), ('is_company', '=', True)]")
-
-    # Validation
-
-    
-    
-    # if special characters are found, raise an error
-    @api.constrains("work_email")
-    def _check_work_email_allowed_characters(self):
-        for record in self:
-            if record.work_email:
-                if re.search(r"['\"*?;/\\]", record.work_email):
-                    raise ValidationError("The work email is invalid")
