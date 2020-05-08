@@ -8,7 +8,7 @@
     'summary': 'Cutomize Employee Module for our purposes',
     
     'depends': [
-        'base', 'hr', 'hr_skills', 'web_domain_field', 'mail'
+        'base', 'hr', 'hr_skills', 'web_domain_field', 'mail', 'auditlog'
     ],
     'data': [
         'security/hr_security.xml',
