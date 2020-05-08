@@ -1,0 +1,13 @@
+<template xml:space="preserve">
+        <t t-extend="FilterMenuGenerator">
+            <t t-jquery="button.o_add_custom_filter" t-operation="replace">
+              <button t-if="Object.keys(widget.fields).length !== 0" 
+                      type="button" 
+                      class="dropdown-item o_generator_menu o_add_custom_filter" 
+                      aria-expanded="false">
+                      <i class="fa fa-plus"/>
+                      Add Custom Filter
+              </button>
+            </t>
+        </t>
+</template>
