@@ -7,7 +7,7 @@ class HrRegion(models.Model):
     _name = "hr.region"
     _description = "Employee Region"
 
-    name = fields.Char(string="Region Name", required = True)
+    name = fields.Char(string="Region Name", required = True, translate = True)
     
     employee_ids = fields.One2many(
         "hr.employee",
@@ -18,6 +18,3 @@ class HrRegion(models.Model):
     _sql_constraints = [
         ('region_unique', 'unique (name)', 'Region already exists!')
     ]
-
-
-
