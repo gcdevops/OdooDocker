@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<template xml:space="preserve">
+        <t t-extend="ListView.buttons">
+            <t t-jquery="button.o_list_button_add" t-operation="replace">
+              <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
+                  <i class="fa fa-plus"/>
+                  Add Employee
+              </button>
+            </t>
+        </t>
+</template>

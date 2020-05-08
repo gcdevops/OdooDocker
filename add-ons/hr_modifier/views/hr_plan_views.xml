@@ -16,5 +16,16 @@
             <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.hr_plan_activity_type_view_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr.hr_plan_activity_type_view_form')})]"/>
         </record>
 
+        <record id="hr.hr_plan_view_search" model="ir.ui.view">
+            <field name="name">hr.plan.view.search</field>
+            <field name="model">hr.plan</field>
+            <field name="arch" type="xml">
+                <search string="Plan">
+                    <field name="name"/>
+                    <separator/>
+                </search>
+            </field>
+        </record>
+
     </data>
 </odoo>

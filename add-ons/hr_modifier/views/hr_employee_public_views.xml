@@ -8,14 +8,13 @@
                 <search string="Employees">
                     <field name="name" string="Employees" filter_domain="['|',('work_email','ilike',self),('name','ilike',self)]"/>
                     <field name="job_id"/>
-                    <field name="department_id" string="Department"/>
+                    <field name="department_id" string="Team"/>
                     <field name="parent_id" string="Manager"/>
                     <field name="company_id" string="Company"/>
                     <separator/>
-                    <filter name="archived" string="Archived" domain="[('active', '=', False)]"/>
                     <group expand="0" string="Group By">
                         <filter name="group_manager" string="Manager" domain="[]" context="{'group_by':'parent_id'}"/>
-                        <filter name="group_department" string="Department" domain="[]" context="{'group_by':'department_id'}"/>
+                        <filter name="group_department" string="Team" domain="[]" context="{'group_by':'department_id'}"/>
                         <filter name="group_company" string="Company" domain="[]" context="{'group_by':'company_id'}"/>
                     </group>
                     <searchpanel>
@@ -52,7 +51,7 @@
                                     Job Title: <field name="job_id"/>
                                 </p>
                                 <p style="font-size:1.2em"> 
-                                    Department: <field name="department_id" context="{'hierarchical_naming': False}"/>
+                                    Team: <field name="department_id" context="{'hierarchical_naming': False}"/>
                                 </p>
                             </div>
                             <field name="company_id" string="Company" invisible="1"/>
@@ -118,7 +117,7 @@
 
 
       <record id="hr.hr_employee_public_action" model="ir.actions.act_window">
-          <field name="name">Employees</field>
+          <field name="name">Public Directory</field>
           <field name="res_model">hr.employee.public</field>
           <field name="view_mode">tree,form</field>
           <field name="domain">[]</field>

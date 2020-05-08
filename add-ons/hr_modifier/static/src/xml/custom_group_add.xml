@@ -1,0 +1,13 @@
+<template xml:space="preserve">
+        <t t-extend="GroupByMenuGenerator">
+            <t t-jquery="button.o_add_custom_group" t-operation="replace">
+              <button t-if="widget.presentedFields.length !== 0" 
+                      type="button" 
+                      class="dropdown-item o_generator_menu o_add_custom_group" 
+                      aria-expanded="false">
+                      <i class="fa fa-plus"/>
+                      Add Custom Group
+              </button>
+            </t>
+        </t>
+</template>
