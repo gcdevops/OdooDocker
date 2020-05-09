@@ -11,7 +11,7 @@
             <field name="sequence">1</field>
         </record>
         <record model="helpdesk_lite.stage" id="stage_inprogress">
-            <field name="name">InProgress</field>
+            <field name="name">In Progress</field>
             <field name="sequence">2</field>
         </record>
         <record model="helpdesk_lite.stage" id="stage_solved">
@@ -23,9 +23,6 @@
             <field name="name">Canceled</field>
             <field name="fold" eval="True"/>
             <field name="sequence">80</field>
-        </record>
-        <record model="helpdesk_lite.team" id="team_alpha">
-            <field name="name">Alpha Team</field>
         </record>
     </data>
 </odoo>
