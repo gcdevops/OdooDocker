@@ -65,12 +65,4 @@
         </field>
     </record>
 
-    <menuitem
-            id="menu_helpdesk_stage_act"
-            name="Stages"
-            sequence="20"
-            action="helpdesk_stage_action"
-            parent="menu_config"
-            groups="base.group_no_one"/>
-
 </odoo>
