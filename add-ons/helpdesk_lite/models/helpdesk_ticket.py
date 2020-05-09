@@ -23,8 +23,8 @@ class HelpdeskTicket(models.Model):
         return self.env['helpdesk_lite.stage'].search([], order='sequence', limit=1)
 
     name = fields.Char(string='Ticket', track_visibility='always', required=True)
-    description = fields.Text('Private Note')
-    partner_id = fields.Many2one('res.partner', string='Customer', track_visibility='onchange', index=True)
+    description = fields.Text(string='Description')
+    partner_id = fields.Many2one('res.partner', string='Employee', track_visibility='onchange', index=True, default=lambda self: self.env.user.partner_id)
     commercial_partner_id = fields.Many2one(
         related='partner_id.commercial_partner_id', string='Customer Company', store=True, index=True)
     contact_name = fields.Char('Contact Name')
@@ -36,7 +36,7 @@ class HelpdeskTicket(models.Model):
     date_deadline = fields.Datetime(string='Deadline', track_visibility='onchange')
     date_done = fields.Datetime(string='Done', track_visibility='onchange')
 
-    stage_id = fields.Many2one('helpdesk_lite.stage', string='Stage', index=True, track_visibility='onchange',
+    stage_id = fields.Many2one('helpdesk_lite.stage', string='Status', index=True, track_visibility='onchange',
                                domain="[]",
                                copy=False,
                                group_expand='_read_group_stage_ids',
