@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="helpdesk_ticket_form_view" model="ir.ui.view">
+    <record id="helpdesk_ticket_form_manager_view" model="ir.ui.view">
         <field name="name">helpdesk_lite.ticket.form.view</field>
         <field name="model">helpdesk_lite.ticket</field>
         <field name="arch" type="xml">
             <form>
                 <header>
                     <button string="I Take It" type="object" name="takeit" class="oe_highlight"/>
-                    <!--<button string="Delegate" type="object" name="delegate" readonly="1"/>-->
-                    <field name="stage_id" widget="statusbar" clickable="True"
-                           options="{'fold_field': 'fold'}"/>
+                    <field name="stage_id" widget="statusbar" clickable="True" options="{'fold_field': 'fold'}"/>
                 </header>
                 <sheet string="Ticket">
                     <div class="oe_button_box" name="button_box">
-                        <button name="toggle_active" type="object" groups="helpdesk_lite.group_helpdesk_lite_manager"
-                                class="oe_stat_button" icon="fa-archive">
-                            <field name="active" widget="boolean_button"
-                                   options='{"terminology": "archive"}'/>
+                        <button name="toggle_active" type="object" groups="helpdesk_lite.group_helpdesk_lite_manager" class="oe_stat_button" icon="fa-archive">
+                            <field name="active" widget="boolean_button" options="{&quot;terminology&quot;: &quot;archive&quot;}"/>
                         </button>
                     </div>
-                    <field name="kanban_state" class="oe_inline" widget="kanban_state_selection"/>
                     <div class="oe_title">
                         <h1>
                             <field name="name" placeholder="Ticket Summary..."/>
@@ -27,8 +22,8 @@
                     </div>
                     <group>
                         <group>
-                            <field name="partner_id" widget="many2one" domain="[('is_company', '=', False)]"
-                                   context="{'default_name': contact_name, 'default_email': email_from}" />
+                            <field name="id" string="Ticket #"/>
+                            <field name="partner_id" widget="many2one" domain="[('is_company', '=', False)]" context="{'default_name': contact_name, 'default_email': email_from}"/>
                             <field name="contact_name" attrs="{'invisible': [('partner_id', '!=', False)]}"/>
                             <field name="email_from"/>
                             <field name="user_id"/>
@@ -41,24 +36,38 @@
                             <field name="date_done" readonly="1"/>
                         </group>
                     </group>
-                    <notebook>
-                        <page string="Description">
-                            <field name="description" placeholder="Add an internal note..." groups="base.group_user"/>
-                        </page>
-                        <page string="Extra Info" name="extra_info">
-                            <group>
-                                <group>
-                                    <field name="id" groups="base.group_no_one"/>
-                                    <field name="company_id" groups="base.group_multi_company" options="{'no_create': True}"/>
-                                </group>
-                                <group>
-                                    <field name="legend_blocked" invisible="1"/>
-                                    <field name="legend_done" invisible="1"/>
-                                    <field name="legend_normal" invisible="1"/>
-                                </group>
-                            </group>
-                        </page>
-                    </notebook>
+                    <h4>Description</h4>
+                    <field name="description" placeholder="Description" groups="base.group_user"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+  
+    <record id="helpdesk_ticket_form_user_view" model="ir.ui.view">
+        <field name="name">helpdesk_lite.ticket.form.view</field>
+        <field name="model">helpdesk_lite.ticket</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet string="Ticket">
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" placeholder="Ticket summary..."/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="id" string="Ticket #"/>
+                            <field name="partner_id" widget="many2one" domain="[('is_company', '=', False)]" context="{'default_email': email_from}" invisible="True"/>
+                            <field name="email_from"/>
+                        </group>
+                        <group>
+                            <field name="create_date" string="Date" readonly="1"/>
+                            <field name="user_id" readonly="1"/>
+                            <field name="stage_id" readonly="1" style="pointer-events:none;"/>
+                        </group>
+                    </group>
+                    <h4>Description</h4>
+                    <field name="description" placeholder="Description" groups="base.group_user"/>
                 </sheet>
             </form>
         </field>
@@ -75,8 +84,6 @@
                 <field name="partner_id"/>
                 <field name="priority" string="Priority"/>
                 <field name="create_date" string="Created"/>
-                <field name="date_deadline"/>
-                <field name="date_done"/>
                 <field name="user_id"/>
                 <field name="stage_id" widget="selection" readonly="1"/>
             </tree>
@@ -128,7 +135,7 @@
     -->
 
 
-    <!-- Helpdesk Karban View-->
+    <!-- Helpdesk Kanban View-->
 
     <record id="helpdesk_ticket_kanban_view" model="ir.ui.view">
         <field name="name">helpdesk_lite.ticket.kanban.view</field>
@@ -247,7 +254,7 @@
 
 -->
 
-    <record id="act_helpdesk_lite_ticket_all" model="ir.actions.act_window">
+    <record id="act_helpdesk_lite_ticket_all_act" model="ir.actions.act_window">
         <field name="res_model">helpdesk_lite.ticket</field>
         <field name="name">Tickets</field>
         <field name="view_mode">kanban,tree,form,calendar,graph,pivot</field>
@@ -263,7 +270,7 @@
         </field>
     </record>
 
-    <record id="action_view_tickets" model="ir.actions.act_window">
+    <record id="action_view_tickets_act" model="ir.actions.act_window">
         <field name="res_model">helpdesk_lite.ticket</field>
         <field name="name">Tickets</field>
         <field name="view_mode">kanban,tree,form,calendar,graph</field>
@@ -276,19 +283,18 @@
         </field>
     </record>
 
-    <record id="helpdesk_ticket_categ_act0" model="ir.actions.act_window">
+    <record id="helpdesk_ticket_manager_list_act" model="ir.actions.act_window">
         <field name="name">Tickets</field>
         <field name="res_model">helpdesk_lite.ticket</field>
         <field name="view_mode">kanban,tree,form,pivot,graph</field>
         <field name="view_id" eval="False"/>
         <field name="domain" eval=""/>
-        <field name="context">{'search_default_my_tickets': 1}</field>
         <field name="search_view_id" ref="view_helpdesk_ticket_filter"/>
         <field name="view_ids"
                eval="[(5, 0, 0),
                           (0, 0, {'view_mode': 'kanban', 'view_id': ref('helpdesk_ticket_kanban_view')}),
                           (0, 0, {'view_mode': 'tree', 'view_id': ref('helpdesk_ticket_tree_view')}),
-                          (0, 0, {'view_mode': 'form', 'view_id': ref('helpdesk_ticket_form_view')}),
+                          (0, 0, {'view_mode': 'form', 'view_id': ref('helpdesk_ticket_form_manager_view')}),
                           (0, 0, {'view_mode': 'graph', 'view_id': ref('helpdesk_ticket_graph_view')}),
                           ]"/>
         <!--(0, 0, {'view_mode': 'calendar', 'view_id': ref('helpdesk_ticket_calendar_view')}),-->
@@ -301,18 +307,54 @@
         </field>
     </record>
 
-    <!-- Top menu item -->
+    <record id="helpdesk_ticket_user_list_act" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">helpdesk_lite.ticket</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" eval="False"/>
+        <field name="domain" eval=""/>
+        <field name="view_ids"
+               eval="[(5, 0, 0),
+                          (0, 0, {'view_mode': 'tree', 'view_id': ref('helpdesk_ticket_tree_view')}),
+                        (0, 0, {'view_mode': 'form', 'view_id': ref('helpdesk_ticket_form_user_view')}),
+                          ]"/>
+        <field name="help" type="html">
+            <p>
+                The Odoo ticket tracker allows you to efficiently manage things
+                like internal requests, software development bugs, customer
+                complaints, project troubles, material breakdowns, etc.
+            </p>
+        </field>
+    </record>
 
-    <menuitem name="Helpdesk" id="menu_root" action="helpdesk_ticket_categ_act0" sequence="80"/>
+    <record id="helpdesk_ticket_user_submit_act" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">helpdesk_lite.ticket</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="helpdesk_lite.helpdesk_ticket_form_user_view"/>
+        <field name="domain" eval=""/>
+        <field name="help" type="html">
+            <p>
+                The Odoo ticket tracker allows you to efficiently manage things
+                like internal requests, software development bugs, customer
+                complaints, project troubles, material breakdowns, etc.
+            </p>
+        </field>
+    </record>
 
-
-    <!-- menu categories -->
-
-<!--    <menuitem name="Dashboard" id="menu_dash" parent="menu_root" sequence="0"/>-->
-<!--    <menuitem name="Search" id="menu_tickets" parent="menu_root" sequence="10"/>-->
-    <menuitem name="Tickets" id="menu_tickets_act" parent="menu_root"  sequence="10" action="helpdesk_ticket_categ_act0"/>
-    <menuitem name="Configuration" id="menu_config" parent="menu_root" sequence="20" groups="base.group_system"/>
-
-    <!-- actions -->
+    <record id="helpdesk_ticket_manager_submit_act" model="ir.actions.act_window">
+        <field name="name">Tickets</field>
+        <field name="res_model">helpdesk_lite.ticket</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="helpdesk_lite.helpdesk_ticket_form_manager_view"/>
+        <field name="domain" eval=""/>
+        <field name="help" type="html">
+            <p>
+                The Odoo ticket tracker allows you to efficiently manage things
+                like internal requests, software development bugs, customer
+                complaints, project troubles, material breakdowns, etc.
+            </p>
+        </field>
+    </record>
 
 </odoo>
