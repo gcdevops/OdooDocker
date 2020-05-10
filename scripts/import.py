@@ -16,16 +16,16 @@ db = os.environ.get("IMPORT_SCRIPT_DATABASE")
 url = os.environ.get("IMPORT_SCRIPT_URL") or 'http://localhost:8069'
 
 # Filename Paths
-org_path = '/data/odoo-org-csv.csv'
-jobs_path = '/data/odoo-jobs-csv.csv'
-buildings_path = '/data/odoo-buildings-csv.csv'
-regions_path = '/data/odoo-regions-csv.csv'
-skill_levels_path = '/data/odoo-skill-levels-csv.csv'
-sub_skills_path = '/data/odoo-sub-skills-csv.csv'
-skill_types_path = '/data/odoo-skills-csv.csv'
-logging_rules_path = '/data/odoo-logging-rules-csv.csv'
-users_path = '/data/odoo-users-csv.csv'
-employees_path = '/data/odoo-employees-csv.csv'
+org_path = './data/odoo-org-csv.csv'
+jobs_path = './data/odoo-jobs-csv.csv'
+buildings_path = './data/odoo-buildings-csv.csv'
+regions_path = './data/odoo-regions-csv.csv'
+skill_levels_path = './data/odoo-skill-levels-csv.csv'
+sub_skills_path = './data/odoo-sub-skills-csv.csv'
+skill_types_path = './data/odoo-skills-csv.csv'
+logging_rules_path = './data/odoo-logging-rules-csv.csv'
+users_path = './data/odoo-users-csv.csv'
+employees_path = './data/odoo-employees-csv.csv'
 
 try:
     common = xmlrpc.client.ServerProxy(url + '/xmlrpc/2/common')
