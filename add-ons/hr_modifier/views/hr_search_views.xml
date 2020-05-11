@@ -1,24 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <data>
+    <data>
 
-    <record id="hr_advanced_search" model="ir.ui.view">
-      <field name="name">hr_advanced_search</field>
-      <field name="model">hr.employee</field>
-      <field name="arch" type="xml">
-        <advanced_search>
-          <field name="name"/>
-        </advanced_search>
-      </field>
-    </record>
+        <record id="hr_advanced_search" model="ir.ui.view">
+            <field name="name">hr_advanced_search</field>
+            <field name="model">hr.employee</field>
+            <field name="arch" type="xml">
+                <advanced_search>
+                    <field name="active" invisible="1"/>
+                    <field name="user_partner_id" invisible="1"/>
+                    <field name="hr_presence_state" invisible="1"/>
+                    <sheet>
+                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
+                        <div>
+                            <h2>Employee Information</h2>
+                            <p style="font-size:1.2em">
+                                Name: <field name="name" placeholder="Employee's Name"/>
+                            </p>
+                            <p style="font-size:1.2em">
+                                Email: <field name="work_email" widget="email"/>
+                            </p>
+                            <p style="font-size:1.2em">
+                                Job Title: <field name="job_id"/>
+                            </p>
+                            <p style="font-size:1.2em">
+                                Team: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"/>
+                            </p>
+                            <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags" groups="hr.group_hr_manager"/>
+                        </div>
 
-    <record id="action_hr_advanced_search" model="ir.actions.act_window">
-      <field name="name">Advanced search</field>
-      <field name="res_model">hr.employee</field>
-      <field name="view_mode">form</field>
-      <field name="view_id" ref="hr_advanced_search"/>
-      <field name="target">new</field>
-    </record>
+                        <h2>Management Information"></h2>
+                        <group>
+                            <field name="x_employee_job_code"/>
+                            <field name="x_employee_work_criticality"/>
+                        </group>
+                        <field name="employee_skill_ids"/>
+                        <h2 >Work Information"</h2>
+                        <div id="o_work_employee_container">                            <!-- These two div are used to position org_chart -->
+                            <div id="o_work_employee_main">
+                                <group>
+                                    <group string = "Information">
+                                        <field name="parent_id" domain="parent_id_domain"/>
+                                        <field name="x_employee_language"/>
+                                        <field name="x_employee_job_type"/>
+                                        <field name="x_employee_status"/>
+                                        <field name="classification_id"/>
+                                        <field name="region_id" options="{'no_create_edit': True}"/>
+                                    </group>
+                                    <group string="Work Address">
+                                        <field name="address_id" context="{'show_address': 1, 'default_is_company': True}" options="{&quot;always_reload&quot;: True, &quot;highlight_first_line&quot;: True}"/>
+                                        <field name="x_employee_is_remote" />
+                                        <field name="x_employee_office_floor"/>
+                                        <field name="x_employee_office_cubicle"/>
+                                        <field name="work_phone" widget="phone"/>
+                                        <field name="mobile_phone" widget="phone"/>
+                                    </group>
+                                    <field name="company_id" groups="base.group_multi_company"/>
+                                </group>
 
-  </data>
+                            </div>
+                        </div>
+                        <h2 groups="hr.group_hr_manager">Access Information</h2>
+                        <group>
+                            <field name="x_employee_access_gov_office"/>
+                            <field name="x_employee_device_type"/>
+                            <field name="x_employee_asset_number"/>
+                            <field name="x_employee_second_monitor"/>
+                            <field name="x_employee_remote_access_network"/>
+                            <field name="x_employee_remote_access_tool"/>
+                            <field name="x_employee_mobile_hotspot"/>
+                            <field name="x_employee_headset"/>
+                        </group>
+                        <h2 groups="hr.group_hr_manager">HR Settings</h2>
+                        <group>
+                            <group string='Status' name="active_group">
+                                <field name="user_id" string="Related User"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </advanced_search>
+            </field>
+        </record>
+
+        <record id="action_hr_advanced_search" model="ir.actions.act_window">
+            <field name="name">Advanced search</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="hr_advanced_search"/>
+            <field name="target">new</field>
+        </record>
+
+    </data>
 </odoo>

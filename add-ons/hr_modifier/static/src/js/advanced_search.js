@@ -29,22 +29,27 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
   });
 });
 
-var AbstractController = require('web.AbstractController');
-var AbstractModel = require('web.AbstractModel');
-var AbstractRenderer = require('web.AbstractRenderer');
-var AbstractView = require('web.AbstractView');
+odoo.define('hr.advanced_search', function(require){
+  "use strict";
+  
+  var AbstractController = require('web.AbstractController');
+  var AbstractModel = require('web.AbstractModel');
+  var AbstractRenderer = require('web.AbstractRenderer');
+  var AbstractView = require('web.AbstractView');
+  
+  var AdvancedSearchController = AbstractController.extend({});
+  var AdvancedSearchRenderer = AbstractRenderer.extend({});
+  var AdvancedSearchModel = AbstractModel.extend({});
+  
+  var AdvancedSearchView = AbstractView.extend({
+      config: {
+          Model: AdvancedSearchModel,
+          Controller: AdvancedSearchController,
+          Renderer: AdvancedSearchRenderer,
+      },
+  });
+  var viewRegistry = require('web.view_registry');
+  
+  viewRegistry.add('advanced_search', AdvancedSearchView);
+})
 
-var AdvancedSearchController = AbstractController.extend({});
-var AdvancedSearchRenderer = AbstractRenderer.extend({});
-var AdvancedSearchModel = AbstractModel.extend({});
-
-var AdvancedSearchView = AbstractView.extend({
-    config: {
-        Model: AdvancedSearchModel,
-        Controller: AdvancedSearchController,
-        Renderer: AdvancedSearchRenderer,
-    },
-});
-var viewRegistry = require('web.view_registry');
-
-viewRegistry.add('advanced_search', AdvancedSearchView);
