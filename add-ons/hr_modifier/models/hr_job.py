@@ -7,7 +7,8 @@ class HrJob(models.Model):
     _name = "hr.job"
     _inherit = "hr.job"
 
-    #  Validation
+    no_of_employee = fields.Integer(compute='_compute_employees', string="Current Number of Employees", store=False,
+        help='Number of employees currently occupying this job position.')
 
     # allow upper case, lower case, hyphens, digits, spaces
     @api.constrains("name")

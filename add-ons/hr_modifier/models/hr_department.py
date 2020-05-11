@@ -9,8 +9,9 @@ import re
 class Department(models.Model):
     _name='hr.department'
     _inherit='hr.department'
-    name = fields.Char('Department Name', required=True, translate = True)
-    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=True, translate=True)
+    parent_id = fields.Many2one(string='Parent Team')
+    name = fields.Char('Team Name', required=True, translate = True)
+    complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=False, translate=True)
     x_coordinators_ids = fields.Many2many('hr.employee', 'hr_department_coordinator_rel', 'dept', 'employee', string='Coordinators')
 
     @api.onchange("x_coordinators_ids")
@@ -26,4 +27,4 @@ class Department(models.Model):
             if record.name:
                 res = re.search(r"[^\w\d\s\-.,'&/()@]", record.name)
                 if res:
-                    raise ValidationError("The department name contains an invalid character: " + res.group(0))
+                    raise ValidationError("The team name contains an invalid character: " + res.group(0))

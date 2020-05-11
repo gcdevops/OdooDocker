@@ -2,7 +2,7 @@
 <odoo>
     <data>
       <record id="hr.open_module_tree_department" model="ir.actions.act_window">
-          <field name="name">Departments</field>
+          <field name="name">Teams</field>
           <field name="res_model">hr.department</field>
           <field name="view_mode">tree,form</field>
           <field name="context">{'hierarchical_naming': False}</field>
@@ -10,10 +10,10 @@
           <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.view_department_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr.view_department_form')})]"/>
           <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-              Create a new department
+              Create a new team
             </p><p>
-              Odoo's department structure is used to manage all documents
-              related to employees by departments: expenses, timesheets,
+              Odoo's team structure is used to manage all documents
+              related to employees by teams: expenses, timesheets,
               leaves, recruitments, etc.
             </p>
           </field>
@@ -43,6 +43,18 @@
             </field>
         </record>
 
+        <record id="hr.view_department_filter" model="ir.ui.view">
+            <field name="name">hr.department.search</field>
+            <field name="model">hr.department</field>
+            <field name="arch" type="xml">
+                <search string="Departments">
+                    <field name="name" string="Department"/>
+                    <field name="manager_id" />
+                    <separator/>
+                </search>
+             </field>
+        </record>
+
         <record id="hr_modifier.view_department_form_coordinator" model="ir.ui.view">
             <field name="name">hr.department.form.coordinator</field>
             <field name="model">hr.department</field>
@@ -68,7 +80,7 @@
         </record>
 
       <record id="open_module_tree_department_coordinator" model="ir.actions.act_window">
-          <field name="name">Departments</field>
+          <field name="name">Teams</field>
           <field name="res_model">hr.department</field>
           <field name="view_mode">tree,form</field>
           <field name="context">{'hierarchical_naming': False}</field>
@@ -76,10 +88,10 @@
           <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.view_department_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr_modifier.view_department_form_coordinator')})]"/>
           <field name="help" type="html">
             <p class="o_view_nocontent_smiling_face">
-              Create a new department
+              Create a new team
             </p><p>
-              Odoo's department structure is used to manage all documents
-              related to employees by departments: expenses, timesheets,
+              Odoo's team structure is used to manage all documents
+              related to employees by teams: expenses, timesheets,
               leaves, recruitments, etc.
             </p>
           </field>
