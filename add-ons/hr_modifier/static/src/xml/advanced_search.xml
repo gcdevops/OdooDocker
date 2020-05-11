@@ -6,6 +6,7 @@
       <button t-if="widget.modelName == 'hr.employee'" type="button" class="btn btn-secondary btn-md oe_filter_button oe_advanced_search_button" accesskey="f">
         Advanced search
       </button>
+      <button name="action_open_advanced_search" type="object" class="btn btn-secondary btn-md oe_filter_button oe_advanced_search_button">Advanced search v2</button>
     </t>
   </t>
 

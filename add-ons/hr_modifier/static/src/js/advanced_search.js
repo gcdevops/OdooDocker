@@ -18,11 +18,11 @@ odoo.define('hr_modifier.advanced_search_button', function (require) {
         type: "ir.actions.act_window",
         name: "Advanced Search",
         res_model: "hr.employee",
-        views: [[false, "form"]],
+        views: [[false, "advanced_search"]],
         target: "new",
-        //view_type: "form",
-        view_mode: "form",
-        flags: { "form": { "action_buttons": true, "options": { "mode": "edit" } } }
+        //view_type: "advanced_search",
+        //view_mode: "advanced_search",
+        flags: { "advanced_search": { "action_buttons": true, "options": { "mode": "edit" } } }
       };
       return this.do_action(action);
     }

@@ -65,4 +65,17 @@ class HrEmployeePrivate(models.Model):
                 raise ValidationError("Employee PRI must be a number")
     
     
+    def action_open_advanced_search(self):       
+        view_id = self.env.ref('hr_advanced_search').id
+        context = self._context.copy()
+        return {
+            'name':('Advanced Search'),
+            'view_type':'form',
+            'view_mode':'form',
+            'res_model':'hr.employee',
+            'view_id':False, # hr_advanced_search
+            'type':'ir.actions.act_window',
+            'target':'current',
+            'context':context,
+        }
     

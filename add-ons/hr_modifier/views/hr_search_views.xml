@@ -7,11 +7,7 @@
             <field name="model">hr.employee</field>
             <field name="arch" type="xml">
                 <advanced_search>
-                    <field name="active" invisible="1"/>
-                    <field name="user_partner_id" invisible="1"/>
-                    <field name="hr_presence_state" invisible="1"/>
                     <sheet>
-                        <widget name="web_ribbon" title="Archived" bg_color="bg-danger" attrs="{'invisible': [('active', '=', True)]}"/>
                         <div>
                             <h2>Employee Information</h2>
                             <p style="font-size:1.2em">
@@ -24,7 +20,7 @@
                                 Job Title: <field name="job_id"/>
                             </p>
                             <p style="font-size:1.2em">
-                                Team: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"/>
+                                Team: <field name="department_id" context="{'hierarchical_naming': False}"/>
                             </p>
                             <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags" groups="hr.group_hr_manager"/>
                         </div>
@@ -40,7 +36,7 @@
                             <div id="o_work_employee_main">
                                 <group>
                                     <group string = "Information">
-                                        <field name="parent_id" domain="parent_id_domain"/>
+                                        <field name="parent_id"/>
                                         <field name="x_employee_language"/>
                                         <field name="x_employee_job_type"/>
                                         <field name="x_employee_status"/>
