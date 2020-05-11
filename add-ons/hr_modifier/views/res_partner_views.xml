@@ -78,6 +78,7 @@
                             <field name="user_ids" invisible="1"/>
                             <field name="email" widget="email" context="{'gravatar_image': True}" attrs="{'required': [('user_ids','!=', [])]}"/>
                             <field name="website" widget="url" placeholder="e.g. https://www.odoo.com"/>
+                            <field name="company_id" options="{'no_create': True}"/>
                             <field name="title" options='{"no_open": True}' placeholder="e.g. Mister"
                                 attrs="{'invisible': [('is_company', '=', True)]}"/>
                             <field name="active_lang_count" invisible="1"/>
@@ -96,6 +97,7 @@
                             <field name="category_id" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags..."/>
                         </group>
                     </group>
+                    <notebook colspan="4"/>
                 </sheet>
                 </form>
             </field>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <function model="ir.default" name="set"
+            eval="('website.support.settings', 'change_user_email_template_id', ref('website_support.support_ticket_user_change') )"/>
+    
+        <function model="ir.default" name="set"
+            eval="('website.support.settings', 'close_ticket_email_template_id', ref('website_support.support_ticket_closed') )"/>
+
+        <function model="ir.default" name="set"
+            eval="('website.support.settings', 'staff_reply_email_template_id', ref('website_support.support_ticket_reply_wrapper') )"/>
+
+        <function model="ir.default" name="set"
+            eval="('website.support.settings', 'max_ticket_attachments', 2 )"/>
+
+        <function model="ir.default" name="set"
+            eval="('website.support.settings', 'max_ticket_attachment_filesize', 500 )"/>
+
+    </data>     
+</odoo>
