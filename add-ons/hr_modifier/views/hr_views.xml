@@ -89,20 +89,12 @@
     groups="hr.group_hr_manager"/>
 
     <menuitem
-    id="hr_skill_level_menu"
-    name="- Levels"
-    action="hr_sub_skill_levels_action"
-    parent="hr.menu_human_resources_configuration"
-    sequence="7"
-    groups="hr.group_hr_manager"/>
-
-    <menuitem
     id = "hr.menu_human_resources_configuration_regions"
     name = "Regions"
     parent="hr.menu_human_resources_configuration"
     groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
     action="action_hr_regions"
-    sequence="8"/>
+    sequence="7"/>
 
     <menuitem
     id="hr.menu_view_employee_category_form"
@@ -110,13 +102,13 @@
     action="hr.open_view_categ_form"
     parent="hr.menu_human_resources_configuration"
     groups="hr.group_hr_manager"
-    sequence="9"/>
+    sequence="8"/>
 
     <menuitem
     id="hr_skills.menu_human_resources_configuration_resume"
     name="Resumé"
     parent="hr.menu_human_resources_configuration"
-    sequence="10"
+    sequence="9"
     groups="base.group_no_one"/>
 
     <menuitem
@@ -124,14 +116,37 @@
     name="Types"
     action="hr_skills.hr_resume_type_action"
     parent="hr_skills.menu_human_resources_configuration_resume"
-    sequence="11"
+    sequence="10"
     groups="base.group_no_one"/>
+
+    <menuitem
+    id="hr.menu_human_resources_configuration_support"
+    name="Support"
+    parent="hr.menu_human_resources_configuration"
+    sequence="110"
+    groups="helpdesk_lite.group_helpdesk_lite_manager"/>
+
+    <menuitem
+    id="hr.menu_helpdesk_stage_act"
+    name="Stages"
+    sequence="111"
+    action="helpdesk_lite.helpdesk_stage_action"
+    parent="hr.menu_human_resources_configuration_support"
+    groups="helpdesk_lite.group_helpdesk_lite_manager"/>
+
+    <menuitem
+    id="hr.support_team_config"
+    name="Support teams"
+    sequence="112"
+    action="helpdesk_lite.support_team_config_action"
+    parent="hr.menu_human_resources_configuration_support"
+    groups="helpdesk_lite.group_helpdesk_lite_manager"/>
 
     <menuitem
     id="hr.menu_human_resources_support"
     name="Support"
     parent="hr.menu_hr_root"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    groups="helpdesk_lite.group_helpdesk_lite_user,helpdesk_lite.group_helpdesk_lite_manager"
     sequence="110"/>
 
     <menuitem
@@ -165,22 +180,6 @@
     groups="helpdesk_lite.group_helpdesk_lite_manager"
     action="helpdesk_lite.helpdesk_ticket_manager_submit_act"
     sequence="2"/>
-
-    <menuitem
-    id="menu_helpdesk_stage_act"
-    name="Stages"
-    sequence="3"
-    action="helpdesk_lite.helpdesk_stage_action"
-    parent="hr.menu_human_resources_support"
-    groups="helpdesk_lite.group_helpdesk_lite_manager"/>
-
-    <menuitem
-    id="support_team_config"
-    name="Support teams"
-    sequence="4"
-    action="helpdesk_lite.support_team_config_action"
-    parent="hr.menu_human_resources_support"
-    groups="helpdesk_lite.group_helpdesk_lite_manager"/>
 
 </data>
 </odoo>
