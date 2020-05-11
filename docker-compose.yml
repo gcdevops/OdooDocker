@@ -15,6 +15,7 @@ services:
         volumes:
             - ./add-ons:/mnt/extra-addons
             - ./odoo-dev.conf:/etc/odoo/odoo.conf
+            - ./scripts:/scripts
 
     db:
         image: postgres:11
