@@ -5,7 +5,7 @@
             <t t-jquery="button.o_list_button_add" t-operation="replace">
               <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
                   <i class="fa fa-plus"/>
-                  Add Employee
+                  Create
               </button>
             </t>
         </t>
