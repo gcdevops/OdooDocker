@@ -139,6 +139,11 @@ class HrEmployeeBase(models.AbstractModel):
         ondelete = "set null"
     )
 
+    branch_id = fields.Many2one(
+        "hr.branch",
+        ondelete = "set null"
+    )
+
     x_employee_remote_access_network = fields.Boolean(
         "Remote access to network",
         groups = "hr.group_hr_user"
