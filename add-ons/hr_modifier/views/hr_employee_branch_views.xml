@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <record id="view_branch_form" model="ir.ui.view">
+      <field name="name">hr.branch.form</field>
+      <field name="model">hr.branch</field>
+      <field name="arch" type="xml">
+        <form string="Branch">
+          <sheet>
+          <h1>BRM Branch</h1>
+            <group>
+              <field name="name" placeholder="e.g. "/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <record id ="view_branch_tree" model="ir.ui.view">
+      <field name="name">hr.branch.tree</field>
+      <field name="model">hr.branch</field>
+      <field name="arch" type="xml">
+        <tree string="BRM Branches">
+          <field name="name"/>
+        </tree>
+      </field>
+    </record>
+
+    <record id="view_branch_filter" model = "ir.ui.view">
+      <field name="name">hr.branch.search</field>
+      <field name="model">hr.branch</field>
+      <field name="arch" type="xml">
+        <search string="BRM Branches">
+          <field name="name" string="Name"/>
+          <group expand="0" string="Group By">
+            <filter 
+              string="Name" name="name"
+              domain="[]" 
+              context="{'group_by': 'name'}" />
+          </group>
+        </search>
+      </field>
+    </record>
+
+    <record id="action_hr_branches" model = "ir.actions.act_window">
+      <field name="name">BRM Branches</field>
+      <field name="res_model">hr.branch</field>
+      <field name="view_mode">tree,form</field>
+      <field name="search_view_id" ref="view_branch_filter"/>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+          Add a branch!
+        </p>
+        <p>
+          Let's create a branch.
+        </p>
+      </field>
+    </record>
+  </data>
+</odoo>
