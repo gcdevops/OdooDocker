@@ -53,6 +53,9 @@
                                 <p style="font-size:1.2em"> 
                                     Team: <field name="department_id" context="{'hierarchical_naming': False}"/>
                                 </p>
+                                <p style="font-size:1.2em"> 
+                                BRM Branch: <field name="branch_id" required="True"/>
+                                </p>
                             </div>
                             <field name="company_id" string="Company" invisible="1"/>
                         <notebook>
