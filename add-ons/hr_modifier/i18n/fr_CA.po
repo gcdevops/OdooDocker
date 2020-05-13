@@ -1105,28 +1105,28 @@ msgstr "Genre"
 #: code:addons/hr_modifier/static/src/xml/button_add.xml:0
 #, python-format
 msgid "Add Employee"
-msgstr ""
+msgstr "Ajouter un employé"
 
 #. module: hr_modifier
 #. openerp-web
 #: code:addons/hr_modifier/static/src/xml/button_add.xml:0
 #, python-format
 msgid "Add Job Position"
-msgstr ""
+msgstr "Ajouter un poste"
 
 #. module: hr_modifier
 #. openerp-web
 #: code:addons/hr_modifier/static/src/xml/button_add.xml:0
 #, python-format
 msgid "Add Location"
-msgstr ""
+msgstr "Ajouter un emplacement"
 
 #. module: hr_modifier
 #. openerp-web
 #: code:addons/hr_modifier/static/src/xml/button_add.xml:0
 #, python-format
 msgid "Add Team"
-msgstr ""
+msgstr "Ajouter une équipe"
 
 #. modules: hr, hr_modifier
 #: model_terms:ir.ui.view,arch_db:hr.hr_employee_public_view_search
