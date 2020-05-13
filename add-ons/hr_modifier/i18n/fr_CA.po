@@ -1100,6 +1100,34 @@ msgstr "Français"
 msgid "Gender"
 msgstr "Genre"
 
+#. module: hr_modifier
+#. openerp-web
+#: code:addons/hr_modifier/static/src/xml/button_add.xml:0
+#, python-format
+msgid "Add Employee"
+msgstr ""
+
+#. module: hr_modifier
+#. openerp-web
+#: code:addons/hr_modifier/static/src/xml/button_add.xml:0
+#, python-format
+msgid "Add Job Position"
+msgstr ""
+
+#. module: hr_modifier
+#. openerp-web
+#: code:addons/hr_modifier/static/src/xml/button_add.xml:0
+#, python-format
+msgid "Add Location"
+msgstr ""
+
+#. module: hr_modifier
+#. openerp-web
+#: code:addons/hr_modifier/static/src/xml/button_add.xml:0
+#, python-format
+msgid "Add Team"
+msgstr ""
+
 #. modules: hr, hr_modifier
 #: model_terms:ir.ui.view,arch_db:hr.hr_employee_public_view_search
 #: model_terms:ir.ui.view,arch_db:hr.view_employee_filter
