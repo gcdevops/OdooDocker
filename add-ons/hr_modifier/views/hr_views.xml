@@ -97,18 +97,26 @@
     sequence="7"/>
 
     <menuitem
+    id = "hr.menu_human_resources_configuration_regions"
+    name = "BRM Branches"
+    parent="hr.menu_human_resources_configuration"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    action="action_hr_branches"
+    sequence="8"/>
+
+    <menuitem
     id="hr.menu_view_employee_category_form"
     name="Tags"
     action="hr.open_view_categ_form"
     parent="hr.menu_human_resources_configuration"
     groups="hr.group_hr_manager"
-    sequence="8"/>
+    sequence="9"/>
 
     <menuitem
     id="hr_skills.menu_human_resources_configuration_resume"
     name="Resumé"
     parent="hr.menu_human_resources_configuration"
-    sequence="9"
+    sequence="10"
     groups="base.group_no_one"/>
 
     <menuitem
@@ -116,7 +124,7 @@
     name="Types"
     action="hr_skills.hr_resume_type_action"
     parent="hr_skills.menu_human_resources_configuration_resume"
-    sequence="10"
+    sequence="11"
     groups="base.group_no_one"/>
 
 </data>
