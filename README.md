@@ -1,6 +1,11 @@
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/gcdevops/OdooDocker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/gcdevops/OdooDocker/alerts/)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/gcdevops/OdooDocker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/gcdevops/OdooDocker/context:javascript)
+[![Language grade: Python](https://img.shields.io/lgtm/grade/python/g/gcdevops/OdooDocker.svg?logo=lgtm&logoWidth=18)](https://lgtm.com/projects/g/gcdevops/OdooDocker/context:python)
+
+
 # Odoo Docker
 
-This repo contains the nessecary Dockerfiles needed for Odoo. Our chosen solution for the [HRWhitelisting Project](https://github.com/gcdevops/HRWhiteListing). 
+This repo contains the nessecary Dockerfiles needed for Odoo. Our chosen solution for the [HRWhitelisting Project](https://github.com/gcdevops/HRWhiteListing).
 
 
 ## What is Odoo
@@ -10,7 +15,7 @@ Odoo is an open source web-based ERP (Enterprise Resource System) built primarly
 
 ## How to get Odoo running locally
 
-We are using Docker and docker-compose for the core system and mounting custom plugins by copying them from the [add-ons](./add-ons). This includes modules/apps as well as themes 
+We are using Docker and docker-compose for the core system and mounting custom plugins by copying them from the [add-ons](./add-ons). This includes modules/apps as well as themes
 
 We are using the Stock Odoo 13.0 Docker image which you can find more info on on [DockerHub](https://hub.docker.com/_/odoo) and on [github](https://github.com/odoo/docker/tree/6d92142da193f60c161f97eea1079f437dd51d7e/13.0)
 
@@ -29,7 +34,7 @@ Step 2. Create the database and your admin credentials. The database name can be
 
 ![create database odoo](./images/create-database-odoo.png)
 
-Step 3. Install the HR Module. 
+Step 3. Install the HR Module.
 
 Go to apps and clear the apps filter
 ![remove apps filter from odoo search](./images/remove-apps-filter.png)
@@ -40,16 +45,16 @@ Step 4. Search hr_mod and press enter and install the module that appears.
 ![install the hr module](./images/install_hr_mod.png)
 
 
-Step 5. Activate developer mode by going to general settings 
+Step 5. Activate developer mode by going to general settings
 
 ![activate developer mode](./images/activate-developer-mode.png)
 
 You should now be ready to develop modules
 
-To take down Odoo completely, i.e. restart from scratch 
+To take down Odoo completely, i.e. restart from scratch
 
 ```sh
-# ctrl + C first if you are in the same shell 
+# ctrl + C first if you are in the same shell
 $ docker-compose down
 ```
 
@@ -61,7 +66,7 @@ $ docker-compose stop
 ```
 
 
-#### Reloading changes 
+#### Reloading changes
 
 Step 1. Make sure your code is saved to disk
 
@@ -69,7 +74,7 @@ Step 2. Within the Apps module, update app list from Odoo ( activate developer m
 
 ![update app list](./images/update-app-list.png)
 
-Step 5. Find your module and upgrade it 
+Step 5. Find your module and upgrade it
 
 ![upgrade module](./images/upgrade-module.png)
 
@@ -79,9 +84,9 @@ Your changes should now be reflected
 Note that if you make changes to ```python``` files, you will need to restart the server. To do this simply ```stop``` the containers by either ctrl + C if you are in the same shell, or docker-compose stop. Then start the containers back up again and upgrade your module with the altered code.
 
 
-## Creating Modules 
+## Creating Modules
 
-As stated, almost all Odoo configuration is done through modules. In this way Odoo can almost be infinitely extended. 
+As stated, almost all Odoo configuration is done through modules. In this way Odoo can almost be infinitely extended.
 
 
 To get started learning how to build modules, go through this [tutorial](https://www.odoo.com/documentation/13.0/howtos/backend.html). Note: There is already an open academy module for you to play around with. Be sure to create a new branch id you decide to modify for learning purposes
@@ -91,7 +96,7 @@ To get started learning how to build modules, go through this [tutorial](https:/
 
 A couple of things to note that aren't explicitly mentioned in the tutorial. When creating data files in XML, you are actually creating records for different tables in the database.
 
-For example take a look at [openacademy.xml](./add-ons/openacademy/views/openacademy.xml) and specifically at this piece 
+For example take a look at [openacademy.xml](./add-ons/openacademy/views/openacademy.xml) and specifically at this piece
 
 ```xml
 <!--course list view-->
@@ -116,13 +121,13 @@ For example, we are using the employees module in Odoo. However, we found it was
 
 ![departments kanban view](./images/kanban-view-departments.png)
 
-Here is the [code](https://github.com/gcdevops/odoo/tree/13.0/addons/hr) for the entire employees module on github. 
+Here is the [code](https://github.com/gcdevops/odoo/tree/13.0/addons/hr) for the entire employees module on github.
 
 The view for departments is represented by the [hr_departments_views.xml](https://github.com/gcdevops/odoo/blob/13.0/addons/hr/views/hr_department_views.xml)
 
-This view defines three views. To see the full code, look at hr_departments_views.xml linked above 
+This view defines three views. To see the full code, look at hr_departments_views.xml linked above
 
-The kanban view 
+The kanban view
 
 ```xml
 <record id="hr_department_view_kanban" model="ir.ui.view" >
@@ -134,7 +139,7 @@ The kanban view
 </record>
 ```
 
-The tree view 
+The tree view
 
 ```xml
 <record id="view_department_tree" model="ir.ui.view">
@@ -152,7 +157,7 @@ The tree view
 ```
 
 
-The form view 
+The form view
 
 ```xml
 <record id="view_department_form" model="ir.ui.view">
@@ -179,7 +184,7 @@ The form view
 </record>
 ```
 
-These views all get combined in a window which defines the Department page in the employees module 
+These views all get combined in a window which defines the Department page in the employees module
 
 ```xml
 <record id="open_module_tree_department" model="ir.actions.act_window">
@@ -235,34 +240,10 @@ In order to modify the departments page to remove the kanban view we created a n
 </odoo>
 ```
 
-Take a close look at the id for this record 
+Take a close look at the id for this record
 
 ```xml
 <record id="hr.open_module_tree_department" model="ir.actions.act_window">
 ```
 
-We are using the ```External ID``` for the Department window view. When the hr_modifier module is installed it will overwrite that window record in the database and thus removing the ability to select the kanban view ! 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+We are using the ```External ID``` for the Department window view. When the hr_modifier module is installed it will overwrite that window record in the database and thus removing the ability to select the kanban view !
