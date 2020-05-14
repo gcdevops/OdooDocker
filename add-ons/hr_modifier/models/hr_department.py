@@ -20,7 +20,7 @@ class Department(models.Model):
         [ self.env[i].clear_caches() for i in self.env ]
 
     @api.onchange("x_reporter_ids")
-    def _onchange_rerporter(self):
+    def _onchange_reporter(self):
         [ self.env[i].clear_caches() for i in self.env ]
     
     # Validation
