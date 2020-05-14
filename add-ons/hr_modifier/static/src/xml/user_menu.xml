@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+    <t t-extend="UserMenu">
+        <t t-jquery=".dropdown-menu-right" t-operation="replace">
+            <div class="dropdown-menu dropdown-menu-right" role="menu">
+                <a role="menuitem" href="#" data-menu="documentation" class="dropdown-item">Documentation</a>
+                <div role="separator" class="dropdown-divider"/>
+                <a role="menuitem" href="#" data-menu="settings" class="dropdown-item">Preferences</a>
+                <a role="menuitem" href="#" data-menu="logout" class="dropdown-item">Log out</a>
+            </div>
+        </t>
+    </t>
+</templates>
