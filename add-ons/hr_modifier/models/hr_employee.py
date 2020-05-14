@@ -10,7 +10,7 @@ class HrEmployeePrivate(models.Model):
 
     x_department_coordinators_ids = fields.Many2many('hr.department', 'hr_department_coordinator_rel', 'employee', 'dept')
 
-    x_department_reporter_ids = fields.Many2many('hr.department', 'hr_department_reporter_rel', 'employee', 'dept')
+    # x_department_reporter_ids = fields.Many2many('hr.department', 'hr_department_reporter_rel', 'employee', 'dept')
 
     x_employee_work_criticality = fields.Boolean("Work criticality")
 

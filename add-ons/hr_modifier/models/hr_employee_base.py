@@ -42,8 +42,7 @@ class HrEmployeeBase(models.AbstractModel):
             if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups or "Reporter" in current_user_groups):
                 rec.department_id_domain = json.dumps(
                     ['|', ('id', 'child_of', [employee.department_id.id for employee in current_user.employee_ids]),
-                          ('id','child_of',[department.id for department in current_user.x_department_coordinators_ids]),
-                          ('id','child_of',[department.id for department in current_user.x_department_reporter_ids])
+                          ('id','child_of',[department.id for department in current_user.x_department_coordinators_ids])
                     ]
                 )
             else:
@@ -61,8 +60,7 @@ class HrEmployeeBase(models.AbstractModel):
             if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups or "Reporter" in current_user_groups):
                 rec.parent_id_domain = json.dumps(
                     ['|', ('id', 'child_of', [employee.id for employee in current_user.employee_ids]),
-                          ('department_id', 'child_of', [department.id for department in current_user.x_department_coordinators_ids]),
-                          ('department_id', 'child_of', [department.id for department in current_user.x_department_reporter_ids])
+                          ('department_id', 'child_of', [department.id for department in current_user.x_department_coordinators_ids])
                     ]
                 )
             else:

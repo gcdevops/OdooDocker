@@ -43,8 +43,8 @@
       <record id="group_hr_reporter" model="res.groups">
           <field name="name">Reporter</field>
           <field name="category_id" ref="base.module_category_human_resources_employees"/>
-          <!-- <field name="implied_ids" eval="[(3, ref('base.user_root'))]"/> -->
-          <field name="implied_ids" eval="[(3, ref('hr.group_hr_user'))]"/>
+          <field name="implied_ids" eval="[(3, ref('base.user_root'))]"/>
+          <!-- <field name="implied_ids" eval="[(3, ref('hr.group_hr_user'))]"/> -->
       </record>
 
       <record id="hr_reporter_rule" model="ir.rule">
@@ -55,7 +55,7 @@
         <field name="perm_write" eval="0"/>
         <field name="perm_create" eval="0"/>
         <field name="perm_unlink" eval="0"/>
-        <field name="domain_force">[('department_id','child_of',[ department.id for department in user.x_department_reporter_ids])]</field>
+        <field name="domain_force">[('department_id','child_of',[ department.id for department in user.x_department_coordinators_ids])]</field>
       </record>
 
       <record id="base.default_user" model="res.users">
