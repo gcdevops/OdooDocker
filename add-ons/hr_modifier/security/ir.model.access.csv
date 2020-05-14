@@ -7,3 +7,5 @@ access_hr_coordinator_public,hr.employee.public hr_coordinator,hr.model_hr_emplo
 access_hr_management_public_employees,hr.employee.public hr_management,hr.model_hr_employee_public,hr.group_hr_manager,1,1,0,0
 access_hr_employee_region,hr.region,model_hr_region,hr.group_hr_user,1,1,1,1
 access_hr_employee_branch,hr.branch,model_hr_branch,hr.group_hr_user,1,1,1,1
+access_hr_reporter,hr.employee hr_reporter,hr.model_hr_employee,group_hr_reporter,1,0,0,0
+access_hr_reporter_public,hr.employee.public hr_reporter,hr.model_hr_employee_public,group_hr_reporter,1,0,0,0
