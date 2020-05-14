@@ -1,12 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<template xml:space="preserve">
-        <t t-extend="ListView.buttons">
-            <t t-jquery="button.o_list_button_add" t-operation="replace">
-              <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
-                  <i class="fa fa-plus"/>
-                  Create
-              </button>
-            </t>
+<templates>
+    <t t-extend="ListView.buttons">
+        <t t-jquery="button.o_list_button_add" t-operation="replace">
+            <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
+                <i class="fa fa-plus"/>
+                <span t-if="widget.modelName == 'hr.employee'">Add Employee</span>
+                <span t-elif="widget.modelName == 'res.partner'">Add Location</span>
+                <span t-elif="widget.modelName == 'hr.job'">Add Job Position</span>
+                <span t-elif="widget.modelName == 'hr.department'">Add Team</span>
+                <span t-elif="widget.modelName == 'hr.classification'">Add Classification</span>
+                <span t-elif="widget.modelName == 'hr.region'">Add Region</span>
+                <span t-elif="widget.modelName == 'hr.branch'">Add BRM Branch</span>
+                <span t-else="">Create</span>
+            </button>
         </t>
-</template>
+    </t>
+</templates>
