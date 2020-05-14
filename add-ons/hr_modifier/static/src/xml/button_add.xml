@@ -3,42 +3,17 @@
 <templates>
     <t t-extend="ListView.buttons">
         <t t-jquery="button.o_list_button_add" t-operation="replace">
-            <t t-if="widget.modelName == 'hr.employee'">
-                <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
-                    <i class="fa fa-plus"/>
-                    Add Employee
-                </button>
-            </t>
-            <t t-if="widget.modelName == 'res.partner'">
-                <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
-                    <i class="fa fa-plus"/>
-                    Add Location
-                </button>
-            </t>
-            <t t-if="widget.modelName == 'hr.job'">
-                <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
-                    <i class="fa fa-plus"/>
-                    Add Job Position
-                </button>
-            </t>
-            <t t-if="widget.modelName == 'hr.department'">
-                <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
-                    <i class="fa fa-plus"/>
-                    Add Team
-                </button>
-            </t>
-            <t t-if="widget.modelName == 'hr.classification'">
-                <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
-                    <i class="fa fa-plus"/>
-                    Add Classification
-                </button>
-            </t>
-            <t t-else="">
-                <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
-                    <i class="fa fa-plus"/>
-                    Create
-                </button>
-            </t>
+            <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
+                <i class="fa fa-plus"/>
+                <span t-if="widget.modelName == 'hr.employee'">Add Employee</span>
+                <span t-elif="widget.modelName == 'res.partner'">Add Location</span>
+                <span t-elif="widget.modelName == 'hr.job'">Add Job Position</span>
+                <span t-elif="widget.modelName == 'hr.department'">Add Team</span>
+                <span t-elif="widget.modelName == 'hr.classification'">Add Classification</span>
+                <span t-elif="widget.modelName == 'hr.region'">Add Region</span>
+                <span t-elif="widget.modelName == 'hr.branch'">Add BRM Branch</span>
+                <span t-else="">Create</span>
+            </button>
         </t>
     </t>
 </templates>
