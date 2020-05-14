@@ -17,7 +17,7 @@
     name="My Team"
     parent="hr.menu_hr_root"
     action="hr.open_view_employee_list_my"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
     sequence="1"/>
 
     <menuitem
@@ -31,14 +31,14 @@
     id="hr.menu_human_resources_configuration"
     name="Configuration"
     parent="hr.menu_hr_root"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
     sequence="100"/>
 
     <menuitem
     id = "hr.menu_human_resources_configuration_classification"
     name = "Classifications"
     parent="hr.menu_human_resources_configuration"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
     action="action_hr_classifications"
     sequence="1"/>
 
@@ -68,7 +68,7 @@
     id = "hr.menu_human_resources_configuration_locations"
     name = "Locations"
     parent="hr.menu_human_resources_configuration"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
     action="action_hr_locations"
     sequence="4"/>
 
@@ -78,7 +78,7 @@
     action="hr_skills.hr_skill_type_action"
     parent="hr.menu_human_resources_configuration"
     sequence="5"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"/>
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"/>
 
     <menuitem
     id="hr_skill_sub_skill_menu"
@@ -92,7 +92,7 @@
     id = "hr.menu_human_resources_configuration_regions"
     name = "Regions"
     parent="hr.menu_human_resources_configuration"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
     action="action_hr_regions"
     sequence="7"/>
 
@@ -100,7 +100,7 @@
     id = "hr.menu_human_resources_configuration_regions"
     name = "BRM Branches"
     parent="hr.menu_human_resources_configuration"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
     action="action_hr_branches"
     sequence="8"/>
 

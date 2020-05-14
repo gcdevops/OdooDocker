@@ -39,13 +39,12 @@ class HrEmployeeBase(models.AbstractModel):
         # if Senior Management or Coordinator is in the user groups, return the restricted domain
 
         for rec in self: 
-            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups or "Reporter" in current_user_groups):
                 rec.department_id_domain = json.dumps(
-                    ['|', ('id', 'child_of', [
-                            employee.department_id.id for employee in current_user.employee_ids
-                        ]), ('id','child_of',[ 
-                            department.id for department in current_user.x_department_coordinators_ids
-                    ])]
+                    ['|', ('id', 'child_of', [employee.department_id.id for employee in current_user.employee_ids]),
+                          ('id','child_of',[department.id for department in current_user.x_department_coordinators_ids]),
+                          ('id','child_of',[department.id for department in current_user.x_department_reporter_ids])
+                    ]
                 )
             else:
                 rec.department_id_domain = json.dumps([("active", "=", True)])
@@ -61,11 +60,10 @@ class HrEmployeeBase(models.AbstractModel):
         for rec in self: 
             if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
                 rec.parent_id_domain = json.dumps(
-                    ['|', ('id', 'child_of', [
-                        employee.id for employee in current_user.employee_ids
-                    ]), ('department_id', 'child_of', [
-                        department.id for department in current_user.x_department_coordinators_ids
-                    ])]
+                    ['|', ('id', 'child_of', [employee.id for employee in current_user.employee_ids]),
+                          ('department_id', 'child_of', [department.id for department in current_user.x_department_coordinators_ids]),
+                          ('department_id', 'child_of', [department.id for department in current_user.x_department_reporter_ids])
+                    ]
                 )
             else:
                 rec.parent_id_domain = json.dumps([("active", "=", True)])

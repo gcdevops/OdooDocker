@@ -13,9 +13,14 @@ class Department(models.Model):
     name = fields.Char('Team Name', required=True, translate = True)
     complete_name = fields.Char('Complete Name', compute='_compute_complete_name', store=False, translate=True)
     x_coordinators_ids = fields.Many2many('hr.employee', 'hr_department_coordinator_rel', 'dept', 'employee', string='Coordinators')
+    x_reporter_ids = fields.Many2many('hr.employee', 'hr_department_reporter_rel', 'dept', 'employee', string='Reporters')
 
     @api.onchange("x_coordinators_ids")
     def _onchange_coordinator(self):
+        [ self.env[i].clear_caches() for i in self.env ]
+
+    @api.onchange("x_reporter_ids")
+    def _onchange_rerporter(self):
         [ self.env[i].clear_caches() for i in self.env ]
     
     # Validation

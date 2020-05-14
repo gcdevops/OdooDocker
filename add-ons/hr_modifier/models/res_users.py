@@ -9,3 +9,9 @@ class Users(models.Model):
         readonly=False,
         related_sudo=False
     )
+    x_department_reporter_ids = fields.Many2many(
+        related="employee_id.x_department_reporter_ids",
+        string="Teams reporting",
+        readonly=False,
+        related_sudo=False
+    )
