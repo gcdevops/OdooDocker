@@ -15,6 +15,6 @@ class HrJob(models.Model):
     def _check_name_allowed_characters(self):
         for record in self:
             if record.name:
-                res = re.search("[^a-zA-Z\d\s:\-,\(\)/&.@À-Öà-ö]", record.name)
+                res = re.search("[^a-zA-Z\d\s:\-,\(\)/&.\'@À-Öà-ö\\\]", record.name)
                 if res:
                     raise ValidationError("The job position contains an invalid character: " + res.group(0))
