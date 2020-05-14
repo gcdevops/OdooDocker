@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<template xml:space="preserve">
+<templates>
     <t t-extend="ListView.buttons">
         <t t-jquery="button.o_list_button_add" t-operation="replace">
             <t t-if="widget.modelName == 'hr.employee'">
@@ -33,6 +33,12 @@
                     Add Classification
                 </button>
             </t>
+            <t t-else="">
+                <button type="button" class="btn btn-primary o_list_button_add" accesskey="c">
+                    <i class="fa fa-plus"/>
+                    Create
+                </button>
+            </t>
         </t>
     </t>
-</template>
+</templates>
