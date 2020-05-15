@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates>
     <t t-extend="Menu">
-            <t t-jquery="a[href=#menu_id=97&action=137]">
+        <t t-if="widget.modelName == 'hr.employee.public'">
+            <t t-jquery="[data-menu-xmlid=hr.menu_hr_employee_payroll]">
               <script>
                 console.log(this)
               </script>
             </t>
+        </t>
     </t>
 </templates>
