@@ -14,7 +14,7 @@
             <field name="arch" type="xml">
                 <search string="Employees">
                     <field name="name" string="Employee" filter_domain="['|', ('work_email', 'ilike', self), ('name', 'ilike', self)]"/>
-                    <field name="category_ids" groups="hr.group_hr_user"/>
+                    <field name="category_ids" groups="hr.group_hr_user,hr.group_hr_reporter"/>
                     <field name="job_id"/>
                     <filter 
                       string="Critical Employees"
@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                             </page>
-                            <page name="access_information" string="Access Information" groups="hr.group_hr_user">
+                            <page name="access_information" string="Access Information">
                                 <group>
                                     <field name="x_employee_access_gov_office"/>
                                     <field name="x_employee_device_type"/>
