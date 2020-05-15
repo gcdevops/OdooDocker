@@ -2,6 +2,7 @@
 from odoo import api, fields, models, tools, SUPERUSER_ID, _
 import re
 from odoo.exceptions import AccessError
+from odoo.http import request
 
 AVAILABLE_PRIORITIES = [
     ('0', 'Low'),
@@ -13,7 +14,7 @@ AVAILABLE_PRIORITIES = [
 
 class HelpdeskTicket(models.Model):
     _name = "helpdesk_lite.ticket"
-    _description = "Helpdesk Tickets"
+    _description = "Helpdesk Ticket"
     _inherit = ['mail.thread', 'mail.activity.mixin', 'portal.mixin']
     _order = "priority desc, create_date desc"
     _mail_post_access = 'read'
@@ -57,7 +58,6 @@ class HelpdeskTicket(models.Model):
 
     active = fields.Boolean(default=True)
     company_id = fields.Many2one('res.company', string='Company', default=lambda self: self.env.user.company_id)
-
 
     @api.onchange('partner_id')
     def _onchange_partner_id(self):
@@ -159,12 +159,69 @@ class HelpdeskTicket(models.Model):
         context.update({
             'mail_create_nosubscribe': False,
         })
+
         res = super(HelpdeskTicket, self.with_context(context)).create(vals)
         # res = super().create(vals)
         if res.partner_id:
             res.message_subscribe([res.partner_id.id])
-        return res
 
+        support_ticket_menu = request.env['ir.model.data'].sudo().get_object('hr', 'menu_hr_root')
+        support_ticket_action = request.env['ir.model.data'].sudo().get_object('helpdesk_lite', 'helpdesk_ticket_manager_list_act')
+        url = request.httprequest.host_url + "web#id=" + str(res.id)  + "&view_type=form&model=helpdesk_lite.ticket&menu_id=" + str(support_ticket_menu.id) + "&action=" + str(support_ticket_action.id)
+
+        body_html = '''\
+        <p>New ticket #{ticket_id} for HR WhiteListing:</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Click <a href="{url}">here</a> to view the ticket and reply.</p>
+        <p>Thank you</p>
+        <hr>
+        <p>Nouveau billet #{ticket_id} de l'application RH WhiteListing :</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Cliquez <a href="{url}">ici</a> pour voir le billet et répondre.</p>
+        <p>Merci</p>
+        \
+        '''.format(ticket_id=res.id, name=res.name, body=res.description, url=url)
+
+        #Send email
+        values = dict(
+            body_html=body_html,
+            email_to="you@you.com",
+            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            subject="New ticket #" + str(res.id)  + " for HR WhiteListing | Nouveau billet #" + str(res.id)  + " pour RH WhiteListing"
+        )
+
+        send_mail = self.env['mail.mail'].create(values)
+        send_mail.send()
+
+        body_html = '''\
+        <p>Ticket #{ticket_id} created for HR WhiteListing:</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Click <a href="{url}">here</a> to view your ticket.</p>
+        <p>Thank you</p>
+        <hr>
+        <p>Nouveau billet #{ticket_id} créé pour l'application RH WhiteListing :</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Cliquez <a href="{url}">ici</a> pour voir votre billet.</p>
+        <p>Merci</p>
+        \
+        '''.format(ticket_id=res.id, name=res.name, body=res.description, url=url)
+
+        #Send email
+        values = dict(
+            body_html=body_html,
+            email_to=res.email_from,
+            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            subject="Ticket #" + str(res.id)  + " for HR WhiteListing | Billet #" + str(res.id)  + " pour RH WhiteListing"
+        )
+
+        send_mail = self.env['mail.mail'].create(values)
+        send_mail.send()
+
+        return res
 
     def write(self, vals):
         # stage change: update date_last_stage_update
@@ -198,9 +255,89 @@ class HelpdeskTicket(models.Model):
 
     def _register_hook(self):
         HelpdeskTicket.website_form = bool(self.env['ir.module.module'].
-                                           search([('name', '=', 'website_form'), ('state', '=', 'installed')]))
+        search([('name', '=', 'website_form'), ('state', '=', 'installed')]))
         if HelpdeskTicket.website_form:
             self.env['ir.model'].search([('model', '=', self._name)]).write({'website_form_access': True})
             self.env['ir.model.fields'].formbuilder_whitelist(
                 self._name, ['name', 'description', 'date_deadline', 'priority', 'partner_id', 'user_id'])
         pass
+
+
+class WebsiteSupportTicketCompose(models.Model):
+
+    _name = "helpdesk_lite.ticket.compose"
+
+    body = fields.Text(string="Message Body")
+    name = fields.Char(string='Ticket', readonly="True")
+    ticket_id = fields.Many2one('helpdesk_lite.ticket', string='Ticket ID', readonly="True")
+    partner_id = fields.Many2one('res.partner', string="Partner", readonly="True")
+    email_from = fields.Char(string="Email", readonly="True")
+    user_id = fields.Many2one('res.users', string='Assigned to')
+
+    def send_reply_manager(self):
+
+        support_ticket_menu = request.env['ir.model.data'].sudo().get_object('hr', 'menu_hr_root')
+        support_ticket_action = request.env['ir.model.data'].sudo().get_object('helpdesk_lite', 'helpdesk_ticket_manager_list_act')
+        url = request.httprequest.host_url + "web#id=" + str(self.ticket_id.id) + "&view_type=form&model=helpdesk_lite.ticket&menu_id=" + str(support_ticket_menu.id) + "&action=" + str(support_ticket_action.id)
+
+        body_html = '''\
+        <p>New reply to HR WhiteListing Ticket #{ticket_id}:</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Click <a href="{url}">here</a> to view your ticket and reply.</p>
+        <p>Thank you</p>
+        <hr>
+        <p>Nouvelle réponse à votre billet #{ticket_id} de l'application RHWhiteListing :</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Cliquez <a href="{url}">ici</a> pour voir votre billet et répondre.</p>
+        <p>Merci</p>
+        \
+        '''.format(ticket_id=str(self.ticket_id.id), name=self.name, body=self.body, url=url)
+
+        #Send email
+        values = dict(
+            body_html=body_html,
+            email_to=self.email_from,
+            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            subject="Reply to HR WhiteListing Ticket #" + str(self.ticket_id.id) + " | Réponse au billet #"  + str(self.ticket_id.id) + " de RH WhiteListing"
+        )
+
+        send_mail = self.env['mail.mail'].create(values)
+        send_mail.send()
+
+        self.ticket_id.message_post(body=self.body, message_type='email', subtype='mt_comment')
+
+    def send_reply_user(self):
+
+        support_ticket_menu = request.env['ir.model.data'].sudo().get_object('hr', 'menu_hr_root')
+        support_ticket_action = request.env['ir.model.data'].sudo().get_object('helpdesk_lite', 'helpdesk_ticket_manager_list_act')
+        url = request.httprequest.host_url + "web#id=" + str(self.ticket_id.id) + "&view_type=form&model=helpdesk_lite.ticket&menu_id=" + str(support_ticket_menu.id) + "&action=" + str(support_ticket_action.id)
+
+        body_html = '''\
+        <p>New reply to HR WhiteListing Ticket #{ticket_id}:</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Click <a href="{url}">here</a> to view your ticket and reply.</p>
+        <p>Thank you</p>
+        <hr>
+        <p>Nouvelle réponse à votre billet #{ticket_id} de l'application RH WhiteListing :</p>
+        <p><b>{name}</b></p>
+        <p>{body}</p>
+        <p>Cliquez <a href="{url}">ici</a> pour voir votre billet et répondre.</p>
+        <p>Merci</p>
+        \
+        '''.format(ticket_id=str(self.ticket_id.id), name=self.name, body=self.body, url=url)
+
+        #Send email
+        values = dict(
+            body_html=body_html,
+            email_to=self.user_id.email,
+            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            subject="Reply to HR WhiteListing Ticket #" + str(self.ticket_id.id) + " | Réponse au billet #"  + str(self.ticket_id.id) + " de RH WhiteListing"
+        )
+
+        send_mail = self.env['mail.mail'].create(values)
+        send_mail.send()
+
+        self.ticket_id.message_post(body=self.body, message_type='email', subtype='mt_comment')

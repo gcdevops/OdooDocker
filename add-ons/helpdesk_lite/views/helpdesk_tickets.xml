@@ -1,5 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
+
+    <record id="helpdesk_ticket_compose_manager_view_form" model="ir.ui.view">
+        <field name="name">Reply</field>
+        <field name="model">helpdesk_lite.ticket.compose</field>
+        <field name="arch" type="xml">
+            <form>      
+                <field name="body" widget="html" readonly="0"/>
+                <footer>
+                    <button string="Send" name="send_reply_manager" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="helpdesk_ticket_compose_manager_action" model="ir.actions.act_window">
+        <field name="name">Reply</field>
+        <field name="res_model">helpdesk_lite.ticket.compose</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="helpdesk_lite.helpdesk_ticket_compose_manager_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="helpdesk_ticket_compose_user_view_form" model="ir.ui.view">
+        <field name="name">Reply</field>
+        <field name="model">helpdesk_lite.ticket.compose</field>
+        <field name="arch" type="xml">
+            <form>      
+                <field name="body" widget="html" readonly="0"/>
+                <footer>
+                    <button string="Send" name="send_reply_user" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-default" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="helpdesk_ticket_compose_user_action" model="ir.actions.act_window">
+        <field name="name">Reply</field>
+        <field name="res_model">helpdesk_lite.ticket.compose</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="helpdesk_lite.helpdesk_ticket_compose_user_view_form"/>
+        <field name="target">new</field>
+    </record>
+
     <record id="helpdesk_ticket_form_manager_view" model="ir.ui.view">
         <field name="name">helpdesk_lite.ticket.form.view</field>
         <field name="model">helpdesk_lite.ticket</field>
@@ -8,6 +55,7 @@
                 <header>
                     <button string="I Take It" type="object" name="takeit" class="oe_highlight"/>
                     <field name="stage_id" widget="statusbar" clickable="True" options="{'fold_field': 'fold'}"/>
+                    <button type="action" name="%(helpdesk_ticket_compose_manager_action)d" context="{'default_ticket_id': id, 'default_name': name, 'default_user_id': user_id, 'default_partner_id': partner_id, 'default_email_from':email_from, 'default_name':name}" string="Reply"/>
                 </header>
                 <sheet string="Ticket">
                     <div class="oe_button_box" name="button_box">
@@ -51,6 +99,9 @@
         <field name="model">helpdesk_lite.ticket</field>
         <field name="arch" type="xml">
             <form>
+                <header>
+                    <button type="action" name="%(helpdesk_ticket_compose_user_action)d" context="{'default_ticket_id': id, 'default_name': name, 'default_user_id': user_id, 'default_partner_id': partner_id, 'default_email_from':email_from, 'default_name':name}" string="Reply"/>
+                </header>
                 <sheet string="Ticket">
                     <div class="oe_title">
                         <h1>
