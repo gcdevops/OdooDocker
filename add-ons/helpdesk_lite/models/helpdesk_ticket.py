@@ -187,7 +187,7 @@ class HelpdeskTicket(models.Model):
         #Send email
         values = dict(
             body_html=body_html,
-            email_to="you@you.com",
+            email_to=res.company_id.administration_email,
             email_from="noreply@grh-hrm.iitb-dgiit.ca",
             subject="New ticket #" + str(res.id)  + " for HR WhiteListing | Nouveau billet #" + str(res.id)  + " pour RH WhiteListing"
         )
