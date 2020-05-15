@@ -103,7 +103,7 @@
                                     </div>
                                 </div>
                             </page>
-                            <page name="access_information" string="Access Information" groups="hr.group_hr_user">
+                            <page name="access_information" string="Access Information" groups="hr.group_hr_user,hr.group_hr_reporter">
                                 <group>
                                     <field name="x_employee_access_gov_office"/>
                                     <field name="x_employee_device_type"/>

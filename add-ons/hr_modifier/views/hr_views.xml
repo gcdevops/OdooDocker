@@ -55,7 +55,7 @@
     action="hr_modifier.open_module_tree_department_coordinator"
     parent="hr.menu_human_resources_configuration"
     sequence="2"
-    groups="group_hr_coordinator"/>
+    groups="group_hr_coordinator,group_hr_reporter"/>
 
     <menuitem
     id="hr.menu_view_hr_job"
