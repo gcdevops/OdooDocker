@@ -71,6 +71,13 @@ odoo.define('hr_modifier.UserMenu', function (require) {
                     }
                 });
 
+                session.user_has_group('hr_modifier.group_hr_reporter').then(function(value) {
+                    if (value == 1) {
+                        topbar_name = _.str.sprintf("%s (%s)", topbar_name, "Reporter");
+                        self.$('.oe_topbar_name').text(topbar_name);
+                    }
+                });
+
                 self.$('.oe_topbar_name').text(topbar_name);
                 var avatar_src = session.url('/web/image', {
                     model:'res.users',
