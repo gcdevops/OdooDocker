@@ -17,14 +17,3 @@ class Department(models.Model):
     @api.onchange("x_coordinators_ids")
     def _onchange_coordinator(self):
         [ self.env[i].clear_caches() for i in self.env ]
-    
-    # Validation
-
-    # allow upper case, lower case, hyphens
-    @api.constrains("name")
-    def _check_name_allowed_characters(self):
-        for record in self:
-            if record.name:
-                res = re.search(r"[^\w\d\s\-.,'&/()@]", record.name)
-                if res:
-                    raise ValidationError("The team name contains an invalid character: " + res.group(0))
