@@ -28,9 +28,9 @@ var Page = function() {
 
     this.baseUrl = function() {
         if (process.env.SECURITY_MODE === 'true') {
-            return `http://odoo:${process.env.PORT}`;
+            return `${process.env.SITE_URL_ONE}`;
         } else {
-            return `http://localhost:${process.env.PORT}`;
+            return `${process.env.SITE_URL_TWO}`;
         }
     }
 
