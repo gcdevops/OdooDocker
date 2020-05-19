@@ -11,15 +11,6 @@ odoo.define('hr_modifier.BasicView', function (require) {
     });
 });
 
-odoo.define('hr_modifier.ListView', function (require) {
-    'use strict';
-
-    var core = require('web.core');
-    var ajax = require('web.ajax');
-    var qweb = core.qweb
-    ajax.loadXML('/hr_modifier/static/src/xml/button_add.xml', qweb);
-});
-
 odoo.define('hr_modifier.FilterMenuGenerator', function (require) {
     'use strict';
 
@@ -76,6 +67,13 @@ odoo.define('hr_modifier.UserMenu', function (require) {
                 session.user_has_group('hr_modifier.group_hr_coordinator').then(function(value) {
                     if (value == 1) {
                         topbar_name = _.str.sprintf("%s (%s)", topbar_name, "Coordinator");
+                        self.$('.oe_topbar_name').text(topbar_name);
+                    }
+                });
+
+                session.user_has_group('hr_modifier.group_hr_reporter').then(function(value) {
+                    if (value == 1) {
+                        topbar_name = _.str.sprintf("%s (%s)", topbar_name, "Reporter");
                         self.$('.oe_topbar_name').text(topbar_name);
                     }
                 });

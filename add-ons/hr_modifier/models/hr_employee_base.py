@@ -16,7 +16,7 @@ class HrEmployeeBase(models.AbstractModel):
         string = "Language"
     )
 
-    x_employee_job_type = fields.Char("Job type", groups="hr.group_hr_user")
+    x_employee_job_type = fields.Char("Job type", groups="hr.group_hr_user,hr.group_hr_reporter")
 
     department_id_domain = fields.Char(
         compute = "_compute_department_id_domain",
@@ -39,13 +39,11 @@ class HrEmployeeBase(models.AbstractModel):
         # if Senior Management or Coordinator is in the user groups, return the restricted domain
 
         for rec in self: 
-            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups or "Reporter" in current_user_groups):
                 rec.department_id_domain = json.dumps(
-                    ['|', ('id', 'child_of', [
-                            employee.department_id.id for employee in current_user.employee_ids
-                        ]), ('id','child_of',[ 
-                            department.id for department in current_user.x_department_coordinators_ids
-                    ])]
+                    ['|', ('id', 'child_of', [employee.department_id.id for employee in current_user.employee_ids]),
+                          ('id','child_of',[department.id for department in current_user.x_department_coordinators_ids])
+                    ]
                 )
             else:
                 rec.department_id_domain = json.dumps([("active", "=", True)])
@@ -59,13 +57,11 @@ class HrEmployeeBase(models.AbstractModel):
         # if Senior Management or Coordinator is in the user groups, return the restricted domain
 
         for rec in self: 
-            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups):
+            if("Senior Management" in current_user_groups or "Coordinator" in current_user_groups or "Reporter" in current_user_groups):
                 rec.parent_id_domain = json.dumps(
-                    ['|', ('id', 'child_of', [
-                        employee.id for employee in current_user.employee_ids
-                    ]), ('department_id', 'child_of', [
-                        department.id for department in current_user.x_department_coordinators_ids
-                    ])]
+                    ['|', ('id', 'child_of', [employee.id for employee in current_user.employee_ids]),
+                          ('department_id', 'child_of', [department.id for department in current_user.x_department_coordinators_ids])
+                    ]
                 )
             else:
                 rec.parent_id_domain = json.dumps([("active", "=", True)])
@@ -79,11 +75,10 @@ class HrEmployeeBase(models.AbstractModel):
             ("assignment", "Assignment"),
             ("student", "Student")
         ],
-        groups = "hr.group_hr_user",
         string = "Employment status"
     )
 
-    x_employee_access_gov_office = fields.Boolean("Access to a government office", groups="hr.group_hr_user")
+    x_employee_access_gov_office = fields.Boolean("Access to a government office", groups="hr.group_hr_user,hr.group_hr_reporter")
     
     x_employee_device_type = fields.Selection(
         [
@@ -91,42 +86,34 @@ class HrEmployeeBase(models.AbstractModel):
             ("desktop", "Desktop"),
             ("tablet", "Tablet")
         ],
-        groups = "hr.group_hr_user",
         string = "Device type"
     )
 
     x_employee_asset_number = fields.Char(
-        "Asset number",
-        groups = "hr.group_hr_user"
+        "Asset number"
     )
     
     x_employee_office_floor = fields.Char(
-        "Office floor",
-        groups = "hr.group_hr_user"
+        "Office floor"
     )
     
     x_employee_office_cubicle = fields.Char(
-        "Office cubicle",
-        groups = "hr.group_hr_user"
+        "Office cubicle"
     )
     x_employee_is_remote = fields.Boolean(
-        "Remote employee",
-        groups = "hr.group_hr_user"
+        "Remote employee"
     )
 
     x_employee_second_monitor = fields.Boolean(
-        "Second monitor availability",
-        groups="hr.group_hr_user"
+        "Second monitor availability"
     )
 
     x_employee_mobile_hotspot = fields.Boolean(
-        "Mobile hotspot availability",
-        groups = "hr.group_hr_user"
+        "Mobile hotspot availability"
     )
 
     x_employee_headset = fields.Boolean(
-        "Headset availability",
-        groups = "hr.group_hr_user"
+        "Headset availability"
     )
 
     classification_id = fields.Many2one(
@@ -145,8 +132,7 @@ class HrEmployeeBase(models.AbstractModel):
     )
 
     x_employee_remote_access_network = fields.Boolean(
-        "Remote access to network",
-        groups = "hr.group_hr_user"
+        "Remote access to network"
     )
 
     x_employee_remote_access_tool = fields.Selection(
@@ -155,7 +141,6 @@ class HrEmployeeBase(models.AbstractModel):
             ("vpn", "VPN"),
             ("appgate", "AppGate")
         ],
-        groups = "hr.group_hr_user",
         string = "Remote connection tool"
     )
     address_id = fields.Many2one('res.partner', 'Work Address', domain="['&', '|', ('company_id', '=', False), ('company_id', '=', company_id), ('is_company', '=', True)]")
