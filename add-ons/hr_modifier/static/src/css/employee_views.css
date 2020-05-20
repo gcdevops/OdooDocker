@@ -8,6 +8,10 @@
     background-color: white !important;
 }
 
+.nav-black {
+  background-color: black;
+}
+
 .o_language_toggle_menu_item {
     height: 46px;
     align-items: center;

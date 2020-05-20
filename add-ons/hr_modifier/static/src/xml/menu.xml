@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates>
     <t t-extend="Menu">
-        <t t-if="widget.modelName == 'hr.employee.public'">
-            <t t-jquery="[data-menu-xmlid=hr.menu_hr_employee_payroll]">
-              <script>
-                console.log(this)
-              </script>
-            </t>
+        <t t-jquery="*" t-operation="replace">
+            <nav class="o_main_navbar nav-black">
+                <ul class="o_menu_apps"/>
+                <a class="o_menu_brand" role="button"/>
+                <ul class="o_menu_sections" role="menu"/>
+                <ul class="o_menu_systray" role="menu"/>
+            </nav>
         </t>
     </t>
 </templates>
