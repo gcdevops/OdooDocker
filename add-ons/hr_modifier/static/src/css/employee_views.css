@@ -8,6 +8,38 @@
     background-color: white !important;
 }
 
+.nav-black {
+  background-color: black;
+}
+
+.o_main_navbar > ul > li > a:hover, .o_main_navbar > ul > li > label:hover {
+  background-color: rgba(90, 90, 90, 0.7);
+}
+
+.o_main_navbar > a:hover, .o_main_navbar > a:focus, .o_main_navbar > button:hover, .o_main_navbar > button:focus {
+  background-color: rgba(90, 90, 90, 0.7);
+}
+
+.o_main_navbar .show .dropdown-toggle {
+  background-color: rgba(90, 90, 90, 0.7);
+}
+
+.o_controller_with_searchpanel .o_search_panel .o_search_panel_category .o_search_panel_section_icon {
+  color: black;
+}
+
+.btn-primary {
+  color: #FFFFFF;
+  background-color: black;
+  border-color: black;
+}
+
+.btn-primary:hover {
+  color: #FFFFFF;
+  background-color: rgba(90, 90, 90, 0.7);
+  border-color: rgba(90, 90, 90, 0.7);
+}
+
 .o_language_toggle_menu_item {
     height: 46px;
     align-items: center;
