@@ -1,0 +1,29 @@
+{
+  "name": "mytestselenium",
+  "version": "1.0.0",
+  "description": "Autonmation test with Selenium",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test",
+    "security-test": "export SECURITY_MODE=true && mocha test --reporter mochawesome --reporter-options autoOpen=true"
+  },
+  "keywords": [
+    "node.js",
+    "selenium"
+  ],
+  "author": "Jonathan",
+  "license": "MIT",
+  "dependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-url": "^1.0.4",
+    "chromedriver": "^81.0.0",
+    "dotenv": "^8.2.0",
+    "mocha": "^7.1.2",
+    "selenium-webdriver": "^4.0.0-alpha.7",
+    "webdriverio": "^6.1.9"
+  },
+  "devDependencies": {
+    "eslint": "^7.0.0"
+  }
+}

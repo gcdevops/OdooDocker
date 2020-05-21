@@ -1,0 +1,17 @@
+# Node moduels
+node_modules
+node_modules
+
+#Mocha
+mochawesome-report/
+
+#Javascript Files
+index.js
+utils/credentials.js
+utils/locator.js
+
+#util folders
+uils/
+
+#Dot Env
+.env
