@@ -20,8 +20,30 @@
                       string="Critical Employees"
                       name="x_employee_work_criticality"
                       domain="[('x_employee_work_criticality', '=', True)]"
-                      groups="hr.group_hr_user"
                     />
+                    <filter 
+                      string="Remote access to network"
+                      name="x_employee_remote_access_network"
+                      domain="[('x_employee_remote_access_network', '=', True)]"
+                    />
+                    <separator/>
+                    <group expand="0" string="Profiles">
+                        <filter name="Profile_0" string="Profile: 0 - Executive or Emergency Management" domain="[('employee_skill_ids.skill_type_id.name', '=', '0 - Executive or Emergency Management')]" />
+                        <filter name="Profile_1" string="Profile: 1 - Employment Insurance (EI)" domain="[('employee_skill_ids.skill_type_id.name', '=', '1 - Employment Insurance (EI)')]" />
+                        <filter name="Profile_2" string="Profile: 2 - Canada Pension Plan (CPP) Benefits" domain="[('employee_skill_ids.skill_type_id.name', '=', '2 - Canada Pension Plan (CPP) Benefits')]" />
+                        <filter name="Profile_3" string="Profile: 3 - Social Insurance Number (SIN)" domain="[('employee_skill_ids.skill_type_id.name', '=', '3 - Social Insurance Number (SIN)')]" />
+                        <filter name="Profile_4" string="Profile: 4 - Service Canada Centers and Outreach" domain="[('employee_skill_ids.skill_type_id.name', '=', '4 - Service Canada Centers and Outreach')]" />
+                        <filter name="Profile_5" string="Profile: 5 - General Enquiry Service (1-800-O-Canada and CIS)" domain="[('employee_skill_ids.skill_type_id.name', '=', '5 - General Enquiry Service (1-800-O-Canada and CIS)')]" />
+                        <filter name="Profile_6" string="Profile: 6 - Principal Publisher Service (and external communications)" domain="[('employee_skill_ids.skill_type_id.name', '=', '6 - Principal Publisher Service (and external communications)')]" />
+                        <filter name="Profile_7" string="Profile: 7 - Canada Student Loans Program: National Student Loans Service Centre" domain="[('employee_skill_ids.skill_type_id.name', '=', '7 - Canada Student Loans Program: National Student Loans Service Centre')]" />
+                        <filter name="Profile_8" string="Profile: 8 - Passport Services (urgent passport only)" domain="[('employee_skill_ids.skill_type_id.name', '=', '8 - Passport Services (urgent passport only)')]" />
+                        <filter name="Profile_9" string="Profile: 9 - Occupational Health and Safety (OHS) (Labour Program - Federally Regulated Workplaces)" domain="[('employee_skill_ids.skill_type_id.name', '=', '9 - Occupational Health and Safety (OHS) (Labour Program - Federally Regulated Workplaces)')]" />
+                        <filter name="Profile_10" string="Profile: 10 - Work Sharing (EI)" domain="[('employee_skill_ids.skill_type_id.name', '=', '10 - Work Sharing (EI)')]" />
+                        <filter name="Profile_11" string="Profile: 11 - Grants and Contributions (Gs&amp;Cs)" domain="[('employee_skill_ids.skill_type_id.name', '=', '11 - Grants and Contributions (Gs&amp;Cs)')]" />
+                        <filter name="Profile_12" string="Profile: 12 - Temporary Foreign Worker Program (TFWP)" domain="[('employee_skill_ids.skill_type_id.name', '=', '12 - Temporary Foreign Worker Program (TFWP)')]" />
+                        <filter name="Profile_13-1" string="Profile: 13 - Enabling Services" domain="[('employee_skill_ids.skill_type_id.name', '=', '13 - Enabling Services')]" />
+                        <filter name="Profile_13-2" string="Profile: 13 - Enabling Services (IITB, PASRB, HRSB, CFOB and ISB)" domain="[('employee_skill_ids.skill_type_id.name', '=', '13 - Enabling Services (IITB, PASRB, HRSB, CFOB and ISB)')]" />
+                    </group>
                     <group expand="0" string="Group By">
                         <filter name="group_manager" string="Manager" domain="[]" context="{'group_by': 'parent_id'}"/>
                         <filter name="group_department" string="Team" domain="[]" context="{'group_by': 'department_id'}"/>
@@ -29,6 +51,9 @@
                     </group>
                     <searchpanel>
                         <field name="company_id" groups="base.group_multi_company" icon="fa-building" invisible="1"/>
+                        <field name="x_employee_language"/>
+                        <field name="x_employee_status"/>
+                        <field name="region_id"/>
                         <field name="department_id" icon="fa-users"/>
                     </searchpanel>
                 </search>
