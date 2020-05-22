@@ -1,0 +1,32 @@
+version: "3"
+
+services:
+    remote_chrome:
+        image: selenium/standalone-chrome
+        networks:
+            - odoodocker_default
+    zap:
+        image: owasp/zap2docker-stable
+        ports:
+            - 8888:8080
+            - 8099:8090
+        command:  zap-webswing.sh
+        networks:
+            - odoodocker_default
+        volumes:
+            - ./data/:/zap-data/
+    testscripts:
+        image: node:14
+        volume:
+            - ./testing:.
+        environments:
+            - SELENIUM_BROWSER=chrome
+            - SELENIUM_REMOTE_URL=http://remote_chrome:4444/wd/hub
+        command: >
+            npm install
+            SELENIUM_BROWSER=chrome SELENIUM_REMOTE_URL=http://remote_chrome:4444/wd/hub node
+        networks:
+            - odoodocker_default
+networks:
+    odoodocker_default:
+        external: true

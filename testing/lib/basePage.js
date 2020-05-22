@@ -17,21 +17,16 @@ var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chr
 
 var Page = function() {
 
+    chromeDriverBuilder = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome());
+
     if (process.env.SECURITY_MODE === 'true') {
-        this.driver = new webdriver.Builder()
-        .withCapabilities(webdriver.Capabilities.chrome())
-        .setProxy(proxy.manual({http: 'localhost:8888'},{https: 'localhost:8888'}))
-        .build();
-    } else {
-        this.driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).build();
+        chromeDriverBuilder.setProxy(proxy.manual({http: `${process.env.ZAP_ADDR}`},{https: `${process.env.ZAP_ADDR}`}))
     }
 
+    this.driver = chromeDriverBuilder.build();
+
     this.baseUrl = function() {
-        if (process.env.SECURITY_MODE === 'true') {
-            return `${process.env.SITE_URL_ONE}`;
-        } else {
-            return `${process.env.SITE_URL_TWO}`;
-        }
+        return `${process.env.SITE_URL}`;
     }
 
     // visit a webpage
@@ -48,7 +43,7 @@ var Page = function() {
     // wait and find a specific element with it's id
     this.findById = async function (id) {
         await driver.wait(webdriver.until.elementLocated(webdriver.By.id(id)), 5000)
-        return await driver.findElement(webdriver.By.id(id)); 
+        return await driver.findElement(webdriver.By.id(id));
     };
 
     // wait and find a specific element with it's name
