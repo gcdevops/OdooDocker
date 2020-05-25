@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    
+
+   	<template id="web_layout" inherit_id="web.layout" name="Web Layout Inherit">
+		<xpath expr="//title" position="replace">
+				<title>Listeblanche RH | HR Whitelist</title>
+		</xpath>
+   	</template>
+
    	 <template id="assets_login" inherit_id="web.assets_frontend">
    	 	<xpath expr="." position="inside">
    	 		<link rel="stylesheet" href="/odoo_web_login/static/src/css/web_login_style.css"/>
