@@ -24,6 +24,34 @@
   background-color: rgba(90, 90, 90, 0.7);
 }
 
+.breadcrumb-item {
+  color: #335075 !important;
+}
+
+.breadcrumb-item > a {
+  color: #335075 !important;
+}
+
+.o_field_widget {
+  color: #335075 !important;
+}
+
+.o_field_widget > span {
+  color: #335075 !important;
+}
+
+.nav-item > a {
+  color: #335075 !important;
+}
+
+.navitem.show > a {
+  color: #335075 !important;
+}
+
+.o_horizontal_separator {
+  color: #335075 !important;
+}
+
 .o_controller_with_searchpanel .o_search_panel .o_search_panel_category .o_search_panel_section_icon {
   color: black;
 }
