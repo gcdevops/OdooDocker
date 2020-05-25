@@ -5,30 +5,7 @@ import re
 class Partner(models.Model):
     _inherit = 'res.partner'
     tz = fields.Selection(default='America/Montreal')
-    x_partner_type = fields.Selection(
-        [
-            ('Backend - Programs','Backend - Programs'),
-            ('Call Center','Call Center'),
-            ('CPP/OAS Processing Centre','CPP/OAS Processing Centre'),
-            ('EI & CPP/OAS Processing Centre','EI & CPP/OAS Processing Centre'),
-            ('EI Call Centre','EI Call Centre'),
-            ('EI Call Centre & Processing','EI Call Centre & Processing'),
-            ('EI Processing','EI Processing'),
-            ('EI Processing - Satellite','EI Processing - Satellite'),
-            ('EI Processing & IPOC','EI Processing & IPOC'),
-            ('EI Processing-IPOC-Call Centre','EI Processing-IPOC-Call Centre'),
-            ('IPOC','IPOC'),
-            ('NHQ','NHQ'),
-            ('Other ESDC Office','Other ESDC Office'),
-            ('Passport','Passport'),
-            ('Processing Center','Processing Center'),
-            ('RHQ','RHQ'),
-            ('SCC (Service Canada Center)','SCC (Service Canada Center)'),
-            ('SSC (Shared Services Canada)','SSC (Shared Services Canada)'),
-            ('Warehouse','Warehouse')
-        ],
-        string = "Building Type"
-    )
+
     # Validation
 
     # allow upper case, lower case, hyphens
@@ -52,7 +29,7 @@ class Partner(models.Model):
                 res = re.search(street_regex, record.street)
                 if res:
                     raise ValidationError("The street 2 field contains an invalid character: " + res.group(0))
-
+    
     # allow letters, spaces, and hyphens
     @api.constrains("city")
     def _check_city_allowed_characters(self):
@@ -61,7 +38,7 @@ class Partner(models.Model):
                 res = re.search("[^a-zA-ZÀ-Öà-ö\s\-\d&.,']", record.city)
                 if res:
                     raise ValidationError("The city field contains an invalid character: " + res.group(0))
-
+    
     # allow postal code formats, uppercase or lowercase, space or no space
     @api.constrains("zip")
     def _check_postal_code_allowed_characters(self):
@@ -69,7 +46,7 @@ class Partner(models.Model):
             if record.zip:
                 if not re.search("^([a-zA-Z]\d[a-zA-Z][ ]?\d[a-zA-Z]\d)$", record.zip):
                     raise ValidationError("The postal code is invalid")
-
+    
     @api.constrains("phone", "mobile")
     def _check_phone_allowed_characters(self):
         for record in self:
