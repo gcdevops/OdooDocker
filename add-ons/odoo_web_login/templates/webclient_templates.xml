@@ -3,7 +3,7 @@
 
    	<template id="web_layout" inherit_id="web.layout" name="Web Layout Inherit">
 		<xpath expr="//title" position="replace">
-				<title>Listeblanche RH | HR Whitelist</title>
+				<title>Liste blanche RH | HR Whitelist</title>
 		</xpath>
    	</template>
 
