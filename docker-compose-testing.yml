@@ -17,14 +17,16 @@ services:
             - ./data/:/zap-data/
     testscripts:
         image: node:14
-        volume:
-            - ./testing:.
-        environments:
+        volumes:
+            - ./testing:/usr/local/app
+        environment:
             - SELENIUM_BROWSER=chrome
             - SELENIUM_REMOTE_URL=http://remote_chrome:4444/wd/hub
+            - SITE_URL=http://odoo:8069
         command: >
-            npm install
-            SELENIUM_BROWSER=chrome SELENIUM_REMOTE_URL=http://remote_chrome:4444/wd/hub node
+            sh -c "cd /usr/local/app
+            && npm install
+            && npm run test"
         networks:
             - odoodocker_default
 networks:
