@@ -130,10 +130,10 @@
     <menuitem
     id = "hr.menu_human_resources_configuration_building_type"
     name = "Building Types"
-    action="action_res_building_type"
     parent="hr.menu_human_resources_configuration"
-    sequence="12"
-    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter" />
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
+    action="action_res_building_type"
+    sequence="12"/>
 
     <menuitem
     id="hr.menu_human_resources_configuration_support"

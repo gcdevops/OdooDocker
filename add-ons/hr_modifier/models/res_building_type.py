@@ -4,7 +4,7 @@ from odoo import fields, models
 
 # hr.open_view_categ_form
 class ResBuildingType(models.Model):
-    _name = "res.building_type"
+    _name = "res.building.type"
     _description = "Building Type"
 
     name = fields.Char(string="Name", required = True, translate = True)
