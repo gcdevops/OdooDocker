@@ -2,7 +2,7 @@
 /* eslint-disable no-useless-escape */
 
 var Page = require('./basePage');
-const webdriver = require('selenium-webdriver'); 
+const webdriver = require('selenium-webdriver');
 
 let submitBtn, navMenu, employeesBtn, selectEmployee, editBtn, saveBtn;
 
@@ -14,8 +14,8 @@ Page.prototype.findInputAndButton = async function () {
 
 Page.prototype.submitBtnAndLogIn = async function () {
     await this.findInputAndButton();
-    await this.write('login', process.env.USERNAME);
-    await this.write('password', process.env.PASSWORD);
+    await this.write('login', process.env.ODOO_TEST_USER);
+    await this.write('password', process.env.ODOO_TEST_PASSWORD);
     return await submitBtn.click();
 }
 

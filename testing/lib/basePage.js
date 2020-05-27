@@ -12,10 +12,6 @@ o.setUserPreferences({
     credential_enable_service: false
 });
 
-
-
-// var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).setChromeOptions(o).build();
-
 var Page = function() {
 
     var chromeDriverBuilder = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome());
