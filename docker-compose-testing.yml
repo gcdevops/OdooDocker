@@ -23,6 +23,7 @@ services:
             - SELENIUM_BROWSER=chrome
             - SELENIUM_REMOTE_URL=http://remote_chrome:4444/wd/hub
             - SITE_URL=http://odoo:8069
+            - START_XVFB=false
         command: >
             sh -c "cd /usr/local/app
             && npm install

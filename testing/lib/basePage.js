@@ -6,24 +6,26 @@ const proxy = require('selenium-webdriver/proxy');
 var service = new chrome.ServiceBuilder(path).build();
 chrome.setDefaultService(service);
 
-let o = new chrome.Options();
+var o = new chrome.Options();
 o.addArguments('disable-infobars');
 o.setUserPreferences({
     credential_enable_service: false
 });
 
 
-var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).setChromeOptions(o).build();
+
+// var driver = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome()).setChromeOptions(o).build();
 
 var Page = function() {
 
-    chromeDriverBuilder = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome());
+    var chromeDriverBuilder = new webdriver.Builder().withCapabilities(webdriver.Capabilities.chrome());
+    chromeDriverBuilder = chromeDriverBuilder.setChromeOptions(o.addArguments('--headless', '--disable-extensions','--no-sandbox', '--whitelisted-ips'));
 
     if (process.env.SECURITY_MODE === 'true') {
         chromeDriverBuilder.setProxy(proxy.manual({http: `${process.env.ZAP_ADDR}`},{https: `${process.env.ZAP_ADDR}`}))
     }
 
-    this.driver = chromeDriverBuilder.build();
+    var driver = chromeDriverBuilder.build();
 
     this.baseUrl = function() {
         return `${process.env.SITE_URL}`;
@@ -31,7 +33,7 @@ var Page = function() {
 
     // visit a webpage
     this.visit = async function(theUrl) {
-        return await this.driver.get(this.baseUrl() + theUrl);
+        return await driver.get(this.baseUrl() + theUrl);
 
     };
 

@@ -17,7 +17,7 @@
     "chai": "^4.2.0",
     "chai-as-promised": "^7.1.1",
     "chai-url": "^1.0.4",
-    "chromedriver": "^81.0.0",
+    "chromedriver": "^83.0.0",
     "dotenv": "^8.2.0",
     "mocha": "^7.1.2",
     "selenium-webdriver": "^4.0.0-alpha.7",
