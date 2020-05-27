@@ -20,7 +20,8 @@ Page.prototype.submitBtnAndLogIn = async function () {
 }
 
 Page.prototype.navigateEmployeePage = async function () {
-    navMenu = await this.findByCss('.dropdown');
+    await this.submitBtnAndLogIn();
+    navMenu = await this.findByClassName('o_menu_apps');
     employeesBtn = await this.findByCss('a[href*=\"#menu_id=95\"]');
     await navMenu.click();
     await employeesBtn.click();

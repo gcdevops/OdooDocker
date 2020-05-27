@@ -29,10 +29,10 @@ process.on('unhandledRejection', () => {});
                 await page.visit('/web/login');
             });
 
-            afterEach(async () => {
-                await page.quit();
+            // afterEach(async () => {
+            //     await page.deleteCookies();
 
-            });
+            // });
 
             it('find the input box and log in button', async () => {
                 await page.findInputAndButton();

@@ -37,6 +37,11 @@ var Page = function() {
         return await driver.quit();
     };
 
+    // get the session cookies
+    this.deleteCookies = async function () {
+        return await driver.manage().deleteAllCookies();
+    }
+
     // wait and find a specific element with it's id
     this.findById = async function (id) {
         await driver.wait(webdriver.until.elementLocated(webdriver.By.id(id)), 5000)
