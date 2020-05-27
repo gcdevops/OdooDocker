@@ -30,7 +30,6 @@ var Page = function() {
     // visit a webpage
     this.visit = async function(theUrl) {
         return await driver.get(this.baseUrl() + theUrl);
-
     };
 
     // quit current session
