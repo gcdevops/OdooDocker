@@ -6,7 +6,7 @@ class Partner(models.Model):
     _inherit = 'res.partner'
     tz = fields.Selection(default='America/Montreal')
     building_type_id = fields.Many2one(
-        'res.building_type', ondelete='set null', string="Building type",
+        'res.building.type', ondelete='set null', string="Building type",
     )
     # Validation
 
