@@ -6,10 +6,8 @@
         <field name="model">helpdesk_lite.page</field>
         <field name="arch" type="xml">
             <form>
-                <group>
-                    <field name="name"/>
-                    <field name="content"/>
-                </group>
+                <h1><field name="name"/></h1>
+                <field name="content"/>
             </form>
         </field>
     </record>
