@@ -35,9 +35,10 @@
                           (0, 0, {'view_mode': 'form', 'view_id': ref('helpdesk_lite.helpdesk_help_page_view_form')}),
                           ]"/>
         <field name="help" type="html">
-        <p>
-            Create a Help Page.
-        </p>
+            <p>
+                Create a Help Page.
+            </p>
+        </field>
     </record>
 
 </odoo>
