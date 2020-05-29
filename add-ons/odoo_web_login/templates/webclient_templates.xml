@@ -60,6 +60,6 @@
 
 	<data noupdate="0">
 		<function model="ir.config_parameter" name="set_param" eval="('base.login_cooldown_after', '3')" />
-		<function model="ir.config_parameter" name="set_param" eval="('base.login_cooldown_duration', '30')" />
+		<function model="ir.config_parameter" name="set_param" eval="('base.login_cooldown_duration', '1800')" />
 	</data>
 </odoo>
