@@ -19,13 +19,13 @@ services:
         image: node:14
         volumes:
             - ./testing:/usr/local/app
+            - ./screenshots:/screenshots
         environment:
             - SELENIUM_BROWSER=chrome
             - SELENIUM_REMOTE_URL=http://remote_chrome:4444/wd/hub
             - SITE_URL=http://odoo:8069
-            - START_XVFB=false
-            - ODOO_TEST_USER=$ODOO_TEST_USER
-            - ODOO_TEST_PASSWORD=$ODOO_TEST_PASSWORD
+            - ODOO_TEST_USER=${ODOO_TEST_USER?Please specify Odoo Username}
+            - ODOO_TEST_PASSWORD=${ODOO_TEST_PASSWORD?Please specify Odoo Password}
         command: >
             sh -c "cd /usr/local/app
             && npm install

@@ -16,12 +16,15 @@ Page.prototype.submitBtnAndLogIn = async function () {
     await this.findInputAndButton();
     await this.write('login', process.env.ODOO_TEST_USER);
     await this.write('password', process.env.ODOO_TEST_PASSWORD);
+    await new Promise(resolve => setTimeout(resolve, 5000));
     return await submitBtn.click();
 }
 
 Page.prototype.navigateEmployeePage = async function () {
-    await this.submitBtnAndLogIn();
-    navMenu = await this.findByClassName('o_menu_apps');
+    this.submitBtnAndLogIn();
+    await new Promise(resolve => setTimeout(resolve, 5000));
+    await this.takeScreenShot('waiting');
+    navMenu = await this.findByClassName('dropdown');
     employeesBtn = await this.findByCss('a[href*=\"#menu_id=95\"]');
     await navMenu.click();
     await employeesBtn.click();
@@ -30,7 +33,7 @@ Page.prototype.navigateEmployeePage = async function () {
 Page.prototype.selectEmployee = async function () {
     await this.navigateEmployeePage();
     await this.findByCss('.o_searchview_input');
-    await driver.findElement(webdriver.By.css('.o_searchview_input')).sendKeys('Smith, Brad\n');
+    await this.driver.findElement(webdriver.By.css('.o_searchview_input')).sendKeys('Smith, Brad\n');
     selectEmployee = await this.findByCss('td[title*=\"Smith, Brad\"]');
     await selectEmployee.click();
 }

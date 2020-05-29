@@ -2,6 +2,7 @@ const webdriver = require('selenium-webdriver');
 const chrome = require('selenium-webdriver/chrome');
 const path = require('chromedriver').path;
 const proxy = require('selenium-webdriver/proxy');
+const fs = require('fs');
 
 var service = new chrome.ServiceBuilder(path).build();
 chrome.setDefaultService(service);
@@ -32,13 +33,21 @@ var Page = function() {
         return await driver.get(this.baseUrl() + theUrl);
     };
 
+
     // quit current session
     this.quit = async function () {
         return await driver.quit();
     };
 
+    this.takeScreenShot = async function (filename) {
+        await driver.takeScreenshot().then(function(data){
+            fs.writeFileSync('./screenshots/' + filename + '.png', data, 'base64');
+        })
+    }
+
     // get the session cookies
-    this.deleteCookies = async function () {
+    this.clearBrowserData = async function () {
+        await driver.get('chrome://settings/clearBrowserData');
         return await driver.manage().deleteAllCookies();
     }
 
