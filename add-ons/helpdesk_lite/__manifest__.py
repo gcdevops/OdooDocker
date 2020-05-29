@@ -15,6 +15,7 @@
         'security/helpdesk_security.xml',
         'security/ir.model.access.csv',
         'views/res_config_settings_views.xml',
+        'views/helpdesk_pages.xml',
         'views/helpdesk_tickets.xml',
         'views/helpdesk_team_views.xml',
         'views/helpdesk_stage_views.xml',
