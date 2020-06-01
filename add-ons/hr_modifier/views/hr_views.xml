@@ -158,12 +158,20 @@
     sequence="110"/>
 
     <menuitem
+    id = "hr.menu_human_resources_support_help_pages"
+    name = "Help Pages"
+    parent="hr.menu_human_resources_support"
+    groups="helpdesk_lite.group_helpdesk_lite_user,helpdesk_lite.group_helpdesk_lite_manager"
+    action="helpdesk_lite.helpdesk_help_page_action"
+    sequence="1"/>
+
+    <menuitem
     id = "hr.menu_human_resources_support_my_tickets"
     name = "My tickets"
     parent="hr.menu_human_resources_support"
     groups="helpdesk_lite.group_helpdesk_lite_user"
     action="helpdesk_lite.helpdesk_ticket_user_list_act"
-    sequence="1"/>
+    sequence="2"/>
 
     <menuitem
     id = "hr.menu_human_resources_support_tickets"
@@ -171,7 +179,7 @@
     parent="hr.menu_human_resources_support"
     groups="helpdesk_lite.group_helpdesk_lite_manager"
     action="helpdesk_lite.helpdesk_ticket_manager_list_act"
-    sequence="1"/>
+    sequence="2"/>
 
     <menuitem
     id = "hr.menu_human_resources_support_submit_ticket_user"
@@ -179,7 +187,7 @@
     parent="hr.menu_human_resources_support"
     groups="helpdesk_lite.group_helpdesk_lite_user"
     action="helpdesk_lite.helpdesk_ticket_user_submit_act"
-    sequence="2"/>
+    sequence="3"/>
 
     <menuitem
     id = "hr.menu_human_resources_support_submit_ticket_manager"
@@ -187,7 +195,7 @@
     parent="hr.menu_human_resources_support"
     groups="helpdesk_lite.group_helpdesk_lite_manager"
     action="helpdesk_lite.helpdesk_ticket_manager_submit_act"
-    sequence="2"/>
+    sequence="3"/>
 
 </data>
 </odoo>
