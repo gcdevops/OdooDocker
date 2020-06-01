@@ -4,7 +4,7 @@
 var Page = require('./basePage');
 const webdriver = require('selenium-webdriver');
 
-let submitBtn, navMenu, employeesBtn, selectEmployee, editBtn, saveBtn;
+let submitBtn, navMenu, employeesBtn, selectEmployee, editBtn, emailBar, saveBtn;
 
 Page.prototype.findInputAndButton = async function () {
     await this.findById('login');
@@ -25,16 +25,14 @@ Page.prototype.navigateEmployeePage = async function () {
     await new Promise(resolve => setTimeout(resolve, 5000));
     await this.takeScreenShot('waiting');
     navMenu = await this.findByClassName('dropdown');
-    employeesBtn = await this.findByCss('a[href*=\"#menu_id=95\"]');
+    employeesBtn = await this.findByCss('a[href*=\"#menu_id=100\"]');
     await navMenu.click();
     await employeesBtn.click();
 };
 
 Page.prototype.selectEmployee = async function () {
     await this.navigateEmployeePage();
-    await this.findByCss('.o_searchview_input');
-    await this.driver.findElement(webdriver.By.css('.o_searchview_input')).sendKeys('Smith, Brad\n');
-    selectEmployee = await this.findByCss('td[title*=\"Smith, Brad\"]');
+    selectEmployee = await this.findByCss('.o_data_row');
     await selectEmployee.click();
 }
 
@@ -42,8 +40,8 @@ Page.prototype.editEmployee = async function () {
     await this.selectEmployee();
     editBtn = await this.findByCss('.o_form_button_edit');
     await editBtn.click();
-    await this.findByCss('.o_field_email');
-    await driver.findElement(webdriver.By.css('.o_field_email')).sendKeys('Brad@example.com');
+    emailBar = await this.findByCss('.o_field_email');
+    emailBar.sendKeys('odoo@example.com');
     saveBtn = await this.findByCss('.o_form_button_save');
     await saveBtn.click();
 }

@@ -44,12 +44,10 @@ process.on('unhandledRejection', () => {});
             });
 
             it('find the input box and log in button', async () => {
-                await page.takeScreenShot('logon');
                 await page.findInputAndButton();
             });
 
             it('add username, password and click login button', async () => {
-                await page.takeScreenShot('logon');
                 await page.submitBtnAndLogIn();
             });
 
@@ -59,8 +57,8 @@ process.on('unhandledRejection', () => {});
             });
 
             it('edit employee', async () => {
-                await page.takeScreenShot('select employee');
                 await page.editEmployee();
+                await page.takeScreenShot('select employee');
             });
 
         });
