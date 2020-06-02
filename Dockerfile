@@ -10,8 +10,11 @@ RUN python3 -m pip install zxcvbn-python
 RUN chmod +x /custom_entrypoint.sh  && \
     chown odoo:odoo /custom_entrypoint.sh
 
-ENV ODOO_DBNAME ""
-ENV ODOO_UPGRADE_MODULE ""
+ARG ODOO_DBNAME=""
+ARG ODOO_UPGRADE_MODULE=""
+
+ENV ODOO_DBNAME ${ODOO_DBNAME}
+ENV ODOO_UPGRADE_MODULE ${ODOO_UPGRADE_MODULE}
 
 #USER odoo
 ENTRYPOINT ["/custom_entrypoint.sh"]
