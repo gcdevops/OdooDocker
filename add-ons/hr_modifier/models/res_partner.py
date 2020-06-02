@@ -5,9 +5,7 @@ import re
 class Partner(models.Model):
     _inherit = 'res.partner'
     tz = fields.Selection(default='America/Montreal')
-    building_type_id = fields.Many2one(
-        'res.building.type', ondelete='set null', string="Building type",
-    )
+
     # Validation
 
     # allow upper case, lower case, hyphens
@@ -31,7 +29,7 @@ class Partner(models.Model):
                 res = re.search(street_regex, record.street)
                 if res:
                     raise ValidationError("The street 2 field contains an invalid character: " + res.group(0))
-
+    
     # allow letters, spaces, and hyphens
     @api.constrains("city")
     def _check_city_allowed_characters(self):
@@ -40,7 +38,7 @@ class Partner(models.Model):
                 res = re.search("[^a-zA-ZÀ-Öà-ö\s\-\d&.,']", record.city)
                 if res:
                     raise ValidationError("The city field contains an invalid character: " + res.group(0))
-
+    
     # allow postal code formats, uppercase or lowercase, space or no space
     @api.constrains("zip")
     def _check_postal_code_allowed_characters(self):
@@ -48,7 +46,7 @@ class Partner(models.Model):
             if record.zip:
                 if not re.search("^([a-zA-Z]\d[a-zA-Z][ ]?\d[a-zA-Z]\d)$", record.zip):
                     raise ValidationError("The postal code is invalid")
-
+    
     @api.constrains("phone", "mobile")
     def _check_phone_allowed_characters(self):
         for record in self:
