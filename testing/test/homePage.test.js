@@ -1,14 +1,5 @@
 /* eslint-disable no-unused-vars */
 
-
-/**
- * TODO: 
- * 1. Fix select employee function in sanityChecks - select only the first employee
- * 2. Fix edit employee - edit only the first employee
- * 3. Adjust screenshots - take screenshots where needed 
- * 
-*/
-
 const {
     describe,
     it,
