@@ -128,6 +128,14 @@
     groups="base.group_no_one"/>
 
     <menuitem
+    id = "hr.menu_human_resources_configuration_building_type"
+    name = "Building Types"
+    parent="hr.menu_human_resources_configuration"
+    groups="hr.group_hr_manager,group_hr_senior_management,group_hr_coordinator,group_hr_reporter"
+    action="action_res_building_type"
+    sequence="12"/>
+
+    <menuitem
     id="hr.menu_human_resources_configuration_support"
     name="Support"
     parent="hr.menu_human_resources_configuration"
