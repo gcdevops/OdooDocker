@@ -1,8 +1,6 @@
-/* global driver */
 /* eslint-disable no-useless-escape */
 
 var Page = require('./basePage');
-const webdriver = require('selenium-webdriver');
 
 let submitBtn, navMenu, employeesBtn, selectEmployee, editBtn, emailBar, saveBtn;
 
