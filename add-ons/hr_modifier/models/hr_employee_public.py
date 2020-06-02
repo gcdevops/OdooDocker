@@ -33,6 +33,8 @@ class HrEmployeePublic(models.Model):
 
     region_id = fields.Many2one(readonly=True)
 
+    branch_id = fields.Many2one(readonly=True)
+
     x_employee_remote_access_network = fields.Boolean(readonly=True)
 
     x_employee_remote_access_tool = fields.Selection(readonly = True)
