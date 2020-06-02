@@ -39,7 +39,7 @@ Page.prototype.editEmployee = async function () {
     editBtn = await this.findByCss('.o_form_button_edit');
     await editBtn.click();
     emailBar = await this.findByCss('.o_field_email');
-    emailBar.sendKeys('odoo@example.com');
+    emailBar.sendKeys(' odoo@example.com');
     saveBtn = await this.findByCss('.o_form_button_save');
     await saveBtn.click();
 }
