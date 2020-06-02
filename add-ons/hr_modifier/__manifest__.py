@@ -6,7 +6,7 @@
     'version': '0.1',
     'category': 'Human Resources/Employees',
     'summary': 'Cutomize Employee Module for our purposes',
-
+    
     'depends': [
         'base', 'hr', 'hr_skills', 'web_domain_field', 'mail', 'auditlog', 'helpdesk_lite'
     ],
@@ -26,7 +26,6 @@
         'views/res_partner_views.xml',
         'views/hr_location_views.xml',
         'views/hr_skills.xml',
-        'views/res_building_type_views.xml',
         'views/hr_views.xml',
         'views/mail_channel_views.xml',
     ],

@@ -1,19 +1,17 @@
 version: "3"
 
-services:
+services: 
     odoo:
         build: .
-        depends_on:
+        depends_on: 
             - db
-        ports:
+        ports: 
             - 8069:8069
-        environment:
+        environment: 
             - HOST=db
             - USER=odoo
             - PASSWORD=odoo
             - NAME=odoo
-            - ODOO_DBNAME=${ODOO_DBNAME}
-            - ODOO_UPGRADE_MODULE=${ODOO_UPGRADE_MODULE}
         volumes:
             - ./add-ons:/mnt/extra-addons
             - ./odoo-dev.conf:/etc/odoo/odoo.conf
@@ -21,7 +19,7 @@ services:
 
     db:
         image: postgres:11
-        environment:
+        environment: 
             - POSTGRES_DB=postgres
             - POSTGRES_PASSWORD=odoo
             - POSTGRES_USER=odoo
@@ -40,5 +38,5 @@ services:
         volumes:
             - ./servers.json:/pgadmin4/servers.json
 
-volumes:
+volumes: 
     odoo-db-data:
