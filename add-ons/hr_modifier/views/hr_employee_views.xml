@@ -53,7 +53,7 @@
                         <field name="company_id" groups="base.group_multi_company" icon="fa-building" invisible="1"/>
                         <field name="x_employee_language"/>
                         <field name="x_employee_status"/>
-                        <field name="region_id"/>
+                        <field name="branch_id"/>
                         <field name="department_id" icon="fa-users"/>
                     </searchpanel>
                 </search>
@@ -95,8 +95,13 @@
                         <notebook>
                             <page name="public" string="Management Information">
                                 <group>
-                                    <field name="x_employee_job_code"/>
-                                    <field name="x_employee_work_criticality"/>
+                                    <group>
+                                        <field name="x_employee_job_code"/>
+                                        <field name="x_employee_work_criticality"/>
+                                    </group>
+                                    <group>
+                                        <field name="x_employee_in_ad" readonly="1"/>
+                                    </group>
                                 </group>
                                 <field name="employee_skill_ids"/>
                             </page>
