@@ -11,9 +11,9 @@ odoo.define("hr_modifier.CustomTitle", function (require) {
     willStart: function () {
       var self = this
       return rpc.query({
-        model: "res.users",
+        model: "hr.employee",
         method: "search_read",
-        args: [[["id", "=", session.uid]]]
+        args: [[["user_id", "=", session.uid]]]
       }).then(function (result) {
         if (result && result.length > 0 && result[0].x_department_coordinators_ids && result[0].x_department_coordinators_ids.length > 0) {
 
@@ -30,13 +30,14 @@ odoo.define("hr_modifier.CustomTitle", function (require) {
             method: "search_read",
             args: [[["id", "in", result[0].x_department_coordinators_ids]]]
           }).then(function (result) {
-            var branchName = "";
-
             if (result && result.length > 0 && result[0].name) {
-              branchName = result[0].name;
+              var branchNames = []
+              for (let i in result){
+                branchNames.push(result[i].name)
+              }
+
+              dom.append($("header nav"), "<span class='o_team_name'>"+ prefix + branchNames.join(", ") + "</span>");
             }
-            
-            dom.append($("header nav"), "<span class='o_team_name'>"+ prefix + branchName + "</span>");
             
           })
         }
