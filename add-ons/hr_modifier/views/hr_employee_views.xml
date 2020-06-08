@@ -51,10 +51,10 @@
                     </group>
                     <searchpanel>
                         <field name="company_id" groups="base.group_multi_company" icon="fa-building" invisible="1"/>
+                        <field name="department_id" icon="fa-users"/>
+                        <field name="branch_id"/>
                         <field name="x_employee_language"/>
                         <field name="x_employee_status"/>
-                        <field name="branch_id"/>
-                        <field name="department_id" icon="fa-users"/>
                     </searchpanel>
                 </search>
              </field>
@@ -129,7 +129,6 @@
                                             <field name="company_id" groups="base.group_multi_company"/>
                                             <field name="user_id" string="Related User" invisible="1"/>
                                         </group>
-                                        
                                     </div>
                                 </div>
                             </page>
