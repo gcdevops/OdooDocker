@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data>
-    
-        <template id="assets_backend" inherit_id="web.assets_backend"> 
+
+        <template id="assets_backend" inherit_id="web.assets_backend">
             <xpath expr="." position="inside">
-                <link rel="stylesheet" href="/hr_modifier/static/src/css/employee_views.css"/> 
-            </xpath>        
+                <link rel="stylesheet" href="/hr_modifier/static/src/css/employee_views.css"/>
+            </xpath>
         </template>
 
         <record id="hr.view_employee_filter" model="ir.ui.view">
@@ -57,7 +57,7 @@
                         <field name="x_employee_status"/>
                     </searchpanel>
                 </search>
-             </field>
+            </field>
         </record>
 
         <record id="hr.view_employee_form" model="ir.ui.view">
@@ -83,14 +83,14 @@
                             <p style="font-size:1.2em">
                                 Job Title: <field name="job_id"/>
                             </p>
-                            <p style="font-size:1.2em"> 
+                            <p style="font-size:1.2em">
                                 <field name="department_id_domain" invisible="1"/>
-                                Team: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain"  required="True"/>
+                                Team: <field name="department_id" context="{'hierarchical_naming': False}" domain="department_id_domain" required="True"/>
                             </p>
                             <p style="font-size:1.2em"> 
                                 BRM Branch: <field name="branch_id" required="True"/>
                             </p>
-                            <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags"  groups="hr.group_hr_manager"/>
+                            <field name="category_ids" widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}" placeholder="Tags" groups="hr.group_hr_manager"/>
                         </div>
                         <notebook>
                             <page name="public" string="Management Information">
@@ -105,8 +105,8 @@
                                 </group>
                                 <field name="employee_skill_ids"/>
                             </page>
-                          <page name="work_info" string="Work Information">
-                                <div id="o_work_employee_container"> <!-- These two div are used to position org_chart -->
+                            <page name="work_info" string="Work Information">
+                                <div id="o_work_employee_container">                                    <!-- These two div are used to position org_chart -->
                                     <div id="o_work_employee_main">
                                         <group>
                                             <group string = "Information">
@@ -156,6 +156,7 @@
                 </form>
             </field>
         </record>
+
         <record id="hr.open_view_employee_list_my" model="ir.actions.act_window">
             <field name="name">My Team</field>
             <field name="res_model">hr.employee</field>
@@ -165,13 +166,14 @@
             <field name="view_ids" eval="[(5, 0, 0), (0, 0, {'view_mode': 'tree', 'view_id': ref('hr.view_employee_tree')}), (0, 0, {'view_mode': 'form', 'view_id': ref('hr.view_employee_form')})]"/>
             <field name="search_view_id" ref="hr.view_employee_filter"/>
             <field name="help" type="html">
-             <p class="o_view_nocontent_smiling_face">
+                <p class="o_view_nocontent_smiling_face">
                Add a new employee!
-             </p><p>
+                </p>
+                <p>
                With just a quick glance on the Odoo employee screen, you
                can easily find all the information you need for each person;
                contact data, job position, availability, etc.
-             </p>
+                </p>
             </field>
         </record>
 
@@ -186,13 +188,14 @@
                 "default_department_id": active_id}
             </field>
             <field name="help" type="html">
-              <p class="o_view_nocontent_smiling_face">
+                <p class="o_view_nocontent_smiling_face">
                 Add a new employee
-              </p><p>
+                </p>
+                <p>
                 With just a quick glance on the Odoo employee screen, you
                 can easily find all the information you need for each person;
                 contact data, job position, availability, etc.
-              </p>
+                </p>
             </field>
         </record>
 
@@ -200,16 +203,7 @@
             <field name="active" eval="False" />
         </record>
 
-        <report
-            id="hr.hr_employee_print_badge"
-            string="Print Badge"
-            model="hr.employee"
-            report_type="qweb-pdf"
-            name="hr.print_employee_badge"
-            file="hr.print_employee_badge"
-            print_report_name="'Print Badge - %s' % (object.name).replace('/', '')"
-            menu="False"
-        />
-        
+        <report id="hr.hr_employee_print_badge" string="Print Badge" model="hr.employee" report_type="qweb-pdf" name="hr.print_employee_badge" file="hr.print_employee_badge" print_report_name="'Print Badge - %s' % (object.name).replace('/', '')" menu="False" />
+
     </data>
 </odoo>

@@ -104,6 +104,18 @@
 	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
+.o_team_name {
+  display: block;
+  margin-right: 35px;
+  user-select: none;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  line-height: 46px;
+  float: right;
+  cursor: auto;
+}
+
  @-webkit-keyframes scale-up-center {
     0% {
       -webkit-transform: scale(1);
