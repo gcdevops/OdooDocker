@@ -60,6 +60,7 @@
                         <field name="branch_id"/>
                         <field name="x_employee_language"/>
                         <field name="x_employee_status"/>
+
                     </searchpanel>
                 </search>
             </field>

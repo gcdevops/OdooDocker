@@ -58,11 +58,11 @@
 		</xpath>
 	</template>
 
-
 	<data noupdate="0">
 		<function model="ir.config_parameter" name="set_param" eval="('base.login_cooldown_after', '3')" />
 		<function model="ir.config_parameter" name="set_param" eval="('base.login_cooldown_duration', '180')" />
 	</data>
+
 
 	<template id="auth_signup.login" inherit_id="web.login" name="Sign up - Reset Password">
 		<xpath expr="//button[@type='submit']" position="after">
@@ -71,5 +71,4 @@
 			</div>
 		</xpath>
 	</template>
-
 </odoo>
