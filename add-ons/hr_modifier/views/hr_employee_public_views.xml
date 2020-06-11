@@ -20,6 +20,9 @@
                     <searchpanel>
                         <field name="company_id" groups="base.group_multi_company" icon="fa-building"/>
                         <field name="department_id" icon="fa-users"/>
+                        <field name="branch_id"/>
+                        <field name="x_employee_language"/>
+                        <field name="x_employee_status"/>
                     </searchpanel>
                 </search>
              </field>
@@ -68,6 +71,7 @@
                                                 <field name="parent_id" domain="parent_id_domain"/>
                                                 <field name="x_employee_language"/>
                                                 <field name="x_employee_job_type"/>
+                                                <field name="x_employee_status"/>
                                                 <field name="classification_id"/>
                                                 <field name="region_id" options="{'no_create_edit': True}"/>
                                             </group>
