@@ -22,9 +22,14 @@
                       domain="[('x_employee_work_criticality', '=', True)]"
                     />
                     <filter 
-                      string="Remote access to network"
+                      string="Remote Access to Network"
                       name="x_employee_remote_access_network"
                       domain="[('x_employee_remote_access_network', '=', True)]"
+                    />
+                    <filter 
+                        string = "Employee in ESDC Directory"
+                        name="x_employee_in_ad" 
+                        domain = "[('x_employee_in_ad', '=', True)]"
                     />
                     <separator/>
                     <group expand="0" string="Profiles">
