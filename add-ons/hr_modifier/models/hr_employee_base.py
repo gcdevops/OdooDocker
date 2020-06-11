@@ -80,7 +80,8 @@ class HrEmployeeBase(models.AbstractModel):
 
     x_employee_access_gov_office = fields.Boolean("Access to a government office", groups="hr.group_hr_user,hr.group_hr_reporter")
 
-    x_employee_in_ad = fields.Boolean("Employee in AD", groups="hr.group_hr_user,hr.group_hr_reporter")
+    x_employee_in_ad = fields.Boolean("Employee in ESDC Directory", groups="hr.group_hr_user,hr.group_hr_reporter")
+
     
     x_employee_device_type = fields.Selection(
         [
