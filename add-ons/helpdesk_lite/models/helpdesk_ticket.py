@@ -188,7 +188,7 @@ class HelpdeskTicket(models.Model):
         values = dict(
             body_html=body_html,
             email_to=res.company_id.administration_email,
-            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            email_from="EDSC Liste blanche RH - ESDC HR Whitelist <esdc-esdc@3joed16.m.notification.alpha.canada.ca>",
             subject="New ticket #" + str(res.id)  + " for HR WhiteListing | Nouveau billet #" + str(res.id)  + " pour RH WhiteListing"
         )
 
@@ -214,7 +214,7 @@ class HelpdeskTicket(models.Model):
         values = dict(
             body_html=body_html,
             email_to=res.email_from,
-            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            email_from="EDSC Liste blanche RH - ESDC HR Whitelist <esdc-esdc@3joed16.m.notification.alpha.canada.ca>",
             subject="Ticket #" + str(res.id)  + " for HR WhiteListing | Billet #" + str(res.id)  + " pour RH WhiteListing"
         )
 
@@ -299,7 +299,7 @@ class WebsiteSupportTicketCompose(models.Model):
         values = dict(
             body_html=body_html,
             email_to=self.email_from,
-            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            email_from="EDSC Liste blanche RH - ESDC HR Whitelist <esdc-esdc@3joed16.m.notification.alpha.canada.ca>",
             subject="Reply to HR WhiteListing Ticket #" + str(self.ticket_id.id) + " | Réponse au billet #"  + str(self.ticket_id.id) + " de RH WhiteListing"
         )
 
@@ -333,7 +333,7 @@ class WebsiteSupportTicketCompose(models.Model):
         values = dict(
             body_html=body_html,
             email_to=self.user_id.email,
-            email_from="noreply@grh-hrm.iitb-dgiit.ca",
+            email_from="EDSC Liste blanche RH - ESDC HR Whitelist <esdc-esdc@3joed16.m.notification.alpha.canada.ca>",
             subject="Reply to HR WhiteListing Ticket #" + str(self.ticket_id.id) + " | Réponse au billet #"  + str(self.ticket_id.id) + " de RH WhiteListing"
         )
 
